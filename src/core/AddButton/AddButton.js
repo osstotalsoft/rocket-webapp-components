@@ -4,6 +4,7 @@ import AddIcon from '@material-ui/icons/Add';
 import CustomIconButton from '../IconButton';
 
 
+
 const AddButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
     <CustomIconButton aria-label="Add" onClick={onClick} disabled={disabled} tooltip={title} {...rest}>
         <AddIcon fontSize={fontSize} />
