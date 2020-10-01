@@ -1,1 +1,1 @@
-# rocket-webapp-components
+This repo contain all components gathered in a single bunch(bundle or pack). The bunch is called 'core'.

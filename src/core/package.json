@@ -1,0 +1,109 @@
+{
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "npm run build:cjs &&  npm run build:copy-files",
+    "build:cjs": "babel src -d build --copy-files",
+    "build:copy-files": "node ./scripts/copy-files.js",
+    "bit-build": "bit -v && bit import && bit build"
+  },
+  "peerDependencies": {
+    "chart.js": "2.8.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "prop-types": "^15.5.4",
+    "lodash.debounce": "^4.0.8",
+    "react-select": "^3.1.0",
+    "text-mask-addons": "^3.8.0",
+    "react-text-mask": "^5.4.3",
+    "react-number-format": "^4.4.1",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "react-datetime": "^2.16.3",
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/styles": "^4.10.0",
+    "@material-ui/icons": "^4.9.1",
+    "classnames": "^2.2.6",
+    "cross-env": "^5.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "i18next": "^17.3.1",
+    "i18next-browser-languagedetector": "^3.1.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "moment": "^2.24.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-flags": "^0.1.18",
+    "react-i18next": "^10.13.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "react-toast-notifications": "^2.4.0",
+    "subscriptions-transport-ws": "^0.9.16",
+    "url-search-params-polyfill": "^7.0.1"
+  },
+  "devDependencies": {
+    "react-select": "^3.1.0",
+    "@babel/cli": "^7.8.0",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.8.0",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "classnames": "^2.2.6",
+    "react-router-dom": "^5.1.2",
+    "subscriptions-transport-ws": "^0.9.16",
+    "url-search-params-polyfill": "^7.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1",
+    "rimraf": "^3.0.0",
+    "@material-ui/styles": "^4.10.0"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://react-components-api.appservice.online/",
+  "directories": {
+    "example": "example"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@bit/totalsoft.react-mui.default-logo": "0.0.1",
+    "@bit/totalsoft.react-mui.utils.styles": "0.0.1",
+    "@apollo/react-hoc": "^4.0.0",
+    "@babel/runtime": "^7.9.6",
+    "@date-io/moment": "^1.3.13",
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/pickers": "^3.2.10",
+    "attr-accept": "^2.2.1",
+    "chartjs-plugin-datalabels": "^0.7.0",
+    "moment": "^2.27.0",
+    "offline-js": "^0.7.19",
+    "ramda": "^0.27.1",
+    "react-chartjs-2": "^2.9.0",
+    "react-select": "^3.1.0",
+    "react-toastify": "^6.0.8",
+    "use-debounce": "^3.4.3"
+  },
+  "bit": {
+    "env": {
+      "compiler": "totalsoft.react-mui/compilers/react@1.0.21"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+  }
+}
