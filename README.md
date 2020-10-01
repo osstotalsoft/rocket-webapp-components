@@ -1,6 +1,7 @@
-![rsz_1rsz_pngwave (1).png](/.attachments/rsz_1rsz_pngwave%20(1)-315566bc-4dd6-4f8e-8dff-f3ac90b4c0a8.png)
+# webapp-rocket [![NPM version][npm-image]][npm-url]
+> React web application sample with GraphQL, Apollo Client and AxaGuilDEv Oidc Client integration.
 
-[[_TOC_]]
+![Building blocks](assets/img/appicon.png)
 
 [[_TOC_]]
 ##Our Bit account
