@@ -16,6 +16,7 @@ AddButton.defaultProps = {
     size: "small"
 };
 
+
 AddButton.propTypes = {
     title: PropTypes.string,
     onClick: PropTypes.func,
