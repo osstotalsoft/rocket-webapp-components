@@ -69,7 +69,7 @@ https://github.com/osstotalsoft/rocket-webapp-components (and :+1: hit the star 
 It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
 
 ### Installation of core
-> we assume you have pre-installed chart.js(npm i chart.js), @babel/runtime, i18next, react-i18next
+> we assume you have pre-installed chart.js(npm i chart.js)
 
 Bit components are stored on the bit registry located in https://node.bit.dev.
 When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
