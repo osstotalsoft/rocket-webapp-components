@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from 'react-i18next';
 import accepts from 'attr-accept'
-import { useToast } from '@bit/totalsoft.react-mui.hooks/dist/hooks';
+import { useToast } from '../Toast';
 import UploadButton from '../UploadButton';
 
 
@@ -12,7 +12,7 @@ function FileUploadButton({ component, children, onFileSelected, uploading, disa
   const Component = component || UploadButton
   const defaultTitle = !component && uploading ? t("General.Uploading") : t("General.Upload")
 
-  
+
   const onInputFileSelected = useCallback(({ target }) => {
     const { validity, files: [file] } = target
 
@@ -27,12 +27,12 @@ function FileUploadButton({ component, children, onFileSelected, uploading, disa
     }
 
     if (maxSize && file.size > maxSize) {
-      addToast(t('File.TooLarge', { maxSize: (maxSize / 1024) > 1024 ? (maxSize / (1024 * 1024)).toFixed(2)+ "MB" : (maxSize / 1024) + "KB"  }), 'error');
+      addToast(t('File.TooLarge', { maxSize: (maxSize / 1024) > 1024 ? (maxSize / (1024 * 1024)).toFixed(2) + "MB" : (maxSize / 1024) + "KB" }), 'error');
       return;
     }
 
     if (minSize && file.size < minSize) {
-      addToast(t('File.TooSmall', { minSize: (minSize / 1024) > 1024 ? (minSize / (1024 * 1024)).toFixed(2) + "MB" : (minSize / 1024) + "KB"}), 'error');
+      addToast(t('File.TooSmall', { minSize: (minSize / 1024) > 1024 ? (minSize / (1024 * 1024)).toFixed(2) + "MB" : (minSize / 1024) + "KB" }), 'error');
       return;
     }
 

@@ -1,6 +1,6 @@
 import styles from '@bit/totalsoft.react-mui.utils.styles';
 
-export const tostHookStyle = theme => {
+export const toastStyle = theme => {
     const {
         snackDangerBgColor,
         snackWarningBgColor,
@@ -15,5 +15,6 @@ export const tostHookStyle = theme => {
         success: { backgroundColor: snackSuccessBgColor, color: snackSuccessColor },
         error: { backgroundColor: snackDangerBgColor, color: snackDangerColor },
         warning: { backgroundColor: snackWarningBgColor, color: snackWarningColor },
+        toastWrapper: { borderRadius: '6px', width: '500px', overflowWrap: 'anywhere' }
     }
 }

@@ -1,25 +1,11 @@
-// export { default as routes } from './routes'
-// export { theme } from './utils/theme.js'
-//  export { default as defaultTheme } from './utils/themes/defaultTheme';
-// export { AreasWrapper } from './providers/AreasProvider'
-// export { default as Dashboard } from './features/dashboard/Dashboard'
-// export { default as Settings } from './features/settings/Settings'
-// export { default as appStyle } from './assets/jss/components/appStyle'
-
-// export { default as Footer } from './components/layout/Footer'
-// export { default as Sidebar } from './components/layout/Sidebar'
-// export { default as Header } from './components/layout/Header'
-// export { default as Main } from './components/layout/Main'
-
-
 //Buttons
 export { default as Button } from './Button'
 export { default as AddButton } from './AddButton'
 export { default as DeleteButton } from './DeleteButton'
 export { default as UploadButton } from './UploadButton'
 export { default as BackToButton } from './BackToButton'
-export { default as IconButton } from './CancelButton'
-export { default as CancelButton } from './IconButton'
+export { default as IconButton } from './IconButton'
+export { default as CancelButton } from './CancelButton'
 export { default as DownloadButton } from './DownloadButton'
 export { default as DownwardButton } from './DownwardButton'
 export { default as EditButton } from './EditButton'
@@ -70,16 +56,16 @@ export { default as Accordion } from './Accordion'
 export { default as Piano } from './Piano'
 
 //Chart factory
-export {default as ChartFactory} from './Charts'
+export { default as ChartFactory } from './Charts'
 
-export {default as CustomDialog} from './CustomDialog'
+export { default as CustomDialog } from './CustomDialog'
 
-export {default as CustomLinearProgress} from './CustomLinearProgress'
+export { default as CustomLinearProgress } from './CustomLinearProgress'
 
-export {default as Typography} from './Typography'
+export { default as Typography } from './Typography'
 
-export {default as CheckInternetConnection} from './CheckInternetConnection'
+export { default as CheckInternetConnection } from './CheckInternetConnection'
 
-export {default as DialogDisplay} from './DialogDisplay'
+export { default as DialogDisplay } from './DialogDisplay'
 
-export {default as PasswordField} from './PasswordField'
+export { default as PasswordField } from './PasswordField'

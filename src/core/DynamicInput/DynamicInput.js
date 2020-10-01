@@ -61,6 +61,7 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
   const boolField = <FormControlLabel
     control={
       <Switch
+        {...other}
         checked={value}
         onChange={onCheckboxPropertyChange} />
     }
