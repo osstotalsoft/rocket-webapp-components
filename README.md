@@ -1,7 +1,7 @@
-# webapp-rocket [![NPM version][npm-image]][npm-url]
+# rocket-webapp-components [![NPM version][npm-image]][npm-url]
 > React web application sample with GraphQL, Apollo Client and AxaGuilDEv Oidc Client integration.
 
-![Building blocks](assets/img/appicon.png)
+![Building blocks](src/assets/img/items.png)
 
 [[_TOC_]]
 ##Our Bit account
