@@ -53,7 +53,7 @@ You should check out the following link https://bit.dev/totalsoft/react-mui/core
 
 Please, listen to this video to better comprehend all of the aforementioned sayings:
 
-[First Introduction](https://1drv.ms/v/s!AjNJY058hJ8vgQ-WK6RYoMj-SNnb?e=pAde35)
+[First Introduction](https://1drv.ms/v/s!AjNJY058hJ8vgRKCFjagQvoBKuXO?e=AWkXMv)
 
 ## The core of components
 
