@@ -69,7 +69,21 @@ https://github.com/osstotalsoft/rocket-webapp-components (and :+1: hit the star 
 It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
 
 ### Installation of core
-Listen to this video to see how to install the core: [Instalation](https://1drv.ms/v/s!AjNJY058hJ8vgRDaejrUUR2cvh4P?e=h9gQqx).
+Bit components are stored on the bit registry located in https://node.bit.dev.
+When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
+
+You can add a  `.npmrc`  in your project with the following:
+
+```shell
+@bit:registry=https://node.bit.dev
+//node.bit.dev/:_authToken=${BIT_TOKEN}
+always-auth=true
+```
+
+> the always-auth=true is required when using Yarn. It is not required
+> for npm.
+
+Listen to this video to see how to install the core and some info about BIT_TOKEN: [Instalation](https://1drv.ms/v/s!AjNJY058hJ8vgRDaejrUUR2cvh4P?e=h9gQqx).
 
 
 ### Leverage Bit CLI by using Azure DevOps
