@@ -1,6 +1,6 @@
 # rocket-webapp-components
 
-![Core](src/assets/img/items.png)
+![Core](/assets/img/items.png)
 
 ## Bit in a nutshell
 
