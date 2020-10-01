@@ -1,8 +1,8 @@
-# rocket-webapp-components
+# :boom: rocket-webapp-components
 
 ![Core](src/assets/img/Items.png)
 
-## :boom: Bit in a nutshell
+##  Bit in a nutshell
 
 Bit is an open-source CLI tool for collaborating on isolated components across projects and repositories.
 
