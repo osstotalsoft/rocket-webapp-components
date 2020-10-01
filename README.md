@@ -2,7 +2,7 @@
 
 ![Core](src/assets/img/Items.png)
 
-## Bit in a nutshell
+## :boom: Bit in a nutshell
 
 Bit is an open-source CLI tool for collaborating on isolated components across projects and repositories.
 
