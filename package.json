@@ -78,6 +78,8 @@
     "env": {
       "compiler": "totalsoft.react-mui/compilers/react@1.0.21"
     },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm",
     "overrides": {
       "*": {
         "dependencies": {
@@ -85,8 +87,6 @@
           "@babel/runtime": "^7.9.6"
         }
       }
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+    }
   }
 }
