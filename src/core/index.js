@@ -58,16 +58,22 @@ export { default as Piano } from './Piano'
 //Chart factory
 export { default as ChartFactory } from './Charts'
 
+//CustomDialog
 export { default as CustomDialog } from './CustomDialog'
 
+//CustomLinearProgress
 export { default as CustomLinearProgress } from './CustomLinearProgress'
 
+//Typography
 export { default as Typography } from './Typography'
 
+//CheckInternetConnection
 export { default as CheckInternetConnection } from './CheckInternetConnection'
 
+//DialogDisplay
 export { default as DialogDisplay } from './DialogDisplay'
 
+//PasswordField
 export { default as PasswordField } from './PasswordField'
 
 //Toast
