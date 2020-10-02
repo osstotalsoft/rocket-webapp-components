@@ -8,7 +8,7 @@
 ### Why we need a single package of react components?
 
 We'd like to standardize all the components used throughout all our projects. Hence, gathering all them in a single package is the best approach of doing it.
-This standard would help us to keep the components well-organized and consistent. :sunglasses:
+This standard would help us to keep the components well-organized, neat and consistent. :sunglasses:
 
 ### The source code of the core
 
