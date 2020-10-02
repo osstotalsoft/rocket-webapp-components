@@ -19,8 +19,6 @@ always-auth=true
 
 > the always-auth=true is required when using Yarn. It is not required
 > for npm.
-
-**Prerequisites:** react, react-dom, react-router-dom and react-i18next
   
 ```bash  
 npm i @bit/totalsoft.react-mui.core
