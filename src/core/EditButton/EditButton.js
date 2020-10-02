@@ -16,7 +16,7 @@ EditButton.defaultProps = {
     editMode: true,
     color: "themeNoBackground",
     fontSize: "default",
-    size: "small"
+    size: "medium"
 };
 
 EditButton.propTypes = {

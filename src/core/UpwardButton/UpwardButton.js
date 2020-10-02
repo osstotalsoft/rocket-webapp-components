@@ -14,7 +14,7 @@ function UpwardButton({ title, onClick, disabled, fontSize, ...rest }) {
 UpwardButton.defaultProps = {
     color: "themeNoBackground",
     fontSize: "small",
-    size: "small"
+    size: "medium"
 };
 
 UpwardButton.propTypes = {

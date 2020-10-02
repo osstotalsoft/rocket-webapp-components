@@ -12,7 +12,7 @@ const SaveButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
 SaveButton.defaultProps = {
     color: "themeWithBackground",
     fontSize: "small",
-    size: "small"
+    size: "medium"
 };
 
 SaveButton.propTypes = {
