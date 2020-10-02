@@ -54,12 +54,6 @@
     "rimraf": "^3.0.0",
     "@material-ui/styles": "^4.10.0"
   },
-  "bugs": {
-    "url": ""
-  },
-  "directories": {
-    "example": "example"
-  },
   "sideEffects": false,
   "dependencies": {
     "i18next": "^17.3.1",
