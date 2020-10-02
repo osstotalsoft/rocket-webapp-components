@@ -33,7 +33,7 @@ function CustomIconButton({ tooltip, ...rest }) {
 
 CustomIconButton.defaultProps = {
   color: "defaultNoBackground",
-  size: "small"
+  size: "medium"
 }
 
 CustomIconButton.propTypes = {

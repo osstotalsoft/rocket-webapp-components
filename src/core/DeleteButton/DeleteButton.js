@@ -12,7 +12,7 @@ const DeleteButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
 DeleteButton.defaultProps = {
     color: "themeNoBackground",
     fontSize: "default",
-    size: "small"
+    size: "medium"
 };
 
 DeleteButton.propTypes = {

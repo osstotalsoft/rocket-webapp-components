@@ -21,7 +21,7 @@ function BackToButton({ title, path, fontSize, ...rest }) {
 BackToButton.defaultProps = {
     color: "themeWithBackground",
     fontSize: "small",
-    size: "small"
+    size: "medium"
 };
 
 BackToButton.propTypes = {
