@@ -10,7 +10,6 @@
     "bit-build": "bit -v && bit import && bit build"
   },
   "peerDependencies": {
-    "@babel/runtime": "^7.9.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flags": "^0.1.18",
@@ -48,7 +47,6 @@
   "sideEffects": false,
   "dependencies": {
     "react-router-dom": "^5.1.2",
-    "chart.js": "2.8.0",
     "i18next": "^17.3.1",
     "i18next-browser-languagedetector": "^3.1.1",
     "i18next-xhr-backend": "^3.2.2",
@@ -79,6 +77,14 @@
   "bit": {
     "env": {
       "compiler": "totalsoft.react-mui/compilers/react@1.0.21"
+    },
+    "overrides": {
+      "*": {
+        "dependencies": {
+          "chart.js": "2.8.0",
+          "@babel/runtime": "^7.9.6"
+        }
+      }
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
