@@ -6,7 +6,7 @@
 > We'd like to introduce you to this standardized collection of Material-UI component wrappers that will help you create neat and friendly web ineterfaces. This great library stores all the components in a well-organized, neat and consistent manner. :sunglasses:
 
 ## Installation
-Bit components are stored on the bit registry located in https://node.bit.dev.
+Bit components are stored on the bit registry located in https://bit.dev/totalsoft/react-mui.
 When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
 
 First add a new `.npmrc` file in your project, if not exists, containing the following:
