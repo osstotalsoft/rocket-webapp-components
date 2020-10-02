@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { ToastContainer as Container, Slide } from 'react-toastify';
 import toastStyle from './toastStyle';
 import { makeStyles } from "@material-ui/core";
+import 'react-toastify/dist/ReactToastify.css';
 
 const useStyles = makeStyles(toastStyle);
 
