@@ -10,6 +10,7 @@
     "bit-build": "bit -v && bit import && bit build"
   },
   "peerDependencies": {
+    "@babel/runtime": "^7.9.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flags": "^0.1.18",
@@ -46,7 +47,6 @@
   },
   "sideEffects": false,
   "dependencies": {
-    "@babel/runtime": "^7.9.6",
     "react-router-dom": "^5.1.2",
     "chart.js": "2.8.0",
     "i18next": "^17.3.1",
