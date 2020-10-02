@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 import { makeStyles } from "@material-ui/core";
-import toastStyle from "./toastStyle";
+import { toastStyle } from "./toastStyle";
 import cx from "classnames";
 
 const useStyles = makeStyles(toastStyle);
