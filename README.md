@@ -68,11 +68,6 @@ I've noticed that these components are placed in each of our projects with their
 It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
 
 ### Installation of core
-> First off, you must have installed the following dependencies: react, react-dom, react-router-dom and react-i18next
-  
-```bash  
-npm i @bit/totalsoft.react-mui.core
-```  
 Bit components are stored on the bit registry located in https://node.bit.dev.
 When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
 
@@ -87,6 +82,12 @@ always-auth=true
 > the always-auth=true is required when using Yarn. It is not required
 > for npm.
 
+> you must have installed the following dependencies: react, react-dom, react-router-dom and react-i18next
+  
+```bash  
+npm i @bit/totalsoft.react-mui.core
+```  
+
 Listen to this video to see how to install the core and some info about BIT_TOKEN: [Instalation and what is BIT_TOKEN](https://1drv.ms/v/s!AjNJY058hJ8vgRNx60Iq0ZJh0CR3?e=ak6waj).
 
 
@@ -95,6 +96,6 @@ Listen to this video to see how to install the core and some info about BIT_TOKE
 #### The best approach of working with the core of components
 Bit platform comes with a performant CLI with which you can import, tag, and export components. (Of course, there are a lot of commands but for the sake of our purpose those three are enough). To work with components you are not supposed to have prior experience with Bit because Azure DevOps do that for you. But how? To answer, by pipeline steps we set in which there are certain commands for exporting and tagging components. You just have to do some changes in your components and set up a pull request. Afterward, the pipeline will carry your changes on Bit.
 
-Please, take a look at this video for further understanding of these steps: [Working with Azure](https://1drv.ms/v/s!AjNJY058hJ8vgQxSSlwhIOascHxY?e=jlGgYd)
+Please, take a look at this video for further understanding of these steps: [Working with Azure](https://1drv.ms/v/s!AjNJY058hJ8vgRSKSG8XfBMoXbU8?e=3VFY19)
 
   
