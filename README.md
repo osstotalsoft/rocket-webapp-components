@@ -69,7 +69,10 @@ It's ok for code to be also on Github due to the traceability of the code as in 
 
 ### Installation of core
 > First off, you must have installed the following dependencies: chart.js(npm i chart.js) and @babel/runtime(npm i @babel/runtime )
-
+  
+```bash  
+npm i @bit/totalsoft.react-mui.core
+```  
 Bit components are stored on the bit registry located in https://node.bit.dev.
 When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
 
