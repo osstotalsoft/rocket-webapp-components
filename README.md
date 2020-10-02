@@ -68,7 +68,7 @@ I've noticed that these components are placed in each of our projects with their
 It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
 
 ### Installation of core
-> First off, you must have installed the following dependencies: chart.js(npm i chart.js) and @babel/runtime(npm i @babel/runtime )
+> First off, you must have installed the following dependencies: react, react-dom, react-router-dom and react-i18next
   
 ```bash  
 npm i @bit/totalsoft.react-mui.core
