@@ -2,7 +2,52 @@
 
 ![Core](src/assets/img/Items.png)
 
-##  Bit in a nutshell
+
+## The core of components
+
+### Why we need a single package of react components?
+
+I've noticed that these components are placed in each of our projects with their logic even though their purpose is supposed to be the same regardless of the project. Besides, a lot of components are quite different depending upon the project, although the name is the same and I guess this is a sort of problem :confused: . By using this package those flaws won't be a problem anymore because you have versions and descriptions, it means every time you want to modify a component you must bump up the version and when is the case, add a simple description saying if the component has some specific logic for a specific project. Those things keep the components well-organized and consistent. :sunglasses:
+
+### The source code of the core
+
+> :+1: hit the star button if you want to :blush:
+
+It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
+
+### Installation of core
+Bit components are stored on the bit registry located in https://node.bit.dev.
+When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
+
+You can add a  `.npmrc`  in your project with the following:
+
+```shell
+@bit:registry=https://node.bit.dev
+//node.bit.dev/:_authToken=${BIT_TOKEN}
+always-auth=true
+```
+
+> the always-auth=true is required when using Yarn. It is not required
+> for npm.
+
+> you must have installed the following dependencies: react, react-dom, react-router-dom and react-i18next
+  
+```bash  
+npm i @bit/totalsoft.react-mui.core
+```  
+
+Listen to this video to see how to install the core and some info about BIT_TOKEN: [Instalation and what is BIT_TOKEN](https://1drv.ms/v/s!AjNJY058hJ8vgRNx60Iq0ZJh0CR3?e=ak6waj).
+
+
+### Leverage Bit CLI by using Azure DevOps
+
+#### The best approach of working with the core of components
+Bit platform comes with a performant CLI with which you can import, tag, and export components. (Of course, there are a lot of commands but for the sake of our purpose those three are enough). To work with components you are not supposed to have prior experience with Bit because Azure DevOps do that for you. But how? To answer, by pipeline steps we set in which there are certain commands for exporting and tagging components. You just have to do some changes in your components and set up a pull request. Afterward, the pipeline will carry your changes on Bit.
+
+Please, take a look at this video for further understanding of these steps: [Working with Azure Pipeline](https://1drv.ms/v/s!AjNJY058hJ8vgRSKSG8XfBMoXbU8?e=3VFY19)
+
+  
+ ##  Bit in a nutshell
 
 Bit is an open-source CLI tool for collaborating on isolated components across projects and repositories.
 
@@ -53,49 +98,5 @@ You should check out the following link https://bit.dev/totalsoft/react-mui/core
 
 Please, listen to this video to better comprehend all of the aforementioned sayings:
 
-[First Introduction](https://1drv.ms/v/s!AjNJY058hJ8vgRKCFjagQvoBKuXO?e=AWkXMv)
+[Bit info](https://1drv.ms/v/s!AjNJY058hJ8vgRKCFjagQvoBKuXO?e=AWkXMv)
 
-## The core of components
-
-### Why we need a single package of react components?
-
-I've noticed that these components are placed in each of our projects with their logic even though their purpose is supposed to be the same regardless of the project. Besides, a lot of components are quite different depending upon the project, although the name is the same and I guess this is a sort of problem :confused: . By using this package those flaws won't be a problem anymore because you have versions and descriptions, it means every time you want to modify a component you must bump up the version and when is the case, add a simple description saying if the component has some specific logic for a specific project. Those things keep the components well-organized and consistent. :sunglasses:
-
-### The source code of the core
-
-> :+1: hit the star button if you want to :blush:
-
-It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
-
-### Installation of core
-Bit components are stored on the bit registry located in https://node.bit.dev.
-When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
-
-You can add a  `.npmrc`  in your project with the following:
-
-```shell
-@bit:registry=https://node.bit.dev
-//node.bit.dev/:_authToken=${BIT_TOKEN}
-always-auth=true
-```
-
-> the always-auth=true is required when using Yarn. It is not required
-> for npm.
-
-> you must have installed the following dependencies: react, react-dom, react-router-dom and react-i18next
-  
-```bash  
-npm i @bit/totalsoft.react-mui.core
-```  
-
-Listen to this video to see how to install the core and some info about BIT_TOKEN: [Instalation and what is BIT_TOKEN](https://1drv.ms/v/s!AjNJY058hJ8vgRNx60Iq0ZJh0CR3?e=ak6waj).
-
-
-### Leverage Bit CLI by using Azure DevOps
-
-#### The best approach of working with the core of components
-Bit platform comes with a performant CLI with which you can import, tag, and export components. (Of course, there are a lot of commands but for the sake of our purpose those three are enough). To work with components you are not supposed to have prior experience with Bit because Azure DevOps do that for you. But how? To answer, by pipeline steps we set in which there are certain commands for exporting and tagging components. You just have to do some changes in your components and set up a pull request. Afterward, the pipeline will carry your changes on Bit.
-
-Please, take a look at this video for further understanding of these steps: [Working with Azure](https://1drv.ms/v/s!AjNJY058hJ8vgRSKSG8XfBMoXbU8?e=3VFY19)
-
-  
