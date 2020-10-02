@@ -68,7 +68,7 @@ I've noticed that these components are placed in each of our projects with their
 It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
 
 ### Installation of core
-> we assume you have pre-installed chart.js(npm i chart.js) and @babel/runtime
+> First off, you must have installed the following dependencies: chart.js(npm i chart.js) and @babel/runtime(npm i @babel/runtime )
 
 Bit components are stored on the bit registry located in https://node.bit.dev.
 When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
