@@ -7,7 +7,8 @@
 
 ### Why we need a single package of react components?
 
-I've noticed that these components are placed in each of our projects with their logic even though their purpose is supposed to be the same regardless of the project. Besides, a lot of components are quite different depending upon the project, although the name is the same and I guess this is a sort of problem :confused: . By using this package those flaws won't be a problem anymore because you have versions and descriptions, it means every time you want to modify a component you must bump up the version and when is the case, add a simple description saying if the component has some specific logic for a specific project. Those things keep the components well-organized and consistent. :sunglasses:
+We'd like to standardize all the components used throughout all our projects. Hence, gathering all them in a single package is the best approach of doing it.
+This standard would help us to keep the components well-organized and consistent. :sunglasses:
 
 ### The source code of the core
 
@@ -96,7 +97,5 @@ You should check out the following link https://bit.dev/totalsoft/react-mui/core
 - the dependencies
 - the output of the build
 
-Please, listen to this video to better comprehend all of the aforementioned sayings:
-
-[Bit info](https://1drv.ms/v/s!AjNJY058hJ8vgRKCFjagQvoBKuXO?e=AWkXMv)
+Please, listen to this video to better comprehend all of the aforementioned sayings: [Bit info](https://1drv.ms/v/s!AjNJY058hJ8vgRKCFjagQvoBKuXO?e=AWkXMv)
 
