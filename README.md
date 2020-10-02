@@ -63,7 +63,7 @@ I've noticed that these components are placed in each of our projects with their
 
 ### The source code of the core
 
-:+1: hit the star button if you want to :blush:
+> :+1: hit the star button if you want to :blush:
 
 It's ok for code to be also on Github due to the traceability of the code as in the other projects even tough the code also appears on the Bit platform.
 
