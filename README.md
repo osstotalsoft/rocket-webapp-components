@@ -3,7 +3,16 @@
 ![Core](src/assets/img/Items.png)
 
 
-> We'd like to introduce you to this standardized collection of Material-UI component wrappers that will help you create neat and friendly web interfaces. This great library stores all the components in a well-organized, neat and consistent manner. :sunglasses:
+An open source and community driven project to provide a consistent user interface across web applications. 
+Ensuring a consistent look and feel, while harmonizing multiple products and applications, is a demanding and expensive task.
+Therefore, our set of libraries cover cover the most common UI components (Material-UI component wrappers), patterns and layouts. 
+It offers a design system and component library that allows teams the flexibility to quickly implement consistent UX, without needing to change the frontend framework or library. :sunglasses:
+
+Key features:
+- modularity: revolves around self-contained components, while encapsulating theme styles and behaviors
+- flexibility: designed around theming capabilities, combines basic blocks to create complex components
+- collaborative: contributors are welcomed, the bigger the community, the faster the releases cycles will be
+
 
 ## Installation
 Bit components are stored on the bit registry located in https://bit.dev/totalsoft/react-mui.
