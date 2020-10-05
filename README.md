@@ -3,9 +3,9 @@
 ![Core](src/assets/img/rocket-components-small.png)
 
 
-An open source and community driven project to provide a consistent user interface across web applications. 
+An open-source and community-driven project to provide a consistent user interface across web applications. 
 Ensuring a consistent look and feel, while harmonizing multiple products and applications, is a demanding and expensive task.
-Therefore, our set of libraries cover cover the most common UI components (Material-UI component wrappers), patterns and layouts. 
+Therefore, our set of libraries cover the most common UI components (Material-UI component wrappers), patterns and layouts. 
 It offers a design system and component library that allows teams the flexibility to quickly implement consistent UX, without needing to change the frontend framework or library. :sunglasses:
 
 Key features:
