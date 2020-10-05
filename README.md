@@ -3,7 +3,7 @@
 ![Core](src/assets/img/Items.png)
 
 
-> We'd like to introduce you to this standardized collection of Material-UI component wrappers that will help you create neat and friendly web ineterfaces. This great library stores all the components in a well-organized, neat and consistent manner. :sunglasses:
+> We'd like to introduce you to this standardized collection of Material-UI component wrappers that will help you create neat and friendly web interfaces. This great library stores all the components in a well-organized, neat and consistent manner. :sunglasses:
 
 ## Installation
 Bit components are stored on the bit registry located in https://bit.dev/totalsoft/react-mui.
