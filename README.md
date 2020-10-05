@@ -1,6 +1,6 @@
 # :boom: rocket-webapp-components
 
-![Core](src/assets/img/Items.png)
+![Core](src/assets/img/rocket-components-logo-small.png)
 
 
 An open source and community driven project to provide a consistent user interface across web applications. 
