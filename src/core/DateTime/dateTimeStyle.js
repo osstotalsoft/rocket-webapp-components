@@ -1,4 +1,4 @@
-import styles from '@bit/totalsoft.react-mui.utils.styles';
+import styles from '@bit/totalsoft_components.react-mui.styles';
 
 const dateTimeStyles = (theme) => {
   const { blackColor, blueColor, defaultFont } = styles(theme);
