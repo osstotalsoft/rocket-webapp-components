@@ -2,14 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { makeStyles, Grid, Dialog, DialogTitle, DialogContent, DialogContentText, useMediaQuery, useTheme } from "@material-ui/core";
 import Button from '../Button';
-import { useTranslation } from "react-i18next";
 import customDialogStyle from './customDialogStyle';
 
 const useStyles = makeStyles(customDialogStyle);
 
 const CustomDialog = (props) => {
-    const { id, open, title, content, textContent, onYes, onClose, buttonColor, buttonSize, showActions, fullWidth, maxWidth } = props;
-    const { t } = useTranslation();
+    const { id, open, title, content, textContent, onYes, onClose, buttonColor, buttonSize, showActions, fullWidth, maxWidth, textDialogYes, textDialogNo } = props;
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const classes = useStyles();
@@ -41,8 +39,8 @@ const CustomDialog = (props) => {
             </Grid>
             <Grid item container justify="flex-end" alignItems="center" lg={12}>
                 {showActions && <>
-                    <Button right size={buttonSize} color={buttonColor} onClick={onYes}>{t("Dialog.Yes")}</Button>
-                    <Button right size={buttonSize} color={buttonColor} onClick={onClose}>{t("Dialog.No")}</Button>
+                    <Button right size={buttonSize} color={buttonColor} onClick={onYes}>{textDialogYes}}</Button>
+                    <Button right size={buttonSize} color={buttonColor} onClick={onClose}>{textDialogNo}</Button>
                 </>
                 }
             </Grid>
@@ -55,7 +53,9 @@ CustomDialog.defaultProps = {
     buttonSize: "sm",
     showActions: false,
     maxWidth: "md",
-    fullWidth: true
+    fullWidth: true,
+    textDialogYes: "Yes",
+    textDialogNo: "No"
 }
 
 CustomDialog.propTypes = {
@@ -90,7 +90,9 @@ CustomDialog.propTypes = {
     onClose: PropTypes.func,
     showActions: PropTypes.bool,
     maxWidth: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl', false]),
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    textDialogYes: PropTypes.string,
+    textDialogNo: PropTypes.string
 }
 
 export default CustomDialog

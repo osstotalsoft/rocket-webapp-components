@@ -45,6 +45,7 @@ Please, take a look at this video for further understanding of these steps: [Wor
 
   
  ##  Bit in a nutshell
+![BitWorkflow](src/assets/img/BitWorkflow.png)
 
 Bit is an open-source CLI tool for collaborating on isolated components across projects and repositories.
 

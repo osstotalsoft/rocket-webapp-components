@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from "react";
 import PropTypes from "prop-types";
-import { useTranslation } from "react-i18next"
 
 import { KeyboardDateTimePicker } from "@material-ui/pickers";
 import { makeStyles, IconButton } from "@material-ui/core";
@@ -25,9 +24,9 @@ TooltipArea.propTypes = {
     children: PropTypes.element
 }
 
-function DateTime({ value, onChange, dateFormat, timeFormat, showTime, clearable, disabled, error, helperText, ...res }) {
+function DateTime({ value, onChange, dateFormat, timeFormat,
+    showTime, clearable, disabled, error, helperText, invalidDateMessage, minDateMessage, maxDateMessage, language, ...res }) {
     const classes = useStyles();
-    const { t, i18n } = useTranslation();
     const [open, setOpen] = useState(false);
     const format = showTime ? `${dateFormat} ${timeFormat}` : dateFormat
 
@@ -48,6 +47,7 @@ function DateTime({ value, onChange, dateFormat, timeFormat, showTime, clearable
                         onClick={handleClear}
                         className={classes.dateTimeIconButtons}
                     >
+
                         <Clear fontSize="small" />
                     </IconButton>
                     <IconButton
@@ -79,7 +79,7 @@ function DateTime({ value, onChange, dateFormat, timeFormat, showTime, clearable
     const pickerProps = clearable && value ? clearablePickerProps : simplePickerProps
 
     return (
-        <MuiPickersUtilsProvider libInstance={moment} utils={MomentUtils} locale={i18n.language}>
+        <MuiPickersUtilsProvider libInstance={moment} utils={MomentUtils} locale={language}>
             <KeyboardDateTimePicker
                 {...pickerProps}
                 fullWidth
@@ -88,9 +88,9 @@ function DateTime({ value, onChange, dateFormat, timeFormat, showTime, clearable
                 value={value}
                 onChange={handleChange}
                 format={format}
-                invalidDateMessage={t("DateTime.InvalidDateMessage")}
-                minDateMessage={t("DateTime.MinDateMessage")}
-                maxDateMessage={t("DateTime.MaxDateMessage")}
+                invalidDateMessage={invalidDateMessage}
+                minDateMessage={minDateMessage}
+                maxDateMessage={maxDateMessage}
                 className={classes.defaultFont}
                 InputProps={{
                     disabled,
@@ -118,7 +118,10 @@ DateTime.defaultProps = {
     disableToolbar: true,
     autoOk: true,
     disabled: false,
-    ampm: false
+    ampm: false,
+    InvalidDateMessage: "Invalid Date Format",
+    MinDateMessage: "Date should not be before minimal date",
+    MaxDateMessage: "Date should not be after maximal date"
 }
 
 DateTime.propTypes = {
@@ -139,7 +142,12 @@ DateTime.propTypes = {
     showTime: PropTypes.bool,
     error: PropTypes.bool,
     helperText: PropTypes.string,
-    clearable: PropTypes.bool
+    clearable: PropTypes.bool,
+    InvalidDateMessage: PropTypes.string,
+    maxDateMessage: PropTypes.string,
+    minDateMessage: PropTypes.string,
+    /** The current language, preferably get it from the i18next (i18.language)  */
+    language: PropTypes.string
 }
 
 export default DateTime;
