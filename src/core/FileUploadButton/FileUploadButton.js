@@ -1,16 +1,15 @@
 import React, { useCallback } from "react";
 import PropTypes from "prop-types";
-import { useTranslation } from 'react-i18next';
 import accepts from 'attr-accept'
 import { useToast } from '../Toast';
 import UploadButton from '../UploadButton';
 
-
-function FileUploadButton({ component, children, onFileSelected, uploading, disabled, accept, maxSize, minSize, ...rest }) {
-  const { t } = useTranslation();
+function FileUploadButton({ component, children, onFileSelected,
+  uploading, disabled, accept, maxSize, minSize, uploadText, uploadingText,
+  invalidTypeText, tooLargeText, tooSmallText, ...rest }) {
   const addToast = useToast();
   const Component = component || UploadButton
-  const defaultTitle = !component && uploading ? t("General.Uploading") : t("General.Upload")
+  const defaultTitle = !component && uploading ? uploadingText : uploadText
 
 
   const onInputFileSelected = useCallback(({ target }) => {
@@ -22,17 +21,17 @@ function FileUploadButton({ component, children, onFileSelected, uploading, disa
     }
 
     if (accept && !accepts(file, accept)) {
-      addToast(t('File.InvalidType', { accept }), 'error')
+      addToast(invalidTypeText, 'error')
       return;
     }
 
     if (maxSize && file.size > maxSize) {
-      addToast(t('File.TooLarge', { maxSize: (maxSize / 1024) > 1024 ? (maxSize / (1024 * 1024)).toFixed(2) + "MB" : (maxSize / 1024) + "KB" }), 'error');
+      addToast(tooLargeText, 'error');
       return;
     }
 
     if (minSize && file.size < minSize) {
-      addToast(t('File.TooSmall', { minSize: (minSize / 1024) > 1024 ? (minSize / (1024 * 1024)).toFixed(2) + "MB" : (minSize / 1024) + "KB" }), 'error');
+      addToast(tooSmallText, 'error');
       return;
     }
 
@@ -60,6 +59,14 @@ function FileUploadButton({ component, children, onFileSelected, uploading, disa
   );
 }
 
+FileUploadButton.defaultProps = {
+  uploadingText: "Uploading",
+  uploadText: "Upload",
+  invalidTypeText: "Invalid file type. Please upload type {{accept}}",
+  tooLargeText: "Maximum allowed size of {{maxSize}} exceeded.",
+  tooSmallText: "Minimum allowed size of upload is {{minSize}}."
+}
+
 FileUploadButton.propTypes = {
   component: PropTypes.object,
   children: PropTypes.node,
@@ -68,7 +75,15 @@ FileUploadButton.propTypes = {
   disabled: PropTypes.bool,
   accept: PropTypes.string,
   minSize: PropTypes.number,
-  maxSize: PropTypes.number
+  maxSize: PropTypes.number,
+  uploadingText: PropTypes.string,
+  uploadText: PropTypes.string,
+  /**Only the {{accept}} type is accepted  */
+  invalidTypeText: PropTypes.string,
+  /**{ maxSize: (maxSize / 1024) > 1024 ? (maxSize / (1024 * 1024)).toFixed(2) + "MB" : (maxSize / 1024) + "KB" }  */
+  tooLargeText: PropTypes.string,
+  /** { minSize: (minSize / 1024) > 1024 ? (minSize / (1024 * 1024)).toFixed(2) + "MB" : (minSize / 1024) + "KB" }  */
+  tooSmallText: PropTypes.string
 };
 
 export default FileUploadButton;

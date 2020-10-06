@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { TablePagination, makeStyles } from '@material-ui/core';
-import { useTranslation } from 'react-i18next';
 import paginationStyle from './paginationStyle';
 import TablePaginationActions from './PaginationActions';
 import RefreshIcon from "@material-ui/icons/Refresh";
@@ -9,12 +8,12 @@ import IconButton from '../IconButton';
 
 const useStyles = makeStyles(paginationStyle);
 
-export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOptions, onRefresh, onChangePage, onChangeRowsPerPage }) => {
-  const { t } = useTranslation();
+export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOptions, onRefresh,
+  onChangePage, onChangeRowsPerPage, rowsPerPageText, rowsOfText }) => {
   const classes = useStyles();
 
   const displayedRows = useCallback(({ from, to, count }) => {
-    return `${from}-${to} ${t('RowsOf')} ${count}`;
+    return `${from}-${to} ${rowsOfText} ${count}`;
   }, [t])
 
   const internalChangePage = useCallback((_event, newPage, direction) => {
@@ -38,7 +37,7 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
           page={page}
           onChangePage={internalChangePage}
           onChangeRowsPerPage={internalChangePageSize}
-          labelRowsPerPage={t('RowsPerPage')}
+          labelRowsPerPage={rowsPerPageText}
           labelDisplayedRows={displayedRows}
           SelectProps={{
             inputProps: { 'aria-label': 'Rows per page' },
@@ -57,7 +56,9 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
 }
 
 Pagination.defaultProps = {
-  onRefresh: () => { }
+  onRefresh: () => { },
+  rowsOfText: "of",
+  rowsPerPageText: "Rows per page",
 }
 
 Pagination.propTypes = {
@@ -68,7 +69,9 @@ Pagination.propTypes = {
   onChangePage: PropTypes.func,
   onRefresh: PropTypes.func.isRequired,
   loading: PropTypes.bool,
-  rowsPerPageOptions: PropTypes.array
+  rowsPerPageOptions: PropTypes.array,
+  rowsOfText: PropTypes.string,
+  rowsPerPageText: PropTypes.string
 };
 
 export default Pagination;

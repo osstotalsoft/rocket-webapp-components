@@ -3,12 +3,11 @@ import CustomTextField from "../CustomTextField";
 import { InputAdornment, IconButton } from "@material-ui/core"
 import { Visibility, VisibilityOff } from "@material-ui/icons"
 import Tooltip from '@material-ui/core/Tooltip';
-import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
-const PasswordField = ({ ...rest }) => {
-    const { t } = useTranslation();
+const PasswordField = ({ showPasswordText, hidePasswordText, ...rest }) => {
     const [showPassword, setShowPassword] = useState(false);
-    const tooltip = showPassword ? t('Tooltips.HidePassword') : t('Tooltips.ShowPassword')
+    const tooltip = showPassword ? hidePasswordText : showPasswordText
 
     const handleClickShowPassword = useCallback(_ => {
         setShowPassword(x => !x)
@@ -40,5 +39,15 @@ const PasswordField = ({ ...rest }) => {
         />
     )
 }
+
+PasswordField.defaultProps = {
+    hidePasswordText: "Hide password",
+    showPasswordText: "Show password text"
+}
+
+PasswordField.propTypes = {
+    hidePasswordText: PropTypes.string,
+    showPasswordText: PropTypes.string
+};
 
 export default PasswordField
