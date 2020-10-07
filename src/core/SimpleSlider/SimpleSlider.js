@@ -7,6 +7,7 @@ import Slider from '@material-ui/core/Slider';
 import debounce from 'lodash.debounce';
 import simpleSliderStyle from "./simpleSliderStyle";
 
+
 const useStyles = makeStyles(simpleSliderStyle);
 
 const SimpleSlider = ({ label, fullWidth, value, min, max, step, onChange, error, helperText, required, decimalScale, disabled, showSliderLimits }) => {

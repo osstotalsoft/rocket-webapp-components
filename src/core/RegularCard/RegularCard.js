@@ -11,6 +11,7 @@ import { makeStyles } from '@material-ui/core';
 import regularCardStyle from "./regularCardStyle";
 const useStyles = makeStyles(regularCardStyle);
 
+
 const RegularCard = ({ plainCard, cardTitle, cardSubtitle, content, titleAlign, customCardClasses, contentAlign, subtitleAlign, customCardTitleClasses }) => {
   const classes = useStyles();
 
