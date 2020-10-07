@@ -26,6 +26,8 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
 
   const actualRowsPerPage = rowsPerPageOptions ? rowsPerPageOptions : [10, 25, 50, 100];
 
+  const handleRefresh = useCallback(() => onRefresh(), [onRefresh])
+
   return !loading && (
     <div>
       <div className={classes.floatRight}>
@@ -47,7 +49,7 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
         />
       </div>
       <div className={classes.refreshButton}>
-        <IconButton onClick={onRefresh} color="defaultNoBackground">
+        <IconButton onClick={handleRefresh} color="defaultNoBackground">
           <RefreshIcon />
         </IconButton >
       </div>
