@@ -1,6 +1,6 @@
 import { emphasize } from '@material-ui/core/styles/colorManipulator';
-import styles from '@bit/totalsoft_components.react-mui.styles';
-import { theme as DefaultTheme } from '@bit/totalsoft_components.react-mui.themes.default-theme';
+import styles from '@bit/totalsoft_oss.react-mui.styles';
+import { theme as DefaultTheme } from '@bit/totalsoft_oss.react-mui.themes.default-theme';
 
 const autocompleteStyle = theme => {
   const { dangerColor, successColor, defaultFont } = styles(theme);
