@@ -1,6 +1,6 @@
 # :boom: rocket-webapp-components
 
-![Core](src/core_components/assets/img/rocket-components-small.png)
+![Core](core_components/src/assets/img/rocket-components-small.png)
 
 
 An open-source and community-driven project to provide a consistent user interface across web applications. 
@@ -45,7 +45,7 @@ Please, take a look at this video for further understanding of these steps: [Wor
 
   
  ##  Bit in a nutshell
-![BitWorkflow](src/core_components/assets/img/BitWorkflow.png)
+![BitWorkflow](core_components/src/assets/img/BitWorkflow.png)
 
 Bit is an open-source CLI tool for collaborating on isolated components across projects and repositories.
 
