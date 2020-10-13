@@ -1,2 +1,2 @@
-import DownwardButton from "../../core/DownwardButton";
+import DownwardButton from "./DownwardButton";
 export default DownwardButton;

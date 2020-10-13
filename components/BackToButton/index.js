@@ -1,2 +1,2 @@
-import BackToButton from "../../core/BackToButton";
+import BackToButton from "./BackToButton";
 export default BackToButton;

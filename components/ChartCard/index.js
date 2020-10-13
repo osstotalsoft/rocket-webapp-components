@@ -1,2 +1,2 @@
-import ChartCard from "../../core/ChartCard";
+import ChartCard from "./ChartCard";
 export default ChartCard;

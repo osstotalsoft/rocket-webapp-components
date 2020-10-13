@@ -1,2 +1,3 @@
-import { useToast, ToastContainer } from "../../core/Toast";
+import { useToast } from "./Toast";
+import ToastContainer from "./ToastContainer";
 export { useToast, ToastContainer };

@@ -1,2 +1,2 @@
-import IconButton from "../../core/IconButton";
+import IconButton from "./IconButton";
 export default IconButton;

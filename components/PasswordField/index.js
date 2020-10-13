@@ -1,2 +1,2 @@
-import PasswordField from "../../core/PasswordField";
+import PasswordField from "./PasswordField";
 export default PasswordField;

@@ -1,2 +1,2 @@
-import ImageCard from "../../core/ImageCard";
+import ImageCard from "./ImageCard";
 export default ImageCard;

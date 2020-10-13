@@ -1,2 +1,2 @@
-import IconCard from "../../core/IconCard";
+import IconCard from "./IconCard";
 export default IconCard;

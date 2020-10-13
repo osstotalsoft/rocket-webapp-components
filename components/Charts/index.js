@@ -1,2 +1,2 @@
-import ChartFactory from "../../core/Charts";
+import ChartFactory from "./ChartFactory";
 export default ChartFactory;

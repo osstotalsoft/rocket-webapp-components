@@ -1,2 +1,2 @@
-import UploadButton from "../../core/UploadButton";
+import UploadButton from "./UploadButton";
 export default UploadButton;

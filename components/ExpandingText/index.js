@@ -1,2 +1,2 @@
-import ExpandingText from "../../core/ExpandingText";
+import ExpandingText from "./ExpandingText";
 export default ExpandingText;

@@ -1,2 +1,2 @@
-import NavPills from "../../core/NavPills";
+import NavPills from "./NavPills";
 export default NavPills;

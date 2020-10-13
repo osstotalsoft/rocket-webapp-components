@@ -1,2 +1,2 @@
-import CustomTextField from "../../core/CustomTextField";
+import CustomTextField from "./CustomTextField";
 export default CustomTextField;

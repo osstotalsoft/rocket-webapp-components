@@ -1,2 +1,2 @@
-import SimpleSlider from "../../core/SimpleSlider";
+import SimpleSlider from "./SimpleSlider";
 export default SimpleSlider;

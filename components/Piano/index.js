@@ -1,2 +1,2 @@
-import Piano from "../../core/Piano";
+import Piano from "./Piano";
 export default Piano;

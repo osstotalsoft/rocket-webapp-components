@@ -1,2 +1,2 @@
-import LoadingFakeText from "../../core/FakeText";
+import LoadingFakeText from "./LoadingFakeText";
 export default LoadingFakeText;

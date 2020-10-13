@@ -1,2 +1,2 @@
-import CardTitle from "../../core/CardTitle";
+import CardTitle from "./CardTitle";
 export default CardTitle;

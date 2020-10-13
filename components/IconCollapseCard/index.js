@@ -1,2 +1,2 @@
-import IconCollapseCard from "../../core/IconCollapseCard";
+import IconCollapseCard from "./IconCollapseCard";
 export default IconCollapseCard;

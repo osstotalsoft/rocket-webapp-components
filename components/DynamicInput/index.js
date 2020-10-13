@@ -1,2 +1,2 @@
-import DynamicInput from "../../core/DynamicInput";
+import DynamicInput from "./DynamicInput";
 export default DynamicInput;

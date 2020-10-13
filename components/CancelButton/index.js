@@ -1,2 +1,2 @@
-import CancelButton from "../../core/CancelButton";
+import CancelButton from "./CancelButton";
 export default CancelButton;

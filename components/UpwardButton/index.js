@@ -1,2 +1,2 @@
-import UpwardButton from "../../core/UpwardButton";
+import UpwardButton from "./UpwardButton";
 export default UpwardButton;

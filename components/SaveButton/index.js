@@ -1,2 +1,2 @@
-import SaveButton from "../../core/SaveButton";
+import SaveButton from "./SaveButton";
 export default SaveButton;

@@ -1,2 +1,2 @@
-import CheckInternetConnection from "../../core/CheckInternetConnection";
+import CheckInternetConnection from "./CheckInternetConnection";
 export default CheckInternetConnection;

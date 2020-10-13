@@ -1,2 +1,2 @@
-import StatsCard from "../../core/StatsCard";
+import StatsCard from "./StatsCard";
 export default StatsCard;

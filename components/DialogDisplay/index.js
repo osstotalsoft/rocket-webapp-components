@@ -1,2 +1,2 @@
-import DialogDisplay from "../../core/DialogDisplay";
+import DialogDisplay from "./DialogDisplay";
 export default DialogDisplay;

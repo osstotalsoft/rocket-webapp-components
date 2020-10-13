@@ -1,2 +1,2 @@
-import DeleteButton from "../../core/DeleteButton";
+import DeleteButton from "./DeleteButton";
 export default DeleteButton;

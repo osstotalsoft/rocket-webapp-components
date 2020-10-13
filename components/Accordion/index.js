@@ -1,2 +1,2 @@
-import Accordion from "../../core/Accordion";
+import Accordion from "./Accordion";
 export default Accordion;

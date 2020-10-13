@@ -1,2 +1,2 @@
-import DownloadButton from "../../core/DownloadButton";
+import DownloadButton from "./DownloadButton";
 export default DownloadButton;

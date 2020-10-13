@@ -1,2 +1,2 @@
-import EditButton from "../../core/EditButton";
+import EditButton from "./EditButton";
 export default EditButton;

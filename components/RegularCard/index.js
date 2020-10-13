@@ -1,2 +1,2 @@
-import RegularCard from "../../core/RegularCard";
+import RegularCard from "./RegularCard";
 export default RegularCard;

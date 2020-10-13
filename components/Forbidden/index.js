@@ -1,2 +1,2 @@
-import Forbidden from "../../core/Forbidden";
+import Forbidden from "./Forbidden";
 export default Forbidden;

@@ -1,2 +1,2 @@
-import DateTime from "../../core/DateTime";
+import DateTime from "./DateTime";
 export default DateTime;

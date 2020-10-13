@@ -1,2 +1,2 @@
-import Button from "../../core/Button";
+import Button from "./Button";
 export default Button;

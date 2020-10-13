@@ -1,2 +1,2 @@
-import CustomLinearProgress from "../../core/CustomLinearProgress";
+import CustomLinearProgress from "./CustomLinearProgress";
 export default CustomLinearProgress;
