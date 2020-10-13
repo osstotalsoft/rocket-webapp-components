@@ -8,6 +8,7 @@ const ExpandingText = ({ text, minLength, showLessText, showMoreText }) => {
     const handleChange = _ => {
         setExpanded(!expanded);
     }
+    
 
     return (
         !expanded ?

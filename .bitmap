@@ -179,6 +179,34 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "totalsoft_oss.react-mui/expanding-text@0.0.3": {
+        "files": [
+            {
+                "relativePath": "components/ExpandingText/ExpandingText.d.ts",
+                "test": false,
+                "name": "ExpandingText.d.ts"
+            },
+            {
+                "relativePath": "components/ExpandingText/ExpandingText.js",
+                "test": false,
+                "name": "ExpandingText.js"
+            },
+            {
+                "relativePath": "components/ExpandingText/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
+                "relativePath": "components/ExpandingText/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "components/ExpandingText/index.js",
+        "trackDir": "components/ExpandingText",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "totalsoft_oss.react-mui/file-upload-button@0.0.3": {
         "files": [
             {
@@ -220,7 +248,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.1": {
+    "totalsoft_oss.react-mui/kit/core@0.0.2": {
         "files": [
             {
                 "relativePath": "core/index.js",
@@ -253,6 +281,34 @@
         ],
         "mainFile": "components/NotFound/index.js",
         "trackDir": "components/NotFound",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "totalsoft_oss.react-mui/pagination@0.0.4": {
+        "files": [
+            {
+                "relativePath": "components/pagination/Pagination.js",
+                "test": false,
+                "name": "Pagination.js"
+            },
+            {
+                "relativePath": "components/pagination/PaginationActions.js",
+                "test": false,
+                "name": "PaginationActions.js"
+            },
+            {
+                "relativePath": "components/pagination/index.js",
+                "test": false,
+                "name": "index.js"
+            },
+            {
+                "relativePath": "components/pagination/paginationStyle.js",
+                "test": false,
+                "name": "paginationStyle.js"
+            }
+        ],
+        "mainFile": "components/pagination/index.js",
+        "trackDir": "components/pagination",
         "origin": "AUTHORED",
         "exported": true
     },

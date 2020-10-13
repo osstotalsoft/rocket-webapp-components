@@ -9,12 +9,12 @@ import IconButton from '../IconButton';
 const useStyles = makeStyles(paginationStyle);
 
 export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOptions, onRefresh,
-  onChangePage, onChangeRowsPerPage, rowsPerPageText, rowsOfText }) => {
+  onChangePage, onChangeRowsPerPage, rowsPerPageText, rowsOfText, instanceOfTranslation }) => {
   const classes = useStyles();
 
   const displayedRows = useCallback(({ from, to, count }) => {
     return `${from}-${to} ${rowsOfText} ${count}`;
-  }, [t])
+  }, [instanceOfTranslation])
 
   const internalChangePage = useCallback((_event, newPage, direction) => {
     onChangePage(newPage, direction);
@@ -73,7 +73,8 @@ Pagination.propTypes = {
   loading: PropTypes.bool,
   rowsPerPageOptions: PropTypes.array,
   rowsOfText: PropTypes.string,
-  rowsPerPageText: PropTypes.string
+  rowsPerPageText: PropTypes.string,
+  instanceOfTranslation: PropTypes.func.isRequired
 };
 
 export default Pagination;
