@@ -93,14 +93,6 @@
       "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.24"
     },
     "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm",
-    "overrides": {
-      "*": {
-        "dependencies": {
-          "chart.js": "2.8.0",
-          "@babel/runtime": "^7.9.6"
-        }
-      }
-    }
+    "packageManager": "npm"
   }
 }
