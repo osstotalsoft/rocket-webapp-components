@@ -179,7 +179,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/expanding-text@0.0.3": {
+    "totalsoft_oss.react-mui/expanding-text@0.0.5": {
         "files": [
             {
                 "relativePath": "components/ExpandingText/ExpandingText.d.ts",
@@ -200,6 +200,11 @@
                 "relativePath": "components/ExpandingText/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/ExpandingText/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/ExpandingText/index.js",
@@ -248,7 +253,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.2": {
+    "totalsoft_oss.react-mui/kit/core@0.0.4": {
         "files": [
             {
                 "relativePath": "core/index.js",
