@@ -316,6 +316,11 @@
     "totalsoft_oss.react-mui/charts@0.0.5": {
         "files": [
             {
+                "relativePath": "components/Charts/ChartFactory.d.ts",
+                "test": false,
+                "name": "ChartFactory.d.ts"
+            },
+            {
                 "relativePath": "components/Charts/ChartFactory.js",
                 "test": false,
                 "name": "ChartFactory.js"
@@ -336,9 +341,19 @@
                 "name": "ChartMix.js"
             },
             {
+                "relativePath": "components/Charts/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/Charts/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/Charts/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/Charts/index.js",
