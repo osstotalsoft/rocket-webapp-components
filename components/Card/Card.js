@@ -22,7 +22,13 @@ export default function Card({ className, color, children, ...rest }) {
 }
 
 Card.propTypes = {
+  /**
+  * The className of card.
+  */
   className: PropTypes.string,
+  /**
+     * The color of card.
+     */
   color: PropTypes.oneOf([
     "primary",
     "info",
@@ -31,5 +37,8 @@ Card.propTypes = {
     "danger",
     "rose"
   ]),
+  /**
+  * The content of card.
+  */
   children: PropTypes.node
 };

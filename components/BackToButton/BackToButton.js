@@ -25,6 +25,13 @@ BackToButton.defaultProps = {
 };
 
 BackToButton.propTypes = {
+    /**
+  * The title of button.
+  */
+    title: PropTypes.string,
+    /**
+   * The color of button.
+   */
     color: PropTypes.oneOf([
         "primary",
         "info",
@@ -45,17 +52,25 @@ BackToButton.propTypes = {
         "dangerNoBackground",
         "roseNoBackground"
     ]),
+    /**
+      * The size of button.
+      */
     size: PropTypes.oneOf([
         "small",
         "medium"
     ]),
+    /**
+  * The fontSize of button's content.
+  */
     fontSize: PropTypes.oneOf([
         "inherit",
         "default",
         "small",
         "large"
     ]),
-    title: PropTypes.string,
+    /**
+  * The path where the browser will be directed to when the button is clicked.
+  */
     path: PropTypes.string
 }
 

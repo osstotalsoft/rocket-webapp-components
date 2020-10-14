@@ -25,5 +25,5 @@ export default function CardTitle({ title, actions }) {
 
 CardTitle.propTypes = {
   title: PropTypes.string,
-  actions: PropTypes.array
+  actions: PropTypes.arrayOf(PropTypes.node).isRequired
 };

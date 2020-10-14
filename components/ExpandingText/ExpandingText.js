@@ -8,7 +8,7 @@ const ExpandingText = ({ text, minLength, showLessText, showMoreText }) => {
     const handleChange = _ => {
         setExpanded(!expanded);
     }
-    
+
     return (
         !expanded ?
             <React.Fragment>
@@ -37,9 +37,21 @@ ExpandingText.defaultProps = {
 }
 
 ExpandingText.propTypes = {
+    /**
+    * The text content.
+    */
     text: PropTypes.string.isRequired,
+    /**
+    * The minimum length of the narrow text.
+    */
     minLength: PropTypes.number,
+    /**
+     * The content of the button when the text is narrow.
+     */
     showLessText: PropTypes.string.isRequired,
+    /**
+    *  The content of the button when the text is wide.
+    */
     showMoreText: PropTypes.string.isRequired
 };
 

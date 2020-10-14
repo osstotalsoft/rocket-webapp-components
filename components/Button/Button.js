@@ -6,7 +6,6 @@ import buttonStyle from "./buttonStyle";
 
 const useStyles = makeStyles(buttonStyle);
 
-
 // eslint-disable-next-line react/prop-types
 const ButtonBase = ({ color, round, children, fullWidth, disabled, customClass, right, justIcon, size, wd, ...rest }) => {
   const classes = useStyles();
@@ -39,6 +38,9 @@ function RegularButton({ tooltip, ...rest }) {
 }
 
 RegularButton.propTypes = {
+  /**
+   * The color of button.
+   */
   color: PropTypes.oneOf([
     "primary",
     "info",
@@ -60,18 +62,45 @@ RegularButton.propTypes = {
     "simple",
     "transparent"
   ]),
+  /**
+     * If true, rounded corners are enabled.
+     */
   round: PropTypes.bool,
+  /**
+  * 	The content of the component.
+  */
   children: PropTypes.node,
+  /**
+  * 	If true, the button will take up the full width of its container.
+  */
   fullWidth: PropTypes.bool,
+  /**
+    * If true, the button will be disabled.
+    */
   disabled: PropTypes.bool,
+  /**
+  * A custom class provided.
+  */
   customClass: PropTypes.string,
-  // make the button's min width to 160px
+  /**
+   * If true,  the button's min width will be set to 160px.
+   */
   wd: PropTypes.bool,
-  // make the button smaller
+  /**
+   * If true, the button will be smaller.
+   */
   justIcon: PropTypes.bool,
-  // button will float right
+  /**
+  * If true, the button will float to the right.
+  */
   right: PropTypes.bool,
+  /**
+  * The size of the button.
+  */
   size: PropTypes.oneOf(["sm", "lg", "xs"]),
+  /**
+   * The tooltip of the button.
+   */
   tooltip: PropTypes.string
 };
 

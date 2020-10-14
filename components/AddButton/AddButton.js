@@ -17,9 +17,21 @@ AddButton.defaultProps = {
 };
 
 AddButton.propTypes = {
+    /**
+   * The title of button.
+   */
     title: PropTypes.string,
+    /**
+    * Callback fired when a "click" event is detected.
+    */
     onClick: PropTypes.func,
+    /**
+   * If true, the button will be disabled.
+   */
     disabled: PropTypes.bool,
+    /**
+   * The color of button.
+   */
     color: PropTypes.oneOf([
         "primary",
         "info",
@@ -40,10 +52,16 @@ AddButton.propTypes = {
         "dangerNoBackground",
         "roseNoBackground"
     ]),
+    /**
+      * The size of button.
+      */
     size: PropTypes.oneOf([
         "small",
         "medium"
     ]),
+    /**
+  * The fontSize of button's content.
+  */
     fontSize: PropTypes.oneOf([
         "inherit",
         "default",

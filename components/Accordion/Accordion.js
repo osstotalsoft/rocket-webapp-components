@@ -9,16 +9,15 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 import accordionStyle from "./accordionStyle";
 const useStyles = makeStyles(accordionStyle);
 
-const Accordion = ({ collapses, active }) => {
+const Accordion = ({ content, active }) => {
 
     const [localSctive, setLocalActive] = useState(active)
-
     const handleChange = panel => (_, expanded) => setLocalActive(expanded ? panel : -1)
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
-            {collapses.map((prop, key) => {
+            {content.map((prop, key) => {
                 return (
                     <AccordionBase
                         expanded={localSctive === key}
@@ -51,14 +50,20 @@ const Accordion = ({ collapses, active }) => {
     );
 }
 
+
 Accordion.defaultProps = {
     active: -1
 };
 
 Accordion.propTypes = {
-    // index of the default active collapse
+    /**
+    * The index of the active child.
+    */
     active: PropTypes.number,
-    collapses: PropTypes.arrayOf(
+    /**
+    * The content of accordion.
+    */
+    content: PropTypes.arrayOf(
         PropTypes.shape({
             title: PropTypes.string,
             content: PropTypes.node
