@@ -80,7 +80,11 @@ export const ChartFactory = ({
 
 ChartFactory.propTypes = {
   options: PropTypes.object.isRequired,
-  type: PropTypes.string.isRequired,
+  type: fontSize: PropTypes.oneOf([
+    "Line",
+    "Bar",
+    "Mix"
+  ]).isRequired,
   labels: PropTypes.array,
   dataInfo: PropTypes.object.isRequired,
   displayDataLabels: PropTypes.bool.isRequired,

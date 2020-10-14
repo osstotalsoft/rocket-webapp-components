@@ -275,7 +275,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/chart-card@0.0.4": {
+    "totalsoft_oss.react-mui/chart-card@0.0.5": {
         "files": [
             {
                 "relativePath": "components/ChartCard/ChartCard.d.ts",
@@ -313,7 +313,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/charts@0.0.4": {
+    "totalsoft_oss.react-mui/charts@0.0.5": {
         "files": [
             {
                 "relativePath": "components/Charts/ChartFactory.js",
@@ -765,7 +765,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.19": {
+    "totalsoft_oss.react-mui/kit/core@0.0.20": {
         "files": [
             {
                 "relativePath": "core/index.js",
