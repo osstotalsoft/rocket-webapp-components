@@ -68,7 +68,7 @@ ChartLine.propTypes = {
   chartColor: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
-  StatIcon: PropTypes.object,
+  StatIcon: PropTypes.node,
   statText: PropTypes.string,
   hover: PropTypes.bool,
   displayDataLabels: PropTypes.bool,

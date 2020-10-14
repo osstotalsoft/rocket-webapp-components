@@ -93,10 +93,25 @@ ChartCard.defaultProps = {
 };
 
 ChartCard.propTypes = {
+  /**
+* The main content of chart.
+*/
   chart: PropTypes.object.isRequired,
-  title: PropTypes.node,
-  text: PropTypes.node,
-  StatIcon: PropTypes.func,
+  /**
+ * The actions(made of array of buttons) of card.
+ */
+  title: PropTypes.string,
+  /**
+ * The text content of chart.
+ */
+  text: PropTypes.string,
+  /**
+  * The icon of chart.
+  */
+  StatIcon: PropTypes.node,
+  /**
+* The icon's color of chart.
+*/
   statIconColor: PropTypes.oneOf([
     "warning",
     "primary",
@@ -106,6 +121,9 @@ ChartCard.propTypes = {
     "rose",
     "gray"
   ]),
+  /**
+* The color of chart.
+*/
   chartColor: PropTypes.oneOf([
     "orange",
     "green",
@@ -115,11 +133,21 @@ ChartCard.propTypes = {
     "rose",
     "white"
   ]),
-  statLink: PropTypes.object,
+  /**
+* The color of chart.
+*/
+  statLink: PropTypes.node,
+  /**
+* The text status of chart.
+*/
   statText: PropTypes.node,
-  // if the chart should move up on hover
+  /**
+* If true, the chart moves up on click hover.
+*/
   hover: PropTypes.bool,
-  // what to be displayed under the chart on hover
+  /**
+ * If provided, its content will appear just below the main content.
+ */
   underChart: PropTypes.node
 };
 

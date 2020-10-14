@@ -4,7 +4,6 @@ import { makeStyles, LinearProgress } from "@material-ui/core";
 import customLinearProgressStyle from "./customLinearProgressStyle";
 
 const useStyles = makeStyles(customLinearProgressStyle);
-
 export default function CustomLinearProgress(props) {
     const { color, variant, value, ...rest } = props;
     const classes = useStyles();

@@ -278,9 +278,9 @@
     "totalsoft_oss.react-mui/chart-card@0.0.4": {
         "files": [
             {
-                "relativePath": "components/ChartCard/CardTitle.d.ts",
+                "relativePath": "components/ChartCard/ChartCard.d.ts",
                 "test": false,
-                "name": "CardTitle.d.ts"
+                "name": "ChartCard.d.ts"
             },
             {
                 "relativePath": "components/ChartCard/ChartCard.js",
@@ -387,7 +387,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-linear-progress@0.0.3": {
+    "totalsoft_oss.react-mui/custom-linear-progress@0.0.4": {
         "files": [
             {
                 "relativePath": "components/CustomLinearProgress/CustomLinearProgress.js",
@@ -765,7 +765,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.18": {
+    "totalsoft_oss.react-mui/kit/core@0.0.19": {
         "files": [
             {
                 "relativePath": "core/index.js",
