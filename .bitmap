@@ -179,7 +179,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/expanding-text@0.0.5": {
+    "totalsoft_oss.react-mui/expanding-text@0.0.6": {
         "files": [
             {
                 "relativePath": "components/ExpandingText/ExpandingText.d.ts",
@@ -253,7 +253,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.4": {
+    "totalsoft_oss.react-mui/kit/core@0.0.5": {
         "files": [
             {
                 "relativePath": "core/index.js",

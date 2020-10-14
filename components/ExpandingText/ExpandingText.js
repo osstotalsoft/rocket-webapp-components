@@ -9,7 +9,6 @@ const ExpandingText = ({ text, minLength, showLessText, showMoreText }) => {
         setExpanded(!expanded);
     }
     
-
     return (
         !expanded ?
             <React.Fragment>
