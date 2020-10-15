@@ -30,7 +30,7 @@ always-auth=true
 > for npm.
   
 ```bash  
-npm i @bit/totalsoft.react-mui.core
+npm i @bit/totalsoft_oss.react-mui.kit.core
 ```  
 
 Check-out this video to see how to install this library and some info about BIT_TOKEN: [Instalation and what is BIT_TOKEN](https://1drv.ms/v/s!AjNJY058hJ8vgRNx60Iq0ZJh0CR3?e=ak6waj).
@@ -83,7 +83,7 @@ Check out https://docs.bit.dev/docs/quick-start for further information about Bi
 
 We have an account where we place all the components written in React gathered in a single package named _**core**_.
 
-You should check out the following link https://bit.dev/totalsoft/react-mui/core, where you can see a lot of helpful information about the package, such as:
+You should check out the following link https://bit.dev/totalsoft_oss/react-mui/kit/core, where you can see a lot of helpful information about the package, such as:
 
 - the current version(with all the old versions along)
 - the number of downloads
