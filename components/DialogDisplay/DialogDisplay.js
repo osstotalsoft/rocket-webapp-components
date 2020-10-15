@@ -9,7 +9,7 @@ const useStyles = makeStyles(dialogDisplayStyle);
 const DialogDisplay = (props) => {
     const { id, open, title, onClose, content, actions } = props
     const classes = useStyles()
-    
+
     return (
         <Dialog
             open={open}
@@ -33,12 +33,33 @@ const DialogDisplay = (props) => {
 }
 
 DialogDisplay.propTypes = {
+    /**
+* The id(s) of the element(s) that label the dialog.
+*/
     id: PropTypes.string.isRequired,
+    /**
+* If true, the dialog is open.
+* @default false
+*/
     open: PropTypes.bool,
+
     title: PropTypes.string,
+    /**
+    *Callback fired when the component requests to be closed.
+   * Signature:
+   * function(event: object, reason: string) => void
+   * event: The event source of the callback.
+   * reason: Can be: "escapeKeyDown", "backdropClick".
+    */
     onClose: PropTypes.func,
-    content: PropTypes.element,
-    actions: PropTypes.element
+    /**
+* The content of dialog.
+*/
+    content: PropTypes.node,
+    /**
+* The actions provided below the dialog.  
+*/
+    actions: PropTypes.node
 }
 
 export default DialogDisplay

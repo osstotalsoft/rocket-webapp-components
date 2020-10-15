@@ -379,8 +379,13 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-dialog@0.0.4": {
+    "totalsoft_oss.react-mui/custom-dialog@0.0.5": {
         "files": [
+            {
+                "relativePath": "components/CustomDialog/CustomDialog.d.ts",
+                "test": false,
+                "name": "CustomDialog.d.ts"
+            },
             {
                 "relativePath": "components/CustomDialog/CustomDialog.js",
                 "test": false,
@@ -392,9 +397,19 @@
                 "name": "customDialogStyle.js"
             },
             {
+                "relativePath": "components/CustomDialog/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/CustomDialog/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/CustomDialog/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/CustomDialog/index.js",
@@ -404,6 +419,11 @@
     },
     "totalsoft_oss.react-mui/custom-linear-progress@0.0.4": {
         "files": [
+            {
+                "relativePath": "components/CustomLinearProgress/CustomLinearProgress.d.ts",
+                "test": false,
+                "name": "CustomLinearProgress.d.ts"
+            },
             {
                 "relativePath": "components/CustomLinearProgress/CustomLinearProgress.js",
                 "test": false,
@@ -415,9 +435,19 @@
                 "name": "customLinearProgressStyle.js"
             },
             {
+                "relativePath": "components/CustomLinearProgress/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/CustomLinearProgress/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/CustomLinearProgress/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/CustomLinearProgress/index.js",
@@ -428,14 +458,29 @@
     "totalsoft_oss.react-mui/custom-text-field@0.0.3": {
         "files": [
             {
+                "relativePath": "components/CustomTextField/CustomTextField.d.ts",
+                "test": false,
+                "name": "CustomTextField.d.ts"
+            },
+            {
                 "relativePath": "components/CustomTextField/CustomTextField.js",
                 "test": false,
                 "name": "CustomTextField.js"
             },
             {
+                "relativePath": "components/CustomTextField/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/CustomTextField/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/CustomTextField/readme.md",
+                "test": false,
+                "name": "readme.md"
             },
             {
                 "relativePath": "components/CustomTextField/textFieldStyle.js",
@@ -451,6 +496,11 @@
     "totalsoft_oss.react-mui/date-time@0.0.3": {
         "files": [
             {
+                "relativePath": "components/DateTime/DateTime.d.ts",
+                "test": false,
+                "name": "DateTime.d.ts"
+            },
+            {
                 "relativePath": "components/DateTime/DateTime.js",
                 "test": false,
                 "name": "DateTime.js"
@@ -461,9 +511,19 @@
                 "name": "dateTimeStyle.js"
             },
             {
+                "relativePath": "components/DateTime/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/DateTime/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/DateTime/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/DateTime/index.js",
@@ -486,14 +546,29 @@
     "totalsoft_oss.react-mui/delete-button@0.0.3": {
         "files": [
             {
+                "relativePath": "components/DeleteButton/DeleteButton.d.ts",
+                "test": false,
+                "name": "DeleteButton.d.ts"
+            },
+            {
                 "relativePath": "components/DeleteButton/DeleteButton.js",
                 "test": false,
                 "name": "DeleteButton.js"
             },
             {
+                "relativePath": "components/DeleteButton/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/DeleteButton/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/DeleteButton/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/DeleteButton/index.js",
@@ -503,6 +578,11 @@
     },
     "totalsoft_oss.react-mui/dialog-display@0.0.3": {
         "files": [
+            {
+                "relativePath": "components/DialogDisplay/DialogDisplay.d.ts",
+                "test": false,
+                "name": "DialogDisplay.d.ts"
+            },
             {
                 "relativePath": "components/DialogDisplay/DialogDisplay.js",
                 "test": false,
@@ -514,9 +594,19 @@
                 "name": "dialogDisplayStyle.js"
             },
             {
+                "relativePath": "components/DialogDisplay/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/DialogDisplay/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/DialogDisplay/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/DialogDisplay/index.js",
@@ -527,14 +617,29 @@
     "totalsoft_oss.react-mui/download-button@0.0.3": {
         "files": [
             {
+                "relativePath": "components/DownloadButton/DownloadButton.d.ts",
+                "test": false,
+                "name": "DownloadButton.d.ts"
+            },
+            {
                 "relativePath": "components/DownloadButton/DownloadButton.js",
                 "test": false,
                 "name": "DownloadButton.js"
             },
             {
+                "relativePath": "components/DownloadButton/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/DownloadButton/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/DownloadButton/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/DownloadButton/index.js",
@@ -550,9 +655,24 @@
                 "name": "DownwardButton.js"
             },
             {
+                "relativePath": "components/DownwardButton/DownwardButton.ts",
+                "test": false,
+                "name": "DownwardButton.ts"
+            },
+            {
+                "relativePath": "components/DownwardButton/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/DownwardButton/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/DownwardButton/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/DownwardButton/index.js",
@@ -563,14 +683,29 @@
     "totalsoft_oss.react-mui/dynamic-input@0.0.3": {
         "files": [
             {
+                "relativePath": "components/DynamicInput/DynamicInput.d.ts",
+                "test": false,
+                "name": "DynamicInput.d.ts"
+            },
+            {
                 "relativePath": "components/DynamicInput/DynamicInput.js",
                 "test": false,
                 "name": "DynamicInput.js"
             },
             {
+                "relativePath": "components/DynamicInput/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/DynamicInput/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/DynamicInput/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/DynamicInput/index.js",
@@ -780,7 +915,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.21": {
+    "totalsoft_oss.react-mui/kit/core@0.0.22": {
         "files": [
             {
                 "relativePath": "core/index.js",

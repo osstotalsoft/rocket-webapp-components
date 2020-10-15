@@ -110,43 +110,88 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
 DateTime.defaultProps = {
     value: null,
     onChange: () => { },
-    label: "Date Time",
     dateFormat: defaultDateFormat,
     timeFormat: defaultTimeFormat,
     variant: "inline",
     views: ["date"],
-    disableToolbar: true,
-    autoOk: true,
     disabled: false,
-    ampm: false,
     InvalidDateMessage: "Invalid Date Format",
     MinDateMessage: "Date should not be before minimal date",
     MaxDateMessage: "Date should not be after maximal date"
 }
 
 DateTime.propTypes = {
+    /**
+ * Picker value
+ * @default null
+ */
     value: PropTypes.any,
+    /**
+  * onChange callback
+  * @default () => { }
+  */
     onChange: PropTypes.func,
+    /**
+* Date format string.
+* @default  'HH:mm'
+*/
     dateFormat: PropTypes.string,
+    /**
+* Time format string.
+* @default  'DD-MM-YYYY'
+*/
     timeFormat: PropTypes.string,
-    label: PropTypes.string,
+    /**
+* If true, the picker and text field will be disabled.
+* @default false
+*/
     disabled: PropTypes.bool,
+    /**
+ * Picker container option.
+ * @defualt 'inline'
+ */
     variant: PropTypes.oneOf(["dialog", "inline", "static"]),
+    /**
+* Array of views to show
+* @default ["date"]
+*/
     views: PropTypes.arrayOf(PropTypes.oneOf(["date", "year", "month", "hours", "minutes"])),
-    autoOk: PropTypes.bool,
-    disablePast: PropTypes.bool,
-    disableFuture: PropTypes.bool,
-    disableToolbar: PropTypes.bool,
-    allowKeyboardControl: PropTypes.bool,
-    ampm: PropTypes.bool, //12h/24h view for hour selection clock
+    /**
+ * If true, the time is shown.
+ * @default false
+ */
     showTime: PropTypes.bool,
+    /**
+* If true, the error data is provided.
+* @default false
+*/
     error: PropTypes.bool,
+    /**
+* The text content in case of failure.
+*/
     helperText: PropTypes.string,
+    /**
+  * If true, show clear action in picker dialog.
+  */
     clearable: PropTypes.bool,
-    InvalidDateMessage: PropTypes.string,
-    maxDateMessage: PropTypes.string,
-    minDateMessage: PropTypes.string,
-    /** The current language, preferably get it from the i18next (i18.language)  */
+    /**
+* Message, appearing when date cannot be parsed.
+* @default 'Invalid Date Format'
+*/
+    InvalidDateMessage: PropTypes.node,
+    /**
+* Error message, shown if date is more then maximal date. 
+* @default 'Date should not be after maximal date'
+*/
+    maxDateMessage: PropTypes.node,
+    /**
+ * Error message, shown if date is less then minimal date
+  * @default 'Date should not be before minimal date'
+ */
+    minDateMessage: PropTypes.node,
+    /**
+  * The current language, preferably gotten from the i18next (i18.language)
+  */
     language: PropTypes.string
 }
 
