@@ -97,9 +97,9 @@ DynamicInput.defaultProps = {
 
 DynamicInput.propTypes = {
   /**
-* The title of button.
-* @default 'N/A''
-*/
+  * The title of button.
+  * @default 'N/A''
+  */
   controlType: PropTypes.oneOf([
     'INT',
     'NUM',
@@ -109,20 +109,20 @@ DynamicInput.propTypes = {
     'BOOL'
   ]),
   /**
-* Callback fired when the value is changed.
-*
-* @param {object} event The event source of the callback.
-* You can pull out the new value by accessing `event.target.value` (string).
-*  @default  () => { }
-*/
+  * Callback fired when the value is changed.
+  *
+  * @param {object} event The event source of the callback.
+  * You can pull out the new value by accessing `event.target.value` (string).
+  *  @default  () => { }
+  */
   onChange: PropTypes.func.isRequired,
   /**
-* Load the options.
-*/
+  * Load the options.
+  */
   loadOptions: PropTypes.func,
   /**
-* The value of the `input` element, required for a controlled component.
-*/
+  * The value of the `input` element, required for a controlled component.
+  */
   value: PropTypes.any,
   /**
   * The default component.
@@ -130,9 +130,9 @@ DynamicInput.propTypes = {
   */
   DefaultComp: PropTypes.func,
   /**
-* The default props of the default component.
-* @default  { fullWidth: true, disabled: true }
-*/
+  * The default props of the default component.
+  * @default  { fullWidth: true, disabled: true }
+  */
   defaultCompProps: PropTypes.any
 };
 

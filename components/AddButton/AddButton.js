@@ -31,6 +31,7 @@ AddButton.propTypes = {
     disabled: PropTypes.bool,
     /**
    * The color of button.
+   * @default "themeNoBackground"
    */
     color: PropTypes.oneOf([
         "primary",
@@ -54,6 +55,7 @@ AddButton.propTypes = {
     ]),
     /**
       * The size of button.
+      * @default "medium"
       */
     size: PropTypes.oneOf([
         "small",
@@ -61,6 +63,7 @@ AddButton.propTypes = {
     ]),
     /**
   * The fontSize of button's content.
+  * @default "small"
   */
     fontSize: PropTypes.oneOf([
         "inherit",

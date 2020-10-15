@@ -6,9 +6,9 @@ export interface CustomTextFieldProps {
     */
     className?: String
     /**
-     * If true, the input will accept only numeric values.
-     *  @default false
-     */
+    * If true, the input will accept only numeric values.
+    *  @default false
+    */
     isNumeric?: Boolean
     /**
     * Other properties you can provide the component with.
@@ -27,12 +27,12 @@ export interface CustomTextFieldProps {
     */
     value?: unknown;
     /**
-   * Callback fired when the value is changed.
-   *
-   * @param {object} event The event source of the callback.
-   * You can pull out the new value by accessing `event.target.value` (string).
-   *  @default  () => { }
-   */
+    * Callback fired when the value is changed.
+    *
+    * @param {object} event The event source of the callback.
+    * You can pull out the new value by accessing `event.target.value` (string).
+    *  @default  () => { }
+    */
     onChange?: (object: Object) => void
     /**
     * The delay of debouncing.

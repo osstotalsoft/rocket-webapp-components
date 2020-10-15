@@ -31,6 +31,7 @@ BackToButton.propTypes = {
     title: PropTypes.string,
     /**
    * The color of button.
+   * @default "themeWithBackground"
    */
     color: PropTypes.oneOf([
         "primary",
@@ -54,6 +55,7 @@ BackToButton.propTypes = {
     ]),
     /**
       * The size of button.
+      * @default "medium"
       */
     size: PropTypes.oneOf([
         "small",
@@ -61,6 +63,7 @@ BackToButton.propTypes = {
     ]),
     /**
   * The fontSize of button's content.
+  * @default "small"
   */
     fontSize: PropTypes.oneOf([
         "inherit",

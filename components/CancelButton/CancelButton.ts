@@ -13,6 +13,7 @@ export interface CancelButtonProps {
     disabled?: Boolean
     /**
     * The color of button.
+    * @default "themeNoBackground"
     */
     color?: "primary" |
             "info" |
@@ -33,11 +34,13 @@ export interface CancelButtonProps {
             "dangerNoBackground" |
             "roseNoBackground"
     /**
-      * The size of button.
-      */
+    * The size of button.
+    * @default "medium "
+    */
     size?: "medium" | "small"
     /**
     * The fontSize of button's content.
+    * @default "small"
     */
     fontSize?: "inherit" | "default" | "small" | "large"
 

@@ -9,12 +9,12 @@ export interface DialogDisplayProps {
     */
     open?: Boolean
     /**
-      *Callback fired when the component requests to be closed.
-     * Signature:
-     * function(event: object, reason: string) => void
-     * event: The event source of the callback.
-     * reason: Can be: "escapeKeyDown", "backdropClick".
-      */
+    *Callback fired when the component requests to be closed.
+    * Signature:
+    * function(event: object, reason: string) => void
+    * event: The event source of the callback.
+    * reason: Can be: "escapeKeyDown", "backdropClick".
+    */
     onClose?: (event: object, reason: string) => void
     /**
     * The content of dialog.

@@ -5,6 +5,7 @@ export interface BackToButtonProps {
   title?: String;
   /**
   * The color of button.
+  * @default "themeWithBackground"
   */
   color?: "primary" |
   "info" |
@@ -26,10 +27,12 @@ export interface BackToButtonProps {
   "roseNoBackground"
   /**
     * The size of button.
+    * @default "medium"
     */
   size?: "medium" | "small"
   /**
   * The fontsize of button's content.
+  * @default "small"
   */
   fontSize?: "inherit" | "default" | "small" | "large"
   /**

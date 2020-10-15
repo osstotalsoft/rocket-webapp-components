@@ -4,8 +4,8 @@ export interface DownwardButtonProps {
     */
     title?: String;
     /**
-     * Callback fired when a "click" event is detected.
-     */
+    * Callback fired when a "click" event is detected.
+    */
     onClick?: () => void
     /**
     * If true, the button will be disabled.
@@ -34,16 +34,15 @@ export interface DownwardButtonProps {
             "dangerNoBackground" |
             "roseNoBackground"
     /**
-      * The size of button.
-      * @default "medium"
-      */
+    * The size of button.
+    * @default "medium"
+    */
     size?: "medium" | "small"
     /**
     * The fontSize of button's content.
     * @default "default"
     */
     fontSize?: "inherit" | "default" | "small" | "large"
-
 }
 /**
  *

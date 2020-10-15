@@ -17,17 +17,17 @@ DownloadButton.defaultProps = {
 
 DownloadButton.propTypes = {
     /**
-* The title of button.
-*/
+    * The title of button.
+    */
     title: PropTypes.string,
     /**
- * Callback fired when a "click" event is detected.
- */
+    * Callback fired when a "click" event is detected.
+    */
     onClick: PropTypes.func,
     /**
-* The color of button.
-* @default "themeNoBackground"
-*/
+    * The color of button.
+    * @default "themeNoBackground"
+    */
     color: PropTypes.oneOf([
         "primary",
         "info",
@@ -49,17 +49,17 @@ DownloadButton.propTypes = {
         "roseNoBackground"
     ]),
     /**
-  * The size of button.
-  * @default "medium"
-  */
+    * The size of button.
+    * @default "medium"
+    */
     size: PropTypes.oneOf([
         "small",
         "medium"
     ]),
     /**
-* The fontSize of button's content.
-* @default "default"
-*/
+    * The fontSize of button's content.
+    * @default "default" 
+    */
     fontSize: PropTypes.oneOf([
         "inherit",
         "default",
@@ -67,8 +67,8 @@ DownloadButton.propTypes = {
         "large"
     ]),
     /**
-* If true, the button will be disabled.
-*/
+    * If true, the button will be disabled.
+    */
     disabled: PropTypes.bool
 };
 

@@ -120,78 +120,78 @@ DateTime.defaultProps = {
     MaxDateMessage: "Date should not be after maximal date"
 }
 
-DateTime.propTypes = {
-    /**
- * Picker value
- * @default null
- */
+DateTime.propTypes = { 
+   /**
+   * Picker value
+   * @default null
+   */
     value: PropTypes.any,
-    /**
-  * onChange callback
-  * @default () => { }
-  */
-    onChange: PropTypes.func,
-    /**
-* Date format string.
-* @default  'HH:mm'
-*/
+   /**
+   * onChange callback
+   * @default () => { }
+   */
+   onChange: PropTypes.func,
+   /**
+   * Date format string.
+   * @default  'HH:mm'
+   */
     dateFormat: PropTypes.string,
     /**
-* Time format string.
-* @default  'DD-MM-YYYY'
-*/
+   * Time format string.
+   * @default  'DD-MM-YYYY' 
+   */
     timeFormat: PropTypes.string,
-    /**
-* If true, the picker and text field will be disabled.
-* @default false
-*/
+   /**
+   * If true, the picker and text field will be disabled.
+   * @default false
+   */
     disabled: PropTypes.bool,
     /**
- * Picker container option.
- * @defualt 'inline'
- */
+    * Picker container option.
+    * @defualt 'inline'
+    */
     variant: PropTypes.oneOf(["dialog", "inline", "static"]),
     /**
-* Array of views to show
-* @default ["date"]
-*/
+   * Array of views to show.
+   * @default ["date"]
+   */
     views: PropTypes.arrayOf(PropTypes.oneOf(["date", "year", "month", "hours", "minutes"])),
     /**
- * If true, the time is shown.
- * @default false
- */
+    * If true, the time is shown.
+    * @default false
+    */
     showTime: PropTypes.bool,
     /**
-* If true, the error data is provided.
-* @default false
-*/
+   * If true, the error data is provided.
+   * @default false
+   */
     error: PropTypes.bool,
     /**
-* The text content in case of failure.
-*/
+   * The text content in case of failure.
+   */
     helperText: PropTypes.string,
     /**
-  * If true, show clear action in picker dialog.
-  */
+   * If true, show clear action in picker dialog.
+   */
     clearable: PropTypes.bool,
     /**
-* Message, appearing when date cannot be parsed.
-* @default 'Invalid Date Format'
-*/
+   * Message, appearing when date cannot be parsed.
+   * @default 'Invalid Date Format'
+   */
     InvalidDateMessage: PropTypes.node,
     /**
-* Error message, shown if date is more then maximal date. 
-* @default 'Date should not be after maximal date'
-*/
+   * Error message, shown if date is more then maximal date. 
+   * @default 'Date should not be after maximal date'
+   */
     maxDateMessage: PropTypes.node,
     /**
- * Error message, shown if date is less then minimal date
-  * @default 'Date should not be before minimal date'
- */
+   * Error message, shown if date is less then minimal date
+   * @default 'Date should not be before minimal date'
+   */
     minDateMessage: PropTypes.node,
     /**
-  * The current language, preferably gotten from the i18next (i18.language)
-  */
+    * The current language, preferably gotten from the i18next (i18.language)
+    */
     language: PropTypes.string
 }
 

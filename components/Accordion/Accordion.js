@@ -58,6 +58,7 @@ Accordion.defaultProps = {
 Accordion.propTypes = {
     /**
     * The index of the active child.
+    * @default -1
     */
     active: PropTypes.number,
     /**

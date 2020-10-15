@@ -1,45 +1,48 @@
 export interface AddButtonProps {
-    /**
-    * The title of button.
+  /**
+  * The title of button.
+  */
+  title?: String;
+  /**
+   * Callback fired when a "click" event is detected.
+   */
+  onClick?: () => void
+  /**
+  * If true, the button will be disabled.
+  */
+  disabled?: Boolean
+  /**
+  * The color of button.
+  * @default "themeNoBackground"
+  */
+  color?: "primary" |
+          "info" |
+          "theme" |
+          "themeNoBackground" |
+          "themeWithBackground" |
+          "success" |
+          "warning" |
+          "danger" |
+          "rose" |
+          "white" |
+          "simple" |
+          "defaultNoBackground" |
+          "primaryNoBackground" |
+          "infoNoBackground" |
+          "successNoBackground" |
+          "warningNoBackground" |
+          "dangerNoBackground" |
+          "roseNoBackground"
+  /**
+    * The size of button.
+    *  @default "medium"
     */
-    title?: String;
-    /**
-     * Callback fired when a "click" event is detected.
-     */
-    onClick?: () => void
-    /**
-    * If true, the button will be disabled.
-    */
-    disabled?: Boolean
-    /**
-    * The color of button.
-    */
-    color?: "primary" |
-            "info" |
-            "theme" |
-            "themeNoBackground" |
-            "themeWithBackground" |
-            "success" |
-            "warning" |
-            "danger" |
-            "rose" |
-            "white" |
-            "simple" |
-            "defaultNoBackground" |
-            "primaryNoBackground" |
-            "infoNoBackground" |
-            "successNoBackground" |
-            "warningNoBackground" |
-            "dangerNoBackground" |
-            "roseNoBackground"
-    /**
-      * The size of button.
-      */
-    size?: "medium" | "small"
-    /**
-    * The fontSize of button's content.
-    */
-    fontSize?: "inherit" | "default" | "small" | "large"
+  size?: "medium" | "small"
+  /**
+  * The fontSize of button's content.
+  *  @default "small"
+  */
+  fontSize?: "inherit" | "default" | "small" | "large"
 
 }
 /**

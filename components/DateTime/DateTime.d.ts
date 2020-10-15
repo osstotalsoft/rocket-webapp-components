@@ -7,9 +7,9 @@ export interface DateTimeProps {
     */
     value?: ParsableDate
     /**
-     * onChange callback
-     * @default () => { }
-     */
+    * onChange callback
+    * @default () => { }
+    */
     onChange?: (date: DateIOType) => void
     /**
     * Date format string.
@@ -32,9 +32,9 @@ export interface DateTimeProps {
     */
     variant?: "dialog" | "inline" | "static"
     /**
-   * Array of views to show
-   * @default ["date"]
-   */
+    * Array of views to show
+    * @default ["date"]
+    */
     views?: ("date" | "year" | "month" | "hours" | "minutes")[]
     /**
     * If true, the time is shown.
@@ -42,13 +42,13 @@ export interface DateTimeProps {
     */
     showTime?: Boolean
     /**
-   * If true, the error data is provided.
-   * @default false
-   */
+    * If true, the error data is provided.
+    * @default false
+    */
     error?: Boolean
     /**
-   * The text content in case of failure.
-   */
+    * The text content in case of failure.
+    */
     helperText?: String
     /**
     * If true, show clear action in picker dialog.
@@ -66,7 +66,7 @@ export interface DateTimeProps {
     maxDateMessage?: React.ReactNode
     /**
     * Error message, shown if date is less then minimal date
-     * @default 'Date should not be before minimal date'
+    * @default 'Date should not be before minimal date'
     */
     minDateMessage?: React.ReactNode
     /**

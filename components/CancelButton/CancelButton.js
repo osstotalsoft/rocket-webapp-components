@@ -17,20 +17,21 @@ CancelButton.defaultProps = {
 
 CancelButton.propTypes = {
     /**
-* The title of button.
-*/
+    * The title of button.
+    */
     title: PropTypes.string,
     /**
     * Callback fired when a "click" event is detected.
     */
     onClick: PropTypes.func,
     /**
- * If true, the button will be disabled.
- */
+    * If true, the button will be disabled.
+    */
     disabled: PropTypes.bool,
     /**
- * The color of button.
- */
+    * The color of button.
+    * @default "themeNoBackground"
+    */
     color: PropTypes.oneOf([
         "primary",
         "info",
@@ -52,15 +53,17 @@ CancelButton.propTypes = {
         "roseNoBackground"
     ]),
     /**
-   * The size of button.
-   */
+     * The size of button.
+     * @default "medium"
+     */
     size: PropTypes.oneOf([
         "small",
         "medium"
     ]),
     /**
- * The fontSize of button's content.
- */
+    * The fontSize of button's content.
+    * @default "small"
+    */
     fontSize: PropTypes.oneOf([
         "inherit",
         "default",

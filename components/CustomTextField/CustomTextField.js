@@ -114,42 +114,42 @@ CustomTextField.defaultProps = {
 
 CustomTextField.propTypes = {
   /**
-* Override or extend the styles applied to the component.
-*/
+  * Override or extend the styles applied to the component.
+  */
   className: PropTypes.string,
   /**
- * If true, the input will accept only numeric values.
- * @default false
- */
+  * If true, the input will accept only numeric values.
+  * @default false
+  */
   isNumeric: PropTypes.bool,
   /**
-   * Other properties you can provide the component with.
-   */
+  * Other properties you can provide the component with.
+  */
   customInputProps: PropTypes.object,
   /**
- * The adornment of componenent. (Usually an InputAdornment from material-ui)
- */
+  * The adornment of componenent. (Usually an InputAdornment from material-ui)
+  */
   endAdornment: PropTypes.any,
   /**
   * Props applied to the InputLabel element.
   */
   InputLabelProps: PropTypes.object,
   /**
-* The value of the `input` element, required for a controlled component.
-*/
+  * The value of the `input` element, required for a controlled component.
+  */
   value: PropTypes.any,
   /**
-* Callback fired when the value is changed.
-*
-* @param {object} event The event source of the callback.
-* You can pull out the new value by accessing `event.target.value` (string).
-*  @default  () => { }
-*/
+  * Callback fired when the value is changed.
+  *
+  * @param {object} event The event source of the callback.
+  * You can pull out the new value by accessing `event.target.value` (string).
+  *  @default  () => { }
+  */
   onChange: PropTypes.func,
   /**
- * The delay of debouncing.
- *  @default 500
- */
+  * The delay of debouncing.
+  *  @default 500
+  */
   debounceBy: PropTypes.number
 };
 

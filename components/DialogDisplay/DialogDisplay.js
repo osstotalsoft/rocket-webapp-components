@@ -34,31 +34,31 @@ const DialogDisplay = (props) => {
 
 DialogDisplay.propTypes = {
     /**
-* The id(s) of the element(s) that label the dialog.
-*/
+    * The id(s) of the element(s) that label the dialog.
+    */
     id: PropTypes.string.isRequired,
     /**
-* If true, the dialog is open.
-* @default false
-*/
+    * If true, the dialog is open.
+    * @default false 
+    */
     open: PropTypes.bool,
 
     title: PropTypes.string,
     /**
     *Callback fired when the component requests to be closed.
-   * Signature:
-   * function(event: object, reason: string) => void
-   * event: The event source of the callback.
-   * reason: Can be: "escapeKeyDown", "backdropClick".
+    * Signature:
+    * function(event: object, reason: string) => void
+    * event: The event source of the callback.
+    * reason: Can be: "escapeKeyDown", "backdropClick".
     */
     onClose: PropTypes.func,
     /**
-* The content of dialog.
-*/
+    * The content of dialog.
+    */
     content: PropTypes.node,
     /**
-* The actions provided below the dialog.  
-*/
+    * The actions provided below the dialog.  
+    */
     actions: PropTypes.node
 }
 

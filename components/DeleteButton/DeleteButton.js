@@ -16,9 +16,22 @@ DeleteButton.defaultProps = {
 };
 
 DeleteButton.propTypes = {
+    /**
+    * The title of button.
+    */
     title: PropTypes.string,
+    /**
+    * Callback fired when a "click" event is detected.
+    */
     onClick: PropTypes.func,
+    /**
+    * If true, the button will be disabled.
+    */
     disabled: PropTypes.bool,
+    /**
+    * The color of button.
+    * @default "themeNoBackground"
+    */
     color: PropTypes.oneOf([
         "primary",
         "info",
@@ -39,10 +52,18 @@ DeleteButton.propTypes = {
         "dangerNoBackground",
         "roseNoBackground"
     ]),
+    /**
+    * The size of button.
+    * @default "medium"
+    */
     size: PropTypes.oneOf([
         "small",
         "medium"
     ]),
+    /**
+    * The fontSize of button's content.
+    * @default "default"
+    */
     fontSize: PropTypes.oneOf([
         "inherit",
         "default",

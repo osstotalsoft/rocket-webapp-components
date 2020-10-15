@@ -22,13 +22,13 @@ export interface DynamicInputProps {
     */
     loadOptions?: () => void
     /**
-   * The value of the `input` element, required for a controlled component.
-   */
+    * The value of the `input` element, required for a controlled component.
+    */
     value?: unknown
     /**
-      * The default component.
-      * @default CustomTextField
-      */
+    * The default component.
+    * @default CustomTextField
+    */
     DefaultComp?: React.ReactNode
     /**
     * The default props of the default component.

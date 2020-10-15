@@ -4,9 +4,9 @@ export interface CustomDialogProps {
     */
     id: String
     /**
-     * If true, the dialog is open.
-     * @default false
-     */
+    * If true, the dialog is open.
+    * @default false
+    */
     open?: Boolean
     /**
     * The title of dialog.
@@ -14,29 +14,31 @@ export interface CustomDialogProps {
     title?: String
     /**
     * The color of actions.
+    * @default "primary"
     */
     buttonColor?: "primary" |
-    "info" |
-    "theme" |
-    "themeNoBackground" |
-    "themeWithBackground" |
-    "success" |
-    "warning" |
-    "danger" |
-    "rose" |
-    "defaultNoBackground" |
-    "primaryNoBackground" |
-    "infoNoBackground" |
-    "successNoBackground" |
-    "warningNoBackground" |
-    "dangerNoBackground" |
-    "roseNoBackground" |
-    "white" |
-    "simple" |
-    "transparent"
+                    "info" |
+                    "theme" |
+                    "themeNoBackground" |
+                    "themeWithBackground" |
+                    "success" |
+                    "warning" |
+                    "danger" |
+                    "rose" |
+                    "defaultNoBackground" |
+                    "primaryNoBackground" |
+                    "infoNoBackground" |
+                    "successNoBackground" |
+                    "warningNoBackground" |
+                    "dangerNoBackground" |
+                    "roseNoBackground" |
+                    "white" |
+                    "simple" |
+                    "transparent"
     /**
-   * The size of buttons.
-   */
+    * The size of buttons.
+    * @default "sm"
+    */
     buttonSize?: "sm" | "lg" | "xs"
     /**
     * The content of dialog.
@@ -56,23 +58,28 @@ export interface CustomDialogProps {
     onClose?: () => void
     /**
     * If true, the actions(buttons) below are shown.
+    * @default false
     */
     showActions?: Boolean
     /**
-   * Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.
-   */
+    * Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.
+    * @default "md"
+    */
     maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false
     /**
-   * 	If true, the button will take up the full width of its container.
-   */
+    * 	If true, the button will take up the full width of its container.
+    * @default true
+    */
     fullWidth?: Boolean
     /**
-   * the text content of the first action.(the button for denial)
-   */
+    * the text content of the first action.(the button for denial)
+    * @default "Yes"
+    */
     textDialogYes?: String
     /**
-   * the text content of the second action.(the button for approval)
-   */
+    * the text content of the second action.(the button for approval)
+    * @default "No"
+    */
     textDialogNo?: String
 }
 /**
