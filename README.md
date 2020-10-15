@@ -15,7 +15,7 @@ Key features:
 
 
 ## Installation
-Bit components are stored on the bit registry located in https://bit.dev/totalsoft/react-mui.
+Bit components are stored on the bit registry located in https://bit.dev/totalsoft_oss/react-mui.
 When installing @bit component with npm or yarn, they will try to install the components starting with @bit by resolving the @bit registry. This configuration is stored in an .npmrc configuration file.
 
 First add a new `.npmrc` file in your project, if not exists, containing the following:
