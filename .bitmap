@@ -713,17 +713,32 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/edit-button@0.0.3": {
+    "totalsoft_oss.react-mui/edit-button@0.0.4": {
         "files": [
+            {
+                "relativePath": "components/EditButton/EditButton.d.ts",
+                "test": false,
+                "name": "EditButton.d.ts"
+            },
             {
                 "relativePath": "components/EditButton/EditButton.js",
                 "test": false,
                 "name": "EditButton.js"
             },
             {
+                "relativePath": "components/EditButton/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/EditButton/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/EditButton/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/EditButton/index.js",
@@ -731,7 +746,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/expanding-text@0.0.7": {
+    "totalsoft_oss.react-mui/expanding-text@0.0.8": {
         "files": [
             {
                 "relativePath": "components/ExpandingText/ExpandingText.d.ts",
@@ -764,17 +779,32 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/fake-text@0.0.3": {
+    "totalsoft_oss.react-mui/fake-text@0.0.4": {
         "files": [
+            {
+                "relativePath": "components/FakeText/LoadingFakeText.d.ts",
+                "test": false,
+                "name": "LoadingFakeText.d.ts"
+            },
             {
                 "relativePath": "components/FakeText/LoadingFakeText.js",
                 "test": false,
                 "name": "LoadingFakeText.js"
             },
             {
+                "relativePath": "components/FakeText/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
                 "relativePath": "components/FakeText/index.js",
                 "test": false,
                 "name": "index.js"
+            },
+            {
+                "relativePath": "components/FakeText/readme.md",
+                "test": false,
+                "name": "readme.md"
             }
         ],
         "mainFile": "components/FakeText/index.js",
@@ -915,7 +945,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.24": {
+    "totalsoft_oss.react-mui/kit/core@0.0.25": {
         "files": [
             {
                 "relativePath": "core/index.js",
