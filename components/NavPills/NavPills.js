@@ -104,7 +104,6 @@ NavPills.propTypes = {
         "info",
         "rose"
     ]),
-    direction: PropTypes.string,
     horizontal: PropTypes.shape({
         tabsGrid: PropTypes.object,
         contentGrid: PropTypes.object
