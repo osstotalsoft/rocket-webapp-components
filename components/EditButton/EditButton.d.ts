@@ -1,16 +1,21 @@
-export interface CancelButtonProps {
+export interface EditButtonProps {
     /**
     * The title of button.
     */
     title?: String;
     /**
-     * Callback fired when a "click" event is detected.
-     */
+    * Callback fired when a "click" event is detected.
+    */
     onClick?: () => void
     /**
     * If true, the button will be disabled.
     */
     disabled?: Boolean
+    /**
+    * If true, the edit icon will be visible.
+    * @default true
+    */
+    editMode?: Boolean
     /**
     * The color of button.
     * @default "themeNoBackground"
@@ -35,22 +40,21 @@ export interface CancelButtonProps {
             "roseNoBackground"
     /**
     * The size of button.
-    * @default "medium "
+    * @default "medium"
     */
     size?: "medium" | "small"
     /**
     * The fontSize of button's content.
-    * @default "small"
+    * @default "default"
     */
     fontSize?: "inherit" | "default" | "small" | "large"
-
 }
 /**
  *
  * Demos:
  *
- * - https://bit.dev/totalsoft_oss/react-mui/cancel-button
+ * - https://bit.dev/totalsoft_oss/react-mui/edit-button
  *
  * 
  */
-export default function CancelButton(props: CancelButtonProps): JSX.Element;
+export default function EditButton(props: EditButtonProps): JSX.Element;

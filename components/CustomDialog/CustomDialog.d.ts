@@ -4,8 +4,9 @@ export interface CustomDialogProps {
     */
     id: String
     /**
-     * If true, the dialog is open.
-     */
+    * If true, the dialog is open.
+    * @default false
+    */
     open?: Boolean
     /**
     * The title of dialog.
@@ -13,29 +14,31 @@ export interface CustomDialogProps {
     title?: String
     /**
     * The color of actions.
+    * @default "primary"
     */
     buttonColor?: "primary" |
-    "info" |
-    "theme" |
-    "themeNoBackground" |
-    "themeWithBackground" |
-    "success" |
-    "warning" |
-    "danger" |
-    "rose" |
-    "defaultNoBackground" |
-    "primaryNoBackground" |
-    "infoNoBackground" |
-    "successNoBackground" |
-    "warningNoBackground" |
-    "dangerNoBackground" |
-    "roseNoBackground" |
-    "white" |
-    "simple" |
-    "transparent"
+                    "info" |
+                    "theme" |
+                    "themeNoBackground" |
+                    "themeWithBackground" |
+                    "success" |
+                    "warning" |
+                    "danger" |
+                    "rose" |
+                    "defaultNoBackground" |
+                    "primaryNoBackground" |
+                    "infoNoBackground" |
+                    "successNoBackground" |
+                    "warningNoBackground" |
+                    "dangerNoBackground" |
+                    "roseNoBackground" |
+                    "white" |
+                    "simple" |
+                    "transparent"
     /**
-   * The size of buttons.
-   */
+    * The size of buttons.
+    * @default "sm"
+    */
     buttonSize?: "sm" | "lg" | "xs"
     /**
     * The content of dialog.
@@ -46,26 +49,44 @@ export interface CustomDialogProps {
     */
     content: React.ReactNode
     /**
-    * The text status of chart.
+    * Callback fired when a "click" event is detected.
     */
-    statText: String
+    onYes?: () => void
     /**
-    * If true, the chart moves up on click hover.
+    *  Callback fired when a "click" event is detected.
     */
-    hover: Boolean
+    onClose?: () => void
     /**
-    * If provided, its content will appear just below the main content.
+    * If true, the actions(buttons) below are shown.
+    * @default false
     */
-    underChart: React.ReactNode
+    showActions?: Boolean
+    /**
+    * Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.
+    * @default "md"
+    */
+    maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false
+    /**
+    * 	If true, the button will take up the full width of its container.
+    * @default true
+    */
+    fullWidth?: Boolean
+    /**
+    * the text content of the first action.(the button for denial)
+    * @default "Yes"
+    */
+    textDialogYes?: String
+    /**
+    * the text content of the second action.(the button for approval)
+    * @default "No"
+    */
+    textDialogNo?: String
 }
 /**
  *
  * Demos:
  *
- * - https://bit.dev/totalsoft_oss/react-mui/chart-card
+ * - https://bit.dev/totalsoft_oss/react-mui/custom-dialog
  *
- * Warning: 
- * This component will be provided only through ChartFactory API. This approach is not compulsory
- *  but it's recommended to ensure the correct behavior of the component.
  */
 export default function CustomDialog(props: CustomDialogProps): JSX.Element;

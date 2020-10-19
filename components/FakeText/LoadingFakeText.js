@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import { Paper } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core';
 
-
-
-
 const styles = {
     wrapper: {
         width: '100%'
@@ -43,7 +40,13 @@ const LoadingFakeText = ({ lines = 4, onPaper = false, ...props }) => {
 }
 
 LoadingFakeText.propTypes = {
+   /**
+   * The number of lines appearing.
+   */
     lines: PropTypes.number,
+   /**
+   * If true, the fake text will be drawn on a Paper.
+   */
     onPaper: PropTypes.bool
 };
 

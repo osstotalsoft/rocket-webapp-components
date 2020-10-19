@@ -4,16 +4,19 @@ export interface ExpandingTextProps {
     */
     text: String;
     /**
-     * The minimum length of the narrow text.
-     */
+    * The minimum length of the narrow text.
+    * @default 2000
+    */
     minLength?: Number;
     /**
-     * The content of the button when the text is narrow.
-     */
+    * The content of the button when the text is narrow.
+    * @default "Show less"
+    */
     showLessText: String;
     /**
-     *  The content of the button when the text is wide.
-     */
+    *  The content of the button when the text is wide.
+    * @default "Show more"
+    */
     showMoreText?: String;
 }
 /**

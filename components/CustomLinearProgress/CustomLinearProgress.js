@@ -24,6 +24,10 @@ CustomLinearProgress.defaultProps = {
 };
 
 CustomLinearProgress.propTypes = {
+    /**
+   * The color of the component.
+   * @default "gray"
+   */
     color: PropTypes.oneOf([
         "primary",
         "warning",
@@ -33,11 +37,18 @@ CustomLinearProgress.propTypes = {
         "rose",
         "gray"
     ]),
+    /**
+    * The variant to use. Use indeterminate or query when there is no progress value.
+    * @default "indeterminate"
+    */
     variant: PropTypes.oneOf([
         "determinate",
         "indeterminate",
         "buffer",
         "query"
     ]),
+    /**
+    * The value of the progress indicator for the determinate and buffer variants. Value between 0 and 100.
+    */
     value: PropTypes.number
 };

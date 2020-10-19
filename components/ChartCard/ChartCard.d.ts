@@ -16,8 +16,9 @@ export interface ChartCardProps {
     */
     StatIcon: React.ReactNode
     /**
-   * The icon's color of chart.
-   */
+    * The icon's color of chart.
+    * @default "gray"
+    */
     statIconColor: "warning" |
                     "primary" |
                     "danger" |
@@ -26,7 +27,8 @@ export interface ChartCardProps {
                     "rose" |
                     "gray"
     /**
-   * The color of chart.
+    * The color of chart.
+    * @default "purple"
     */
     chartColor: "orange" |
                 "green" |
@@ -45,6 +47,7 @@ export interface ChartCardProps {
     statText: String
     /**
     * If true, the chart moves up on click hover.
+    * @default false
     */
     hover: Boolean
     /**

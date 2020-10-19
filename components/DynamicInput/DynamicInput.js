@@ -92,11 +92,14 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
 DynamicInput.defaultProps = {
   controlType: "N/A",
   DefaultComp: CustomTextField,
-  onClick: () => { },
   defaultCompProps: { fullWidth: true, disabled: true }
 };
 
 DynamicInput.propTypes = {
+  /**
+  * The title of button.
+  * @default 'N/A''
+  */
   controlType: PropTypes.oneOf([
     'INT',
     'NUM',
@@ -105,10 +108,31 @@ DynamicInput.propTypes = {
     'VCLST',
     'BOOL'
   ]),
+  /**
+  * Callback fired when the value is changed.
+  *
+  * @param {object} event The event source of the callback.
+  * You can pull out the new value by accessing `event.target.value` (string).
+  *  @default  () => { }
+  */
   onChange: PropTypes.func.isRequired,
+  /**
+  * Load the options.
+  */
   loadOptions: PropTypes.func,
+  /**
+  * The value of the `input` element, required for a controlled component.
+  */
   value: PropTypes.any,
+  /**
+  * The default component.
+  * @default CustomTextField
+  */
   DefaultComp: PropTypes.func,
+  /**
+  * The default props of the default component.
+  * @default  { fullWidth: true, disabled: true }
+  */
   defaultCompProps: PropTypes.any
 };
 
