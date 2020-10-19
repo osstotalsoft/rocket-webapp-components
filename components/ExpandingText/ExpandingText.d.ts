@@ -1,4 +1,6 @@
-export interface ExpandingTextProps {
+import { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
+
+export interface ExpandingTextProps extends FormControlLabelProps {
     /**
     * The text content.
     */

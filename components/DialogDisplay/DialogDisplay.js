@@ -6,8 +6,8 @@ import dialogDisplayStyle from './dialogDisplayStyle';
 
 const useStyles = makeStyles(dialogDisplayStyle);
 
-const DialogDisplay = (props) => {
-    const { id, open, title, onClose, content, actions } = props
+const DialogDisplay = props => {
+    const { id, open, title, onClose, content, actions, ...rest } = props
     const classes = useStyles()
 
     return (
@@ -16,6 +16,7 @@ const DialogDisplay = (props) => {
             onClose={onClose}
             aria-labelledby={`${id}-dialog-display-title`}
             maxWidth="xl"
+            {...rest}
         >
             <DialogTitle id={`${id}-dialog-display-title`}>
                 <Typography className={classes.modalTitle}>{title}</Typography>

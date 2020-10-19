@@ -2,7 +2,7 @@ export interface CardProps {
     /**
     * The className of card.
     */
-    className?: String;
+    className?: string;
     /**
      * The color of card.
      */

@@ -1,15 +1,16 @@
 import { InputAdornmentProps } from "@material-ui/core";
+import { StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@material-ui/core/TextField";
 
-export interface CustomTextFieldProps {
+export interface Props {
     /**
     * Override or extend the styles applied to the component.
     */
-    className?: String
+    className?: string
     /**
     * If true, the input will accept only numeric values.
     *  @default false
     */
-    isNumeric?: Boolean
+    isNumeric?: boolean
     /**
     * Other properties you can provide the component with.
     */
@@ -38,8 +39,11 @@ export interface CustomTextFieldProps {
     * The delay of debouncing.
     * @default 500
     */
-    debounceBy?: Number
+    debounceBy?: number
 }
+
+export type CustomTextFieldProps = Props | StandardTextFieldProps | FilledTextFieldProps | OutlinedTextFieldProps;
+
 /**
  *
  * Demos:

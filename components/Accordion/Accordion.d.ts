@@ -3,12 +3,12 @@ export interface AccordionProps {
     * The index of the active child.
     * @default -1
     */
-    active?: Number;
+    active?: number
     /**
      * The content of accordion.
      */
     content: {
-        title: String,
+        title: string,
         content: React.ReactNode
     }[];
 }

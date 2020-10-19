@@ -1,4 +1,6 @@
-export interface EditButtonProps {
+import { ButtonProps } from '@material-ui/core/Button';
+
+export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'> {
     /**
     * The title of button.
     */
@@ -10,34 +12,34 @@ export interface EditButtonProps {
     /**
     * If true, the button will be disabled.
     */
-    disabled?: Boolean
+    disabled?: boolean
     /**
     * If true, the edit icon will be visible.
     * @default true
     */
-    editMode?: Boolean
+    editMode?: boolean
     /**
     * The color of button.
     * @default "themeNoBackground"
     */
     color?: "primary" |
-            "info" |
-            "theme" |
-            "themeNoBackground" |
-            "themeWithBackground" |
-            "success" |
-            "warning" |
-            "danger" |
-            "rose" |
-            "white" |
-            "simple" |
-            "defaultNoBackground" |
-            "primaryNoBackground" |
-            "infoNoBackground" |
-            "successNoBackground" |
-            "warningNoBackground" |
-            "dangerNoBackground" |
-            "roseNoBackground"
+    "info" |
+    "theme" |
+    "themeNoBackground" |
+    "themeWithBackground" |
+    "success" |
+    "warning" |
+    "danger" |
+    "rose" |
+    "white" |
+    "simple" |
+    "defaultNoBackground" |
+    "primaryNoBackground" |
+    "infoNoBackground" |
+    "successNoBackground" |
+    "warningNoBackground" |
+    "dangerNoBackground" |
+    "roseNoBackground"
     /**
     * The size of button.
     * @default "medium"

@@ -1,8 +1,10 @@
-export interface CancelButtonProps {
+import { ButtonProps } from '@material-ui/core/Button';
+
+export interface CancelButtonProps extends Omit<ButtonProps, 'color'> {
     /**
     * The title of button.
     */
-    title?: String;
+    title?: string
     /**
      * Callback fired when a "click" event is detected.
      */
@@ -10,29 +12,29 @@ export interface CancelButtonProps {
     /**
     * If true, the button will be disabled.
     */
-    disabled?: Boolean
+    disabled?: boolean
     /**
     * The color of button.
     * @default "themeNoBackground"
     */
     color?: "primary" |
-            "info" |
-            "theme" |
-            "themeNoBackground" |
-            "themeWithBackground" |
-            "success" |
-            "warning" |
-            "danger" |
-            "rose" |
-            "white" |
-            "simple" |
-            "defaultNoBackground" |
-            "primaryNoBackground" |
-            "infoNoBackground" |
-            "successNoBackground" |
-            "warningNoBackground" |
-            "dangerNoBackground" |
-            "roseNoBackground"
+    "info" |
+    "theme" |
+    "themeNoBackground" |
+    "themeWithBackground" |
+    "success" |
+    "warning" |
+    "danger" |
+    "rose" |
+    "white" |
+    "simple" |
+    "defaultNoBackground" |
+    "primaryNoBackground" |
+    "infoNoBackground" |
+    "successNoBackground" |
+    "warningNoBackground" |
+    "dangerNoBackground" |
+    "roseNoBackground"
     /**
     * The size of button.
     * @default "medium "

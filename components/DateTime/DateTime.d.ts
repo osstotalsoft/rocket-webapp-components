@@ -1,13 +1,15 @@
 import { ParsableDate } from "@material-ui/pickers/constants/prop-types";
 
-export interface DateTimeProps {
+import { KeyboardDateTimePickerProps } from "@material-ui/pickers";
+
+export interface DateTimeProps extends KeyboardDateTimePickerProps {
     /**
-    * Picker value
+    * Picker value.
     * @default null
     */
     value?: ParsableDate
     /**
-    * onChange callback
+    * onChange callback.
     * @default () => { }
     */
     onChange?: (date: DateIOType) => void
@@ -15,17 +17,17 @@ export interface DateTimeProps {
     * Date format string.
     * @default  'HH:mm'
     */
-    dateFormat?: String
+    dateFormat?: string
     /**
     * Time format string.
     * @default  'DD-MM-YYYY'
     */
-    timeFormat?: String
+    timeFormat?: string
     /**
     * If true, the picker and text field will be disabled.
     * @default false
     */
-    disabled?: Boolean
+    disabled?: boolean
     /**
     * Picker container option.
     * @defualt 'inline'
@@ -40,20 +42,20 @@ export interface DateTimeProps {
     * If true, the time is shown.
     * @default false
     */
-    showTime?: Boolean
+    showTime?: boolean
     /**
     * If true, the error data is provided.
     * @default false
     */
-    error?: Boolean
+    error?: boolean
     /**
     * The text content in case of failure.
     */
-    helperText?: String
+    helperText?: string
     /**
     * If true, show clear action in picker dialog.
     */
-    clearable?: Boolean
+    clearable?: boolean
     /**
     * Message, appearing when date cannot be parsed.
     * @default 'Invalid Date Format'
@@ -72,7 +74,7 @@ export interface DateTimeProps {
     /**
     * The current language, preferably gotten from the i18next (i18.language)
     */
-    language?: String
+    language?: string
 }
 /**
  *

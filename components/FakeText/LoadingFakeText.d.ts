@@ -1,4 +1,6 @@
-export interface LoadingFakeTextProps {
+import { PaperProps } from "@material-ui/core/Paper";
+
+export interface LoadingFakeTextProps extends PaperProps {
     /**
     * The number of lines appearing.
     */
@@ -6,7 +8,7 @@ export interface LoadingFakeTextProps {
     /**
     * If true, the fake text will be drawn on a Paper.
     */
-    onPaper?: Boolean;
+    onPaper?: boolean;
 }
 /**
 *

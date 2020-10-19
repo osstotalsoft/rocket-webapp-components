@@ -1,4 +1,6 @@
-export interface DialogDisplayProps {
+import { DialogProps } from '@material-ui/core/Dialog';
+
+export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'> {
     /**
     * The id(s) of the element(s) that label the dialog.
     */
@@ -7,7 +9,7 @@ export interface DialogDisplayProps {
     * If true, the dialog is open.
     * @default false
     */
-    open?: Boolean
+    open?: boolean
     /**
     *Callback fired when the component requests to be closed.
     * Signature:
@@ -24,7 +26,6 @@ export interface DialogDisplayProps {
     * The actions provided below the dialog.  
     */
     actions?: React.ReactNode
-
 }
 /**
  *

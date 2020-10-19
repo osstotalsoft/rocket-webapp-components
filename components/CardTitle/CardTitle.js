@@ -6,7 +6,7 @@ import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles(cardTitleStyle);
 
-export default function CardTitle({ title, actions }) {
+export default function CardTitle({ title, actions, ...rest }) {
   const classes = useStyles();
 
   return (
@@ -14,7 +14,7 @@ export default function CardTitle({ title, actions }) {
       <Box className={classes.cardTitle}>{title}</Box>
       {actions.map(
         (action, index) => (
-          <Box key={index} ml={1}>
+          <Box key={index} ml={1} {...rest}>
             {action}
           </Box>
         )
