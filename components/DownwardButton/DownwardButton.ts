@@ -1,6 +1,6 @@
 import { ButtonProps } from '@material-ui/core/Button';
 
-export interface DownwardButtonProps extends Omit<ButtonProps, 'color'> {
+export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'> {
     /**
     * The title of button.
     */
