@@ -4,7 +4,7 @@ export interface LoadingFakeTextProps extends PaperProps {
     /**
     * The number of lines appearing.
     */
-    lines?: Number;
+    lines?: number;
     /**
     * If true, the fake text will be drawn on a Paper.
     */

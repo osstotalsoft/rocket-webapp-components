@@ -3,18 +3,17 @@ import cx from "classnames";
 import PropTypes from "prop-types";
 import { Card, CardContent, CardHeader, makeStyles } from "@material-ui/core";
 import iconCardStyle from "./iconCardStyle";
-import Typography from '../Typography';
+import Typography from "../Typography";
 
 const useStyles = makeStyles(iconCardStyle);
 
-const IconCard = (props) => {
-
+const IconCard = props => {
   const classes = useStyles();
   const {
     title,
     content,
     iconColor,
-    category,
+    subtitle,
     footer,
     plain,
     customCardContentClass,
@@ -45,20 +44,20 @@ const IconCard = (props) => {
         avatar={<Icon className={classes.cardIcon} />}
       />
       <CardContent className={cardContentClasses}>
-        <Typography className={classes.cardTitle} variant='subtitle1'>
+        <Typography className={classes.cardTitle} variant="subtitle1">
           {title}
         </Typography>
-        {category !== undefined ? (
-          <small className={classes.cardCategory}>{category}</small>
-        ) : null}
+        {subtitle && (
+          <Typography className={classes.cardCategory} variant="subtitle2">
+            {subtitle}
+          </Typography>
+        )}
         {content}
       </CardContent>
-      {footer !== undefined ? (
-        <div className={classes.cardFooter}>{footer}</div>
-      ) : null}
+      {footer && <div className={classes.cardFooter}>{footer}</div>}
     </Card>
-  )
-}
+  );
+};
 
 IconCard.defaultProps = {
   iconColor: "theme",
@@ -77,7 +76,7 @@ IconCard.propTypes = {
     "theme"
   ]),
   title: PropTypes.node,
-  category: PropTypes.node,
+  subtitle: PropTypes.node,
   content: PropTypes.node,
   footer: PropTypes.node,
   plain: PropTypes.bool,

@@ -11,7 +11,7 @@ const useStyles = makeStyles(accordionStyle);
 
 const Accordion = ({ content, active }) => {
 
-    const [localSctive, setLocalActive] = useState(active)
+    const [localActive, setLocalActive] = useState(active)
     const handleChange = panel => (_, expanded) => setLocalActive(expanded ? panel : -1)
     const classes = useStyles();
 
@@ -20,7 +20,7 @@ const Accordion = ({ content, active }) => {
             {content.map((prop, key) => {
                 return (
                     <AccordionBase
-                        expanded={localSctive === key}
+                        expanded={localActive === key}
                         onChange={handleChange(key)}
                         key={key}
                         classes={{

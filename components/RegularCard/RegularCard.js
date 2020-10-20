@@ -1,18 +1,22 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader
-} from "@material-ui/core";
+import { Card, CardContent, CardHeader, makeStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { makeStyles } from '@material-ui/core';
 
 import regularCardStyle from "./regularCardStyle";
 const useStyles = makeStyles(regularCardStyle);
 
-
-const RegularCard = ({ plainCard, cardTitle, cardSubtitle, content, titleAlign, customCardClasses, contentAlign, subtitleAlign, customCardTitleClasses }) => {
+const RegularCard = ({
+  plainCard,
+  cardTitle,
+  cardSubtitle,
+  content,
+  titleAlign,
+  customCardClasses,
+  contentAlign,
+  subtitleAlign,
+  customCardTitleClasses
+}) => {
   const classes = useStyles();
 
   const cardClasses =
@@ -27,7 +31,12 @@ const RegularCard = ({ plainCard, cardTitle, cardSubtitle, content, titleAlign, 
         <CardHeader
           classes={{
             root: classes.cardHeader,
-            title: classes.cardTitle + " " + classes[titleAlign] + " " + customCardTitleClasses,
+            title:
+              classes.cardTitle +
+              " " +
+              classes[titleAlign] +
+              " " +
+              customCardTitleClasses,
             subheader: classes.cardSubtitle + " " + classes[subtitleAlign]
           }}
           title={cardTitle}
@@ -41,7 +50,7 @@ const RegularCard = ({ plainCard, cardTitle, cardSubtitle, content, titleAlign, 
       </CardContent>
     </Card>
   );
-}
+};
 
 RegularCard.propTypes = {
   customCardClasses: PropTypes.string,

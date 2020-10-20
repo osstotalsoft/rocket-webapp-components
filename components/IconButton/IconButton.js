@@ -63,7 +63,8 @@ CustomIconButton.propTypes = {
   ]),
   customClass: PropTypes.string,
   disabled: PropTypes.bool,
-  tooltip: PropTypes.string
+  tooltip: PropTypes.string,
+  children: PropTypes.node
 };
 
 export default CustomIconButton;

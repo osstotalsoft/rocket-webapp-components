@@ -4,9 +4,9 @@ import {
   CardContent,
   CardHeader,
   CardActions,
-  Typography,
   makeStyles
 } from "@material-ui/core";
+import Typography from "../Typography";
 import PropTypes from "prop-types";
 import statsCardStyle from "./statsCardStyle";
 
@@ -21,8 +21,8 @@ const StatsCard = ({
   statIconColor,
   iconColor,
   Icon,
-  StatIcon }) => {
-
+  StatIcon
+}) => {
   const classes = useStyles();
 
   return (
@@ -38,15 +38,9 @@ const StatsCard = ({
         <Typography component="p" className={classes.cardCategory}>
           {title}
         </Typography>
-        <Typography
-          variant="h5"
-          component="h2"
-          className={classes.cardTitle}
-        >
-          {description}{" "}
-          {Small !== undefined ? (
-            <Small className={classes.cardTitleSmall}>{Small}</Small>
-          ) : null}
+        <Typography variant="h5" component="h2" className={classes.cardTitle}>
+          {description} &nbsp;
+          {Small && <small className={classes.cardTitleSmall}>{Small}</small>}
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
@@ -69,20 +63,20 @@ const StatsCard = ({
       </CardActions>
     </Card>
   );
-}
+};
 
 StatsCard.defaultProps = {
-  iconColor: "purple",
+  iconColor: "blue",
   statIconColor: "gray"
 };
 
 StatsCard.propTypes = {
-  Icon: PropTypes.func.isRequired,
+  Icon: PropTypes.node.isRequired,
   iconColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
   title: PropTypes.node,
   description: PropTypes.node,
   Small: PropTypes.node,
-  StatIcon: PropTypes.func,
+  StatIcon: PropTypes.node,
   statIconColor: PropTypes.oneOf([
     "warning",
     "primary",

@@ -35,11 +35,11 @@ function FileUploadButton({ component, children, onFileSelected,
       return;
     }
 
-    // Reset input value to allow re-seletion
+    // Reset input value to allow re-selection
     target.value = null;
 
     onFileSelected(file);
-  }, [onFileSelected, accept, maxSize, minSize, addToast, t])
+  }, [onFileSelected, accept, maxSize, minSize, addToast])
 
   return (
     <Component

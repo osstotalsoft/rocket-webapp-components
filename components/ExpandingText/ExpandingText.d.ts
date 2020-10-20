@@ -4,22 +4,22 @@ export interface ExpandingTextProps extends FormControlLabelProps {
     /**
     * The text content.
     */
-    text: String;
+    text: string;
     /**
     * The minimum length of the narrow text.
     * @default 2000
     */
-    minLength?: Number;
+    minLength?: number;
     /**
     * The content of the button when the text is narrow.
     * @default "Show less"
     */
-    showLessText: String;
+    showLessText: string;
     /**
     *  The content of the button when the text is wide.
     * @default "Show more"
     */
-    showMoreText?: String;
+    showMoreText?: string;
 }
 /**
  *

@@ -4,7 +4,7 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
     /**
     * The id(s) of the element(s) that label the dialog.
     */
-    id: String;
+    id: string;
     /**
     * If true, the dialog is open.
     * @default false

@@ -12,8 +12,8 @@ const UploadButton = ({ title, onClick, disabled, children, fontSize, ...rest })
 
 UploadButton.defaultProps = {
     color: "themeWithBackground",
-    fontSize: "default",
-    size: "medium"
+    size: "medium",
+    fontSize: "default"
 };
 
 UploadButton.propTypes = {

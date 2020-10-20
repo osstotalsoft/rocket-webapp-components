@@ -4,7 +4,7 @@ export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'>
     /**
     * The title of button.
     */
-    title?: String;
+    title?: string;
     /**
     * Callback fired when a "click" event is detected.
     */
