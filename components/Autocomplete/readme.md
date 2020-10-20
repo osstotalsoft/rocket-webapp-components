@@ -19,7 +19,7 @@ const App = () => {
 			fullWidth
 			simpleValue={true}
 			isClearable={true}
-			value={localFilters.statusId || ''}
+			value={localFilters.id || ''}
 			onChange={handleFilterPropertyChange('id')}
 		/>
 	)
