@@ -1,4 +1,6 @@
-export interface CardTitleProps {
+import { BoxProps } from "@material-ui/core";
+
+export interface CardTitleProps extends BoxProps {
     /**
     * The title of card.
     */

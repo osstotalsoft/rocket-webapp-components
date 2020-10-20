@@ -62,7 +62,8 @@ NumberFormatCustom.defaultProps = {
 const setValueToDesiredFormat = curry((isNumeric, value) => isNumeric ? value : ({ target: { value } }))
 const getValueFromDesiredFormat = curry((isNumeric, e) => isNumeric ? e : e?.target.value)
 
-function CustomTextField({ isNumeric, customInputProps, endAdornment, InputLabelProps, className, value, onChange, debounceBy, ...rest }) {
+function CustomTextField({ isNumeric, customInputProps, endAdornment, InputLabelProps,
+  className, value, onChange, debounceBy, ...rest }) {
   const classes = useStyles();
   const customInput = isNumeric ?
     {

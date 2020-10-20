@@ -25,7 +25,7 @@ TooltipArea.propTypes = {
 }
 
 function DateTime({ value, onChange, dateFormat, timeFormat,
-    showTime, clearable, disabled, error, helperText, invalidDateMessage, minDateMessage, maxDateMessage, language, ...res }) {
+    showTime, clearable, disabled, error, helperText, invalidDateMessage, minDateMessage, maxDateMessage, language, ...rest }) {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const format = showTime ? `${dateFormat} ${timeFormat}` : dateFormat
@@ -101,7 +101,7 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
                     className: classes.label
                 }}
                 {...errorData}
-                {...res}
+                {...rest}
             />
         </MuiPickersUtilsProvider>
     )

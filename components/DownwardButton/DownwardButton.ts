@@ -1,4 +1,6 @@
-export interface DownwardButtonProps {
+import { ButtonProps } from '@material-ui/core/Button';
+
+export interface DownwardButtonProps extends Omit<ButtonProps, 'color'> {
     /**
     * The title of button.
     */
@@ -16,23 +18,23 @@ export interface DownwardButtonProps {
     * @default "themeNoBackground"
     */
     color?: "primary" |
-            "info" |
-            "theme" |
-            "themeNoBackground" |
-            "themeWithBackground" |
-            "success" |
-            "warning" |
-            "danger" |
-            "rose" |
-            "white" |
-            "simple" |
-            "defaultNoBackground" |
-            "primaryNoBackground" |
-            "infoNoBackground" |
-            "successNoBackground" |
-            "warningNoBackground" |
-            "dangerNoBackground" |
-            "roseNoBackground"
+    "info" |
+    "theme" |
+    "themeNoBackground" |
+    "themeWithBackground" |
+    "success" |
+    "warning" |
+    "danger" |
+    "rose" |
+    "white" |
+    "simple" |
+    "defaultNoBackground" |
+    "primaryNoBackground" |
+    "infoNoBackground" |
+    "successNoBackground" |
+    "warningNoBackground" |
+    "dangerNoBackground" |
+    "roseNoBackground"
     /**
     * The size of button.
     * @default "medium"

@@ -1,6 +1,7 @@
 import { InputAdornmentProps } from "@material-ui/core";
+import { StandardTextFieldProps, FilledTextFieldProps, OutlinedTextFieldProps } from "@material-ui/core/TextField";
 
-export interface CustomTextFieldProps {
+export interface Props {
     /**
     * Override or extend the styles applied to the component.
     */
@@ -40,6 +41,9 @@ export interface CustomTextFieldProps {
     */
     debounceBy?: number
 }
+
+export type CustomTextFieldProps = Props | StandardTextFieldProps | FilledTextFieldProps | OutlinedTextFieldProps;
+
 /**
  *
  * Demos:

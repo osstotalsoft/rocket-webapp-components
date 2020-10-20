@@ -6,8 +6,11 @@ import customDialogStyle from './customDialogStyle';
 
 const useStyles = makeStyles(customDialogStyle);
 
-const CustomDialog = (props) => {
-    const { id, open, title, content, textContent, onYes, onClose, buttonColor, buttonSize, showActions, fullWidth, maxWidth, textDialogYes, textDialogNo } = props;
+const CustomDialog = props => {
+    const { id, open, title, content, textContent, onYes,
+        onClose, buttonColor, buttonSize, showActions,
+        fullWidth, maxWidth, textDialogYes, textDialogNo,
+        otherDialogProps } = props;
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const classes = useStyles();
@@ -23,6 +26,7 @@ const CustomDialog = (props) => {
         maxWidth={maxWidth}
         fullScreen={fullScreen}
         fullWidth={fullWidth}
+        {...otherDialogProps}
     >
         <DialogTitle id={`${id}-dialog-yes-no-title`} className={classes.text}>
             {title}
@@ -39,7 +43,7 @@ const CustomDialog = (props) => {
             </Grid>
             <Grid item container justify="flex-end" alignItems="center" lg={12}>
                 {showActions && <>
-                    <Button right size={buttonSize} color={buttonColor} onClick={onYes}>{textDialogYes}}</Button>
+                    <Button right size={buttonSize} color={buttonColor} onClick={onYes}>{textDialogYes}</Button>
                     <Button right size={buttonSize} color={buttonColor} onClick={onClose}>{textDialogNo}</Button>
                 </>
                 }
@@ -142,7 +146,11 @@ CustomDialog.propTypes = {
     * the text content of the second action.(the button for approval)
     * @default "No"
     */
-    textDialogNo: PropTypes.string
+    textDialogNo: PropTypes.string,
+    /**
+    * the additional properties you can send to Dialog component
+    */
+    otherDialogProps: PropTypes.object
 }
 
 export default CustomDialog

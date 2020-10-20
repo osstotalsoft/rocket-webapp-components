@@ -1,4 +1,6 @@
-export interface LoadingFakeTextProps {
+import { PaperProps } from "@material-ui/core/Paper";
+
+export interface LoadingFakeTextProps extends PaperProps {
     /**
     * The number of lines appearing.
     */

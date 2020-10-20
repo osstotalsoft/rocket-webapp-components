@@ -6,7 +6,7 @@ import cardStyle from "./cardStyle";
 
 const useStyles = makeStyles(cardStyle);
 
-export default function Card({ className, color, children, ...rest }) {
+export default function Card({ className, color, children }) {
   const classes = useStyles();
   const cardClasses = classNames({
     [classes.card]: true,
@@ -15,7 +15,7 @@ export default function Card({ className, color, children, ...rest }) {
   });
 
   return (
-    <div className={cardClasses} {...rest}>
+    <div className={cardClasses}>
       {children}
     </div>
   );

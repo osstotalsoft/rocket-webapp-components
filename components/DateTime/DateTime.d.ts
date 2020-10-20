@@ -1,13 +1,15 @@
 import { ParsableDate } from "@material-ui/pickers/constants/prop-types";
 
-export interface DateTimeProps {
+import { KeyboardDateTimePickerProps } from "@material-ui/pickers";
+
+export interface DateTimeProps extends KeyboardDateTimePickerProps {
     /**
-    * Picker value
+    * Picker value.
     * @default null
     */
     value?: ParsableDate
     /**
-    * onChange callback
+    * onChange callback.
     * @default () => { }
     */
     onChange?: (date: DateIOType) => void

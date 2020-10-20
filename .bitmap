@@ -128,7 +128,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/button@0.0.5": {
+    "totalsoft_oss.react-mui/button@0.0.6": {
         "files": [
             {
                 "relativePath": "components/Button/Button.d.ts",
@@ -379,7 +379,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-dialog@0.0.8": {
+    "totalsoft_oss.react-mui/custom-dialog@0.0.9": {
         "files": [
             {
                 "relativePath": "components/CustomDialog/CustomDialog.d.ts",
@@ -945,7 +945,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.26": {
+    "totalsoft_oss.react-mui/kit/core@0.0.27": {
         "files": [
             {
                 "relativePath": "core/index.js",

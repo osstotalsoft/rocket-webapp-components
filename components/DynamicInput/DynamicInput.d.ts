@@ -1,4 +1,6 @@
-export interface DynamicInputProps {
+import { SwitchProps } from "@material-ui/core/Switch";
+
+export interface DynamicInputProps extends SwitchProps {
     /**
     * The title of button.
     * @default 'N/A''

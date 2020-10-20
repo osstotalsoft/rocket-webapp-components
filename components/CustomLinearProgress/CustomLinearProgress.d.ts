@@ -1,27 +1,29 @@
-export interface CustomLinearProgressProps {
-    /**
-    *  The color of the component.
-    * @default "gray"
-    */
-    color?: "primary" |
-            "warning" |
-            "danger" |
-            "success" |
-            "info" |
-            "rose" |
-            "gray"
-    /**
-    * The variant to use. Use indeterminate or query when there is no progress value.
-    * @default "indeterminate"
-    */
-    variant?: "determinate" |
-            "indeterminate" |
-            "buffer" |
-            "query"
-    /**
-    * The value of the progress indicator for the determinate and buffer variants. Value between 0 and 100.
-    */
-    value?: number
+import { LinearProgressProps } from "@material-ui/core";
+
+export interface CustomLinearProgressProps extends Omit<LinearProgressProps, 'color' | 'variant' | 'value'> {
+        /**
+        *  The color of the component.
+        * @default "gray"
+        */
+        color?: "primary" |
+        "warning" |
+        "danger" |
+        "success" |
+        "info" |
+        "rose" |
+        "gray"
+        /**
+        * The variant to use. Use indeterminate or query when there is no progress value.
+        * @default "indeterminate"
+        */
+        variant?: "determinate" |
+        "indeterminate" |
+        "buffer" |
+        "query"
+        /**
+        * The value of the progress indicator for the determinate and buffer variants. Value between 0 and 100.
+        */
+        value?: number
 }
 /**
  *

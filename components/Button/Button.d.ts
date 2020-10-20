@@ -1,68 +1,70 @@
-export interface ButtonProps {
-    /**
-    * The color of button.
-    */
-    color?: "primary" |
-            "info" |
-            "theme" |
-            "themeNoBackground" |
-            "themeWithBackground" |
-            "success" |
-            "warning" |
-            "danger" |
-            "rose" |
-            "white" |
-            "simple" |
-            "defaultNoBackground" |
-            "primaryNoBackground" |
-            "infoNoBackground" |
-            "successNoBackground" |
-            "warningNoBackground" |
-            "dangerNoBackground" |
-            "roseNoBackground" |
-            "white" |
-            "simple" |
-            "transparent"
-     /**
-      * If true, rounded corners are enabled.
-      */
-    round?: boolean
-    /**
-    * 	The content of the component.
-    */
-    children?: React.ReactNode
-    /**
-    * 	If true, the button will take up the full width of its container.
-    */
-    fullWidth?: boolean
-    /**
-    * If true, the button will be disabled.
-    */
-    disabled?: boolean
-    /**
-    * A custom class provided.
-    */
-    customClass?: string
-    /**
-    * If true,  the button's min width will be set to 160px.
-    */
-    wd?: boolean
-    /**
-    * If true, the button will be smaller.
-    */
-    justIcon?: boolean
-    /**
-    * If true, the button will float to the right.
-    */
-    right?: boolean
-    /**
-    * The size of the button.
-    */
-    size?: "sm" | "lg" | "xs"
-    /**
-    * The tooltip of the button.
-    */
-    tooltip?: string
+import { ButtonProps as BaseProps } from '@material-ui/core/Button';
+
+export interface ButtonProps extends Omit<BaseProps, 'color'> {
+  /**
+  * The color of the button.
+  */
+  color?: "primary" |
+  "info" |
+  "theme" |
+  "themeNoBackground" |
+  "themeWithBackground" |
+  "success" |
+  "warning" |
+  "danger" |
+  "rose" |
+  "white" |
+  "simple" |
+  "defaultNoBackground" |
+  "primaryNoBackground" |
+  "infoNoBackground" |
+  "successNoBackground" |
+  "warningNoBackground" |
+  "dangerNoBackground" |
+  "roseNoBackground" |
+  "white" |
+  "simple" |
+  "transparent"
+  /**
+   * If true, rounded corners are enabled.
+   */
+  round?: boolean
+  /**
+  * 	The content of the component.
+  */
+  children?: React.ReactNode
+  /**
+  * 	If true, the button will take up the full width of its container.
+  */
+  fullWidth?: boolean
+  /**
+  * If true, the button will be disabled.
+  */
+  disabled?: boolean
+  /**
+  * A custom class provided.
+  */
+  customClass?: string
+  /**
+  * If true,  the button's min width will be set to 160px.
+  */
+  wd?: boolean
+  /**
+  * If true, the button will be smaller.
+  */
+  justIcon?: boolean
+  /**
+  * If true, the button will float to the right.
+  */
+  right?: boolean
+  /**
+  * The size of the button.
+  */
+  size?: "sm" | "lg" | "xs"
+  /**
+  * The tooltip of the button.
+  */
+  tooltip?: string
 
 }
 /**

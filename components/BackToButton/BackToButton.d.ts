@@ -1,8 +1,10 @@
-export interface BackToButtonProps {
+import { ButtonProps } from '@material-ui/core/Button';
+
+export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   /**
   * The title of button.
   */
-  title?: string;
+  title?: string
   /**
   * The color of button.
   * @default "themeWithBackground"

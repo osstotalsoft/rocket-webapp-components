@@ -1,4 +1,6 @@
-export interface CustomDialogProps {
+import { DialogProps } from "@material-ui/core";
+
+export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth' | 'maxWidth' | 'onClose'> {
     /**
     * 	The id(s) of the element(s) that label the dialog.
     */
@@ -17,24 +19,24 @@ export interface CustomDialogProps {
     * @default "primary"
     */
     buttonColor?: "primary" |
-                    "info" |
-                    "theme" |
-                    "themeNoBackground" |
-                    "themeWithBackground" |
-                    "success" |
-                    "warning" |
-                    "danger" |
-                    "rose" |
-                    "defaultNoBackground" |
-                    "primaryNoBackground" |
-                    "infoNoBackground" |
-                    "successNoBackground" |
-                    "warningNoBackground" |
-                    "dangerNoBackground" |
-                    "roseNoBackground" |
-                    "white" |
-                    "simple" |
-                    "transparent"
+    "info" |
+    "theme" |
+    "themeNoBackground" |
+    "themeWithBackground" |
+    "success" |
+    "warning" |
+    "danger" |
+    "rose" |
+    "defaultNoBackground" |
+    "primaryNoBackground" |
+    "infoNoBackground" |
+    "successNoBackground" |
+    "warningNoBackground" |
+    "dangerNoBackground" |
+    "roseNoBackground" |
+    "white" |
+    "simple" |
+    "transparent"
     /**
     * The size of buttons.
     * @default "sm"
@@ -81,6 +83,10 @@ export interface CustomDialogProps {
     * @default "No"
     */
     textDialogNo?: string
+    /**
+    * the additional properties you can send to Dialog component
+    */
+    otherDialogProps: Object
 }
 /**
  *
