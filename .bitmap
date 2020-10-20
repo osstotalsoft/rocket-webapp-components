@@ -508,7 +508,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/date-time@0.0.7": {
+    "totalsoft_oss.react-mui/date-time@0.0.8": {
         "files": [
             {
                 "relativePath": "components/DateTime/DateTime.d.ts",
@@ -662,7 +662,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/downward-button@0.0.8": {
+    "totalsoft_oss.react-mui/downward-button@0.0.9": {
         "files": [
             {
                 "relativePath": "components/DownwardButton/DownwardButton.js",
@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.33": {
+    "totalsoft_oss.react-mui/kit/core@0.0.34": {
         "files": [
             {
                 "relativePath": "core/index.js",
