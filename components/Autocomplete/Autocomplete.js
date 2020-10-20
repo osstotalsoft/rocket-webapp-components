@@ -6,7 +6,7 @@ import AsyncCreatableSelect from 'react-select/async-creatable';
 import AsyncSelect from 'react-select/async';
 import { Paper, MenuItem, TextField, ListItem, ListItemIcon, ListItemText, Checkbox, makeStyles, InputAdornment } from '@material-ui/core';
 import Typography from '../Typography';
-import autoCompleteStyles from "./autocompleteStyle";
+import autoCompleteStyles from "./autocompleteStyle"
 import { isArray } from 'util';
 import Search from '@material-ui/icons/Search';
 import { curry, prop } from 'ramda';
@@ -45,6 +45,7 @@ function controlHasValue(selectProps) {
 }
 
 function Control({ selectProps, innerRef, children, innerProps }) {
+
   const inputProps = {
     inputComponent,
     inputProps: {
@@ -142,6 +143,7 @@ function MultiValueDisplay(text) {
 }
 
 function MultiValueContainer({ selectProps, children }) {
+
   let elements = Object.assign([], children);
   if (children.length > 0 && children[0] && children[0].length > 1) {
     elements[0] = MultiValueDisplay(`(${children[0].length} selected)`);
@@ -184,7 +186,9 @@ function DropdownIndicator() {
 
 const formatCreateLabel = curry((createdLabel, text) => i18next.t(createdLabel, { text }))
 
-function Autocomplete({ options, loadOptions, onChange, creatable, onMenuOpen, value, isMultiSelection, isClearable, isSearchable, disabled, simpleValue, label, valueKey, labelKey, error, helperText, createdLabel, ...other }) {
+function Autocomplete({ options, defaultOptions, loadOptions, onChange,
+  creatable, onMenuOpen, value, isMultiSelection, isClearable,
+  isSearchable, disabled, simpleValue, label, valueKey, labelKey, error, helperText, createdLabel, ...other }) {
   const classes = useStyles();
 
   const handleOnChange = useCallback(inputValue => {
@@ -206,10 +210,6 @@ function Autocomplete({ options, loadOptions, onChange, creatable, onMenuOpen, v
 
   const Comp = loadOptions ? creatable ? AsyncCreatableSelect : AsyncSelect : Select;
   const loadOptionsAsync = useCallback(input => {
-    if (!input) {
-      return [];
-    }
-
     return loadOptions(input)
   }, [loadOptions])
 
@@ -236,6 +236,7 @@ function Autocomplete({ options, loadOptions, onChange, creatable, onMenuOpen, v
       styles={classes.selectStyles}
       options={options}
       loadOptions={loadOptionsAsync}
+      defaultOptions={defaultOptions}
       components={components}
       closeMenuOnSelect={isMultiSelection ? false : true}
       value={simpleValue ? getSimpleValue(options, value, valueKey, isMultiSelection) : value}
@@ -298,7 +299,8 @@ Autocomplete.propTypes = {
   valueKey: PropTypes.string,
   labelKey: PropTypes.string,
   error: PropTypes.bool,
-  createdLabel: PropTypes.string
+  createdLabel: PropTypes.string,
+  defaultOptions: PropTypes.oneOfType([PropTypes.bool, PropTypes.array])
 };
 
 export default Autocomplete;

@@ -1,6 +1,6 @@
 import { ButtonProps as BaseProps } from '@material-ui/core/Button';
 
-export interface ButtonProps extends Omit<BaseProps, 'color'> {
+export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
   /**
   * The color of the button.
   */
