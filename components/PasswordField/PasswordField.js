@@ -2,7 +2,6 @@ import React, { useState, useCallback } from "react";
 import CustomTextField from "../CustomTextField";
 import { InputAdornment, Tooltip } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
-import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "../IconButton";
 import PropTypes from "prop-types";
 
