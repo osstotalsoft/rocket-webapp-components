@@ -279,8 +279,19 @@ Autocomplete.defaultProps = {
 };
 
 Autocomplete.propTypes = {
+  /**
+  * The array of options from which the client can select a value.
+  * @default []
+  */
   options: PropTypes.array,
+  /**
+  * Function that returns a promise, which is the set of options to be used once the promise resolves.
+  */
   loadOptions: PropTypes.func,
+  /**
+  * The selected value from list of options.
+  * @default null
+  */
   value: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
@@ -288,18 +299,66 @@ Autocomplete.propTypes = {
     PropTypes.string,
     PropTypes.bool
   ]),
+  /**
+  * Handle change events on the select.
+  */
   onChange: PropTypes.func.isRequired,
+  /**
+  * Handle the menu opening.
+  */
   onMenuOpen: PropTypes.func,
+  /**
+  * If true, the user can select multiple values from list.
+  * @default false  
+  */
   isMultiSelection: PropTypes.bool,
+  /**
+  * If true, the user can clear the selected value.
+  * @default false  
+  */
   isClearable: PropTypes.bool,
+  /**
+  * If true, the search functionality is enabled.
+  * @default false  
+  */
   isSearchable: PropTypes.bool,
+  /**
+  * If true, the Select is disabled.
+  * @default false  
+  */
   disabled: PropTypes.bool,
+  /**
+  * @default false
+  * @TODO
+  */
   simpleValue: PropTypes.bool,
+  /**
+  * Label to be displayed in the heading component.
+  */
   label: PropTypes.string,
+  /**
+  * The key of values from options.
+  * @default "id"
+  * @TODO
+  */
   valueKey: PropTypes.string,
+  /**
+  * @default "name"
+  * @TODO
+  */
   labelKey: PropTypes.string,
+  /**
+  * If true, the helper text is displayed when an error pops up.
+  * @default false
+  */
   error: PropTypes.bool,
+  /**
+  * The value of label when a new option is added.
+  */
   createdLabel: PropTypes.string,
+  /**
+  * The default set of options to show before the user starts searching. When set to true, the results for loadOptions('') will be autoloaded.
+  */
   defaultOptions: PropTypes.oneOfType([PropTypes.bool, PropTypes.array])
 };
 

@@ -22,7 +22,6 @@ export interface AutocompleteProps {
   value?: Object | [] | number | string | boolean
   /**
   * Handle change events on the select.
-  * This property is required.
   */
   onChange: () => void
   /**
@@ -50,8 +49,8 @@ export interface AutocompleteProps {
   */
   disabled?: boolean
   /**
-  *@todo
   * @default false
+  * @TODO
   */
   simpleValue?: boolean
   /**
@@ -65,8 +64,8 @@ export interface AutocompleteProps {
   */
   valueKey?: string
   /**
-  * @TODO
   * @default "name"
+  * @TODO
   */
   labelKey?: string
   /**
