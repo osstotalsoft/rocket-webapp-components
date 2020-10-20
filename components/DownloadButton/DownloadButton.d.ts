@@ -2,7 +2,7 @@ export interface DownloadButtonProps {
     /**
     * The title of button.
     */
-    title?: String;
+    title?: string;
     /**
     * Callback fired when a "click" event is detected.
     */
@@ -10,7 +10,7 @@ export interface DownloadButtonProps {
     /**
     * If true, the button will be disabled.
     */
-    disabled?: Boolean
+    disabled?: boolean
     /**
     * The color of button.
     * @default "themeNoBackground"

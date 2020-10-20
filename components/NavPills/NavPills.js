@@ -69,7 +69,7 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
 
     return horizontal !== undefined ? (
         <Grid container className={classes.grid}>
-            <Grid item lg={11} className={classes.itemGrid} {...horizontal.tabsGrid}>{tabButtons}</Grid><Grid item lg={1}>{"+++++"}</Grid>
+            <Grid item lg={11} className={classes.itemGrid} {...horizontal.tabsGrid}>{tabButtons}</Grid><Grid item lg={1}/>
             <Grid item className={classes.itemGrid} {...horizontal.contentGrid}>{tabContent}</Grid>
         </Grid>
     ) : (

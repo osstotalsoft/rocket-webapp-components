@@ -2,7 +2,7 @@ export interface CardTitleProps {
     /**
     * The title of card.
     */
-    title?: String;
+    title?: string;
     /**
      * The actions(made of array of buttons) of card.
      */

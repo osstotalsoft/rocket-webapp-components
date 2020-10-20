@@ -4,7 +4,7 @@ export interface ForbiddenProps {
      * Text to be displayed
      * @default "Not allowed to see this page!"
      */
-    forbiddenText?: String;
+    forbiddenText?: string;
 
     /**
      * Demos:

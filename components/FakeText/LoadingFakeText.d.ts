@@ -2,11 +2,11 @@ export interface LoadingFakeTextProps {
     /**
     * The number of lines appearing.
     */
-    lines?: Number;
+    lines?: number;
     /**
     * If true, the fake text will be drawn on a Paper.
     */
-    onPaper?: Boolean;
+    onPaper?: boolean;
 }
 /**
 *

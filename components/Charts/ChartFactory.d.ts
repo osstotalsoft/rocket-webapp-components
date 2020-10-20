@@ -12,7 +12,7 @@ export interface ChartFactoryProps {
     /**
     * The labels of chart.
     */
-    labels?: String[]
+    labels?: string[]
     /**
     * The info of chart.(see the sample provided in demos)
     */
@@ -20,23 +20,23 @@ export interface ChartFactoryProps {
     /**
    * If true, the labels are shown.
    */
-    displayDataLabels: Boolean
+    displayDataLabels: boolean
     /**
    * The color of chart.
     */
-    chartColor: String
+    chartColor: string
     /**
     * The title of chart.
     */
-    title?: String
+    title?: string
     /**
     * The text status of chart.
     */
-    text?: String
+    text?: string
     /**
     * If true, the chart moves up on click hover.
     */
-    hover: Boolean
+    hover: boolean
     /**
     * If provided, its content will appear just below the main content.
     */

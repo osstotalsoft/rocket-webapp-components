@@ -2,7 +2,7 @@ export interface EditButtonProps {
     /**
     * The title of button.
     */
-    title?: String;
+    title?: string;
     /**
     * Callback fired when a "click" event is detected.
     */
@@ -10,12 +10,12 @@ export interface EditButtonProps {
     /**
     * If true, the button will be disabled.
     */
-    disabled?: Boolean
+    disabled?: boolean
     /**
     * If true, the edit icon will be visible.
     * @default true
     */
-    editMode?: Boolean
+    editMode?: boolean
     /**
     * The color of button.
     * @default "themeNoBackground"

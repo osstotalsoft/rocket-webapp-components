@@ -1,4 +1,6 @@
-export interface IconButtonProps {
+import { IconButtonProps as BaseProps } from '@material-ui/core/IconButton';
+
+export interface IconButtonProps extends Omit<BaseProps, 'color'> {
 
     /**
      * The content of the button
@@ -37,17 +39,17 @@ export interface IconButtonProps {
     /**
      * Override or extend the styles applied to the component
      */
-    customClass?: String;
+    customClass?: string;
 
     /**
      * If true, button will be disabled. Default is set to false
      */
-    disabled?: Boolean;
+    disabled?: boolean;
 
     /**
      * The text to be displayed when the user hover over the button
      */
-    tooltip?: String;
+    tooltip?: string;
 
     /**
     * Demos:

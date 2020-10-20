@@ -26,7 +26,7 @@ export interface ButtonProps {
      /**
       * If true, rounded corners are enabled.
       */
-    round?: Boolean
+    round?: boolean
     /**
     * 	The content of the component.
     */
@@ -34,27 +34,27 @@ export interface ButtonProps {
     /**
     * 	If true, the button will take up the full width of its container.
     */
-    fullWidth?: Boolean
+    fullWidth?: boolean
     /**
     * If true, the button will be disabled.
     */
-    disabled?: Boolean
+    disabled?: boolean
     /**
     * A custom class provided.
     */
-    customClass?: String
+    customClass?: string
     /**
     * If true,  the button's min width will be set to 160px.
     */
-    wd?: Boolean
+    wd?: boolean
     /**
     * If true, the button will be smaller.
     */
-    justIcon?: Boolean
+    justIcon?: boolean
     /**
     * If true, the button will float to the right.
     */
-    right?: Boolean
+    right?: boolean
     /**
     * The size of the button.
     */
@@ -62,7 +62,7 @@ export interface ButtonProps {
     /**
     * The tooltip of the button.
     */
-    tooltip?: String
+    tooltip?: string
 
 }
 /**

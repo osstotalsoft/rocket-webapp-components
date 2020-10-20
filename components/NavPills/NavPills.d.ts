@@ -1,16 +1,19 @@
-export interface NavPillsProps {
+import { TabProps } from '@material-ui/core/Tab'
+import { TabsProps } from '@material-ui/core/Tabs'
+
+export interface Props {
 
     /**
      * Index of the default active pill
      * @default 0
      */
-    active?: Number;
+    active?: number;
 
     /**
      * The content of the component
      */
     tabs: {
-        tabButton: String,
+        tabButton: string,
         tabIcon: Object,
         tabContent: React.ReactNode
     }[];
@@ -37,18 +40,29 @@ export interface NavPillsProps {
     /**
      * If set to true, the alignment of pills will be centered
      */
-    alignCenter?: Boolean;
+    alignCenter?: boolean;
 
     /**
      * This property is required
+     * @param {object} event The event source of the callback.
+     * @param {any} value We default to the index of the child (number)
      */
-    onChange: Function;
+    onChange: (event: React.SyntheticEvent, value: any) => void;
 
     /**
      * A list of actions available in this component
      * @default []
      */
-    actions?: String[];
+    actions?: string[];
+
+    /**
+     * Demos:
+     * 
+     * - https://bit.dev/totalsoft_oss/react-mui/nav-pills
+     * 
+     */
 }
+
+export type NavPillsProps = Props | TabProps | TabsProps
 
 export default function NavPills(props: NavPillsProps): JSX.Element;

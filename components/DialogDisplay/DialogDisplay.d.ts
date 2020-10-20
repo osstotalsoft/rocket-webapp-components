@@ -2,12 +2,12 @@ export interface DialogDisplayProps {
     /**
     * The id(s) of the element(s) that label the dialog.
     */
-    id: String;
+    id: string;
     /**
     * If true, the dialog is open.
     * @default false
     */
-    open?: Boolean
+    open?: boolean
     /**
     *Callback fired when the component requests to be closed.
     * Signature:

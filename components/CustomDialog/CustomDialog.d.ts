@@ -2,16 +2,16 @@ export interface CustomDialogProps {
     /**
     * 	The id(s) of the element(s) that label the dialog.
     */
-    id: String
+    id: string
     /**
     * If true, the dialog is open.
     * @default false
     */
-    open?: Boolean
+    open?: boolean
     /**
     * The title of dialog.
     */
-    title?: String
+    title?: string
     /**
     * The color of actions.
     * @default "primary"
@@ -43,7 +43,7 @@ export interface CustomDialogProps {
     /**
     * The content of dialog.
     */
-    textContent: String
+    textContent: string
     /**
     * The content of dialog.
     */
@@ -60,7 +60,7 @@ export interface CustomDialogProps {
     * If true, the actions(buttons) below are shown.
     * @default false
     */
-    showActions?: Boolean
+    showActions?: boolean
     /**
     * Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.
     * @default "md"
@@ -70,17 +70,17 @@ export interface CustomDialogProps {
     * 	If true, the button will take up the full width of its container.
     * @default true
     */
-    fullWidth?: Boolean
+    fullWidth?: boolean
     /**
     * the text content of the first action.(the button for denial)
     * @default "Yes"
     */
-    textDialogYes?: String
+    textDialogYes?: string
     /**
     * the text content of the second action.(the button for approval)
     * @default "No"
     */
-    textDialogNo?: String
+    textDialogNo?: string
 }
 /**
  *

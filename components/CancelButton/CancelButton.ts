@@ -2,7 +2,7 @@ export interface CancelButtonProps {
     /**
     * The title of button.
     */
-    title?: String;
+    title?: string;
     /**
      * Callback fired when a "click" event is detected.
      */
@@ -10,7 +10,7 @@ export interface CancelButtonProps {
     /**
     * If true, the button will be disabled.
     */
-    disabled?: Boolean
+    disabled?: boolean
     /**
     * The color of button.
     * @default "themeNoBackground"

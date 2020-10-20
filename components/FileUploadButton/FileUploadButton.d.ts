@@ -12,61 +12,62 @@ export interface FileUploadButtonProps {
 
     /**
      * This function is called after a file is selected
+     * @param {file} file 
      */
     onFileSelected?: (file: File) => void
 
     /**
      * If one of them is true, button will be disabled
      */
-    uploading?: Boolean;
-    disabled?: Boolean;
+    uploading?: boolean;
+    disabled?: boolean;
 
     /**
      * Accepted type of file to upload
      */
-    accept?: String;
+    accept?: string;
 
     /**
      * The minimum size of the file to be uploaded
      */
-    minSize?: Number;
+    minSize?: number;
 
     /**
      * The maximum size of the file to be uploaded
      */
-    maxSize?: Number;
+    maxSize?: number;
 
     /**
      * Text shown when a file is uploading
      * @default "Uploading"
      */
-    uploadingText?: String;
+    uploadingText?: string;
 
     /**
      * Text to be displayed
      * @default "Upload"
      */
-    uploadText?: String;
+    uploadText?: string;
 
     /**
      * If the file type isn't the same with the one received in the accept prop, it will be prompted this text
      * @default "Invalid file type. Please upload type {{accept}}"
      */
-    invalidTypeText?: String;
+    invalidTypeText?: string;
 
     /**
      * If the file size exceeded maxSize, it wil be prompted this text
      * { maxSize: (maxSize / 1024) > 1024 ? (maxSize / (1024 * 1024)).toFixed(2) + "MB" : (maxSize / 1024) + "KB" }
      * @default "Maximum allowed size of {{maxSize}} exceeded."
      */
-    tooLargeText?: String;
+    tooLargeText?: string;
 
     /**
      * If the file size is less than minSize, it wil be prompted this text
      * { minSize: (minSize / 1024) > 1024 ? (minSize / (1024 * 1024)).toFixed(2) + "MB" : (minSize / 1024) + "KB" }
      * @default "Minimum allowed size of upload is {{minSize}}."
      */
-    tooSmallText?: String;
+    tooSmallText?: string;
 
     /**
      * Demos:

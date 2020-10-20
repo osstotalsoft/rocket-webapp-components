@@ -6,11 +6,11 @@ export interface ChartCardProps {
     /**
      * The actions(made of array of buttons) of card.
      */
-    title?: String
+    title?: string
     /**
     * The text content of chart.
     */
-    text?: String
+    text?: string
     /**
     * The icon of chart.
     */
@@ -44,12 +44,12 @@ export interface ChartCardProps {
     /**
     * The text status of chart.
     */
-    statText: String
+    statText: string
     /**
     * If true, the chart moves up on click hover.
     * @default false
     */
-    hover: Boolean
+    hover: boolean
     /**
     * If provided, its content will appear just below the main content.
     */

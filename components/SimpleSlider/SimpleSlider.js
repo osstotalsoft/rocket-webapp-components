@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { FormControl, FormHelperText, Typography } from '@material-ui/core';
+import { FormControl, FormHelperText } from '@material-ui/core';
 import CustomTextField from "../CustomTextField";
+import Typography from '../Typography';
 import Slider from '@material-ui/core/Slider';
 import debounce from 'lodash.debounce';
 import simpleSliderStyle from "./simpleSliderStyle";
