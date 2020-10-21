@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Accordion from '../Accordion';
+import Accordion from './Accordion';
+
 
 const arr = [{
     title: 'Title 1',

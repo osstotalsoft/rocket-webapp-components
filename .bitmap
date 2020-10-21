@@ -14,7 +14,7 @@
                 "name": "Accordion.js"
             },
             {
-                "relativePath": "components/Accordion/__tests__/Accordion.test.js",
+                "relativePath": "components/Accordion/Accordion.test.js",
                 "test": true,
                 "name": "Accordion.test.js"
             },
