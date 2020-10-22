@@ -99,8 +99,7 @@
   },
   "bit": {
     "env": {
-      "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.25",
-      "tester": "totalsoft_oss.react-mui/testers/jest@22.4.4"
+      "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.25"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm",
