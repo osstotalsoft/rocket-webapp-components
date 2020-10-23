@@ -17,7 +17,7 @@ const someArray = [{
 }
 ]
 
-describe('Snapshot', () => {
+describe('Accordion', () => {
     it('Three children are expected to render', () => {
         const wrapper = shallow(<Accordion
             active={0}
@@ -107,5 +107,27 @@ describe('Snapshot', () => {
         />);
         const json = component.toJSON();
         expect(json).toMatchSnapshot();
+    });
+
+    it('Second child is expected to be expanded', () => {
+        // const setState = jest.fn();
+        // const useStateSpy = jest.spyOn(React, 'useState')
+        // useStateSpy.mockImplementation((init) => [init, setState]);
+        
+        // const wrapper = mount(<Accordion
+        //     active={1}
+        //     content={someArray.map(item => {
+        //         return {
+        //             title: item.title,
+        //             content: (
+        //                 <div>
+        //                     {item.value}
+        //                 </div>
+        //             )
+        //         };
+        //     })}
+        // />);
+
+        // expect(wrapper.prop('active')).toBe(1)
     });
 });
