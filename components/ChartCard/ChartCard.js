@@ -108,7 +108,7 @@ ChartCard.propTypes = {
   /**
   * The icon of chart.
   */
-  StatIcon: PropTypes.node,
+  StatIcon: PropTypes.any,
   /**
   * The icon's color of chart.
   * @default "gray"

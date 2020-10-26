@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpandingText snapshot 1`] = `
+<div>
+  <label
+    className="MuiFormControlLabel-root"
+  >
+    <div>
+       
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor   incididunt ut labor
+       
+      <br />
+       
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "blue",
+            "cursor": "pointer",
+          }
+        }
+      >
+        Show more
+      </div>
+    </div>
+    <span
+      className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+    />
+  </label>
+</div>
+`;

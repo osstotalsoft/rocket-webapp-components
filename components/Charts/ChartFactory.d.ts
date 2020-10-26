@@ -7,8 +7,8 @@ export interface ChartFactoryProps {
      * The type of chart.
      */
     type?: "Line" |
-            "Bar" |
-            "Mix"
+    "Bar" |
+    "Mix"
     /**
     * The labels of chart.
     */
@@ -41,6 +41,10 @@ export interface ChartFactoryProps {
     * If provided, its content will appear just below the main content.
     */
     underChart: React.ReactNode
+    /**
+    * The status icon.
+    */
+    StatIcon: unknown
 }
 /**
  *

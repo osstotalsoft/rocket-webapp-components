@@ -71,7 +71,7 @@ CustomDialog.propTypes = {
     * If true, the dialog is open.
     * @default false
     */
-    open: PropTypes.bool,
+    open: PropTypes.bool.isRequired,
     /**
     * The title of dialog.
     */

@@ -9,7 +9,7 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
     * If true, the dialog is open.
     * @default false
     */
-    open?: boolean
+    open: boolean
     /**
     * The title of dialog.
     */

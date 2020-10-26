@@ -14,7 +14,7 @@ export interface ChartCardProps {
     /**
     * The icon of chart.
     */
-    StatIcon: React.ReactNode
+    StatIcon: unknown
     /**
     * The icon's color of chart.
     * @default "gray"

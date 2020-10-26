@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartCard snapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
+>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12"
+  >
+    <div
+      className="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="MuiCardHeader-root makeStyles-cardHeader-2 makeStyles-blueCardHeader-6"
+      >
+        <div
+          className="MuiCardHeader-content"
+        >
+          <span
+            className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+          />
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root makeStyles-cardContent-9"
+      >
+        <div
+          className="makeStyles-underChart-23"
+        >
+          <div>
+            Some content under chart
+          </div>
+        </div>
+        <h6
+          className="MuiTypography-root makeStyles-cardTitle-10 MuiTypography-subtitle1"
+        >
+          Title
+        </h6>
+        <p
+          className="MuiTypography-root makeStyles-cardCategory-11"
+        />
+      </div>
+      <div
+        className="MuiCardActions-root makeStyles-cardActions-12 MuiCardActions-spacing"
+      >
+        <div
+          className="makeStyles-cardStats-13"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root makeStyles-cardStatsIcon-14 makeStyles-grayCardStatsIcon-21"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+            />
+            <path
+              d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+            />
+          </svg>
+           
+          Text description
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12"
+  >
+    <div
+      className="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="MuiCardHeader-root makeStyles-cardHeader-2 makeStyles-orangeCardHeader-3"
+      >
+        <div
+          className="MuiCardHeader-content"
+        >
+          <span
+            className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+          />
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root makeStyles-cardContent-9"
+      >
+        <div
+          className="makeStyles-underChart-23"
+        >
+          <div>
+            Some content under chart
+          </div>
+        </div>
+        <h6
+          className="MuiTypography-root makeStyles-cardTitle-10 MuiTypography-subtitle1"
+        >
+          Title
+        </h6>
+        <p
+          className="MuiTypography-root makeStyles-cardCategory-11"
+        />
+      </div>
+      <div
+        className="MuiCardActions-root makeStyles-cardActions-12 MuiCardActions-spacing"
+      >
+        <div
+          className="makeStyles-cardStats-13"
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root makeStyles-cardStatsIcon-14 makeStyles-grayCardStatsIcon-21"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+            />
+            <path
+              d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+            />
+          </svg>
+           
+          Status text
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
