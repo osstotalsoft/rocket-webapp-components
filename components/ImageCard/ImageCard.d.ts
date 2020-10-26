@@ -41,6 +41,7 @@ export interface ImageCardProps {
    * 
    * - https://bit.dev/totalsoft_oss/react-mui/image-card
    * 
+   *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/ImageCard/ImageCard.js
    */
 
 }

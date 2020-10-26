@@ -60,6 +60,7 @@ export interface Props {
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/nav-pills
      * 
+     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/NavPills/NavPills.js
      */
 }
 

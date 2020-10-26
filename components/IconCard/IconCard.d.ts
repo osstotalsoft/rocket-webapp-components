@@ -62,6 +62,7 @@ export interface Props {
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/icon-card
      * 
+     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/IconCard/IconCard.js
      */
 }
 
