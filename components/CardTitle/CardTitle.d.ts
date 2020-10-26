@@ -16,6 +16,6 @@ export interface CardTitleProps extends BoxProps {
  *
  * - https://bit.dev/totalsoft_oss/react-mui/card-title
  *
- * 
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/CardTitle/CardTitle.js
  */
 export default function CardTitle(props: CardTitleProps): JSX.Element;
