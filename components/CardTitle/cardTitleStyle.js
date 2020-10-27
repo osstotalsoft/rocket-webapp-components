@@ -1,5 +1,5 @@
 import styles from '@bit/totalsoft_oss.react-mui.styles';
-import { theme as DefaultTheme } from '@bit/totalsoft_oss.react-mui.themes.default-theme';
+import { defaultTheme } from '@bit/totalsoft_oss.react-mui.themes';
 
 const cardTitleStyle = theme => {
   const {
@@ -9,7 +9,7 @@ const cardTitleStyle = theme => {
   return ({
     defaultFont,
     cardTitle: {
-      ...theme.header?.title || DefaultTheme.header?.title,
+      ...theme.header?.title || defaultTheme.header?.title,
       display: 'flex',
       flexGrow: 1,
       padding: '5px'

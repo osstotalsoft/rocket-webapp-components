@@ -1,5 +1,5 @@
 import styles from '@bit/totalsoft_oss.react-mui.styles';
-import { theme as DefaultTheme } from '@bit/totalsoft_oss.react-mui.themes.default-theme';
+import { defaultTheme } from '@bit/totalsoft_oss.react-mui.themes';
 
 const cardStyle = theme => {
   const {
@@ -30,7 +30,7 @@ const cardStyle = theme => {
       width: '280px'
     },
     primary: {
-      background: theme.palette?.primary?.main || DefaultTheme.palette?.primary?.main,
+      background: theme.palette?.primary?.main || defaultTheme.palette?.primary?.main,
       color: whiteColor
     },
     info: {

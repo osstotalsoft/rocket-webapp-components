@@ -1,6 +1,6 @@
 import { emphasize } from '@material-ui/core/styles/colorManipulator';
 import styles from '@bit/totalsoft_oss.react-mui.styles';
-import { theme as DefaultTheme } from '@bit/totalsoft_oss.react-mui.themes.default-theme';
+import { defaultTheme} from '@bit/totalsoft_oss.react-mui.themes';
 
 const autocompleteStyle = theme => {
   const { dangerColor, successColor, defaultFont } = styles(theme);
@@ -27,9 +27,9 @@ const autocompleteStyle = theme => {
       color: successColor[0] + " !important"
     },
     valueContainer: {
-      ...theme.autoComplete?.valueContainer || DefaultTheme.autoComplete.valueContainer,
+      ...theme.autoComplete?.valueContainer || defaultTheme.autoComplete.valueContainer,
       '& input': {
-        ...theme.autoComplete?.input || DefaultTheme.autoComplete.input
+        ...theme.autoComplete?.input || defaultTheme.autoComplete.input
       }
     },
     chip: {
@@ -65,7 +65,7 @@ const autocompleteStyle = theme => {
     selectStyles: {
       input: base => ({
         ...base,
-        color: theme.palette?.text?.primary || DefaultTheme.palette.text.primary
+        color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
       }),
     }
   })

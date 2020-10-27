@@ -1,5 +1,5 @@
 import styles from '@bit/totalsoft_oss.react-mui.styles';
-import { theme as DefaultTheme } from '@bit/totalsoft_oss.react-mui.themes.default-theme';
+import { defaultTheme } from '@bit/totalsoft_oss.react-mui.themes';
 
 const customLinearProgressStyle = (theme) => {
     const {
@@ -22,7 +22,7 @@ const customLinearProgressStyle = (theme) => {
             height: "4px"
         },
         primary: {
-            backgroundColor: theme.palette?.primary?.main || DefaultTheme.palette?.primary?.main
+            backgroundColor: theme.palette?.primary?.main || defaultTheme.palette?.primary?.main
         },
         warning: {
             backgroundColor: warningColor
@@ -43,7 +43,7 @@ const customLinearProgressStyle = (theme) => {
             backgroundColor: grayColor
         },
         primaryBackground: {
-            background: "rgba(" + hexToRgb(theme.palette?.primary?.main || DefaultTheme.palette?.primary?.main) + ", 0.2)"
+            background: "rgba(" + hexToRgb(theme.palette?.primary?.main || defaultTheme.palette?.primary?.main) + ", 0.2)"
         },
         warningBackground: {
             background: "rgba(" + hexToRgb(warningColor) + ", 0.2)"

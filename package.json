@@ -99,6 +99,8 @@
   "sideEffects": false,
   "dependencies": {
     "@bit/totalsoft_oss.react-mui.logo.default-logo": "0.0.1",
+    "@bit/totalsoft_oss.react-mui.styles": "0.0.1",
+    "@bit/totalsoft_oss.react-mui.themes": "0.0.1",
     "@material-ui/core": "^4.11.0",
     "classnames": "^2.2.6",
     "enzyme": "^3.11.0",
@@ -113,7 +115,7 @@
   },
   "bit": {
     "env": {
-      "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.30"
+      "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.31"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm",
