@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card snapshot - danger 1`] = `
+<div
+  className="makeStyles-card-1"
+>
+  <div>
+     Card
+  </div>
+</div>
+`;
+
+exports[`Card snapshot - info 1`] = `
+<div
+  className="makeStyles-card-1"
+>
+  <div>
+     Card
+  </div>
+</div>
+`;
+
+exports[`Card snapshot - primary 1`] = `
+<div
+  className="makeStyles-card-1"
+>
+  <div>
+     Card
+  </div>
+</div>
+`;
+
+exports[`Card snapshot - rose 1`] = `
+<div
+  className="makeStyles-card-1"
+>
+  <div>
+     Card
+  </div>
+</div>
+`;
+
+exports[`Card snapshot - success 1`] = `
+<div
+  className="makeStyles-card-1"
+>
+  <div>
+     Card
+  </div>
+</div>
+`;
+
+exports[`Card snapshot - warning 1`] = `
+<div
+  className="makeStyles-card-1"
+>
+  <div>
+     Card
+  </div>
+</div>
+`;

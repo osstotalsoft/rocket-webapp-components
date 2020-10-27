@@ -20,7 +20,7 @@ const App = () => {
 				<DynamicInput
 					label='DynamicInput - NumberTextField'
 					id={'testId'}
-					controlType={"TP_NUM"}
+					controlType={"NUM"}
 					onChange={onDynamicInputChange(handleDynamicPropertyChange)}
 					value={dynamicInputValue}
 					disabled={false}
@@ -31,7 +31,7 @@ const App = () => {
 				<DynamicInput
 					label='DynamicInput - TextField'
 					id={'testId'}
-					controlType={"TP_TEXT"}
+					controlType={"TEXT"}
 					onChange={onDynamicInputChange(handleDynamicPropertyChange)}
 					value={dynamicInputValue}
 					disabled={false}
@@ -53,7 +53,7 @@ const App = () => {
 				<DynamicInput
 					label='DynamicInput - Datetime'
 					id={'testId'}
-					controlType={"TP_DATE"}
+					controlType={"DATE"}
 					onChange={onDynamicInputChange(handleDynamicDatetimePropertyChange)}
 					value={dynamicInputDatetimeValue}
 					disabled={false}

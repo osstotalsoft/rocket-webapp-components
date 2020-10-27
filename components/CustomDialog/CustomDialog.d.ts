@@ -9,7 +9,7 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
     * If true, the dialog is open.
     * @default false
     */
-    open?: boolean
+    open: boolean
     /**
     * The title of dialog.
     */
@@ -94,5 +94,6 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
  *
  * - https://bit.dev/totalsoft_oss/react-mui/custom-dialog
  *
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/CustomDialog/CustomDialog.js
  */
 export default function CustomDialog(props: CustomDialogProps): JSX.Element;

@@ -82,5 +82,6 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps,'onChang
  *
  * - https://bit.dev/totalsoft_oss/react-mui/date-time
  *
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/DateTime/DateTime.js
  */
 export default function DateTime(props: DateTimeProps): JSX.Element;

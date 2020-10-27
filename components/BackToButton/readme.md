@@ -1,11 +1,11 @@
 ##### Copy this snapshot in the overview panel
  ```js
 import React from 'react';
-import BackButton from '@bit/totalsoft_oss.react-mui.back-button';
+import BackToButton from '@bit/totalsoft_oss.react-mui.back-to-button';
 
 export default (
-	<BackButton
+	<BackToButton
 		title="Back"
-	></BackButton>
+	></BackToButton>
 )
  ```

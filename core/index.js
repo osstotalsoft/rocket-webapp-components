@@ -54,7 +54,6 @@ export { default as ExpandingText } from '@bit/totalsoft_oss.react-mui.expanding
 
 //Accordion
 export { default as Accordion } from '@bit/totalsoft_oss.react-mui.accordion'
-export { default as Piano } from '@bit/totalsoft_oss.react-mui.piano'
 
 //Chart factory
 export { default as ChartFactory } from '@bit/totalsoft_oss.react-mui.charts'

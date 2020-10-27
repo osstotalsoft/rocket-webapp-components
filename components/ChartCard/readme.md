@@ -2,6 +2,8 @@
  ```js
 import React from 'react';
 import Charts from '@bit/totalsoft_oss.react-mui.charts';
+import AccessTime from "@material-ui/icons/AccessTime";
+import { Grid } from '@material-ui/core';
 
 const labels = ["January", "February", "March", "April", "May", "June",
 	"July", "August", "September", "October", "November", "December"]

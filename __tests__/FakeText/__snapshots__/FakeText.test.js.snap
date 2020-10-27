@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingFakeText snapshot 1`] = `
+<div
+  className="makeStyles-wrapper-1"
+>
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+  <div
+    className="makeStyles-fake-2"
+  />
+</div>
+`;

@@ -31,5 +31,6 @@ export interface CustomLinearProgressProps extends Omit<LinearProgressProps, 'co
  *
  * - https://bit.dev/totalsoft_oss/react-mui/custom-linear-progress
  *
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/CustomLinearProgress/CustomLinearProgress.js
  */
 export default function CustomLinearProgress(props: CustomLinearProgressProps): JSX.Element;

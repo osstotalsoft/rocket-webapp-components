@@ -91,7 +91,7 @@ ChartFactory.propTypes = {
   chartColor: PropTypes.string.isRequired,
   title: PropTypes.string,
   text: PropTypes.string,
-  StatIcon: PropTypes.node,
+  StatIcon: PropTypes.any,
   statText: PropTypes.string,
   hover: PropTypes.bool,
   borderWidth: PropTypes.number,
