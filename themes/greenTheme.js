@@ -1,4 +1,4 @@
-import DefaultLogo from '../assets/img/defaultLogo.png';
+import DefaultLogo from '@bit/totalsoft_oss.react-mui.logo.default-logo';
 
 const defaultFont = {
     fontFamily: "Source Sans Pro",

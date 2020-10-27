@@ -1,4 +1,4 @@
-import styles from '../../assets/jss/styles';
+import styles from '@bit/totalsoft_oss.react-mui.styles';
 
 const textFieldStyle = theme => {
     const { defaultFont, grayColor } = styles(theme);
