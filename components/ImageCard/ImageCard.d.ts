@@ -13,7 +13,7 @@ export interface ImageCardProps {
   /**
    * The image to be displayed
    */
-  image?: string;
+  image?: string | React.ReactNode;
 
   /**
    * If the image cannot be displayed for some reason, this text will be shown

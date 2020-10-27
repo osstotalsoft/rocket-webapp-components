@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render IconCard render correctly IconCard component 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-card-1  MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <div
+    className="MuiCardHeader-root makeStyles-cardHeader-3 makeStyles-themeCardHeader-10"
+  >
+    <div
+      className="MuiCardHeader-avatar makeStyles-cardAvatar-12"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root makeStyles-cardIcon-13"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="MuiCardHeader-content"
+    />
+  </div>
+  <div
+    className="MuiCardContent-root makeStyles-cardContent-11 "
+  >
+    <h6
+      className="MuiTypography-root makeStyles-cardTitle-14 MuiTypography-subtitle1"
+    >
+      Title card
+    </h6>
+    <h6
+      className="MuiTypography-root makeStyles-cardCategory-15 MuiTypography-subtitle2"
+    >
+      Subtitle card
+    </h6>
+    Content of the card
+  </div>
+  <div
+    className="makeStyles-cardFooter-16"
+  >
+    Footer card
+  </div>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Forbidden render correctly Forbidden component 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-cardStyle-1 MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <h6
+    className="MuiTypography-root makeStyles-textStyle-2 MuiTypography-h6 MuiTypography-alignCenter"
+  >
+    Not allowed to see this page!
+  </h6>
+</div>
+`;

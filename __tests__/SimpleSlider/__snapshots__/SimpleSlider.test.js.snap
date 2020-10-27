@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render SimpleSlider render correctly SimpleSlider component 1`] = `
+<div
+  className="MuiFormControl-root makeStyles-formControl-5 MuiFormControl-fullWidth"
+>
+  <div
+    className="MuiFormControl-root MuiTextField-root undefined undefined MuiFormControl-fullWidth"
+  >
+    <label
+      className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-7 MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"
+      data-shrink={false}
+    >
+      Simple slider
+      <span
+        aria-hidden={true}
+        className="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+      >
+         
+        *
+      </span>
+    </label>
+    <div
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        autoFocus={false}
+        className="MuiInputBase-input MuiInput-input makeStyles-input-8"
+        disabled={false}
+        onAnimationStart={[Function]}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={true}
+        type="text"
+        value={null}
+      />
+    </div>
+  </div>
+  <span
+    className="MuiSlider-root makeStyles-sliderRoot-1 MuiSlider-colorPrimary"
+    onMouseDown={[Function]}
+  >
+    <span
+      className="MuiSlider-rail"
+    />
+    <span
+      className="MuiSlider-track"
+      style={
+        Object {
+          "left": "0%",
+          "width": "0%",
+        }
+      }
+    />
+    <input
+      type="hidden"
+      value="0"
+    />
+    <span
+      aria-labelledby="continuous-slider"
+      aria-orientation="horizontal"
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={0}
+      className="MuiSlider-thumb makeStyles-sliderThumb-3 MuiSlider-thumbColorPrimary"
+      data-index={0}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="slider"
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+      tabIndex={0}
+    />
+  </span>
+  <div
+    className="makeStyles-sliderLimits-6"
+  >
+    <span
+      className="MuiTypography-root makeStyles-disabledText-4 MuiTypography-overline"
+    >
+      0
+    </span>
+    <span
+      className="MuiTypography-root makeStyles-disabledText-4 MuiTypography-overline"
+      style={
+        Object {
+          "textAlign": "end",
+        }
+      }
+    >
+      100.00
+    </span>
+  </div>
+  <p
+    className="MuiFormHelperText-root Mui-required"
+  />
+</div>
+`;

@@ -8,6 +8,6 @@ export default (
   <PasswordField
     hidePasswordText="Hide password"
     showPasswordText="Show password text"
-  ></PasswordField>
+  />
 );
 ```

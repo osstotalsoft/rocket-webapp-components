@@ -26,6 +26,7 @@ const App = () => {
       tabContent: <div>Content2</div>
     }
   ];
+  
   return (
     <NavPills
       label="NavPills"
