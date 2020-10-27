@@ -71,12 +71,12 @@ StatsCard.defaultProps = {
 };
 
 StatsCard.propTypes = {
-  Icon: PropTypes.node.isRequired,
+  Icon: PropTypes.any.isRequired,
   iconColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
   title: PropTypes.node,
   description: PropTypes.node,
   Small: PropTypes.node,
-  StatIcon: PropTypes.node,
+  StatIcon: PropTypes.any,
   statIconColor: PropTypes.oneOf([
     "warning",
     "primary",

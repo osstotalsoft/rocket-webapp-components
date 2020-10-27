@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render NotFound render correctly NotFound component 1`] = `
+<div
+  className="makeStyles-card-1"
+/>
+`;

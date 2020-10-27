@@ -8,7 +8,7 @@ export interface Props {
     /**
      * The icon to be displayed. This property is required
      */
-    Icon: React.ReactNode;
+    Icon: unknown;
 
     /**
      * The color of the icon
@@ -38,7 +38,7 @@ export interface Props {
     /**
      * Icon for content
      */
-    StatIcon?: React.ReactNode;
+    StatIcon?: unknown;
 
     /**
      * @default "gray"
