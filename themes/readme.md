@@ -1,4 +1,4 @@
-##### Please note that the components from Bit is using by default a default theme.
+##### Please note that the components from Bit are using a default theme.
 
 ##### If you want to learn more about how the theme is assembled, take a look at https://github.com/osstotalsoft/rocket-webapp-components/tree/master/themes
 

@@ -37,7 +37,7 @@ export interface Props {
     onChange?: (object: Object) => void
     /**
     * The delay of debouncing.
-    * @default 500
+    * @default 0
     */
     debounceBy?: number
 }
