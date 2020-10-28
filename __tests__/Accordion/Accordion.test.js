@@ -54,7 +54,7 @@ describe('Accordion', () => {
         expect(json).toMatchSnapshot();
     });
 
-    it('First child is rendered', () => {
+    it('First child is expanded', () => {
         const component = renderer.create(<Accordion
             active={0}
             content={someArray.map(item => {
@@ -72,7 +72,7 @@ describe('Accordion', () => {
         expect(json).toMatchSnapshot();
     });
 
-    it('Second child is rendered', () => {
+    it('Second child is expanded', () => {
         const wrapper = mount(<Accordion
             active={1}
             content={someArray.map(item => {
@@ -87,11 +87,10 @@ describe('Accordion', () => {
             })}
         />);
 
-        console.log(wrapper.prop('active'))
         expect(wrapper.prop('active')).toBe(1)
     });
 
-    it('Third child is rendered', () => {
+    it('Third child is expanded', () => {
         const component = renderer.create(<Accordion
             active={2}
             content={someArray.map(item => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Accordion First child is rendered 1`] = `
+exports[`Accordion First child is expanded 1`] = `
 <div
   className="makeStyles-root-1"
 >
@@ -298,7 +298,7 @@ exports[`Accordion First child is rendered 1`] = `
 </div>
 `;
 
-exports[`Accordion Third child is rendered 1`] = `
+exports[`Accordion Third child is expanded 1`] = `
 <div
   className="makeStyles-root-1"
 >

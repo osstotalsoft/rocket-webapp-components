@@ -1,5 +1,5 @@
-import styles from '@bit/totalsoft_oss.react-mui.styles';
-import  defaultTheme from '@bit/totalsoft_oss.react-mui.themes.default-theme';
+import styles from '../../assets/jss/styles';
+import  {theme as defaultTheme} from '../../themes/defaultTheme';
 
 const cardStyle = theme => {
   const {
