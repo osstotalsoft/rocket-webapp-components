@@ -1,5 +1,5 @@
 import styles from '@bit/totalsoft_oss.react-mui.styles';
-import { defaultTheme } from '@bit/totalsoft_oss.react-mui.themes';
+import defaultTheme from '@bit/totalsoft_oss.react-mui.themes.default-theme';
 
 const iconCardStyle = theme => {
   const {

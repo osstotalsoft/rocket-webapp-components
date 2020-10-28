@@ -1,4 +1,4 @@
-import { defaultTheme } from '@bit/totalsoft_oss.react-mui.themes';
+import defaultTheme from '@bit/totalsoft_oss.react-mui.themes.default-theme';
 
 const styles = (theme) => {
   const hexToRgb = input => {
