@@ -88,6 +88,7 @@ describe('Accordion', () => {
         />);
 
         expect(wrapper.prop('active')).toBe(1)
+        expect(wrapper.find(AccordionBase).at(1).props().expanded).toBe(true)
     });
 
     it('Third child is expanded', () => {
@@ -106,5 +107,23 @@ describe('Accordion', () => {
         />);
         const json = component.toJSON();
         expect(json).toMatchSnapshot();
+    });
+
+    it('Third child is expanded', () => {
+        const wrapper = mount(<Accordion
+            active={2}
+            content={someArray.map(item => {
+                return {
+                    title: item.title,
+                    content: (
+                        <div>
+                            {item.value}
+                        </div>
+                    )
+                };
+            })}
+        />);
+
+        expect(wrapper.find(AccordionBase).at(2).props().expanded).toBe(true)
     });
 });

@@ -32,6 +32,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/pickers": "^3.2.10",
     "@material-ui/styles": "^4.10.0",
+    "@testing-library/jest-dom": "^5.11.5",
     "attr-accept": "^2.2.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^26.6.0",

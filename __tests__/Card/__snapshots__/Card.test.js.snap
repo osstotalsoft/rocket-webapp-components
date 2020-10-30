@@ -2,7 +2,7 @@
 
 exports[`Card snapshot - danger 1`] = `
 <div
-  className="makeStyles-card-1"
+  className="makeStyles-card-1 makeStyles-danger-9"
 >
   <div>
      Card
@@ -12,7 +12,7 @@ exports[`Card snapshot - danger 1`] = `
 
 exports[`Card snapshot - info 1`] = `
 <div
-  className="makeStyles-card-1"
+  className="makeStyles-card-1 makeStyles-info-6"
 >
   <div>
      Card
@@ -22,7 +22,7 @@ exports[`Card snapshot - info 1`] = `
 
 exports[`Card snapshot - primary 1`] = `
 <div
-  className="makeStyles-card-1"
+  className="makeStyles-card-1 makeStyles-primary-5"
 >
   <div>
      Card
@@ -32,7 +32,7 @@ exports[`Card snapshot - primary 1`] = `
 
 exports[`Card snapshot - rose 1`] = `
 <div
-  className="makeStyles-card-1"
+  className="makeStyles-card-1 makeStyles-rose-10"
 >
   <div>
      Card
@@ -42,7 +42,7 @@ exports[`Card snapshot - rose 1`] = `
 
 exports[`Card snapshot - success 1`] = `
 <div
-  className="makeStyles-card-1"
+  className="makeStyles-card-1 makeStyles-success-7"
 >
   <div>
      Card
@@ -52,7 +52,7 @@ exports[`Card snapshot - success 1`] = `
 
 exports[`Card snapshot - warning 1`] = `
 <div
-  className="makeStyles-card-1"
+  className="makeStyles-card-1 makeStyles-warning-8"
 >
   <div>
      Card

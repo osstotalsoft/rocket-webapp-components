@@ -54,4 +54,18 @@ describe('AddButton', () => {
         expect(wrapper.prop('fontSize')).toBe('small')
         expect(wrapper.prop('size')).toBe('small')
     });
+
+    it('the button is expected to be called', () => {
+        const onChangeMock = jest.fn()
+        const wrapper = mount(<AddButton
+            title="Title"
+            onClick={onChangeMock}
+            disabled={false}
+            fontSize="small"
+            size="small"
+        />);
+
+        wrapper.find('Button').simulate('click');
+        expect(onChangeMock).toHaveBeenCalledTimes(1);
+    });
 });

@@ -1,11 +1,9 @@
 import React, { useState, useCallback } from "react";
 import PropTypes from "prop-types";
-
-import { KeyboardDateTimePicker } from "@material-ui/pickers";
 import { makeStyles, IconButton } from "@material-ui/core";
 import { Clear, CalendarToday } from "@material-ui/icons";
 
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { MuiPickersUtilsProvider, KeyboardDateTimePicker } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 
 import dateTimeStyle from "./dateTimeStyle";
@@ -120,31 +118,31 @@ DateTime.defaultProps = {
     MaxDateMessage: "Date should not be after maximal date"
 }
 
-DateTime.propTypes = { 
-   /**
-   * Picker value
-   * @default null
-   */
+DateTime.propTypes = {
+    /**
+    * Picker value
+    * @default null
+    */
     value: PropTypes.any,
-   /**
-   * onChange callback
-   * @default () => { }
-   */
-   onChange: PropTypes.func,
-   /**
-   * Date format string.
-   * @default  'HH:mm'
-   */
+    /**
+    * onChange callback
+    * @default () => { }
+    */
+    onChange: PropTypes.func,
+    /**
+    * Date format string.
+    * @default  'HH:mm'
+    */
     dateFormat: PropTypes.string,
     /**
    * Time format string.
    * @default  'DD-MM-YYYY' 
    */
     timeFormat: PropTypes.string,
-   /**
-   * If true, the picker and text field will be disabled.
-   * @default false
-   */
+    /**
+    * If true, the picker and text field will be disabled.
+    * @default false
+    */
     disabled: PropTypes.bool,
     /**
     * Picker container option.

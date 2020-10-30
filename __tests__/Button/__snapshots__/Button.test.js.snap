@@ -21,7 +21,7 @@ exports[`Button snapshot - danger 1`] = `
   <span
     className="MuiButton-label"
   >
-    Warning
+    danger
   </span>
 </button>
 `;
@@ -47,7 +47,7 @@ exports[`Button snapshot - info 1`] = `
   <span
     className="MuiButton-label"
   >
-    Warning
+    info
   </span>
 </button>
 `;
@@ -73,7 +73,7 @@ exports[`Button snapshot - primary 1`] = `
   <span
     className="MuiButton-label"
   >
-    Warning
+    primary
   </span>
   <span
     className="MuiTouchRipple-root"
@@ -102,7 +102,7 @@ exports[`Button snapshot - rose 1`] = `
   <span
     className="MuiButton-label"
   >
-    Warning
+    rose
   </span>
   <span
     className="MuiTouchRipple-root"
@@ -131,7 +131,7 @@ exports[`Button snapshot - success 1`] = `
   <span
     className="MuiButton-label"
   >
-    Warning
+    success
   </span>
   <span
     className="MuiTouchRipple-root"
