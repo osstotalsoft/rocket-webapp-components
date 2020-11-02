@@ -2,7 +2,7 @@ import React from 'react';
 import DialogDisplay from '../../components/DialogDisplay/DialogDisplay';
 import { mount } from 'enzyme';
 import EnzymeToJson from 'enzyme-to-json';
-import { Dialog, DialogTitle, makeStyles, Typography, IconButton, DialogContent, DialogActions } from "@material-ui/core";
+import { Dialog, Typography, IconButton } from "@material-ui/core";
 
 describe('DialogDisplay', () => {
     it('snapshot', () => {

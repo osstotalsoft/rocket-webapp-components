@@ -2,8 +2,8 @@ import React from "react";
 import renderer from "react-test-renderer";
 import RegularCard from "../../components/RegularCard/RegularCard";
 
-describe("Render RegularCard", () => {
-  it("render correctly RegularCard component", () => {
+describe("RegularCard", () => {
+  it("Snapshot", () => {
     const component = renderer.create(
       <RegularCard
         cardTitle={"Title"}

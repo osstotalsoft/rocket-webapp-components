@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render Pagination render correctly Pagination component 1`] = `
+exports[`Pagination Snapshot 1`] = `
 <div>
   <div
     className="makeStyles-floatRight-1"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render SaveButton render correctly SaveButton component 1`] = `
+exports[`SaveButton Snapshot 1`] = `
 <span
   aria-describedby={null}
   className=""
@@ -17,6 +17,7 @@ exports[`Render SaveButton render correctly SaveButton component 1`] = `
     className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-themeWithBackground-19"
     disabled={false}
     onBlur={[Function]}
+    onClick={[MockFunction]}
     onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}

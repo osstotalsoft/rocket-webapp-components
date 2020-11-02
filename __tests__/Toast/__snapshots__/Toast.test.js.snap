@@ -5,3 +5,9 @@ exports[`Render ToastContainer render correctly ToastContainer component 1`] = `
   className="Toastify"
 />
 `;
+
+exports[`ToastContainer Snapshot 1`] = `
+<div
+  className="Toastify"
+/>
+`;

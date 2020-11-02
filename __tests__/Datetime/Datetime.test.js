@@ -4,7 +4,7 @@ import DateTime from '../../components/DateTime/DateTime';
 import { mount } from 'enzyme';
 import { IconButton } from "@material-ui/core";
 import { CalendarToday } from "@material-ui/icons";
-import { MuiPickersUtilsProvider, KeyboardDateTimePicker } from '@material-ui/pickers';
+import { KeyboardDateTimePicker } from '@material-ui/pickers';
 
 describe('DateTime', () => {
     it('snapshot', () => {

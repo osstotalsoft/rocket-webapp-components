@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render NavPills render correctly NavPills component 1`] = `
+exports[`NavPills Snapshot 1`] = `
 <div>
   <div
     className="MuiBox-root MuiBox-root-20 makeStyles-container-2"

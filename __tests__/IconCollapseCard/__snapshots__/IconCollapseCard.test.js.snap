@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render IconCollapseCard render correctly IconCollapseCard component 1`] = `
+exports[`IconCollapseCard Snapshot 1`] = `
 <div
   className="MuiPaper-root MuiCard-root makeStyles-card-1  MuiPaper-elevation1 MuiPaper-rounded"
 >

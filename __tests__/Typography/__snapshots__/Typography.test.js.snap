@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render Typography render correctly Typography component 1`] = `
+exports[`Typography Snapshot 1`] = `
 <p
   aria-describedby={null}
   className="MuiTypography-root makeStyles-defaultFont-1 MuiTypography-body1 MuiTypography-alignCenter"

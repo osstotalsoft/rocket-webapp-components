@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render FileUploadButton render correctly FileUploadButton component 1`] = `
+exports[`FileUploadButton Snapshot 1`] = `
 <span
   aria-describedby={null}
   className=""

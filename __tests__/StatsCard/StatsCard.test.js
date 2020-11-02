@@ -4,8 +4,8 @@ import StatsCard from "../../components/StatsCard/StatsCard";
 import Work from "@material-ui/icons/Work";
 import Update from "@material-ui/icons/Update";
 
-describe("Render StatsCard", () => {
-  it("render correctly StatsCard component", () => {
+describe("StatsCard", () => {
+  it("Snapshot", () => {
     const component = renderer.create(
       <StatsCard
         Icon={Update}

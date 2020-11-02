@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render SimpleSlider render correctly SimpleSlider component 1`] = `
+exports[`SimpleSlider Snapshot 1`] = `
 <div
   className="MuiFormControl-root makeStyles-formControl-5 MuiFormControl-fullWidth"
 >

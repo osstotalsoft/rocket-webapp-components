@@ -2,8 +2,8 @@ import React from "react";
 import renderer from "react-test-renderer";
 import ToastContainer from "../../components/Toast/ToastContainer";
 
-describe("Render ToastContainer", () => {
-  it("render correctly ToastContainer component", () => {
+describe("ToastContainer", () => {
+  it("Snapshot", () => {
     const component = renderer.create(<ToastContainer />);
 
     const json = component.toJSON();

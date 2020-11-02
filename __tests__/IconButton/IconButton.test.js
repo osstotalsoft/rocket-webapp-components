@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import IconButton from "../../components/IconButton/IconButton";
 import { Clear } from "@material-ui/icons";
 
-describe("Render IconButton", () => {
+describe("IconButton", () => {
   it("render correctly IconButton component", () => {
     const component = renderer.create(
       <IconButton size="small" tooltip="Clear data" disabled={false}>

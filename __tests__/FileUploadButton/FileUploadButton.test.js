@@ -2,8 +2,8 @@ import React from "react";
 import renderer from "react-test-renderer";
 import FileUploadButton from "../../components/FileUploadButton/FileUploadButton";
 
-describe("Render FileUploadButton", () => {
-  it("render correctly FileUploadButton component", () => {
+describe("FileUploadButton", () => {
+  it("Snapshot", () => {
     const component = renderer.create(
       <FileUploadButton
         accept="image/*"

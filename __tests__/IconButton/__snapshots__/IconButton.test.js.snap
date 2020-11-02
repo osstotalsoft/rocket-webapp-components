@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render IconButton render correctly IconButton component 1`] = `
+exports[`IconButton render correctly IconButton component 1`] = `
 <span
   aria-describedby={null}
   className=""

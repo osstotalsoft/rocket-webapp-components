@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render UpwardButton render correctly UpwardButton component 1`] = `
+exports[`UpwardButton Snapshot 1`] = `
 <span
   aria-describedby={null}
   className=""
