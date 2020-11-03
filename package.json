@@ -115,7 +115,7 @@
   },
   "bit": {
     "env": {
-      "compiler": "bit.envs/compilers/react@1.0.21"
+      "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm",
