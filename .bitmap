@@ -1440,29 +1440,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/time-picker@0.0.1": {
-        "files": [
-            {
-                "relativePath": "components/TimePicker/TimePicker.js",
-                "test": false,
-                "name": "TimePicker.js"
-            },
-            {
-                "relativePath": "components/TimePicker/dateTimeStyle.js",
-                "test": false,
-                "name": "dateTimeStyle.js"
-            },
-            {
-                "relativePath": "components/TimePicker/index.js",
-                "test": false,
-                "name": "index.js"
-            }
-        ],
-        "mainFile": "components/TimePicker/index.js",
-        "trackDir": "components/TimePicker",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "totalsoft_oss.react-mui/toast@0.0.1": {
         "files": [
             {
