@@ -1233,7 +1233,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/prints/orange@0.0.1": {
+    "totalsoft_oss.react-mui/prints/orange@0.0.2": {
         "files": [
             {
                 "relativePath": "assets/prints/Orange.png",

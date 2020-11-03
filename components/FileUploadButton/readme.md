@@ -1,9 +1,9 @@
 ##### Copy this snapshot in the overview panel
 
 ```js
-import React from "react";
-import FileUploadButton from "@bit/totalsoft_oss.react-mui.file-upload-button";
-import IconButton from npm "@bit/totalsoft_oss.react-mui.icon-button"
+import React from "react"
+import FileUploadButton from "@bit/totalsoft_oss.react-mui.file-upload-button"
+import IconButton from "@bit/totalsoft_oss.react-mui.icon-button"
 
 export default (
   <FileUploadButton

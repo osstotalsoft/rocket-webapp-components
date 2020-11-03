@@ -3,6 +3,7 @@
 import React from 'react';
 import ChartFactory from '@bit/totalsoft_oss.react-mui.charts';
 import {Grid} from '@material-ui/core'
+import AccessTime from "@material-ui/icons/AccessTime";
 
 const labels = ["January", "February", "March", "April", "May", "June",
 	"July", "August", "September", "October", "November", "December"]
