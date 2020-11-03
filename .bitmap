@@ -1197,6 +1197,66 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "totalsoft_oss.react-mui/prints/blue@0.0.1": {
+        "files": [
+            {
+                "relativePath": "assets/prints/Blue.png",
+                "test": false,
+                "name": "Blue.png"
+            }
+        ],
+        "mainFile": "assets/prints/Blue.png",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "totalsoft_oss.react-mui/prints/default@0.0.1": {
+        "files": [
+            {
+                "relativePath": "assets/prints/Default.png",
+                "test": false,
+                "name": "Default.png"
+            }
+        ],
+        "mainFile": "assets/prints/Default.png",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "totalsoft_oss.react-mui/prints/green@0.0.1": {
+        "files": [
+            {
+                "relativePath": "assets/prints/Green.png",
+                "test": false,
+                "name": "Green.png"
+            }
+        ],
+        "mainFile": "assets/prints/Green.png",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "totalsoft_oss.react-mui/prints/orange@0.0.1": {
+        "files": [
+            {
+                "relativePath": "assets/prints/Orange.png",
+                "test": false,
+                "name": "Orange.png"
+            }
+        ],
+        "mainFile": "assets/prints/Orange.png",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "totalsoft_oss.react-mui/prints/red@0.0.1": {
+        "files": [
+            {
+                "relativePath": "assets/prints/Red.png",
+                "test": false,
+                "name": "Red.png"
+            }
+        ],
+        "mainFile": "assets/prints/Red.png",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "totalsoft_oss.react-mui/regular-card@0.0.2": {
         "files": [
             {
