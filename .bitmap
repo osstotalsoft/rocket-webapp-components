@@ -394,7 +394,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-dialog@0.0.1": {
+    "totalsoft_oss.react-mui/custom-dialog@0.0.2": {
         "files": [
             {
                 "relativePath": "components/CustomDialog/CustomDialog.d.ts",
@@ -508,7 +508,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/date-time@0.0.1": {
+    "totalsoft_oss.react-mui/date-time@0.0.2": {
         "files": [
             {
                 "relativePath": "components/DateTime/DateTime.d.ts",
@@ -1268,7 +1268,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/simple-slider@0.0.1": {
+    "totalsoft_oss.react-mui/simple-slider@0.0.2": {
         "files": [
             {
                 "relativePath": "components/SimpleSlider/SimpleSlider.d.ts",

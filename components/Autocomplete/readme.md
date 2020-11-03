@@ -13,15 +13,16 @@ const App = () => {
 	);
 
 	return (
-		<Autocomplete
-			label={"Status"}
-			options={arr}
-			fullWidth
-			simpleValue={true}
-			isClearable={true}
-			value={localFilters.id || ''}
-			onChange={handleFilterPropertyChange('id')}
-		/>
+		<div style={{ "minWidth": "300px" }}>
+			<Autocomplete
+				label={"Status"}
+				options={arr}
+				simpleValue={true}
+				isClearable={true}
+				value={localFilters.id || ''}
+				onChange={handleFilterPropertyChange('id')}
+			/>
+		</div >
 	)
 }
 
