@@ -2,7 +2,7 @@
 
 ```js
 import React from "react";
-import Pagination from "@bit/totalsoft_oss.react-mui.pagination";
+import PasswordField from "@bit/totalsoft_oss.react-mui.password-field";
 
 export default (
   <PasswordField
