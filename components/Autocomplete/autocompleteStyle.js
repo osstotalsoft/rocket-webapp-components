@@ -65,11 +65,11 @@ const autocompleteStyle = theme => {
     selectStyles: {
       singleValue: base => ({
         ...base,
-        color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
+        color: theme.palette?.primary.main || defaultTheme.palette.primary.main
       }),
       input: base => ({
         ...base,
-        color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
+        color: theme.palette?.primary.main || defaultTheme.palette.primary.main
       })
     }
   })
