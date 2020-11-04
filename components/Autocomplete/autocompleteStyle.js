@@ -1,6 +1,6 @@
 import { emphasize } from '@material-ui/core/styles/colorManipulator';
 import styles from '../../assets/jss/styles';
-import  {theme as defaultTheme} from '../../themes/defaultTheme';
+import { theme as defaultTheme } from '../../themes/defaultTheme';
 
 const autocompleteStyle = theme => {
   const { dangerColor, successColor, defaultFont } = styles(theme);
@@ -63,10 +63,14 @@ const autocompleteStyle = theme => {
       height: theme.spacing(2),
     },
     selectStyles: {
-      input: base => ({
+      singleValue: base => ({
         ...base,
         color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
       }),
+      input: base => ({
+        ...base,
+        color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
+      })
     }
   })
 };
