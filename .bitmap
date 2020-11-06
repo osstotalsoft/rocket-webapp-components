@@ -328,7 +328,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/charts@0.0.2": {
+    "totalsoft_oss.react-mui/charts@0.0.3": {
         "files": [
             {
                 "relativePath": "components/Charts/ChartFactory.d.ts",
@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.3": {
+    "totalsoft_oss.react-mui/kit/core@0.0.5": {
         "files": [
             {
                 "relativePath": "core/index.js",
