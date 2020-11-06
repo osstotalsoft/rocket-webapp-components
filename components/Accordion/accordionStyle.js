@@ -2,7 +2,7 @@ import styles from '../../assets/jss/styles';
 
 const accordionStyle = theme => {
 
-  const { primaryColor } = styles(theme);
+  const { themeColor } = styles(theme);
 
   return {
     root: {
@@ -31,11 +31,11 @@ const accordionStyle = theme => {
       borderTopRightRadius: "3px",
       color: "#3C4858",
       "&:hover": {
-        color: primaryColor
+        color: themeColor
       }
     },
     expansionPanelSummaryExpaned: {
-      color: primaryColor
+      color: themeColor
     },
     expansionPanelSummaryContent: {
       margin: "0"

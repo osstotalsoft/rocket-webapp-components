@@ -75,3 +75,6 @@ export { default as PasswordField } from '@bit/totalsoft_oss.react-mui.password-
 
 //Toast
 export { useToast, ToastContainer } from '@bit/totalsoft_oss.react-mui.toast'
+
+//FileUploadButton
+export { default as FileUploadButton } from '@bit/totalsoft_oss.react-mui.file-upload-button'

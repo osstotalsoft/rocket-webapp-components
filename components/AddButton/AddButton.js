@@ -11,7 +11,7 @@ const AddButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
 )
 
 AddButton.defaultProps = {
-    color: "themeNoBackground",
+    color: "theme",
     fontSize: "small",
     size: "medium"
 };
@@ -31,7 +31,7 @@ AddButton.propTypes = {
     disabled: PropTypes.bool,
     /**
    * The color of button.
-   * @default "themeNoBackground"
+   * @default "theme"
    */
     color: PropTypes.oneOf([
         "primary",
