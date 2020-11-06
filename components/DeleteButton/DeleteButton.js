@@ -10,7 +10,7 @@ const DeleteButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
 )
 
 DeleteButton.defaultProps = {
-    color: "themeNoBackground",
+    color: "theme",
     fontSize: "default",
     size: "medium"
 };
@@ -30,7 +30,7 @@ DeleteButton.propTypes = {
     disabled: PropTypes.bool,
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color: PropTypes.oneOf([
         "primary",

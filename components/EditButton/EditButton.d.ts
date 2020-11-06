@@ -20,7 +20,7 @@ export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'>
     editMode?: boolean
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color?: "primary" |
     "info" |

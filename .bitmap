@@ -39,7 +39,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/add-button@0.0.3": {
+    "totalsoft_oss.react-mui/add-button@0.0.4": {
         "files": [
             {
                 "relativePath": "components/AddButton/AddButton.d.ts",
@@ -110,7 +110,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/back-to-button@0.0.2": {
+    "totalsoft_oss.react-mui/back-to-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/BackToButton/BackToButton.d.ts",
@@ -181,7 +181,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/cancel-button@0.0.2": {
+    "totalsoft_oss.react-mui/cancel-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/CancelButton/CancelButton.d.ts",
@@ -558,7 +558,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/delete-button@0.0.2": {
+    "totalsoft_oss.react-mui/delete-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/DeleteButton/DeleteButton.d.ts",
@@ -629,7 +629,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/download-button@0.0.2": {
+    "totalsoft_oss.react-mui/download-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/DownloadButton/DownloadButton.d.ts",
@@ -662,7 +662,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/downward-button@0.0.2": {
+    "totalsoft_oss.react-mui/downward-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/DownwardButton/DownwardButton.js",
@@ -728,7 +728,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/edit-button@0.0.2": {
+    "totalsoft_oss.react-mui/edit-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/EditButton/EditButton.d.ts",
@@ -827,7 +827,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/file-upload-button@0.0.3": {
+    "totalsoft_oss.react-mui/file-upload-button@0.0.4": {
         "files": [
             {
                 "relativePath": "components/FileUploadButton/FileUploadButton.d.ts",
@@ -898,7 +898,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/icon-button@0.0.2": {
+    "totalsoft_oss.react-mui/icon-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/IconButton/IconButton.d.ts",
@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.6": {
+    "totalsoft_oss.react-mui/kit/core@0.0.7": {
         "files": [
             {
                 "relativePath": "core/index.js",
@@ -1139,7 +1139,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/pagination@0.0.2": {
+    "totalsoft_oss.react-mui/pagination@0.0.3": {
         "files": [
             {
                 "relativePath": "components/Pagination/Pagination.d.ts",
@@ -1182,7 +1182,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/password-field@0.0.3": {
+    "totalsoft_oss.react-mui/password-field@0.0.4": {
         "files": [
             {
                 "relativePath": "components/PasswordField/PasswordField.d.ts",
@@ -1313,7 +1313,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/save-button@0.0.3": {
+    "totalsoft_oss.react-mui/save-button@0.0.4": {
         "files": [
             {
                 "relativePath": "components/SaveButton/SaveButton.d.ts",
@@ -1599,7 +1599,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/upload-button@0.0.2": {
+    "totalsoft_oss.react-mui/upload-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/UploadButton/UploadButton.d.ts",
@@ -1632,7 +1632,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/upward-button@0.0.2": {
+    "totalsoft_oss.react-mui/upward-button@0.0.3": {
         "files": [
             {
                 "relativePath": "components/UpwardButton/UpwardButton.d.ts",

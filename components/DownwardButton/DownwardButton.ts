@@ -15,7 +15,7 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
     disabled?: boolean
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color?: "primary" |
     "info" |

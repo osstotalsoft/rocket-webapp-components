@@ -9,7 +9,7 @@ export interface IconButtonProps extends Omit<BaseProps, 'color'> {
 
     /**
      * The color of the button
-     * @default "defaultNoBackground"
+     * @default "theme"
      */
     color?: "primary" |
     "info" |

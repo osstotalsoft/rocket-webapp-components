@@ -7,7 +7,7 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   title?: string
   /**
   * The color of button.
-  * @default "themeWithBackground"
+  * @default "theme"
   */
   color?: "primary" |
   "info" |

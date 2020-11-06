@@ -15,7 +15,7 @@ export interface CancelButtonProps extends Omit<ButtonProps, 'color'> {
     disabled?: boolean
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color?: "primary" |
     "info" |

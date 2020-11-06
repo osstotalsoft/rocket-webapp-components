@@ -18,7 +18,7 @@ export interface SaveButtonProps {
 
     /**
      * The color of the button
-     * @default "themeWithBackground"
+     * @default "theme"
      */
     color?: "primary" |
     "info" |
