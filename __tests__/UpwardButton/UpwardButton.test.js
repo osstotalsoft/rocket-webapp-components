@@ -53,7 +53,7 @@ describe("UpwardButton", () => {
       disabled={false}
       title="Upward" />);
 
-    expect(wrapper.props().color).toBe('themeNoBackground');
+    expect(wrapper.props().color).toBe('theme');
     expect(wrapper.props().fontSize).toBe('small');
     expect(wrapper.props().size).toBe('medium');
   });

@@ -91,7 +91,7 @@ exports[`NavPills Snapshot 1`] = `
     >
       <button
         aria-label="Add"
-        className="MuiButtonBase-root MuiIconButton-root makeStyles-button-27 makeStyles-themeNoBackground-44"
+        className="MuiButtonBase-root MuiIconButton-root makeStyles-button-27 makeStyles-theme-43"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}

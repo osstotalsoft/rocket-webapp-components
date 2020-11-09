@@ -13,7 +13,7 @@ exports[`IconButton render correctly IconButton component 1`] = `
   title="Clear data"
 >
   <button
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-defaultNoBackground-10 MuiIconButton-sizeSmall"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17 MuiIconButton-sizeSmall"
     disabled={false}
     onBlur={[Function]}
     onDragLeave={[Function]}

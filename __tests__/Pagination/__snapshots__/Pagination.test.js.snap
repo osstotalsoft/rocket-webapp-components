@@ -83,7 +83,7 @@ exports[`Pagination Snapshot 1`] = `
         >
           <button
             aria-label="Previous Page"
-            className="MuiButtonBase-root MuiIconButton-root makeStyles-button-7 makeStyles-defaultNoBackground-16 Mui-disabled Mui-disabled"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-button-7 makeStyles-theme-23 Mui-disabled Mui-disabled"
             disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
@@ -117,7 +117,7 @@ exports[`Pagination Snapshot 1`] = `
           </button>
           <button
             aria-label="Next Page"
-            className="MuiButtonBase-root MuiIconButton-root makeStyles-button-7 makeStyles-defaultNoBackground-16 Mui-disabled Mui-disabled"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-button-7 makeStyles-theme-23 Mui-disabled Mui-disabled"
             disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
