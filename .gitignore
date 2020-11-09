@@ -24,3 +24,4 @@ example/package-lock.json
 package-lock.json
 
 .bit
+coverage
