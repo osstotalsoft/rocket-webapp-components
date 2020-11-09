@@ -44,7 +44,7 @@ describe('DeleteButton', () => {
         expect(wrapper.find(IconButton).props().disabled).toBe(true);
     });
 
-    
+
     it('the button should be enabled', () => {
         const onClickMock = jest.fn();
 
@@ -56,5 +56,20 @@ describe('DeleteButton', () => {
         ></DeleteButton>);
 
         expect(wrapper.find(IconButton).props().disabled).toBe(false);
+    });
+
+    it('the color, fontSize and size props should be equal to the default values if they are not provided', () => {
+
+        const onClickMock = jest.fn();
+        const wrapper = mount(<DeleteButton
+            title="Delete"
+            onClick={onClickMock}
+            disabled={false}
+            fontSize="small"
+        ></DeleteButton>);
+
+        expect(wrapper.props().color).toBe('theme');
+        expect(wrapper.props().fontSize).toBe('small');
+        expect(wrapper.props().size).toBe('medium');
     });
 });

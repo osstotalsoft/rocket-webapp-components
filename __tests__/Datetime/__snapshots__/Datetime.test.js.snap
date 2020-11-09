@@ -2,9 +2,6 @@
 
 exports[`DateTime snapshot 1`] = `
 <div
-  InvalidDateMessage="Invalid Date Format"
-  MaxDateMessage="Date should not be after maximal date"
-  MinDateMessage="Date should not be before minimal date"
   className="MuiFormControl-root MuiTextField-root makeStyles-defaultFont-6 MuiFormControl-fullWidth"
   editable={false}
   maskable={true}

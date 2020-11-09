@@ -52,4 +52,17 @@ describe('DownloadButton', () => {
 
         expect(wrapper.find(IconButton).props().disabled).toBe(false);
     });
+
+    it('the color, fontSize and size props should be equal to the default values if they are not provided', () => {
+        const wrapper = mount(<DownloadButton
+            title="Download"
+            onClick={() => { }}
+            disabled={false}
+            fontSize="small"
+        ></DownloadButton>);
+
+        expect(wrapper.props().color).toBe('theme');
+        expect(wrapper.props().fontSize).toBe('small');
+        expect(wrapper.props().size).toBe('medium');
+    });
 });
