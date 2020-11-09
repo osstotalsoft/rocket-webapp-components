@@ -18,9 +18,11 @@
   "scripts": {
     "prebuild": "rimraf build",
     "bit-build": "bit -v && bit import && bit build",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "test:ci": "cross-env CI=true npm test -- --reporters=default --reporters=jest-junit --coverage --coverageReporters=cobertura --coverageReporters=lcov --coverageReporters=html"
   },
   "devDependencies": {
+    "jest-junit": "7.0.0",
     "@babel/cli": "^7.8.0",
     "@babel/core": "^7.7.7",
     "@babel/node": "^7.7.7",
