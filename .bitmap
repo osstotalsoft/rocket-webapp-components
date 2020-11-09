@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.7": {
+    "totalsoft_oss.react-mui/kit/core@0.0.8": {
         "files": [
             {
                 "relativePath": "core/index.js",
