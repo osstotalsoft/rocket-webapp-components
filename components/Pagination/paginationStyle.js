@@ -1,4 +1,4 @@
-import styles from '@bit/totalsoft_oss.react-mui.styles';
+import styles from '../../assets/jss/styles.js';
 
 const paginationStyle = theme => {
     const { defaultFont } = styles(theme);

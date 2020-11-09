@@ -1,4 +1,4 @@
-import { theme as DefaultTheme } from '@bit/totalsoft_oss.react-mui.themes.default-theme';
+import { theme as defaultTheme } from '../../themes/defaultTheme';
 
 const styles = (theme) => {
   const hexToRgb = input => {
@@ -88,7 +88,7 @@ const styles = (theme) => {
     margin: "25px 0",
     boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
     borderRadius: "6px",
-    color: theme.palette?.activeColor || DefaultTheme.palette?.activeColor,
+    color: theme.palette?.activeColor || defaultTheme.palette?.activeColor,
     background: "#fff",
     overflow: "visible"
   };
@@ -99,43 +99,43 @@ const styles = (theme) => {
   };
 
   const defaultFont = {
-    ...theme.defaultFont || DefaultTheme.defaultFont,
+    ...theme.defaultFont || defaultTheme.defaultFont,
     fontWeight: "300",
     lineHeight: "1.5em"
   };
 
-  const primaryColor = theme.palette.timColors?.primary || DefaultTheme.palette?.timColors.primary;
-  const primaryColorRGBA = theme.palette.timColors?.primaryRGBA || DefaultTheme.palette?.timColors.primaryRGBA;
-  const warningColor = theme.palette.timColors?.warningColor || DefaultTheme.palette?.timColors.warningColor;
-  const dangerColor = theme.palette.timColors?.dangerColor || DefaultTheme.palette?.timColors.dangerColor;
-  const successColor = theme.palette.timColors?.successColor || DefaultTheme.palette?.timColors.successColor;
-  const infoColor = theme.palette.timColors?.infoColor || DefaultTheme.palette?.timColors.infoColor;
-  const blueColor = theme.palette.timColors?.blueColor || DefaultTheme.palette?.timColors.blueColor;
-  const roseColor = theme.palette.timColors?.roseColor || DefaultTheme.palette?.timColors.roseColor;
-  const grayColor = theme.palette.timColors?.grayColor || DefaultTheme.palette?.timColors.grayColor;
-  const blackColor = theme.palette.timColors?.blackColor || DefaultTheme.palette?.timColors.blackColor;
+  const primaryColor = theme.palette.timColors?.primary || defaultTheme.palette?.timColors.primary;
+  const primaryColorRGBA = theme.palette.timColors?.primaryRGBA || defaultTheme.palette?.timColors.primaryRGBA;
+  const warningColor = theme.palette.timColors?.warningColor || defaultTheme.palette?.timColors.warningColor;
+  const dangerColor = theme.palette.timColors?.dangerColor || defaultTheme.palette?.timColors.dangerColor;
+  const successColor = theme.palette.timColors?.successColor || defaultTheme.palette?.timColors.successColor;
+  const infoColor = theme.palette.timColors?.infoColor || defaultTheme.palette?.timColors.infoColor;
+  const blueColor = theme.palette.timColors?.blueColor || defaultTheme.palette?.timColors.blueColor;
+  const roseColor = theme.palette.timColors?.roseColor || defaultTheme.palette?.timColors.roseColor;
+  const grayColor = theme.palette.timColors?.grayColor || defaultTheme.palette?.timColors.grayColor;
+  const blackColor = theme.palette.timColors?.blackColor || defaultTheme.palette?.timColors.blackColor;
   //theme colors
-  const themeColor = theme.palette?.timColors?.themeColor || DefaultTheme.palette.timColors.themeColor;
-  const themeRGBAColor = theme.palette?.timColors?.themeColorRGBA || DefaultTheme.palette.timColors.themeColorRGBA;
-  const themeShadowColor = theme.palette?.timColors?.themeShadowColor || DefaultTheme.palette.timColors.themeShadowColor;
-  const themeShadowRGBAColor = theme.palette?.timColors?.themeShadowColorRGBA || DefaultTheme.palette.timColors.themeShadowColorRGBA;
+  const themeColor = theme.palette?.timColors?.themeColor || defaultTheme.palette.timColors.themeColor;
+  const themeRGBAColor = theme.palette?.timColors?.themeColorRGBA || defaultTheme.palette.timColors.themeColorRGBA;
+  const themeShadowColor = theme.palette?.timColors?.themeShadowColor || defaultTheme.palette.timColors.themeShadowColor;
+  const themeShadowRGBAColor = theme.palette?.timColors?.themeShadowColorRGBA || defaultTheme.palette.timColors.themeShadowColorRGBA;
 
-  const menuActiveColor = theme.palette?.sideMenu?.activeLinkColor || DefaultTheme.palette.sideMenu.activeLinkColor;
-  const menuActiveBkColor = theme.palette?.sideMenu?.activeBkColor || DefaultTheme.palette.sideMenu.activeBkColor;
-  const menuBkColor = theme.palette?.sideMenu?.bkColor || DefaultTheme.palette.sideMenu.bkColor;
-  const menuColor = theme.palette?.sideMenu?.color || DefaultTheme.palette.sideMenu.color;
-  const menuBkOpacity = theme.palette?.sideMenu?.bkOpacity || DefaultTheme.palette.sideMenu.bkOpacity;
-  const topBarBkColor = theme.palette?.topBar?.bkColor || DefaultTheme.palette.topBar.bkColor;
+  const menuActiveColor = theme.palette?.sideMenu?.activeLinkColor || defaultTheme.palette.sideMenu.activeLinkColor;
+  const menuActiveBkColor = theme.palette?.sideMenu?.activeBkColor || defaultTheme.palette.sideMenu.activeBkColor;
+  const menuBkColor = theme.palette?.sideMenu?.bkColor || defaultTheme.palette.sideMenu.bkColor;
+  const menuColor = theme.palette?.sideMenu?.color || defaultTheme.palette.sideMenu.color;
+  const menuBkOpacity = theme.palette?.sideMenu?.bkOpacity || defaultTheme.palette.sideMenu.bkOpacity;
+  const topBarBkColor = theme.palette?.topBar?.bkColor || defaultTheme.palette.topBar.bkColor;
 
-  const snackSuccessBgColor = theme.palette?.snackbar?.successBgColor || DefaultTheme.palette?.snackbar?.successBgColor;
-  const snackSuccessColor = theme.palette?.snackbar?.successColor || DefaultTheme.palette?.snackbar?.successColor;
-  const snackWarningBgColor = theme.palette?.snackbar?.warningBgColor || DefaultTheme.palette?.snackbar?.warningBgColor;
-  const snackWarningColor = theme.palette?.snackbar?.warningColor || DefaultTheme.palette?.snackbar?.warningColor;
-  const snackInfoBgColor = theme.palette?.snackbar?.infoBgColor || DefaultTheme.palette?.snackbar?.infoBgColor;
-  const snackInfoColor = theme.palette?.snackbar?.infoColor || DefaultTheme.palette?.snackbar?.infoColor;
-  const snackDangerBgColor = theme.palette?.snackbar?.dangerBgColor || DefaultTheme.palette?.snackbar?.dangerBgColor;
-  const snackDangerColor = theme.palette?.snackbar?.dangerColor || DefaultTheme.palette?.snackbar?.dangerColor;
-  const activeColor = theme.palette?.activeColor || DefaultTheme.palette?.activeColor;
+  const snackSuccessBgColor = theme.palette?.snackbar?.successBgColor || defaultTheme.palette?.snackbar?.successBgColor;
+  const snackSuccessColor = theme.palette?.snackbar?.successColor || defaultTheme.palette?.snackbar?.successColor;
+  const snackWarningBgColor = theme.palette?.snackbar?.warningBgColor || defaultTheme.palette?.snackbar?.warningBgColor;
+  const snackWarningColor = theme.palette?.snackbar?.warningColor || defaultTheme.palette?.snackbar?.warningColor;
+  const snackInfoBgColor = theme.palette?.snackbar?.infoBgColor || defaultTheme.palette?.snackbar?.infoBgColor;
+  const snackInfoColor = theme.palette?.snackbar?.infoColor || defaultTheme.palette?.snackbar?.infoColor;
+  const snackDangerBgColor = theme.palette?.snackbar?.dangerBgColor || defaultTheme.palette?.snackbar?.dangerBgColor;
+  const snackDangerColor = theme.palette?.snackbar?.dangerColor || defaultTheme.palette?.snackbar?.dangerColor;
+  const activeColor = theme.palette?.activeColor || defaultTheme.palette?.activeColor;
 
   const primaryBoxShadow = {
     boxShadow:
@@ -173,26 +173,26 @@ const styles = (theme) => {
 
   const orangeCardHeader = {
     background: "linear-gradient(60deg, " + (theme.palette?.card?.orange400
-      || DefaultTheme.palette?.card.orange400) + ", " + (theme.palette?.card?.orange500
-        || DefaultTheme.palette?.card.orange500) + ")",
+      || defaultTheme.palette?.card.orange400) + ", " + (theme.palette?.card?.orange500
+        || defaultTheme.palette?.card.orange500) + ")",
     ...warningBoxShadow
   };
   const greenCardHeader = {
     background: "linear-gradient(60deg, " + (theme.palette?.card?.green400
-      || DefaultTheme.palette?.card.green400) + ", " + (theme.palette?.card?.green500
-        || DefaultTheme.palette?.card.green500) + ")",
+      || defaultTheme.palette?.card.green400) + ", " + (theme.palette?.card?.green500
+        || defaultTheme.palette?.card.green500) + ")",
     ...successBoxShadow
   };
   const redCardHeader = {
     background: "linear-gradient(60deg, " + (theme.palette?.card?.red400
-      || DefaultTheme.palette.card.red400) + ", " + (theme.palette?.card?.red500
-        || DefaultTheme.palette.card.red500) + ")",
+      || defaultTheme.palette.card.red400) + ", " + (theme.palette?.card?.red500
+        || defaultTheme.palette.card.red500) + ")",
     ...dangerBoxShadow
   };
   const blueCardHeader = {
     background: "linear-gradient(60deg, " + (theme.palette?.card?.blue400
-      || DefaultTheme.palette.card.blue400) + ", " + (theme.palette?.card?.blue500
-        || DefaultTheme.palette.card.blue500) + ")",
+      || defaultTheme.palette.card.blue400) + ", " + (theme.palette?.card?.blue500
+        || defaultTheme.palette.card.blue500) + ")",
     ...infoBoxShadow
   };
   const purpleCardHeader = {
@@ -244,7 +244,7 @@ const styles = (theme) => {
       "0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2)",
     maxWidth: "200px",
     textAlign: "center",
-    fontFamily: theme.defaultFont?.fontFamily || DefaultTheme.defaultFont?.fontFamily,
+    fontFamily: theme.defaultFont?.fontFamily || defaultTheme.defaultFont?.fontFamily,
     fontSize: "12px",
     fontStyle: "normal",
     fontWeight: "400",
@@ -481,32 +481,32 @@ const styles = (theme) => {
       }
     },
     theme: {
-      backgroundColor: theme.palette?.button?.theme || DefaultTheme.palette.button.theme,
-      boxShadow: theme.palette?.button?.themeShadow || DefaultTheme.palette?.button?.themeShadow,
+      backgroundColor: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
+      boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow,
       "&:hover": {
         backgroundColor: whiteColor,
-        color: theme.palette?.button?.theme || DefaultTheme.palette.button.theme,
-        boxShadow: theme.palette?.button?.themeShadow || DefaultTheme.palette?.button?.themeShadow
+        color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
+        boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow
       }
     },
     themeNoBackground: {
       backgroundColor: "transparent",
-      color: theme.palette?.button?.theme || DefaultTheme.palette.button.theme,
+      color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
       boxShadow: "none",
       "&:hover": {
         backgroundColor: "transparent",
-        color: theme.palette?.button?.theme || DefaultTheme.palette.button.theme,
-        boxShadow: theme.palette?.button?.themeShadow || DefaultTheme.palette?.button?.themeShadow
+        color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
+        boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow
       }
     },
     themeWithBackground: {
       backgroundColor: "transparent",
-      color: theme.palette?.button?.theme || DefaultTheme.palette.button.theme,
-      boxShadow: theme.palette?.button?.themeShadow || DefaultTheme.palette?.button?.themeShadow,
+      color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
+      boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow,
       "&:hover": {
-        backgroundColor: theme.palette?.button?.theme || DefaultTheme.palette.button.theme,
+        backgroundColor: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
         color: whiteColor,
-        boxShadow: theme.palette?.button?.themeShadow || DefaultTheme.palette?.button?.themeShadow
+        boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow
       }
     },
     disabled: {

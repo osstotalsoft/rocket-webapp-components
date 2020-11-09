@@ -1,11 +1,9 @@
 import React, { useState, useCallback } from "react";
 import PropTypes from "prop-types";
-
-import { KeyboardDateTimePicker } from "@material-ui/pickers";
 import { makeStyles, IconButton } from "@material-ui/core";
 import { Clear, CalendarToday } from "@material-ui/icons";
 
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { MuiPickersUtilsProvider, KeyboardDateTimePicker } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
 
 import dateTimeStyle from "./dateTimeStyle";
@@ -26,6 +24,7 @@ TooltipArea.propTypes = {
 
 function DateTime({ value, onChange, dateFormat, timeFormat,
     showTime, clearable, disabled, error, helperText, invalidDateMessage, minDateMessage, maxDateMessage, language, ...rest }) {
+
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const format = showTime ? `${dateFormat} ${timeFormat}` : dateFormat
@@ -115,36 +114,36 @@ DateTime.defaultProps = {
     variant: "inline",
     views: ["date"],
     disabled: false,
-    InvalidDateMessage: "Invalid Date Format",
-    MinDateMessage: "Date should not be before minimal date",
-    MaxDateMessage: "Date should not be after maximal date"
+    invalidDateMessage: "Invalid Date Format",
+    minDateMessage: "Date should not be before minimal date",
+    maxDateMessage: "Date should not be after maximal date"
 }
 
-DateTime.propTypes = { 
-   /**
-   * Picker value
-   * @default null
-   */
+DateTime.propTypes = {
+    /**
+    * Picker value
+    * @default null
+    */
     value: PropTypes.any,
-   /**
-   * onChange callback
-   * @default () => { }
-   */
-   onChange: PropTypes.func,
-   /**
-   * Date format string.
-   * @default  'HH:mm'
-   */
+    /**
+    * onChange callback
+    * @default () => { }
+    */
+    onChange: PropTypes.func,
+    /**
+    * Date format string.
+    * @default  'HH:mm'
+    */
     dateFormat: PropTypes.string,
     /**
    * Time format string.
    * @default  'DD-MM-YYYY' 
    */
     timeFormat: PropTypes.string,
-   /**
-   * If true, the picker and text field will be disabled.
-   * @default false
-   */
+    /**
+    * If true, the picker and text field will be disabled.
+    * @default false
+    */
     disabled: PropTypes.bool,
     /**
     * Picker container option.
@@ -178,7 +177,7 @@ DateTime.propTypes = {
    * Message, appearing when date cannot be parsed.
    * @default 'Invalid Date Format'
    */
-    InvalidDateMessage: PropTypes.node,
+    invalidDateMessage: PropTypes.node,
     /**
    * Error message, shown if date is more then maximal date. 
    * @default 'Date should not be after maximal date'

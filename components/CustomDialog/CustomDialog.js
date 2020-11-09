@@ -11,6 +11,7 @@ const CustomDialog = props => {
         onClose, buttonColor, buttonSize, showActions,
         fullWidth, maxWidth, textDialogYes, textDialogNo,
         otherDialogProps } = props;
+        
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const classes = useStyles();
@@ -71,7 +72,7 @@ CustomDialog.propTypes = {
     * If true, the dialog is open.
     * @default false
     */
-    open: PropTypes.bool,
+    open: PropTypes.bool.isRequired,
     /**
     * The title of dialog.
     */

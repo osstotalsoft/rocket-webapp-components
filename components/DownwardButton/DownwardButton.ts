@@ -15,7 +15,7 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
     disabled?: boolean
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color?: "primary" |
     "info" |
@@ -52,6 +52,6 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
  *
  * - https://bit.dev/totalsoft_oss/react-mui/downward-button
  *
- * 
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/DownwardButton/DownwardButton.js
  */
 export default function DownwardButton(props: DownwardButtonProps): JSX.Element;

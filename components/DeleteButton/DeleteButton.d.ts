@@ -15,7 +15,7 @@ export interface DeleteButtonProps extends Omit<ButtonProps, 'color'> {
     disabled?: boolean
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color?: "primary" |
     "info" |
@@ -52,6 +52,6 @@ export interface DeleteButtonProps extends Omit<ButtonProps, 'color'> {
  *
  * - https://bit.dev/totalsoft_oss/react-mui/delete-button
  *
- * 
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/DeleteButton/DeleteButton.js
  */
 export default function DeleteButton(props: DeleteButtonProps): JSX.Element;

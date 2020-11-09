@@ -1,7 +1,7 @@
 ##### Copy this snapshot in the overview panel
 
 ```js
-import React from "react";
+import React, {useState, useCallback} from "react";
 import NavPills from "@bit/totalsoft_oss.react-mui.nav-pills";
 
 const App = () => {
@@ -26,6 +26,7 @@ const App = () => {
       tabContent: <div>Content2</div>
     }
   ];
+  
   return (
     <NavPills
       label="NavPills"

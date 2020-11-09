@@ -60,7 +60,7 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps,'onChang
     * Message, appearing when date cannot be parsed.
     * @default 'Invalid Date Format'
     */
-    InvalidDateMessage?: React.ReactNode
+    invalidDateMessage?: React.ReactNode
     /**
     * Error message, shown if date is more then maximal date. 
     * @default 'Date should not be after maximal date'
@@ -82,5 +82,6 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps,'onChang
  *
  * - https://bit.dev/totalsoft_oss/react-mui/date-time
  *
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/DateTime/DateTime.js
  */
 export default function DateTime(props: DateTimeProps): JSX.Element;

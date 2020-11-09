@@ -10,7 +10,7 @@ const CancelButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
 )
 
 CancelButton.defaultProps = {
-    color: "themeNoBackground",
+    color: "theme",
     fontSize: "small",
     size: "medium"
 };
@@ -30,7 +30,7 @@ CancelButton.propTypes = {
     disabled: PropTypes.bool,
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color: PropTypes.oneOf([
         "primary",

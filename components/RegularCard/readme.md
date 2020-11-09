@@ -2,7 +2,7 @@
 
 ```js
 import React from "react";
-import Pagination from "@bit/totalsoft_oss.react-mui.pagination";
+import RegularCard from "@bit/totalsoft_oss.react-mui.regular-card";
 
 export default (
   <RegularCard

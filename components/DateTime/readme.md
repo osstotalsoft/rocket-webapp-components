@@ -23,7 +23,6 @@ const App = () => {
 					label={'Datetime'}
 					onChange={onDateTimeChanged}
 					dateFormat="DD-MMMM-YYYY"
-					timeFormat={false}
 					editable={false}
 					maskable={true}
 					clearable={false}
@@ -36,7 +35,6 @@ const App = () => {
 					label={'Datetime'}
 					onChange={onDateTimeChanged1}
 					dateFormat="DD-MMMM-YYYY"
-					timeFormat={false}
 					editable={false}
 					maskable={true}
 					clearable={true}
@@ -50,7 +48,6 @@ const App = () => {
 					label={'Datetime'}
 					onChange={onDateTimeChanged2}
 					dateFormat="YYYY-MM"
-					timeFormat={false}
 					editable={false}
 					maskable={true}
 					clearable={true}

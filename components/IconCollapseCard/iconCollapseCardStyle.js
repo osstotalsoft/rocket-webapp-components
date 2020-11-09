@@ -1,5 +1,5 @@
-import styles from '@bit/totalsoft_oss.react-mui.styles';
-import { theme as DefaultTheme } from '@bit/totalsoft_oss.react-mui.themes.default-theme';
+import styles from '../../assets/jss/styles.js';
+import {theme as defaultTheme} from '../../themes/defaultTheme.js';
 
 const iconCollapseCardStyle = theme => {
   const {
@@ -47,7 +47,7 @@ const iconCollapseCardStyle = theme => {
       height: "30px"
     },
     cardTitle: {
-      ...theme.header?.title || DefaultTheme.header.title,
+      ...theme.header?.title || defaultTheme.header.title,
       display: 'flex',
       marginBottom: "3px",
       width: "100%"

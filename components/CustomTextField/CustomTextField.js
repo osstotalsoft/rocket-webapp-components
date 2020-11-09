@@ -109,7 +109,7 @@ function CustomTextField({ isNumeric, customInputProps, endAdornment, InputLabel
 
 CustomTextField.defaultProps = {
   isNumeric: false,
-  debounceBy: 500,
+  debounceBy: 0,
   onChange: () => { }
 };
 
@@ -149,7 +149,7 @@ CustomTextField.propTypes = {
   onChange: PropTypes.func,
   /**
   * The delay of debouncing.
-  *  @default 500
+  *  @default 0
   */
   debounceBy: PropTypes.number
 };

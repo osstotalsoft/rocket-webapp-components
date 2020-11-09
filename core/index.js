@@ -46,15 +46,11 @@ export { default as NotFound } from '@bit/totalsoft_oss.react-mui.not-found'
 //SimpleSlider
 export { default as SimpleSlider } from '@bit/totalsoft_oss.react-mui.simple-slider'
 
-//TimePicker
-export { default as TimePicker } from '@bit/totalsoft_oss.react-mui.time-picker'
-
 //ExpandingText
 export { default as ExpandingText } from '@bit/totalsoft_oss.react-mui.expanding-text'
 
 //Accordion
 export { default as Accordion } from '@bit/totalsoft_oss.react-mui.accordion'
-export { default as Piano } from '@bit/totalsoft_oss.react-mui.piano'
 
 //Chart factory
 export { default as ChartFactory } from '@bit/totalsoft_oss.react-mui.charts'
@@ -79,3 +75,6 @@ export { default as PasswordField } from '@bit/totalsoft_oss.react-mui.password-
 
 //Toast
 export { useToast, ToastContainer } from '@bit/totalsoft_oss.react-mui.toast'
+
+//FileUploadButton
+export { default as FileUploadButton } from '@bit/totalsoft_oss.react-mui.file-upload-button'

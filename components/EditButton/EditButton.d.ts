@@ -20,7 +20,7 @@ export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'>
     editMode?: boolean
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color?: "primary" |
     "info" |
@@ -57,6 +57,6 @@ export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'>
  *
  * - https://bit.dev/totalsoft_oss/react-mui/edit-button
  *
- * 
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/EditButton/EditButton.js
  */
 export default function EditButton(props: EditButtonProps): JSX.Element;

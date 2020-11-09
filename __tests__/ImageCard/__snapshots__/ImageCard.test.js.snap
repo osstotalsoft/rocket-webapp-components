@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render ImageCard render correctly ImageCard component 1`] = `
+<div
+  className="makeStyles-card-11"
+>
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+  >
+    <img
+      alt="Image card"
+      className="makeStyles-image-1 makeStyles-m-3"
+      src={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "compare": null,
+          "displayName": "AssignmentLateIcon",
+          "muiName": "SvgIcon",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          },
+        }
+      }
+    />
+  </div>
+</div>
+`;

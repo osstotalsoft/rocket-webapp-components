@@ -2,7 +2,7 @@
 
 ```js
 import React from "react";
-import Pagination from "@bit/totalsoft_oss.react-mui.pagination";
+import SaveButton from "@bit/totalsoft_oss.react-mui.save-button";
 
-export default <SaveButton title="Save"></SaveButton>;
+export default <SaveButton title="Save" />;
 ```

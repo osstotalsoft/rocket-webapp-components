@@ -8,7 +8,7 @@ export interface Props {
     /**
      * The icon to be displayed. This property is required
      */
-    Icon: React.ReactNode;
+    Icon: unknown;
 
     /**
      * The color of the icon
@@ -38,7 +38,7 @@ export interface Props {
     /**
      * Icon for content
      */
-    StatIcon?: React.ReactNode;
+    StatIcon?: unknown;
 
     /**
      * @default "gray"
@@ -66,6 +66,7 @@ export interface Props {
     * 
     * - https://bit.dev/totalsoft_oss/react-mui/stats-card
     * 
+    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/StatsCard/StatsCard.js
     */
 
 }

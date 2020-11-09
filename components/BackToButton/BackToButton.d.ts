@@ -7,7 +7,7 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   title?: string
   /**
   * The color of button.
-  * @default "themeWithBackground"
+  * @default "theme"
   */
   color?: "primary" |
   "info" |
@@ -48,6 +48,6 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
  *
  * - https://bit.dev/totalsoft_oss/react-mui/back-to-button
  *
- * 
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/BackToButton/BackToButton.js
  */
 export default function BackToButton(props: BackToButtonProps): JSX.Element;

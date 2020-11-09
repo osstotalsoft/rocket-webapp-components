@@ -8,7 +8,7 @@ export default (
   <Pagination
     totalCount={100}
     pageSize={100}
-    page={1}
+    page={0}
     onChangeRowsPerPage={() => {}}
     onChangePage={() => {}}
     onRefresh={() => {}}

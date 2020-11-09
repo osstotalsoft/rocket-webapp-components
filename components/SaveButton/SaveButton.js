@@ -10,7 +10,7 @@ const SaveButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
 )
 
 SaveButton.defaultProps = {
-    color: "themeWithBackground",
+    color: "theme",
     size: "medium",
     fontSize: "small"
 };

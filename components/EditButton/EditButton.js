@@ -14,7 +14,7 @@ const EditButton = ({ title, onClick, editMode, disabled, fontSize, ...rest }) =
 
 EditButton.defaultProps = {
     editMode: true,
-    color: "themeNoBackground",
+    color: "theme",
     fontSize: "default",
     size: "medium"
 };
@@ -39,7 +39,7 @@ EditButton.propTypes = {
     disabled: PropTypes.bool,
     /**
     * The color of button.
-    * @default "themeNoBackground"
+    * @default "theme"
     */
     color: PropTypes.oneOf([
         "primary",
