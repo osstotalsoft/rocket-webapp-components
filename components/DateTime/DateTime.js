@@ -24,6 +24,7 @@ TooltipArea.propTypes = {
 
 function DateTime({ value, onChange, dateFormat, timeFormat,
     showTime, clearable, disabled, error, helperText, invalidDateMessage, minDateMessage, maxDateMessage, language, ...rest }) {
+
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const format = showTime ? `${dateFormat} ${timeFormat}` : dateFormat
@@ -113,9 +114,9 @@ DateTime.defaultProps = {
     variant: "inline",
     views: ["date"],
     disabled: false,
-    InvalidDateMessage: "Invalid Date Format",
-    MinDateMessage: "Date should not be before minimal date",
-    MaxDateMessage: "Date should not be after maximal date"
+    invalidDateMessage: "Invalid Date Format",
+    minDateMessage: "Date should not be before minimal date",
+    maxDateMessage: "Date should not be after maximal date"
 }
 
 DateTime.propTypes = {
@@ -176,7 +177,7 @@ DateTime.propTypes = {
    * Message, appearing when date cannot be parsed.
    * @default 'Invalid Date Format'
    */
-    InvalidDateMessage: PropTypes.node,
+    invalidDateMessage: PropTypes.node,
     /**
    * Error message, shown if date is more then maximal date. 
    * @default 'Date should not be after maximal date'

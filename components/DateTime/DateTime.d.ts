@@ -60,7 +60,7 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps,'onChang
     * Message, appearing when date cannot be parsed.
     * @default 'Invalid Date Format'
     */
-    InvalidDateMessage?: React.ReactNode
+    invalidDateMessage?: React.ReactNode
     /**
     * Error message, shown if date is more then maximal date. 
     * @default 'Date should not be after maximal date'
