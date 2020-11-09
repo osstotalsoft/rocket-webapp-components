@@ -45,7 +45,7 @@ describe("UpwardButton", () => {
     expect(wrapper.find(IconButton).props().disabled).toBe(false);
   });
 
-  it('the color, fontSize and size props should be equal to the dfault values if they are not provided', () => {
+  it('the color, fontSize and size props should be equal to the default values if they are not provided', () => {
     const onClickMock = jest.fn();
 
     const wrapper = mount(<UpwardButton
