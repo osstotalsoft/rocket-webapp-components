@@ -116,7 +116,11 @@ DateTime.defaultProps = {
     disabled: false,
     invalidDateMessage: "Invalid Date Format",
     minDateMessage: "Date should not be before minimal date",
-    maxDateMessage: "Date should not be after maximal date"
+    maxDateMessage: "Date should not be after maximal date",
+    disableToolbar: true,
+    autoOk: true,
+    disabled: false,
+    ampm: false
 }
 
 DateTime.propTypes = {
@@ -191,7 +195,27 @@ DateTime.propTypes = {
     /**
     * The current language, preferably gotten from the i18next (i18.language)
     */
-    language: PropTypes.string
+    language: PropTypes.string,
+    /**
+    * Hide toolbar and show only date/time views
+    * @default false
+    */
+    disableToolbar: PropTypes.bool,
+    /**
+    * Auto accept date on selection
+    * @default false
+    */
+    autoOk: PropTypes.bool,
+    /**
+     * Disable picker and text field
+     * @default false
+     */
+    disabled: PropTypes.bool,
+    /**
+    * 12h/24h view for hour selection clock
+    * @default true
+    */
+    ampm: PropTypes.bool,
 }
 
 export default DateTime;
