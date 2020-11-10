@@ -2,7 +2,7 @@ import { ParsableDate } from "@material-ui/pickers/constants/prop-types";
 
 import { KeyboardDateTimePickerProps } from "@material-ui/pickers";
 
-export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps,'onChange' | 'value'> {
+export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChange' | 'value'> {
     /**
     * Picker value.
     * @default null
@@ -75,6 +75,26 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps,'onChang
     * The current language, preferably gotten from the i18next (i18.language)
     */
     language?: string
+    /**
+    * Hide toolbar and show only date/time views
+    * @default false
+    */
+    disableToolbar: boolean
+    /**
+    * Auto accept date on selection
+    * @default false
+    */
+    autoOk: boolean
+    /**
+    * Disable picker and text field
+    * @default false
+    */
+    disabled: boolean
+    /**
+    * 12h/24h view for hour selection clock
+    * @default true
+    */
+    ampm: boolean
 }
 /**
  *
