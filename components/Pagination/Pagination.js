@@ -8,13 +8,13 @@ import IconButton from '../IconButton';
 
 const useStyles = makeStyles(paginationStyle);
 
-export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOptions, onRefresh,
-  onChangePage, onChangeRowsPerPage, rowsPerPageText, rowsOfText, instanceOfTranslation }) => {
-  const classes = useStyles();
+const displayedRows = rowsOfText => ({ from, to, count }) => {
+  return `${from}-${to} ${rowsOfText} ${count}`;
+}
 
-  const displayedRows = useCallback(({ from, to, count }) => {
-    return `${from}-${to} ${rowsOfText} ${count}`;
-  }, [instanceOfTranslation])
+export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOptions, onRefresh,
+  onChangePage, onChangeRowsPerPage, rowsPerPageText, rowsOfText }) => {
+  const classes = useStyles();
 
   const internalChangePage = useCallback((_event, newPage, direction) => {
     onChangePage(newPage, direction);
@@ -40,7 +40,7 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
           onChangePage={internalChangePage}
           onChangeRowsPerPage={internalChangePageSize}
           labelRowsPerPage={rowsPerPageText}
-          labelDisplayedRows={displayedRows}
+          labelDisplayedRows={displayedRows(rowsOfText)}
           SelectProps={{
             inputProps: { 'aria-label': 'Rows per page' },
             native: true
@@ -73,8 +73,7 @@ Pagination.propTypes = {
   loading: PropTypes.bool,
   rowsPerPageOptions: PropTypes.array,
   rowsOfText: PropTypes.string,
-  rowsPerPageText: PropTypes.string,
-  instanceOfTranslation: PropTypes.func.isRequired
+  rowsPerPageText: PropTypes.string
 };
 
 export default Pagination;

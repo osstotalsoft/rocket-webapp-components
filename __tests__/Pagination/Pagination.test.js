@@ -13,7 +13,6 @@ describe("Pagination", () => {
         onChangePage={() => { }}
         onRefresh={() => { }}
         loading={false}
-        instanceOfTranslation={() => { }}
       />
     );
 
