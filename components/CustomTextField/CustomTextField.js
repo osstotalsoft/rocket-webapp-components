@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from 'prop-types';
 import NumberFormat from 'react-number-format';
-import i18n from 'i18next';
 import { makeStyles, TextField } from "@material-ui/core";
 import textFieldStyle from './textFieldStyle';
 import { useDebounce } from "use-debounce";
@@ -13,8 +12,8 @@ const useStyles = makeStyles(textFieldStyle);
 const isAllowed = values => !(values.floatValue && values.floatValue.toString().includes("e"))
 
 function NumberFormatCustom(props) {
-  const { inputRef, onChange, decimalScale, fixedDecimalScale, thousandSeparator, ...other } = props;
-  let formatter = new Intl.NumberFormat(i18n.language);
+  const { inputRef, onChange, decimalScale, fixedDecimalScale, thousandSeparator, language, ...other } = props;
+  let formatter = new Intl.NumberFormat(language);
 
   var thousandSep = thousandSeparator ? formatter.format(1111).replace(/1/g, '') : thousandSeparator;
   var decimalSeparator = formatter.format(1.1).replace(/1/g, '');
@@ -151,7 +150,11 @@ CustomTextField.propTypes = {
   * The delay of debouncing.
   *  @default 0
   */
-  debounceBy: PropTypes.number
+  debounceBy: PropTypes.number,
+  /**
+  * The current language, preferably taken from the i18next (i18.language) or another internationalization library
+  */
+  language: PropTypes.string,
 };
 
 export default CustomTextField;

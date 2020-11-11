@@ -40,6 +40,10 @@ export interface Props {
     * @default 0
     */
     debounceBy?: number
+    /**
+    * The current language, preferably taken from the i18next (i18.language) or another internationalization library
+    */
+    language: string
 }
 
 export type CustomTextFieldProps = Props | StandardTextFieldProps | FilledTextFieldProps | OutlinedTextFieldProps;
