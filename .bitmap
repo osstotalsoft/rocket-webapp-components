@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.11": {
+    "totalsoft_oss.react-mui/kit/core@0.0.12": {
         "files": [
             {
                 "relativePath": "core/index.js",
@@ -1139,7 +1139,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/pagination@0.0.4": {
+    "totalsoft_oss.react-mui/pagination@0.0.5": {
         "files": [
             {
                 "relativePath": "components/Pagination/Pagination.d.ts",
