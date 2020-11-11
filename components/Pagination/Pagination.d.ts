@@ -61,11 +61,6 @@ export interface Props {
     rowsPerPageText?: string;
 
     /**
-     * The function used to translate text. This property is required
-     */
-    instanceOfTranslation: () => void;
-
-    /**
      * Demos:
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/pagination
