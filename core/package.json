@@ -41,12 +41,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flags": "^0.1.18",
-    "react-router-dom": "^5.1.2",
-    "react-i18next": "^10.13.2"
+    "react-router-dom": "^5.1.2"
   },
   "sideEffects": false,
-  "dependencies": {
-  },
+  "dependencies": {},
   "bit": {
     "env": {
       "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"

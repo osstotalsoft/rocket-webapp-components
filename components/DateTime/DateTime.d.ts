@@ -72,7 +72,9 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChan
     */
     minDateMessage?: React.ReactNode
     /**
-    * The current language, preferably gotten from the i18next (i18.language)
+    * To use another localization import "moment/locale/[lang]" in your app
+    * The current language, preferably taken from the i18next (i18.language) or another internationalization library
+    * @default "en"
     */
     language?: string
     /**

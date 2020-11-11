@@ -10,7 +10,6 @@ import autoCompleteStyles from "./autocompleteStyle"
 import { isArray } from 'util';
 import Search from '@material-ui/icons/Search';
 import { curry, prop } from 'ramda';
-import i18next from 'i18next';
 
 const useStyles = makeStyles(autoCompleteStyles);
 
@@ -184,7 +183,7 @@ function DropdownIndicator() {
   return (<span />);
 }
 
-const formatCreateLabel = curry((createdLabel, text) => i18next.t(createdLabel, { text }))
+const formatCreateLabel = curry((createdLabel, text) => createdLabel.concat(text))
 
 function Autocomplete({ options, defaultOptions, loadOptions, onChange,
   creatable, onMenuOpen, value, isMultiSelection, isClearable,
