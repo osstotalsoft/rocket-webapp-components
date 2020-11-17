@@ -827,7 +827,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/file-upload-button@0.0.4": {
+    "totalsoft_oss.react-mui/file-upload-button@0.0.5": {
         "files": [
             {
                 "relativePath": "components/FileUploadButton/FileUploadButton.d.ts",
@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.13": {
+    "totalsoft_oss.react-mui/kit/core@0.0.14": {
         "files": [
             {
                 "relativePath": "core/index.js",
@@ -1518,7 +1518,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/toast@0.0.3": {
+    "totalsoft_oss.react-mui/toast@0.0.4": {
         "files": [
             {
                 "relativePath": "components/Toast/Toast.js",
