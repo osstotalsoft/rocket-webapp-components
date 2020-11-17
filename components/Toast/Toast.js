@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { toast } from "react-toastify";
 import { makeStyles } from "@material-ui/core";
 import { toastStyle } from "./toastStyle";
@@ -7,7 +8,7 @@ const useStyles = makeStyles(toastStyle);
 
 export function useToast() {
     const classes = useStyles();
-    return (message, variant, autoClose = variant !== 'error') => {
+    return useCallback((message, variant, autoClose = variant !== 'error') => {
         const toastClasses = cx({
             [classes[variant]]: variant,
             [classes['default']]: true
@@ -30,5 +31,5 @@ export function useToast() {
                 toast(message, { autoClose, className: toastClasses })
                 break;
         }
-    }
+    }, [])
 }
