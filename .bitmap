@@ -695,7 +695,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/dynamic-input@0.0.9": {
+    "totalsoft_oss.react-mui/dynamic-input@0.0.10": {
         "files": [
             {
                 "relativePath": "components/DynamicInput/DynamicInput.d.ts",
@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.17": {
+    "totalsoft_oss.react-mui/kit/core@0.0.18": {
         "files": [
             {
                 "relativePath": "core/index.js",
