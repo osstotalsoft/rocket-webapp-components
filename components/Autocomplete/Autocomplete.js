@@ -16,7 +16,7 @@ const useStyles = makeStyles(autoCompleteStyles);
 function NoOptionsMessage({ selectProps, innerProps, children }) {
   return (
     <Typography
-      color="textSecondary"
+      color={selectProps.typographyProps.color}
       className={selectProps.classes.noOptionsMessage}
       {...innerProps}
     >
@@ -112,7 +112,7 @@ const MultiOption = props => (
 function Placeholder({ selectProps, innerProps, children }) {
   return (
     <Typography
-      color="textSecondary"
+      color={selectProps.typographyProps.color}
       className={selectProps.classes.placeholder}
       {...innerProps}
     >
@@ -187,7 +187,8 @@ const formatCreateLabel = curry((createdLabel, text) => createdLabel.concat(text
 
 function Autocomplete({ options, defaultOptions, loadOptions, onChange,
   creatable, onMenuOpen, value, isMultiSelection, isClearable,
-  isSearchable, disabled, simpleValue, label, valueKey, labelKey, error, helperText, createdLabel, ...other }) {
+  isSearchable, disabled, simpleValue, label, valueKey, labelKey,
+  error, helperText, createdLabel, typographyContentColor, ...other }) {
   const classes = useStyles();
 
   const handleOnChange = useCallback(inputValue => {
@@ -246,6 +247,9 @@ function Autocomplete({ options, defaultOptions, loadOptions, onChange,
         error: error,
         helperText: helperText
       }}
+      typographyProps={{
+        color: typographyContentColor
+      }}
       multiValueRemove={false}
       creatable={creatable}
       hideSelectedOptions={false}
@@ -274,7 +278,8 @@ Autocomplete.defaultProps = {
   label: " ",
   error: false,
   value: null,
-  creatable: false
+  creatable: false,
+  typographyContentColor: "textSecondary"
 };
 
 Autocomplete.propTypes = {
@@ -358,7 +363,20 @@ Autocomplete.propTypes = {
   /**
   * The default set of options to show before the user starts searching. When set to true, the results for loadOptions('') will be autoloaded.
   */
-  defaultOptions: PropTypes.oneOfType([PropTypes.bool, PropTypes.array])
+  defaultOptions: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
+  /**
+  * The color of both the text displayed when there are no options and placeholder. It supports those theme colors that make sense for this component.
+  * @default "textSecondary"
+  */
+  typographyContentColor: PropTypes.oneOf([
+    'initial',
+    'inherit',
+    'primary',
+    'secondary',
+    'textPrimary',
+    'textSecondary',
+    'error'
+  ])
 };
 
 export default Autocomplete;

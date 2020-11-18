@@ -45,7 +45,8 @@ const autocompleteStyle = theme => {
       padding: `${theme.spacing()}px ${theme.spacing(2)}px`,
     },
     singleValue: {
-      ...defaultFont
+      ...defaultFont,
+      color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
     },
     placeholder: {
       ...defaultFont,
@@ -65,11 +66,11 @@ const autocompleteStyle = theme => {
     selectStyles: {
       singleValue: base => ({
         ...base,
-        color: theme.palette?.primary.main || defaultTheme.palette.primary.main
+        color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
       }),
       input: base => ({
         ...base,
-        color: theme.palette?.primary.main || defaultTheme.palette.primary.main
+        color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
       })
     }
   })

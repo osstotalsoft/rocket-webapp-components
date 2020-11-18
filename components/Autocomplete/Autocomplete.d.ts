@@ -81,6 +81,18 @@ export interface AutocompleteProps {
   * The default set of options to show before the user starts searching. When set to true, the results for loadOptions('') will be autoloaded.
   */
   defaultOptions?: boolean | Object[]
+  /**
+  * The color of both the text displayed when there are no options and placeholder. It supports those theme colors that make sense for this component.
+  * @default "textSecondary"
+  */
+    typographyContentColor:
+    'initial' |
+    'inherit' |
+    'primary' |
+    'secondary' |
+    'textPrimary' |
+    'textSecondary' |
+    'error'
 }
 /**
  *

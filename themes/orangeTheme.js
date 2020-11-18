@@ -17,7 +17,8 @@ const palette = {
         dark: 'rgb(3, 19, 3)',
         white: 'rgb(255, 255, 255)',
         darkGrey: 'rgb(169,169,169)',
-        highlight: 'rgb(36, 76, 140)'
+        highlight: 'rgb(36, 76, 140)',
+        primary: '#FF6F00'
     },
     sideMenu: {
         bkColor: '#000',
