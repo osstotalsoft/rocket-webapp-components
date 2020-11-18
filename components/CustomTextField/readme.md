@@ -4,17 +4,46 @@ import React, { useState } from 'react';
 import CustomTextField from '@bit/totalsoft_oss.react-mui.custom-text-field';
 
 const App = () => {
-	const onCustomInputChange = value => setCustomInputValue(value)
-	const [customInputValue, setCustomInputValue] = useState(1);
+   const onCustomInputChange = event => setValue(event.target.value)
+   const [value, setValue] = useState(1);
+
+   return (
+       <CustomTextField
+           fullWidth
+           label={'CustomTextField'}
+           value={value || ""}
+           onChange={onCustomInputChange}
+       />
+   )
+}
+
+export default (
+   <App />
+)
+ ```
+
+
+ ##### Copy this snapshot in the overview panel
+ ```js
+import React, { useState } from 'react';
+import CustomTextField from '@bit/totalsoft_oss.react-mui.custom-text-field';
+
+const App = () => {
+	const onCustomInputChange = value => setValue(value)
+	const [value, setValue] = useState(1);
 
 	return (
 		<CustomTextField
 			fullWidth
 			label={'CustomTextField'}
-			value={customInputValue || ""}
+			value={value || ""}
 			onChange={onCustomInputChange}
-			decimalScale={0}
-			thousandSeparator={"."}
+			isNumeric
+			customInputProps={{
+				decimalScale: 3,
+				thousandSeparator: false,
+				prefix: '$'
+			}}
 		/>
 	)
 }
