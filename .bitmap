@@ -470,7 +470,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-text-field@0.0.4": {
+    "totalsoft_oss.react-mui/custom-text-field@0.0.5": {
         "files": [
             {
                 "relativePath": "components/CustomTextField/CustomTextField.d.ts",
@@ -695,7 +695,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/dynamic-input@0.0.8": {
+    "totalsoft_oss.react-mui/dynamic-input@0.0.9": {
         "files": [
             {
                 "relativePath": "components/DynamicInput/DynamicInput.d.ts",
@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.16": {
+    "totalsoft_oss.react-mui/kit/core@0.0.17": {
         "files": [
             {
                 "relativePath": "core/index.js",
@@ -1182,7 +1182,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/password-field@0.0.6": {
+    "totalsoft_oss.react-mui/password-field@0.0.7": {
         "files": [
             {
                 "relativePath": "components/PasswordField/PasswordField.d.ts",
@@ -1346,7 +1346,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/simple-slider@0.0.5": {
+    "totalsoft_oss.react-mui/simple-slider@0.0.6": {
         "files": [
             {
                 "relativePath": "components/SimpleSlider/SimpleSlider.d.ts",
