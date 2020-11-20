@@ -3,7 +3,17 @@ import styles from '../../assets/jss/styles';
 import { theme as defaultTheme } from '../../themes/defaultTheme';
 
 const autocompleteStyle = theme => {
-  const { dangerColor, successColor, defaultFont } = styles(theme);
+  const {
+    dangerColor,
+    successColor,
+    defaultFont,
+    themeColor,
+    primaryColor,
+    infoColor,
+    whiteColor,
+    roseColor,
+    warningColor,
+    blackColor } = styles(theme);
 
   return ({
     root: {
@@ -72,7 +82,16 @@ const autocompleteStyle = theme => {
         ...base,
         color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
       })
-    }
+    },
+    primary: { color: primaryColor },
+    info: { color: infoColor },
+    success: { color: successColor },
+    warning: { color: warningColor },
+    danger: { color: dangerColor },
+    rose: { color: roseColor },
+    white: { color: whiteColor },
+    theme: { color: themeColor },
+    black: { color: blackColor }
   })
 };
 

@@ -2,58 +2,114 @@
  ```js
 import React, { useState } from 'react';
 import DateTime from '@bit/totalsoft_oss.react-mui.date-time';
-import { Grid } from '@material-ui/core';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 const App = () => {
-	const [dateValue, setDateValue] = useState(null);
-	const onDateTimeChanged = value => setDateValue(value)
-
-	const [dateValue1, setDateValue1] = useState(null);
-	const onDateTimeChanged1 = value => setDateValue1(value)
-
-	const [dateValue2, setDateValue2] = useState(null);
-	const onDateTimeChanged2 = value => setDateValue2(value)
+	const [value, setValue] = useState(null);
+	const onChange = value => setValue(value)
 
 	return (
-		<Grid container spacing={1}>
-			<Grid item xs={12} sm={6} md={6} lg={3}>
-				<div>Non-editable datetime and not-clearable</div>
-				<DateTime
-					value={dateValue || null}
-					label={'Datetime'}
-					onChange={onDateTimeChanged}
-					dateFormat="DD-MMMM-YYYY"
-					editable={false}
-					maskable={true}
-					clearable={false}
-				/>
-			</Grid>
-			<Grid item xs={12} sm={6} md={6} lg={3}>
-				<div>Editable datetime and clearable</div>
-				<DateTime
-					value={dateValue1 || null}
-					label={'Datetime'}
-					onChange={onDateTimeChanged1}
-					dateFormat="DD-MMMM-YYYY"
-					editable={false}
-					maskable={true}
-					clearable={true}
-				/>
-			</Grid>
+		<List component="nav">
+			<ListItem>
+				<p style={{ color: "red", fontWeight: "bold" }}>Please, in order to view the components properly drag the paint window to right</p>
+			</ListItem>
+			<ListItem>
+				<div style={{ dispaly: "block", float: "left" }}>
+					<DateTime
+						value={value || null}
+						label={'Start from'}
+						onChange={onChange}
+						dateFormat="DD-MMMM-YYYY"
+						editable={false}
+						maskable={true}
+						clearable={false}
+					/>
+				</div>
+			</ListItem>
+		</List>
+	)
+}
 
-			<Grid item xs={12} sm={6} md={6} lg={3}>
-				<div>Calendar mask:YYYY-MM and clearable</div>
-				<DateTime
-					value={dateValue2 || null}
-					label={'Datetime'}
-					onChange={onDateTimeChanged2}
-					dateFormat="YYYY-MM"
-					editable={false}
-					maskable={true}
-					clearable={true}
-				/>
-			</Grid>
-		</Grid>
+export default (
+	<App />
+)
+ ```
+
+
+
+ ##### Copy this snapshot in the overview panel
+ ```js
+import React, { useState } from 'react';
+import DateTime from '@bit/totalsoft_oss.react-mui.date-time';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+
+const App = () => {
+	const [value, setValue] = useState(null);
+	const onChange = value => setValue(value)
+
+	return (
+		<List component="nav">
+			<ListItem>
+				<p style={{ color: "red", fontWeight: "bold" }}>Please, in order to view the components properly drag the paint window to right</p>
+			</ListItem>
+			<ListItem>
+				<div style={{ dispaly: "block", float: "left" }}>
+					<DateTime
+						value={value || null}
+						label={'Start from'}
+						onChange={onChange}
+						dateFormat="DD-MMMM-YYYY"
+						editable={false}
+						maskable={true}
+						clearable={true}
+						disableToolbar={false}
+						showTime
+					/>
+				</div>
+			</ListItem>
+		</List>
+	)
+}
+
+export default (
+	<App />
+)
+ ```
+
+
+
+  ##### Copy this snapshot in the overview panel
+ ```js
+import React, { useState } from 'react';
+import DateTime from '@bit/totalsoft_oss.react-mui.date-time';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+
+const App = () => {
+	const [value, setValue] = useState(null);
+	const onChange = value => setValue(value)
+
+	return (
+		<List component="nav">
+			<ListItem>
+				<p style={{ color: "red", fontWeight: "bold" }}>Please, in order to view the components properly drag the paint window to right</p>
+			</ListItem>
+			<ListItem>
+				<div style={{ dispaly: "block", float: "left" }}>
+					<DateTime
+						value={value || null}
+						label={'Start from'}
+						onChange={onChange}
+						dateFormat="YYYY-MM"
+						editable={false}
+						maskable={true}
+						clearable={true}
+					/>
+				</div>
+			</ListItem>
+		</List>
 	)
 }
 

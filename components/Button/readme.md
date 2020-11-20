@@ -2,87 +2,126 @@
  ```js
 import React from 'react';
 import Button from '@bit/totalsoft_oss.react-mui.button';
-import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import DeleteIcon from '@material-ui/icons/Delete';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
+import Icon from '@material-ui/core/Icon';
+import SaveIcon from '@material-ui/icons/Save';
+import SendIcon from '@material-ui/icons/Send';
+
+const useStyles = makeStyles((theme) => ({
+	button: {
+		margin: theme.spacing(5),
+	},
+}));
+
+const App = () => {
+	const classes = useStyles();
+
+	return (
+		<div>
+			<Button
+				color="warning"
+				className={classes.button}
+				startIcon={<DeleteIcon />}
+				size="sm"
+			>
+				Delete
+      </Button>
+			<Button
+				color="primary"
+				className={classes.button}
+				endIcon={<SendIcon />}
+				size="sm"
+			>
+				Send
+      </Button>
+			<Button
+				color="info"
+				className={classes.button}
+				startIcon={<CloudUploadIcon />}
+				size="sm"
+			>
+				Upload
+      </Button>
+			<Button
+				color="danger"
+				className={classes.button}
+				startIcon={<KeyboardVoiceIcon />}
+				size="sm"
+			>
+				Talk
+      </Button>
+			<Button
+				color="info"
+				size="small"
+				className={classes.button}
+				startIcon={<SaveIcon />}
+				size="sm"
+			>
+				Save
+      </Button>
+			<Button
+				color="success"
+				size="large"
+				className={classes.button}
+				startIcon={<SaveIcon />}
+				size="sm"
+			>
+				Save
+      </Button>
+		</div>
+	)
+}
 
 export default (
-	<Grid container spacing={1}>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="warning">
-				Warning
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="primary">
-				Primary
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="info">
-				Info
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="success">
-				Success
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="danger">
-				Danger
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="rose">
-				Rose
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="defaultNoBackground">
-				DefaultNoBackground
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="primaryNoBackground">
-				PrimaryNoBackground
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="infoNoBackground">
-				InfoNoBackground
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="successNoBackground">
-				SuccessNoBackground
-                </Button>
-		</Grid>
+	<App />
+)
+ ```
 
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="warningNoBackground">
-				WarningNoBackground
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="dangerNoBackground">
-				DangerNoBackground
-                </Button>
-		</Grid>
 
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="white">
-				White
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="simple">
-				Simple
-                </Button>
-		</Grid>
-		<Grid item xs={12} sm={6} md={6} lg={3}>
-			<Button color="transparent">
-				Transparent
-                </Button>
-		</Grid>
-	</Grid>
+
+ ##### Copy this snapshot in the overview panel
+ ```js
+import React from 'react';
+import Button from '@bit/totalsoft_oss.react-mui.button';
+import { makeStyles } from '@material-ui/core/styles';
+import DeleteIcon from '@material-ui/icons/Delete';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
+import Icon from '@material-ui/core/Icon';
+import SaveIcon from '@material-ui/icons/Save';
+import SendIcon from '@material-ui/icons/Send';
+
+const useStyles = makeStyles((theme) => ({
+	margin: {
+		margin: theme.spacing(1),
+	},
+	extendedIcon: {
+		marginRight: theme.spacing(1),
+	},
+}));
+
+const App = () => {
+	const classes = useStyles();
+
+	return (
+		<div>
+			<Button size="xs" color="info" className={classes.margin}>
+				Small
+        </Button>
+			<Button size="sm" color="info" className={classes.margin}>
+				Medium
+        </Button>
+			<Button size="lg" color="info" className={classes.margin}>
+				Large
+        </Button>
+		</div>
+	)
+}
+
+export default (
+	<App />
 )
  ```

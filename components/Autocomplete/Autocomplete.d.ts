@@ -85,7 +85,7 @@ export interface AutocompleteProps {
   * The color of both the text displayed when there are no options and placeholder. It supports those theme colors that make sense for this component.
   * @default "textSecondary"
   */
-    typographyContentColor:
+  typographyContentColor:
     'initial' |
     'inherit' |
     'primary' |
@@ -93,6 +93,20 @@ export interface AutocompleteProps {
     'textPrimary' |
     'textSecondary' |
     'error'
+  /**
+  * The color of selected input.
+  * @default "black"
+  */
+  inputSelectedColor:
+    "primary" |
+    "info" |
+    "success" |
+    "warning" |
+    "danger" |
+    "rose" |
+    "theme" |
+    "white" |
+    "black"
 }
 /**
  *
