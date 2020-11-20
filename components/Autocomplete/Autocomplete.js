@@ -10,6 +10,7 @@ import autoCompleteStyles from "./autocompleteStyle"
 import { isArray } from 'util';
 import Search from '@material-ui/icons/Search';
 import { curry, prop } from 'ramda';
+import cx from "classnames";
 
 const useStyles = makeStyles(autoCompleteStyles);
 
@@ -122,8 +123,12 @@ function Placeholder({ selectProps, innerProps, children }) {
 }
 
 function SingleValue({ selectProps, innerProps, children }) {
+  const inputClasses = cx({
+    [selectProps.classes[selectProps.inputSelectedColor]]: selectProps.inputSelectedColor
+  });
+
   return (
-    <Typography className={selectProps.classes.singleValue} {...innerProps}>
+    <Typography className={selectProps.classes.singleValue + " " + inputClasses}{...innerProps}>
       {typeof children === 'function' ? children() : children}
     </Typography>
   );
@@ -188,7 +193,7 @@ const formatCreateLabel = curry((createdLabel, text) => createdLabel.concat(text
 function Autocomplete({ options, defaultOptions, loadOptions, onChange,
   creatable, onMenuOpen, value, isMultiSelection, isClearable,
   isSearchable, disabled, simpleValue, label, valueKey, labelKey,
-  error, helperText, createdLabel, typographyContentColor, ...other }) {
+  error, helperText, createdLabel, typographyContentColor, inputSelectedColor, ...other }) {
   const classes = useStyles();
 
   const handleOnChange = useCallback(inputValue => {
@@ -262,6 +267,7 @@ function Autocomplete({ options, defaultOptions, loadOptions, onChange,
       getOptionValue={prop(valueKey)}
       formatCreateLabel={formatCreateLabel(createdLabel)}
       getNewOptionData={getNewOptionData}
+      inputSelectedColor={inputSelectedColor}
     />
   )
 }
@@ -279,7 +285,8 @@ Autocomplete.defaultProps = {
   error: false,
   value: null,
   creatable: false,
-  typographyContentColor: "textSecondary"
+  typographyContentColor: "textSecondary",
+  inputSelectedColor: "black"
 };
 
 Autocomplete.propTypes = {
@@ -376,6 +383,21 @@ Autocomplete.propTypes = {
     'textPrimary',
     'textSecondary',
     'error'
+  ]),
+  /**
+  * The color of selected input.
+  * @default "black"
+  */
+  inputSelectedColor: PropTypes.oneOf([
+    "primary",
+    "info",
+    "success",
+    "warning",
+    "danger",
+    "rose",
+    "theme",
+    "white",
+    "black"
   ])
 };
 

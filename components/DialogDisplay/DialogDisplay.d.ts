@@ -23,7 +23,7 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
     */
     content?: React.ReactNode
     /**
-    * The actions provided below the dialog.  
+    * The actions provided below the dialog.
     */
     actions?: React.ReactNode
 }

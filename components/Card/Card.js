@@ -27,8 +27,8 @@ Card.propTypes = {
   */
   className: PropTypes.string,
   /**
-     * The color of card.
-     */
+  * The color of card.
+  */
   color: PropTypes.oneOf([
     "primary",
     "info",
