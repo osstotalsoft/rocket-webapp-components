@@ -4,7 +4,6 @@ import { theme as defaultTheme } from '../../themes/defaultTheme';
 
 const autocompleteStyle = theme => {
   const {
-    defaultFont,
     dangerColor,
     successColor,
     defaultFont,
