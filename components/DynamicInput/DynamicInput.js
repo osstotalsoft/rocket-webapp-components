@@ -90,7 +90,6 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
 }
 
 DynamicInput.defaultProps = {
-  controlType: "N/A",
   DefaultComp: CustomTextField,
   defaultCompProps: { fullWidth: true, disabled: true }
 };

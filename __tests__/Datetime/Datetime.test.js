@@ -17,8 +17,6 @@ describe('DateTime', () => {
             onChange={onDateTimeChanged}
             dateFormat="DD-MMMM-YYYY"
             timeFormat={defaultTimeFormat}
-            editable={false}
-            maskable={true}
             clearable={false}
         />);
 
@@ -26,7 +24,7 @@ describe('DateTime', () => {
         expect(json).toMatchSnapshot();
     });
 
-    it('if clearable and value are true then InputProps node will be made up of two IconButtons ', () => {
+    it('if clearable and value are true then InputProps node will be made up of two IconButtons', () => {
         const onDateTimeChanged = jest.fn()
         const defaultTimeFormat = "HH:mm"
 
@@ -36,15 +34,13 @@ describe('DateTime', () => {
             onChange={onDateTimeChanged}
             dateFormat="DD-MMMM-YYYY"
             timeFormat={defaultTimeFormat}
-            editable={false}
-            maskable={true}
             clearable={true}
         />);
 
         expect(wrapper.find(IconButton)).toHaveLength(3)
     });
 
-    it('if clearable and value are false then InputProps node will be made of one CalendarToday node ', () => {
+    it('if clearable and value are false then InputProps node will be made of one CalendarToday node', () => {
         const onDateTimeChanged = value => { }
         const defaultTimeFormat = "HH:mm"
 
@@ -54,8 +50,6 @@ describe('DateTime', () => {
             onChange={onDateTimeChanged}
             dateFormat="DD-MMMM-YYYY"
             timeFormat={defaultTimeFormat}
-            editable={false}
-            maskable={true}
             clearable={false}
         />);
 
@@ -72,8 +66,6 @@ describe('DateTime', () => {
             onChange={onDateTimeChanged}
             dateFormat="DD-MMMM-YYYY"
             timeFormat={defaultTimeFormat}
-            editable={false}
-            maskable={true}
             clearable={false}
         />);
 
