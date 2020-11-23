@@ -107,7 +107,6 @@ describe('DynamicInput', () => {
 
         const wrapper = mount(<DynamicInput
             id={'testId'}
-            controlType={"N/A"}
             onChange={onChangeMock}
             value={true}
             disabled={false}

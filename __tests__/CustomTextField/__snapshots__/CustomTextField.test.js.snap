@@ -3,8 +3,6 @@
 exports[`CustomTextField snapshot 1`] = `
 <div
   className="MuiFormControl-root MuiTextField-root undefined undefined MuiFormControl-fullWidth"
-  decimalScale={0}
-  thousandSeparator="."
 >
   <label
     className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"

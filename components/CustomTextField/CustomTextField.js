@@ -64,6 +64,7 @@ const getValueFromDesiredFormat = curry((isNumeric, e) => isNumeric ? e : e?.tar
 function CustomTextField({ isNumeric, customInputProps, endAdornment, InputLabelProps,
   className, value, onChange, debounceBy, ...rest }) {
   const classes = useStyles();
+
   const customInput = isNumeric ?
     {
       inputComponent: NumberFormatCustom,

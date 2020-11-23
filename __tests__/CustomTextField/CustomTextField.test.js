@@ -13,8 +13,6 @@ describe('CustomTextField', () => {
             label={'CustomTextField'}
             value={12 || ""}
             onChange={onCustomInputChange}
-            decimalScale={0}
-            thousandSeparator={"."}
         />);
 
         const json = component.toJSON();
@@ -29,9 +27,12 @@ describe('CustomTextField', () => {
             label={'CustomTextField'}
             value={12 || ""}
             onChange={onCustomInputChange}
-            decimalScale={0}
-            thousandSeparator={"."}
-            isNumeric={true}
+            customInputProps={{
+                decimalScale: 3,
+                thousandSeparator: true,
+                prefix: '$'
+            }}
+            isNumeric
         />);
 
         console.log(wrapper.find(TextField).props())
@@ -47,9 +48,6 @@ describe('CustomTextField', () => {
             label={'CustomTextField'}
             value={12 || ""}
             onChange={onCustomInputChange}
-            decimalScale={0}
-            thousandSeparator={"."}
-            isNumeric={false}
         />);
 
         expect(wrapper.find(TextField).props().InputProps.inputComponent).toBeUndefined()
@@ -63,9 +61,6 @@ describe('CustomTextField', () => {
             label={'CustomTextField'}
             value={12 || ""}
             onChange={onCustomInputChange}
-            decimalScale={0}
-            thousandSeparator={"."}
-            isNumeric={false}
         />);
 
         expect(wrapper.find(TextField).props().InputProps.inputProps.className).toContain('input')
