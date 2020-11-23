@@ -974,7 +974,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/icon-collapse-card@0.0.4": {
+    "totalsoft_oss.react-mui/icon-collapse-card@0.0.5": {
         "files": [
             {
                 "relativePath": "components/IconCollapseCard/IconCollapseCard.d.ts",
@@ -1050,7 +1050,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@0.0.19": {
+    "totalsoft_oss.react-mui/kit/core@0.0.20": {
         "files": [
             {
                 "relativePath": "core/index.js",
@@ -1068,7 +1068,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/nav-pills@0.0.3": {
+    "totalsoft_oss.react-mui/nav-pills@0.0.4": {
         "files": [
             {
                 "relativePath": "components/NavPills/NavPills.d.ts",
@@ -1346,7 +1346,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/simple-slider@0.0.6": {
+    "totalsoft_oss.react-mui/simple-slider@0.0.7": {
         "files": [
             {
                 "relativePath": "components/SimpleSlider/SimpleSlider.d.ts",
