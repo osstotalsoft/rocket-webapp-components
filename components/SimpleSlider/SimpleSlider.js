@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { FormControl, FormHelperText } from '@material-ui/core';
@@ -10,28 +10,28 @@ import simpleSliderStyle from "./simpleSliderStyle";
 
 const useStyles = makeStyles(simpleSliderStyle);
 
-const SimpleSlider = ({ label, fullWidth, value, min, max, step, onChange, error, 
-    helperText, required, decimalScale, disabled, showSliderLimits }) => {
+const SimpleSlider = ({ label, fullWidth, value, min, max, step, onChange, error,
+    helperText, required, decimalScale, disabled, showSliderLimits, ...other }) => {
     const classes = useStyles();
 
-    const OnTextChanged = function (value) {
-        if (value) {
-            if (value <= min) {
+    const onTextChanged = useCallback(event => {
+        if (event.target && event.target.value) {
+            if (event.target.value <= min) {
                 onChange(null, min);
             }
-            else if (value >= max) {
+            else if (event.target.value >= max) {
                 onChange(null, max);
             }
             else {
-                onChange(null, value);
+                onChange(null, event.target.value);
             }
         }
         else {
             onChange(null, min);
         }
-    }
+    }, [onChange, min, max])
 
-    const OnTextChangedDebounced = debounce(OnTextChanged, 1000)
+    const OnTextChangedDebounced = debounce(onTextChanged, 1000)
 
     return (
         <FormControl fullWidth={fullWidth} className={classes.formControl} error={error} required={required}>
@@ -53,6 +53,7 @@ const SimpleSlider = ({ label, fullWidth, value, min, max, step, onChange, error
                 aria-labelledby="continuous-slider"
                 onChange={onChange}
                 disabled={disabled}
+                {...other}
             />
 
             {showSliderLimits && (
