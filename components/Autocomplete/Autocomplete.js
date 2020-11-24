@@ -247,8 +247,6 @@ function Autocomplete({ options, defaultOptions, loadOptions, onChange,
       value={simpleValue ? getSimpleValue(options, value, valueKey, isMultiSelection) : value}
       onChange={handleOnChange}
       onMenuOpen={onMenuOpen}
-      
-    
       textFieldProps={{
         label: label,
         error: error,
