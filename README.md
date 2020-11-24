@@ -43,6 +43,8 @@ Bit platform comes with a performant CLI with which you can import, tag, and exp
 
 Please, take a look at this video for further understanding of these steps: [Working with Azure Pipeline](https://1drv.ms/v/s!AjNJY058hJ8vgRSKSG8XfBMoXbU8?e=3VFY19)
 
+## Versioning
+Components versioning is done using GitVersion (https://gitversion.net/docs/). Our approach is by using commit messages like so: adding ```+semver: breaking``` or ```+semver: major``` will cause the major version to be increased, ```+semver: feature``` or ```+semver: minor``` will bump minor and ```+semver: patch``` or ```+semver: fix``` will bump the patch.
   
  ##  Bit in a nutshell
 ![BitWorkflow](/assets/img/BitWorkflow.png)
