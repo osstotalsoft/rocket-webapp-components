@@ -248,6 +248,7 @@ function Autocomplete({ options, defaultOptions, loadOptions, onChange,
       onChange={handleOnChange}
       onMenuOpen={onMenuOpen}
       
+    
       textFieldProps={{
         label: label,
         error: error,
