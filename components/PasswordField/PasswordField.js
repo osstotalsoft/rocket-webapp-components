@@ -46,7 +46,13 @@ PasswordField.defaultProps = {
 };
 
 PasswordField.propTypes = {
+/**
+* The text to be displayed on tooltip when the user wants to hide the password
+*/
   hidePasswordText: PropTypes.string,
+/**
+* The text to be displayed on tooltip when the user wants to show the password
+*/
   showPasswordText: PropTypes.string
 };
 

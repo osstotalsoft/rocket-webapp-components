@@ -65,15 +65,50 @@ Pagination.defaultProps = {
 }
 
 Pagination.propTypes = {
+  /**
+  * The total number of pages. This property is required
+  */
   totalCount: PropTypes.number.isRequired,
+
+  /**
+  * The number of items to be displayed in one page. This property is required
+  */
   pageSize: PropTypes.number.isRequired,
+  /**
+  * The current page. This property is required
+  */
   page: PropTypes.number.isRequired,
+  /**
+  * This function is called when the number of rows per page is changed
+  * @param {object} event The event source of the callback.
+  */
   onChangeRowsPerPage: PropTypes.func,
+  /**
+  * This function is called when the page is changed
+  * @param {object} event The event source of the callback.
+  * @param {number} newPage The page you want to navigate
+  * @param {number} direction 0 => navigate to a previous page and 1 => navigate to a next page
+  */
   onChangePage: PropTypes.func,
+  /**
+  * The function called on refresh. Thi property is required 
+  */
   onRefresh: PropTypes.func.isRequired,
+  /**
+  * If the pages are loading, thi property is set to true
+  */
   loading: PropTypes.bool,
+  /**
+  * Array of values to choose how many rows should be displayed in a page
+  */
   rowsPerPageOptions: PropTypes.array,
+  /**
+  * The text to be displayed between the number of rows per page and total count
+  */
   rowsOfText: PropTypes.string,
+  /**
+  * The text to be displayed for the number of rows per page
+  */
   rowsPerPageText: PropTypes.string
 };
 

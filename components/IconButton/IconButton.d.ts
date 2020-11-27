@@ -1,16 +1,14 @@
 import { IconButtonProps as BaseProps } from '@material-ui/core/IconButton';
 
 export interface IconButtonProps extends Omit<BaseProps, 'color'> {
-
     /**
      * The content of the button
      */
     children?: React.ReactNode;
-
     /**
-     * The color of the button
-     * @default "theme"
-     */
+    * @default "theme"
+    * The color of the button
+    */
     color?: "primary" |
     "info" |
     "theme" |
@@ -29,28 +27,23 @@ export interface IconButtonProps extends Omit<BaseProps, 'color'> {
     "warningNoBackground" |
     "dangerNoBackground" |
     "roseNoBackground"
-
     /**
-     * The size of the button
-     * @default "medium"
-     */
+    * @default "medium"
+    * The size of the button
+    */
     size?: "small" | "medium"
-
     /**
      * Override or extend the styles applied to the component
      */
     customClass?: string;
-
     /**
-     * If true, button will be disabled. Default is set to false
-     */
+    * If true, button will be disabled. Default is set to false
+    */
     disabled?: boolean;
-
     /**
      * The text to be displayed when the user hover over the button
      */
     tooltip?: string;
-
     /**
     * Demos:
     * 

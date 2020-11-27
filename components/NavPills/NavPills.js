@@ -96,8 +96,13 @@ NavPills.defaultProps = {
 };
 
 NavPills.propTypes = {
-    // index of the default active pill
+    /**
+    * Index of the default active pill
+    */
     active: PropTypes.number,
+    /**
+    * The content of the component
+    */
     tabs: PropTypes.arrayOf(
         PropTypes.shape({
             tabButton: PropTypes.string,
@@ -105,17 +110,29 @@ NavPills.propTypes = {
             tabContent: PropTypes.node
         })
     ).isRequired,
+    /**
+    * The color of the component
+    */
     color: PropTypes.oneOf([
         "primary",
         "warning",
         "danger",
         "success",
         "info",
-        "rose"
+        "rose",
+        "theme"
     ]),
     horizontal: PropTypes.bool,
     alignCenter: PropTypes.bool,
+    /**
+    * This property is required
+    * @param {object} event The event source of the callback.
+    * @param {any} value We default to the index of the child (number)
+    */
     onChange: PropTypes.func.isRequired,
+    /**
+    * A list of actions available in this component
+    */
     actions: PropTypes.array
 };
 

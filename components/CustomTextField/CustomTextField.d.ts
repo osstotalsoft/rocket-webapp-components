@@ -7,8 +7,8 @@ export interface Props {
     */
     className?: string
     /**
+    * @default false
     * If true, the input will accept only numeric values.
-    *  @default false
     */
     isNumeric?: boolean
     /**
@@ -30,15 +30,14 @@ export interface Props {
     value?: unknown;
     /**
     * Callback fired when the value is changed.
-    *
+    * @default  () => { }
     * @param {object} event The event source of the callback.
     * You can pull out the new value by accessing `event.target.value` (string).
-    *  @default  () => { }
     */
     onChange?: (object: Object) => void
     /**
-    * The delay of debouncing.
     * @default 0
+    * The delay of debouncing.
     */
     debounceBy?: number
     /**

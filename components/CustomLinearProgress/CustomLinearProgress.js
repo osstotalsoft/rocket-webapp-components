@@ -26,7 +26,6 @@ CustomLinearProgress.defaultProps = {
 CustomLinearProgress.propTypes = {
     /**
    * The color of the component.
-   * @default "gray"
    */
     color: PropTypes.oneOf([
         "primary",
@@ -39,7 +38,6 @@ CustomLinearProgress.propTypes = {
     ]),
     /**
     * The variant to use. Use indeterminate or query when there is no progress value.
-    * @default "indeterminate"
     */
     variant: PropTypes.oneOf([
         "determinate",

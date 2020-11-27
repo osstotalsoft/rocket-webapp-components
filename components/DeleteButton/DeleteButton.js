@@ -30,7 +30,6 @@ DeleteButton.propTypes = {
     disabled: PropTypes.bool,
     /**
     * The color of button.
-    * @default "theme"
     */
     color: PropTypes.oneOf([
         "primary",
@@ -54,7 +53,6 @@ DeleteButton.propTypes = {
     ]),
     /**
     * The size of button.
-    * @default "medium"
     */
     size: PropTypes.oneOf([
         "small",
@@ -62,7 +60,6 @@ DeleteButton.propTypes = {
     ]),
     /**
     * The fontSize of button's content.
-    * @default "default"
     */
     fontSize: PropTypes.oneOf([
         "inherit",

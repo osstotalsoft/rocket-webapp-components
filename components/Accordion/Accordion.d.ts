@@ -1,7 +1,7 @@
 export interface AccordionProps {
     /**
-    * The index of the active child.
     * @default -1
+    * The index of the active child.
     */
     active?: number;
     /**

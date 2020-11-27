@@ -7,8 +7,8 @@ export type OptionsType<OptionType> = ReadonlyArray<OptionType>;
 
 export interface AutocompleteProps {
   /**
-   * The array of options from which the client can select a value.
    * @default []
+   * The array of options from which the client can select a value.
    */
   options?: []
   /**
@@ -16,8 +16,8 @@ export interface AutocompleteProps {
   */
   loadOptions(inputValue: string, callback: (options: OptionsType<OptionType>) => void): void;
   /**
-    * The selected value from list of options.
     * @default null
+    * The selected value from list of options.
     */
   value?: Object | [] | number | string | boolean
   /**
@@ -29,23 +29,23 @@ export interface AutocompleteProps {
   */
   onMenuOpen?: () => void
   /**
+   * @default false  
   * If true, the user can select multiple values from list.
-  * @default false  
   */
   isMultiSelection?: boolean
   /**
-  * If true, the user can clear the selected value.
   * @default false  
+  * If true, the user can clear the selected value.
   */
   isClearable?: boolean
   /**
-  * If true, the search functionality is enabled.
   * @default false  
+  * If true, the search functionality is enabled.
   */
   isSearchable?: boolean
   /**
-  * If true, the Select is disabled.
   * @default false  
+  * If true, the Select is disabled.
   */
   disabled?: boolean
   /**
@@ -69,8 +69,8 @@ export interface AutocompleteProps {
   */
   labelKey?: string
   /**
-  * If true, the helper text is displayed when an error pops up.
   * @default false
+  * If true, the helper text is displayed when an error pops up.
   */
   error?: boolean
   /**
@@ -82,31 +82,31 @@ export interface AutocompleteProps {
   */
   defaultOptions?: boolean | Object[]
   /**
-  * The color of both the text displayed when there are no options and placeholder. It supports those theme colors that make sense for this component.
   * @default "textSecondary"
+  * The color of both the text displayed when there are no options and placeholder. It supports those theme colors that make sense for this component.
   */
   typographyContentColor:
-    'initial' |
-    'inherit' |
-    'primary' |
-    'secondary' |
-    'textPrimary' |
-    'textSecondary' |
-    'error'
+  'initial' |
+  'inherit' |
+  'primary' |
+  'secondary' |
+  'textPrimary' |
+  'textSecondary' |
+  'error'
   /**
-  * The color of selected input.
   * @default "black"
+  * The color of selected input.
   */
   inputSelectedColor:
-    "primary" |
-    "info" |
-    "success" |
-    "warning" |
-    "danger" |
-    "rose" |
-    "theme" |
-    "white" |
-    "black"
+  "primary" |
+  "info" |
+  "success" |
+  "warning" |
+  "danger" |
+  "rose" |
+  "theme" |
+  "white" |
+  "black"
 }
 /**
  *
@@ -114,6 +114,6 @@ export interface AutocompleteProps {
  *
  * - https://bit.dev/totalsoft_oss/react-mui/autocomplete
  *
- *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/Autocomplete/Autocomplete.js
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/tree/master/components/Autocomplete
  */
 export default function Autocomplete(props: AutocompleteProps): JSX.Element;

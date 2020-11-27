@@ -1,32 +1,37 @@
 export interface ToastContainerProps {
 
     /**
-     * The position of the notification. This property is required
-     * @default "top-center"
+     * @default "top-center" 
+    * The position of the notification. This property is required
+    
      */
     position?: string;
 
     /**
-     * How long the notification will close automatically(milliseconds). This property is required
-     * @default 3000
+       * @default 3000 
+    * How long the notification will close automatically(milliseconds). This property is required
+  
      */
     autoClose: number;
 
     /**
-     * If true, the progress bar will be displayed. This property is required
      * @default false
+    * If true, the progress bar will be displayed. This property is required
+    
      */
     hideProgressBar: boolean;
 
     /**
-     * If true, the writing will start from right. This property is required
-     * @default false
+      * @default false 
+    * If true, the writing will start from right. This property is required
+   
      */
     rtl: boolean
 
     /**
-     * The number of toasts that can appear on screen. This property is required
-     * @default 5
+      * @default 5 
+    * The number of toasts that can appear on screen. This property is required
+   
      */
     limit: number;
 

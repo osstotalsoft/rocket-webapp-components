@@ -68,21 +68,57 @@ FileUploadButton.defaultProps = {
 }
 
 FileUploadButton.propTypes = {
+/**
+* The component to render. If component prop isn't provided, UploadButton will be rendered.
+*/
   component: PropTypes.object,
+/**
+* The content of the button
+*/
   children: PropTypes.node,
+/**
+* This function is called after a file is selected
+* @param {file} file 
+*/
   onFileSelected: PropTypes.func,
+/**
+* If one of them is true, button will be disabled
+*/
   uploading: PropTypes.bool,
   disabled: PropTypes.bool,
+/**
+* Accepted type of file to upload
+*/
   accept: PropTypes.string,
+/**
+* The minimum size of the file to be uploaded
+*/
   minSize: PropTypes.number,
+/**
+ * The maximum size of the file to be uploaded
+ */
   maxSize: PropTypes.number,
+/**
+* Text shown when a file is uploading
+*/
   uploadingText: PropTypes.string,
+/**
+* Text to be displayed 
+*/
   uploadText: PropTypes.string,
-  /**Only the {{accept}} type is accepted  */
+/**
+* If the file type isn't the same with the one received in the accept prop, it will be prompted this text
+*/
   invalidTypeText: PropTypes.string,
-  /**{ maxSize: (maxSize / 1024) > 1024 ? (maxSize / (1024 * 1024)).toFixed(2) + "MB" : (maxSize / 1024) + "KB" }  */
+/**
+* If the file size exceeded maxSize, it wil be prompted this text
+* { maxSize: (maxSize / 1024) > 1024 ? (maxSize / (1024 * 1024)).toFixed(2) + "MB" : (maxSize / 1024) + "KB" }
+*/
   tooLargeText: PropTypes.string,
-  /** { minSize: (minSize / 1024) > 1024 ? (minSize / (1024 * 1024)).toFixed(2) + "MB" : (minSize / 1024) + "KB" }  */
+/**
+* If the file size is less than minSize, it wil be prompted this text
+* { minSize: (minSize / 1024) > 1024 ? (minSize / (1024 * 1024)).toFixed(2) + "MB" : (minSize / 1024) + "KB" }
+*/
   tooSmallText: PropTypes.string
 };
 

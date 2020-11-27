@@ -120,7 +120,6 @@ CustomTextField.propTypes = {
   className: PropTypes.string,
   /**
   * If true, the input will accept only numeric values.
-  * @default false
   */
   isNumeric: PropTypes.bool,
   /**
@@ -144,12 +143,10 @@ CustomTextField.propTypes = {
   *
   * @param {object} event The event source of the callback.
   * You can pull out the new value by accessing `event.target.value` (string).
-  *  @default  () => { }
   */
   onChange: PropTypes.func,
   /**
   * The delay of debouncing.
-  *  @default 0
   */
   debounceBy: PropTypes.number,
   /**
