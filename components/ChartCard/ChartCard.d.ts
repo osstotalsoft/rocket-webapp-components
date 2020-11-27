@@ -16,8 +16,8 @@ export interface ChartCardProps {
     */
     StatIcon: unknown
     /**
-    * The icon's color of chart.
     * @default "gray"
+    * The icon's color of chart.
     */
     statIconColor: "warning" |
                     "primary" |
@@ -27,8 +27,8 @@ export interface ChartCardProps {
                     "rose" |
                     "gray"
     /**
-    * The color of chart.
     * @default "purple"
+    * The color of chart.
     */
     chartColor: "orange" |
                 "green" |
@@ -46,8 +46,8 @@ export interface ChartCardProps {
     */
     statText: string
     /**
-    * If true, the chart moves up on click hover.
     * @default false
+    * If true, the chart moves up on click hover.
     */
     hover: boolean
     /**

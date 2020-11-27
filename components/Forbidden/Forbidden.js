@@ -23,6 +23,9 @@ Forbidden.defaultProps = {
 };
 
 Forbidden.propTypes = {
+    /**
+    * Text to be displayed
+    */
   forbiddenText: PropTypes.string
 };
 

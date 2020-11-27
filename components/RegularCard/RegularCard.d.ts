@@ -38,22 +38,22 @@ export interface Props {
      * Title alignment
      */
     titleAlign?: "right" |
-    "left" |
-    "center"
+                 "left" |
+                 "center"
 
     /**
      * Content alignment
      */
     contentAlign?: "right" |
-    "left" |
-    "center"
+                    "left" |
+                    "center"
 
     /**
      * Subtitle alignment
      */
     subtitleAlign?: "right" |
-    "left" |
-    "center"
+                    "left" |
+                    "center"
 
     /**
      * Demos:

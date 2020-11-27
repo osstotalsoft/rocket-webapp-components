@@ -7,8 +7,8 @@ export type OptionsType<OptionType> = ReadonlyArray<OptionType>;
 
 export interface AutocompleteProps {
   /**
-   * The array of options from which the client can select a value.
    * @default []
+   * The array of options from which the client can select a value.
    */
   options?: []
   /**
@@ -16,8 +16,8 @@ export interface AutocompleteProps {
   */
   loadOptions(inputValue: string, callback: (options: OptionsType<OptionType>) => void): void;
   /**
-    * The selected value from list of options.
     * @default null
+    * The selected value from list of options.
     */
   value?: Object | [] | number | string | boolean
   /**
@@ -29,8 +29,8 @@ export interface AutocompleteProps {
   */
   onMenuOpen?: () => void
   /**
+   * @default false  
   * If true, the user can select multiple values from list.
-  * @default false  
   */
   isMultiSelection?: boolean
   /**
@@ -86,27 +86,27 @@ export interface AutocompleteProps {
   * @default "textSecondary"
   */
   typographyContentColor:
-    'initial' |
-    'inherit' |
-    'primary' |
-    'secondary' |
-    'textPrimary' |
-    'textSecondary' |
-    'error'
+  'initial' |
+  'inherit' |
+  'primary' |
+  'secondary' |
+  'textPrimary' |
+  'textSecondary' |
+  'error'
   /**
   * The color of selected input.
   * @default "black"
   */
   inputSelectedColor:
-    "primary" |
-    "info" |
-    "success" |
-    "warning" |
-    "danger" |
-    "rose" |
-    "theme" |
-    "white" |
-    "black"
+  "primary" |
+  "info" |
+  "success" |
+  "warning" |
+  "danger" |
+  "rose" |
+  "theme" |
+  "white" |
+  "black"
 }
 /**
  *

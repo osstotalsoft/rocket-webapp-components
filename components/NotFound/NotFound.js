@@ -7,6 +7,9 @@ const NotFound = ({ title }) => {
 };
 
 NotFound.propTypes = {
+  /**
+  * The message to be displayed when this component is rendered
+  */
   title: PropTypes.string
 };
 

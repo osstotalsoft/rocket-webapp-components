@@ -40,7 +40,6 @@ DialogDisplay.propTypes = {
     id: PropTypes.string.isRequired,
     /**
     * If true, the dialog is open.
-    * @default false 
     */
     open: PropTypes.bool,
 

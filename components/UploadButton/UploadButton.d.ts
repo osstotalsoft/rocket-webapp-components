@@ -22,43 +22,46 @@ export interface UploadButtonProps {
     children?: React.ReactNode;
 
     /**
-     * The color of the button
-     * @default "theme"
+     * @default "theme" 
+    * The color of the button
+    
      */
     color?: "primary" |
-    "info" |
-    "theme" |
-    "themeNoBackground" |
-    "themeWithBackground" |
-    "success" |
-    "warning" |
-    "danger" |
-    "rose" |
-    "white" |
-    "simple" |
-    "defaultNoBackground" |
-    "primaryNoBackground" |
-    "infoNoBackground" |
-    "successNoBackground" |
-    "warningNoBackground" |
-    "dangerNoBackground" |
-    "roseNoBackground"
+            "info" |
+            "theme" |
+            "themeNoBackground" |
+            "themeWithBackground" |
+            "success" |
+            "warning" |
+            "danger" |
+            "rose" |
+            "white" |
+            "simple" |
+            "defaultNoBackground" |
+            "primaryNoBackground" |
+            "infoNoBackground" |
+            "successNoBackground" |
+            "warningNoBackground" |
+            "dangerNoBackground" |
+            "roseNoBackground"
 
     /**
-     * The size of the button
-     * @default "medium"
+     * @default "medium" 
+    * The size of the button
+    
      */
     size?: "small" |
-    "medium"
+           "medium"
 
     /**
-     * The size of the font
      * @default "small"
+     * The size of the font
+     
      */
     fontSize?: "inherit" |
-    "default" |
-    "small" |
-    "large"
+                "default" |
+                "small" |
+                "large"
 
     /**
     * Demos:

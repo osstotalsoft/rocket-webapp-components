@@ -97,7 +97,6 @@ DynamicInput.defaultProps = {
 DynamicInput.propTypes = {
   /**
   * The title of button.
-  * @default 'N/A''
   */
   controlType: PropTypes.oneOf([
     'INT',
@@ -112,7 +111,6 @@ DynamicInput.propTypes = {
   *
   * @param {object} event The event source of the callback.
   * You can pull out the new value by accessing `event.target.value` (string).
-  *  @default  () => { }
   */
   onChange: PropTypes.func.isRequired,
   /**
@@ -125,12 +123,10 @@ DynamicInput.propTypes = {
   value: PropTypes.any,
   /**
   * The default component.
-  * @default CustomTextField
   */
   DefaultComp: PropTypes.func,
   /**
   * The default props of the default component.
-  * @default  { fullWidth: true, disabled: true }
   */
   defaultCompProps: PropTypes.any
 };

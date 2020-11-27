@@ -9,43 +9,43 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChan
     */
     value?: ParsableDate
     /**
-    * onChange callback.
     * @default () => { }
+    * onChange callback.
     */
     onChange?: (date: DateIOType) => void
     /**
-    * Date format string.
     * @default  'HH:mm'
+    * Date format string.
     */
     dateFormat?: string
     /**
-    * Time format string.
     * @default  'DD-MM-YYYY'
+    * Time format string.
     */
     timeFormat?: string
     /**
-    * If true, the picker and text field will be disabled.
     * @default false
+    * If true, the picker and text field will be disabled.
     */
     disabled?: boolean
     /**
-    * Picker container option.
     * @defualt 'inline'
+    * Picker container option.
     */
     variant?: "dialog" | "inline" | "static"
     /**
-    * Array of views to show
     * @default ["date"]
+    * Array of views to show
     */
     views?: ("date" | "year" | "month" | "hours" | "minutes")[]
     /**
-    * If true, the time is shown.
     * @default false
+    * If true, the time is shown.
     */
     showTime?: boolean
     /**
-    * If true, the error data is provided.
     * @default false
+    * If true, the error data is provided.
     */
     error?: boolean
     /**
@@ -57,24 +57,24 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChan
     */
     clearable?: boolean
     /**
-    * Message, appearing when date cannot be parsed.
     * @default 'Invalid Date Format'
+    * Message, appearing when date cannot be parsed.
     */
     invalidDateMessage?: React.ReactNode
     /**
-    * Error message, shown if date is more then maximal date. 
     * @default 'Date should not be after maximal date'
+    * Error message, shown if date is more then maximal date. 
     */
     maxDateMessage?: React.ReactNode
     /**
-    * Error message, shown if date is less then minimal date
     * @default 'Date should not be before minimal date'
+    * Error message, shown if date is less then minimal date
     */
     minDateMessage?: React.ReactNode
     /**
+    * @default "en"
     * To use another localization import "moment/locale/[lang]" in your app
     * The current language, preferably taken from the i18next (i18.language) or another internationalization library
-    * @default "en"
     */
     language?: string
     /**
@@ -83,18 +83,18 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChan
     */
     disableToolbar: boolean
     /**
-    * Auto accept date on selection
     * @default false
+    * Auto accept date on selection
     */
     autoOk: boolean
     /**
-    * Disable picker and text field
     * @default false
+    * Disable picker and text field
     */
     disabled: boolean
     /**
-    * 12h/24h view for hour selection clock
     * @default true
+    * 12h/24h view for hour selection clock
     */
     ampm: boolean
 }

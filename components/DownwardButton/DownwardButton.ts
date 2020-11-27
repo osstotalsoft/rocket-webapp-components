@@ -14,8 +14,8 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
     */
     disabled?: boolean
     /**
-    * The color of button.
     * @default "theme"
+    * The color of button.
     */
     color?: "primary" |
     "info" |
@@ -36,13 +36,13 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
     "dangerNoBackground" |
     "roseNoBackground"
     /**
-    * The size of button.
     * @default "medium"
+    * The size of button.
     */
     size?: "medium" | "small"
     /**
-    * The fontSize of button's content.
     * @default "default"
+    * The fontSize of button's content.
     */
     fontSize?: "inherit" | "default" | "small" | "large"
 }

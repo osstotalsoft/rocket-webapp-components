@@ -37,6 +37,9 @@ CustomIconButton.defaultProps = {
 }
 
 CustomIconButton.propTypes = {
+  /**
+   * The color of the button
+   */
   color: PropTypes.oneOf([
     "primary",
     "info",
@@ -57,13 +60,28 @@ CustomIconButton.propTypes = {
     "dangerNoBackground",
     "roseNoBackground"
   ]),
+  /**
+  * The size of the button
+  */
   size: PropTypes.oneOf([
     "small",
     "medium"
   ]),
+  /**
+ * Override or extend the styles applied to the component
+ */
   customClass: PropTypes.string,
+  /**
+  * If true, button will be disabled. Default is set to false
+  */
   disabled: PropTypes.bool,
+  /**
+  * The text to be displayed when the user hover over the button
+  */
   tooltip: PropTypes.string,
+  /**
+   * The content of the button
+   */
   children: PropTypes.node
 };
 

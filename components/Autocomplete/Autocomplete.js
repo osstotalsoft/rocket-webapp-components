@@ -247,7 +247,6 @@ function Autocomplete({ options, defaultOptions, loadOptions, onChange,
       value={simpleValue ? getSimpleValue(options, value, valueKey, isMultiSelection) : value}
       onChange={handleOnChange}
       onMenuOpen={onMenuOpen}
-      
       textFieldProps={{
         label: label,
         error: error,
@@ -293,7 +292,6 @@ Autocomplete.defaultProps = {
 Autocomplete.propTypes = {
   /**
   * The array of options from which the client can select a value.
-  * @default []
   */
   options: PropTypes.array,
   /**
@@ -302,7 +300,6 @@ Autocomplete.propTypes = {
   loadOptions: PropTypes.func,
   /**
   * The selected value from list of options.
-  * @default null
   */
   value: PropTypes.oneOfType([
     PropTypes.object,
@@ -321,26 +318,21 @@ Autocomplete.propTypes = {
   onMenuOpen: PropTypes.func,
   /**
   * If true, the user can select multiple values from list.
-  * @default false  
   */
   isMultiSelection: PropTypes.bool,
   /**
   * If true, the user can clear the selected value.
-  * @default false  
   */
   isClearable: PropTypes.bool,
   /**
   * If true, the search functionality is enabled.
-  * @default false  
   */
   isSearchable: PropTypes.bool,
   /**
   * If true, the Select is disabled.
-  * @default false  
   */
   disabled: PropTypes.bool,
   /**
-  * @default false
   * @TODO
   */
   simpleValue: PropTypes.bool,
@@ -350,18 +342,15 @@ Autocomplete.propTypes = {
   label: PropTypes.string,
   /**
   * The key of values from options.
-  * @default "id"
   * @TODO
   */
   valueKey: PropTypes.string,
   /**
-  * @default "name"
   * @TODO
   */
   labelKey: PropTypes.string,
   /**
   * If true, the helper text is displayed when an error pops up.
-  * @default false
   */
   error: PropTypes.bool,
   /**
@@ -374,7 +363,6 @@ Autocomplete.propTypes = {
   defaultOptions: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
   /**
   * The color of both the text displayed when there are no options and placeholder. It supports those theme colors that make sense for this component.
-  * @default "textSecondary"
   */
   typographyContentColor: PropTypes.oneOf([
     'initial',
@@ -387,7 +375,6 @@ Autocomplete.propTypes = {
   ]),
   /**
   * The color of selected input.
-  * @default "black"
   */
   inputSelectedColor: PropTypes.oneOf([
     "primary",

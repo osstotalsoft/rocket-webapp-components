@@ -11,8 +11,8 @@ export interface Props {
     Icon: unknown;
 
     /**
-     * The color of the icon
      * @default "blue"
+    * The color of the icon
      */
     iconColor?: "orange" |
     "green" |
@@ -42,14 +42,15 @@ export interface Props {
 
     /**
      * @default "gray"
+     * The color of the status icon
      */
     statIconColor?: "warning" |
-    "primary" |
-    "danger" |
-    "success" |
-    "info" |
-    "rose" |
-    "gray"
+                    "primary" |
+                    "danger" |
+                    "success" |
+                    "info" |
+                    "rose" |
+                    "gray"
 
     /**
      * Link for content

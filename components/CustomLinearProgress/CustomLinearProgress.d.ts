@@ -2,8 +2,8 @@ import { LinearProgressProps } from "@material-ui/core";
 
 export interface CustomLinearProgressProps extends Omit<LinearProgressProps, 'color' | 'variant' | 'value'> {
         /**
+        *  @default "gray"
         *  The color of the component.
-        * @default "gray"
         */
         color?: "primary" |
         "warning" |
@@ -13,8 +13,8 @@ export interface CustomLinearProgressProps extends Omit<LinearProgressProps, 'co
         "rose" |
         "gray"
         /**
+        *  @default "indeterminate"
         * The variant to use. Use indeterminate or query when there is no progress value.
-        * @default "indeterminate"
         */
         variant?: "determinate" |
         "indeterminate" |

@@ -65,7 +65,13 @@ IconCard.defaultProps = {
 };
 
 IconCard.propTypes = {
+  /**
+  * Icon to be displayed. This property is mandatory
+  */
   icon: PropTypes.object.isRequired,
+  /**
+  * The color of the icon that will be displayed
+  */
   iconColor: PropTypes.oneOf([
     "orange",
     "green",
@@ -75,12 +81,33 @@ IconCard.propTypes = {
     "rose",
     "theme"
   ]),
+  /**
+  * The title to be displayed. This property can be a string or a component 
+  */
   title: PropTypes.node,
+  /**
+  * The subtitle to be displayed. This property can be a string or a component
+  */
   subtitle: PropTypes.node,
+  /**
+  * The content of the card
+  */
   content: PropTypes.node,
+  /**
+  * The footer to be displayed. This property can be a string or a component
+  */
   footer: PropTypes.node,
+  /**
+  * If set to true, the background will be transparent
+  */
   plain: PropTypes.bool,
+  /**
+  * Override or extend the styles applied to the content of the card
+  */
   customCardContentClass: PropTypes.string,
+  /**
+  * Override or extend the styles applied to the card
+  */
   customCardClass: PropTypes.string
 };
 

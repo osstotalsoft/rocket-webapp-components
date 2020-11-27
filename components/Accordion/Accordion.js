@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
-// material-ui components
 import { Accordion as AccordionBase, AccordionSummary, AccordionDetails, makeStyles } from "@material-ui/core";
-
-
-
-// material-ui-icons
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import accordionStyle from "./accordionStyle";
 const useStyles = makeStyles(accordionStyle);
@@ -60,7 +54,6 @@ Accordion.defaultProps = {
 Accordion.propTypes = {
     /**
     * The index of the active child.
-    * @default -1
     */
     active: PropTypes.number,
     /**
