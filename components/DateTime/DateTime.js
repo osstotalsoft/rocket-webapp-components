@@ -119,54 +119,44 @@ DateTime.defaultProps = {
     maxDateMessage: "Date should not be after maximal date",
     disableToolbar: true,
     autoOk: true,
-    disabled: false,
     ampm: false
 }
 
 DateTime.propTypes = {
     /**
     * Picker value
-    * @default null
     */
     value: PropTypes.any,
     /**
     * onChange callback
-    * @default () => { }
     */
     onChange: PropTypes.func,
     /**
     * Date format string.
-    * @default  'HH:mm'
     */
     dateFormat: PropTypes.string,
     /**
    * Time format string.
-   * @default  'DD-MM-YYYY' 
    */
     timeFormat: PropTypes.string,
     /**
     * If true, the picker and text field will be disabled.
-    * @default false
     */
     disabled: PropTypes.bool,
     /**
     * Picker container option.
-    * @defualt 'inline'
     */
     variant: PropTypes.oneOf(["dialog", "inline", "static"]),
     /**
    * Array of views to show.
-   * @default ["date"]
    */
     views: PropTypes.arrayOf(PropTypes.oneOf(["date", "year", "month", "hours", "minutes"])),
     /**
     * If true, the time is shown.
-    * @default false
     */
     showTime: PropTypes.bool,
     /**
    * If true, the error data is provided.
-   * @default false
    */
     error: PropTypes.bool,
     /**
@@ -179,43 +169,31 @@ DateTime.propTypes = {
     clearable: PropTypes.bool,
     /**
    * Message, appearing when date cannot be parsed.
-   * @default 'Invalid Date Format'
    */
     invalidDateMessage: PropTypes.node,
     /**
    * Error message, shown if date is more then maximal date. 
-   * @default 'Date should not be after maximal date'
    */
     maxDateMessage: PropTypes.node,
     /**
    * Error message, shown if date is less then minimal date
-   * @default 'Date should not be before minimal date'
    */
     minDateMessage: PropTypes.node,
     /**
     * To use another localization import "moment/locale/[lang]" in your app
     * The current language, preferably taken from the i18next (i18.language) or another internationalization library
-    * @default "en"
     */
     language: PropTypes.string,
     /**
     * Hide toolbar and show only date/time views
-    * @default false
     */
     disableToolbar: PropTypes.bool,
     /**
     * Auto accept date on selection
-    * @default false
     */
     autoOk: PropTypes.bool,
     /**
-     * Disable picker and text field
-     * @default false
-     */
-    disabled: PropTypes.bool,
-    /**
     * 12h/24h view for hour selection clock
-    * @default true
     */
     ampm: PropTypes.bool,
 }

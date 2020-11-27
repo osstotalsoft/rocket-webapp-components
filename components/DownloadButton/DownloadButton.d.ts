@@ -14,8 +14,8 @@ export interface DownloadButtonProps extends Omit<ButtonProps, 'color'> {
     */
     disabled?: boolean
     /**
-    * The color of button.
     * @default "theme"
+    * The color of button.
     */
     color?: "primary" |
     "info" |
@@ -36,13 +36,13 @@ export interface DownloadButtonProps extends Omit<ButtonProps, 'color'> {
     "dangerNoBackground" |
     "roseNoBackground"
     /**
-    * The size of button.
     * @default "medium"
+    * The size of button.
     */
     size?: "medium" | "small"
     /**
+    *  @default "default"
     * The fontSize of button's content.
-    * @default "default"
     */
     fontSize?: "inherit" | "default" | "small" | "large"
 }

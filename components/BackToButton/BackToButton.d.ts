@@ -6,8 +6,8 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   */
   title?: string
   /**
-  * The color of button.
   * @default "theme"
+  * The color of button.
   */
   color?: "primary" |
   "info" |
@@ -28,13 +28,13 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   "dangerNoBackground" |
   "roseNoBackground"
   /**
-    * The size of button.
-    * @default "medium"
-    */
+  * @default "medium"
+  * The size of button.
+  */
   size?: "medium" | "small"
   /**
-  * The fontsize of button's content.
   * @default "small"
+  * The fontsize of button's content.
   */
   fontSize?: "inherit" | "default" | "small" | "large"
   /**

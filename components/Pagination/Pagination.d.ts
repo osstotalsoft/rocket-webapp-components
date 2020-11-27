@@ -32,8 +32,9 @@ export interface Props {
     onChangePage?: (event: React.SyntheticEvent, newPage: number, direction: 0 | 1) => void;
 
     /**
-     * The function called on refresh. Thi property is required
-     * @default () => { }
+    * @default () => { } 
+    * The function called on refresh. Thi property is required
+     
      */
     onRefresh: () => void;
 
@@ -43,20 +44,20 @@ export interface Props {
     loading?: boolean;
 
     /**
-     * Array of values to choose how many rows should be displayed in a page
-     * @default [10, 25, 50, 100]
+     * @default [10, 25, 50, 100] 
+    * Array of values to choose how many rows should be displayed in a page
      */
     rowsPerPageOptions?: number[];
 
     /**
-     * The text to be displayed between the number of rows per page and total count
-     * @default "of"
+    * @default "of" 
+    * The text to be displayed between the number of rows per page and total count
      */
     rowsOfText?: string;
 
     /**
-     * The text to be displayed for the number of rows per page
-     * @default "Rows per page"
+      * @default "Rows per page" 
+    * The text to be displayed for the number of rows per page
      */
     rowsPerPageText?: string;
 

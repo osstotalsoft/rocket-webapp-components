@@ -30,7 +30,6 @@ EditButton.propTypes = {
     onClick: PropTypes.func,
     /**
     * If true, the edit icon will be visible.
-    * @default true
     */
     editMode: PropTypes.bool,
     /**
@@ -39,7 +38,6 @@ EditButton.propTypes = {
     disabled: PropTypes.bool,
     /**
     * The color of button.
-    * @default "theme"
     */
     color: PropTypes.oneOf([
         "primary",
@@ -63,7 +61,6 @@ EditButton.propTypes = {
     ]),
     /**
     * The size of button.
-    * @default "medium"
     */
     size: PropTypes.oneOf([
         "small",
@@ -71,7 +68,6 @@ EditButton.propTypes = {
     ]),
     /**
     * The fontSize of button's content.
-    * @default "default"
     */
     fontSize: PropTypes.oneOf([
         "inherit",

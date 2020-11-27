@@ -28,11 +28,24 @@ ImageCard.defaultProps = {
 };
 
 ImageCard.propTypes = {
+  /**
+  * Override or extend the styles applied to the component
+  */
   className: PropTypes.string,
+  /**
+  * The content of the card
+  */
   children: PropTypes.node,
+  /**
+  * The image to be displayed
+  */
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  //Specifies an alternate text for the image, if the image for some reason cannot be displayed
-  alternateText: PropTypes.string,
+  /**
+  * If the image cannot be displayed for some reason, this text will be shown
+  */  alternateText: PropTypes.string,
+  /**
+  * The color of the card
+  */
   color: PropTypes.oneOf([
     "primary",
     "info",
@@ -41,6 +54,9 @@ ImageCard.propTypes = {
     "danger",
     "rose"
   ]),
+  /**
+  * The size of the image
+  */
   imageSize: PropTypes.oneOf(["s", "m", "l"])
 };
 

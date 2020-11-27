@@ -32,7 +32,6 @@ DownwardButton.propTypes = {
     disabled: PropTypes.bool,
     /**
    * The color of button.
-   * @default "theme"
    */
     color: PropTypes.oneOf([
         "primary",
@@ -56,7 +55,6 @@ DownwardButton.propTypes = {
     ]),
     /**
     * The size of button.
-    * @default "medium"
     */
     size: PropTypes.oneOf([
         "small",
@@ -64,7 +62,6 @@ DownwardButton.propTypes = {
     ]),
     /**
    * The fontSize of button's content.
-   * @default "default"
    */
     fontSize: PropTypes.oneOf([
         "inherit",

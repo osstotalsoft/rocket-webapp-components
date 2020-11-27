@@ -79,22 +79,55 @@ export const ChartFactory = ({
 };
 
 ChartFactory.propTypes = {
+  /**
+  * The options of chart.
+  */
   options: PropTypes.object.isRequired,
+  /**
+  * The type of chart.
+  */
   type: PropTypes.oneOf([
     "Line",
     "Bar",
     "Mix"
   ]).isRequired,
+  /**
+  * The labels of chart.
+  */
   labels: PropTypes.array,
+  /**
+  * The info of chart.(see the sample provided in demos)
+  */
   dataInfo: PropTypes.object.isRequired,
+  /**
+  * If true, the labels are shown.
+  */
   displayDataLabels: PropTypes.bool.isRequired,
+  /**
+  * The color of chart.
+  */
   chartColor: PropTypes.string.isRequired,
+  /**
+  * The title of chart.
+  */
   title: PropTypes.string,
+  /**
+  * The text status of chart.
+  */
   text: PropTypes.string,
+  /**
+  * The status icon.
+  */
   StatIcon: PropTypes.any,
   statText: PropTypes.string,
+  /**
+  * If true, the chart moves up on click hover.
+  */
   hover: PropTypes.bool,
   borderWidth: PropTypes.number,
+  /**
+  * If provided, its content will appear just below the main content.
+  */
   underChart: PropTypes.object
 };
 

@@ -26,7 +26,6 @@ DownloadButton.propTypes = {
     onClick: PropTypes.func,
     /**
     * The color of button.
-    * @default "theme"
     */
     color: PropTypes.oneOf([
         "primary",
@@ -50,7 +49,6 @@ DownloadButton.propTypes = {
     ]),
     /**
     * The size of button.
-    * @default "medium"
     */
     size: PropTypes.oneOf([
         "small",
@@ -58,7 +56,6 @@ DownloadButton.propTypes = {
     ]),
     /**
     * The fontSize of button's content.
-    * @default "default" 
     */
     fontSize: PropTypes.oneOf([
         "inherit",

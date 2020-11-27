@@ -6,8 +6,8 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
     */
     id: string
     /**
-    * If true, the dialog is open.
     * @default false
+    * If true, the dialog is open.
     */
     open: boolean
     /**
@@ -15,8 +15,8 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
     */
     title?: string
     /**
-    * The color of actions.
     * @default "primary"
+    * The color of actions.
     */
     buttonColor?: "primary" |
     "info" |
@@ -38,8 +38,8 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
     "simple" |
     "transparent"
     /**
-    * The size of buttons.
     * @default "sm"
+    * The size of buttons.
     */
     buttonSize?: "sm" | "lg" | "xs"
     /**
@@ -59,28 +59,28 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
     */
     onClose?: () => void
     /**
-    * If true, the actions(buttons) below are shown.
     * @default false
+    * If true, the actions(buttons) below are shown.
     */
     showActions?: boolean
     /**
-    * Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.
     * @default "md"
+    * Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.
     */
     maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false
     /**
-    * 	If true, the button will take up the full width of its container.
     * @default true
+    * 	If true, the button will take up the full width of its container.
     */
     fullWidth?: boolean
     /**
-    * the text content of the first action.(the button for denial)
     * @default "Yes"
+    * the text content of the first action.(the button for denial)
     */
     textDialogYes?: string
     /**
-    * the text content of the second action.(the button for approval)
     * @default "No"
+    * the text content of the second action.(the button for approval)
     */
     textDialogNo?: string
     /**

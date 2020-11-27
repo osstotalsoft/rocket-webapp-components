@@ -2,8 +2,8 @@ import { SwitchProps } from "@material-ui/core/Switch";
 
 export interface DynamicInputProps extends SwitchProps {
     /**
-    * The title of button.
     * @default 'N/A''
+    * The title of button.
     */
     controlType?: 'INT' |
     'NUM' |
@@ -14,9 +14,9 @@ export interface DynamicInputProps extends SwitchProps {
     /**
     * Callback fired when the value is changed.
     *
+    * @default  () => { }
     * @param {object} event The event source of the callback.
     * You can pull out the new value by accessing `event.target.value` (string).
-    *  @default  () => { }
     */
     onChange: (object: Object) => void
     /**
@@ -28,13 +28,13 @@ export interface DynamicInputProps extends SwitchProps {
     */
     value?: unknown
     /**
-    * The default component.
     * @default CustomTextField
+    * The default component.
     */
     DefaultComp?: React.ReactNode
     /**
-    * The default props of the default component.
     * @default  { fullWidth: true, disabled: true }
+    * The default props of the default component. 
     */
     defaultCompProps?: unknown
 }

@@ -45,6 +45,8 @@ export interface ChartFactoryProps {
     * The status icon.
     */
     StatIcon: unknown
+    borderWidth: Number
+    statText: string
 }
 /**
  *

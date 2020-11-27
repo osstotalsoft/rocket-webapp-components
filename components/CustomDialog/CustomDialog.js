@@ -70,7 +70,6 @@ CustomDialog.propTypes = {
     id: PropTypes.string.isRequired,
     /**
     * If true, the dialog is open.
-    * @default false
     */
     open: PropTypes.bool.isRequired,
     /**
@@ -79,7 +78,6 @@ CustomDialog.propTypes = {
     title: PropTypes.string,
     /**
     * The color of actions.
-    * @default "primary"
     */
     buttonColor: PropTypes.oneOf([
         "primary",
@@ -104,7 +102,6 @@ CustomDialog.propTypes = {
     ]),
     /**
     * The size of buttons.
-    * @default "sm"
     */
     buttonSize: PropTypes.oneOf(["sm", "lg", "xs"]),
     /**
@@ -125,27 +122,22 @@ CustomDialog.propTypes = {
     onClose: PropTypes.func,
     /**
     * If true, the actions(buttons) below are shown.
-    * @default false
     */
     showActions: PropTypes.bool,
     /**
     * Determine the max-width of the container. The container width grows with the size of the screen. Set to false to disable maxWidth.
-    * @default "md"
     */
     maxWidth: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl', false]),
     /**
     * If true, the button will take up the full width of its container.
-    * @default true
     */
     fullWidth: PropTypes.bool,
     /**
     * the text content of the first action.(the button for denial)
-    * @default "Yes"
     */
     textDialogYes: PropTypes.string,
     /**
     * the text content of the second action.(the button for approval)
-    * @default "No"
     */
     textDialogNo: PropTypes.string,
     /**
