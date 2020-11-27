@@ -1,25 +1,20 @@
 export interface UpwardButtonProps {
-
     /**
      * The text displayed when user hover over the button
      */
     title?: string;
-
     /**
      * Callback fired when a "click" event is detected
      * @param {object} event The event source of the callback.
      */
     onClick: (event: React.SyntheticEvent) => void
-
     /**
      * If set to true, the button will be disabled
      */
     disabled?: boolean
-
     /**
-      * @default "theme" 
+    * @default "theme" 
     * The color of the button
-   
      */
     color?: "primary" |
             "info" |
