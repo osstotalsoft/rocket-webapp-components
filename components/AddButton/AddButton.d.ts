@@ -18,23 +18,23 @@ export interface AddButtonProps extends Omit<ButtonProps, 'color'> {
   * The color of button.
   */
   color?: "primary" |
-  "info" |
-  "theme" |
-  "themeNoBackground" |
-  "themeWithBackground" |
-  "success" |
-  "warning" |
-  "danger" |
-  "rose" |
-  "white" |
-  "simple" |
-  "defaultNoBackground" |
-  "primaryNoBackground" |
-  "infoNoBackground" |
-  "successNoBackground" |
-  "warningNoBackground" |
-  "dangerNoBackground" |
-  "roseNoBackground"
+          "info" |
+          "theme" |
+          "themeNoBackground" |
+          "themeWithBackground" |
+          "success" |
+          "warning" |
+          "danger" |
+          "rose" |
+          "white" |
+          "simple" |
+          "defaultNoBackground" |
+          "primaryNoBackground" |
+          "infoNoBackground" |
+          "successNoBackground" |
+          "warningNoBackground" |
+          "dangerNoBackground" |
+          "roseNoBackground"
   /**
    *  @default "medium"
    * The size of button. 
