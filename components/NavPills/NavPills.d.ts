@@ -30,12 +30,10 @@ export interface Props {
     "rose"
 
     /**
-     * 
+     * If set to true, the tabs will be displayed horizontal
+     * @default true
      */
-    horizontal?: {
-        tabsGrid: Object,
-        contentGrid: Object
-    };
+    horizontal?: boolean
 
     /**
      * If set to true, the alignment of pills will be centered
