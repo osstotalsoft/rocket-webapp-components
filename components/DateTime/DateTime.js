@@ -123,79 +123,24 @@ DateTime.defaultProps = {
 }
 
 DateTime.propTypes = {
-    /**
-    * Picker value
-    */
     value: PropTypes.any,
-    /**
-    * onChange callback
-    */
     onChange: PropTypes.func,
-    /**
-    * Date format string.
-    */
     dateFormat: PropTypes.string,
-    /**
-   * Time format string.
-   */
     timeFormat: PropTypes.string,
-    /**
-    * If true, the picker and text field will be disabled.
-    */
     disabled: PropTypes.bool,
-    /**
-    * Picker container option.
-    */
     variant: PropTypes.oneOf(["dialog", "inline", "static"]),
-    /**
-   * Array of views to show.
-   */
     views: PropTypes.arrayOf(PropTypes.oneOf(["date", "year", "month", "hours", "minutes"])),
-    /**
-    * If true, the time is shown.
-    */
     showTime: PropTypes.bool,
-    /**
-   * If true, the error data is provided.
-   */
     error: PropTypes.bool,
-    /**
-   * The text content in case of failure.
-   */
     helperText: PropTypes.string,
-    /**
-   * If true, show clear action in picker dialog.
-   */
     clearable: PropTypes.bool,
-    /**
-   * Message, appearing when date cannot be parsed.
-   */
     invalidDateMessage: PropTypes.node,
-    /**
-   * Error message, shown if date is more then maximal date. 
-   */
     maxDateMessage: PropTypes.node,
-    /**
-   * Error message, shown if date is less then minimal date
-   */
     minDateMessage: PropTypes.node,
-    /**
-    * To use another localization import "moment/locale/[lang]" in your app
-    * The current language, preferably taken from the i18next (i18.language) or another internationalization library
-    */
     language: PropTypes.string,
-    /**
-    * Hide toolbar and show only date/time views
-    */
     disableToolbar: PropTypes.bool,
-    /**
-    * Auto accept date on selection
-    */
     autoOk: PropTypes.bool,
-    /**
-    * 12h/24h view for hour selection clock
-    */
-    ampm: PropTypes.bool,
+    ampm: PropTypes.bool
 }
 
 export default DateTime;
