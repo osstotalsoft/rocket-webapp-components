@@ -3,60 +3,51 @@ import { CardContentProps } from '@material-ui/core/CardContent';
 import { CardHeaderProps } from '@material-ui/core/CardHeader';
 
 export interface Props {
-
     /**
      * Icon to be displayed. This property is mandatory
      */
     icon: Object;
-
     /**
-     * The color of the icon that will be displayed
-     * @default "theme"
+    * @default "theme" 
+    * The color of the icon that will be displayed
      */
     iconColor?: "orange" |
-    "green" |
-    "red" |
-    "blue" |
-    "purple" |
-    "rose" |
-    "theme"
+                "green" |
+                "red" |
+                "blue" |
+                "purple" |
+                "rose" |
+                "theme"
 
     /**
-     * The title to be displayed. This property can be a string or a component
-     * @default ""
-     */
+    * @default "" 
+    * The title to be displayed. This property can be a string or a component 
+    */
     title?: React.ReactNode;
-
     /**
      * The subtitle to be displayed. This property can be a string or a component
      */
     subtitle?: React.ReactNode;
-
     /**
      * The content of the card
      */
     content?: React.ReactNode;
-
     /**
      * The footer to be displayed. This property can be a string or a component
      */
     footer?: React.ReactNode;
-
     /**
      * If set to true, the background will be transparent
      */
     plain?: boolean;
-
     /**
      * Override or extend the styles applied to the content of the card
      */
     customCardContentClass?: string;
-
     /**
      * Override or extend the styles applied to the card
      */
     customCardClass?: string;
-
     /**
      * Demos:
      * 

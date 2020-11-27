@@ -24,15 +24,15 @@ export interface ImageCardProps {
    * The color of the card
    */
   color?: "primary" |
-  "info" |
-  "success" |
-  "warning" |
-  "danger" |
-  "rose"
+          "info" |
+          "success" |
+          "warning" |
+          "danger" |
+          "rose"
 
   /**
-   * The size of the image
    * @default 's'
+   * The size of the image
    */
   imageSize?: 's' | 'm' | 'l'
 

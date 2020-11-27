@@ -17,9 +17,9 @@ export interface SaveButtonProps {
     disabled?: boolean
 
     /**
-     * The color of the button
-     * @default "theme"
-     */
+    * @default "theme"
+    * The color of the button
+    */
     color?: "primary" |
     "info" |
     "theme" |
@@ -40,15 +40,15 @@ export interface SaveButtonProps {
     "roseNoBackground"
 
     /**
-     * The size of the button
-     * @default "medium"
-     */
+    * @default "medium"
+    * The size of the button
+    */
     size?: "small" |
     "medium"
 
     /**
-     * The size of the font
-     * @default "small"
+    * @default "small"
+    * The size of the font
      */
     fontSize?: "inherit" |
     "default" |

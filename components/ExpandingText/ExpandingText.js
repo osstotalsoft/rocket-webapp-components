@@ -45,17 +45,14 @@ ExpandingText.propTypes = {
     text: PropTypes.string.isRequired,
     /**
     * The minimum length of the narrow text.
-    * @default 2000
     */
     minLength: PropTypes.number,
     /**
     * The content of the button when the text is narrow.
-    * @default "Show less"
     */
     showLessText: PropTypes.string.isRequired,
     /**
     *  The content of the button when the text is wide.
-    * @default "Show more"
     */
     showMoreText: PropTypes.string.isRequired
 };

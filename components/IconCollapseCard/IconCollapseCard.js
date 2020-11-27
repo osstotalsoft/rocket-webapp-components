@@ -92,23 +92,23 @@ function IconCollapseCard({
             </AccordionDetails>
           </Accordion>
         ) : (
-          <Accordion
-            onChange={handleToggle}
-            expanded={false}
-            className={classes.accordionRoot}
-          >
-            <AccordionSummary
-              classes={{ content: classes.content, root: classes.summaryRoot }}
+            <Accordion
+              onChange={handleToggle}
+              expanded={false}
+              className={classes.accordionRoot}
             >
-              {(exp || (!exp && !header)) && (
-                <Typography variant="subtitle1" className={classes.cardTitle}>
-                  {title}
-                </Typography>
-              )}
-              {!exp && header && <div style={{ width: "100%" }}>{header}</div>}
-            </AccordionSummary>
-          </Accordion>
-        )}
+              <AccordionSummary
+                classes={{ content: classes.content, root: classes.summaryRoot }}
+              >
+                {(exp || (!exp && !header)) && (
+                  <Typography variant="subtitle1" className={classes.cardTitle}>
+                    {title}
+                  </Typography>
+                )}
+                {!exp && header && <div style={{ width: "100%" }}>{header}</div>}
+              </AccordionSummary>
+            </Accordion>
+          )}
       </CardContent>
       {footer && <div className={classes.cardFooter}>{footer}</div>}
     </Card>
@@ -120,7 +120,13 @@ IconCollapseCard.defaultProps = {
 };
 
 IconCollapseCard.propTypes = {
+  /**
+  * Icon to be displayed. This property is mandatory
+  */
   icon: PropTypes.object.isRequired,
+  /**
+  * The color of the icon that will be displayed
+  */
   iconColor: PropTypes.oneOf([
     "orange",
     "green",
@@ -130,15 +136,46 @@ IconCollapseCard.propTypes = {
     "rose",
     "theme"
   ]),
+  /**
+  * The title to be displayed. This property can be a string or a component
+  */
   title: PropTypes.node,
+  /**
+  * The content of the card. This property can be a string or a component
+  */
   content: PropTypes.node,
+  /**
+  * The footer to be displayed. This property can be a string or a component
+  */
   footer: PropTypes.node,
+  /**
+  * If set to true, the background will be transparent
+  */
   plain: PropTypes.bool,
+  /**
+  * Override or extend the styles applied to the content of the card
+  */
   customCardContentClass: PropTypes.string,
+  /**
+  * The header of the card
+  */
   header: PropTypes.node,
+  /**
+  * If set to true, the card will be expanded
+  */
   expanded: PropTypes.bool,
+  /**
+  * If set to true, the card can be expanded
+  */
   canExpand: PropTypes.bool,
+  /**
+  * Default value for expanded property. If it's not provided will be set to false
+  */
   defaultExpanded: PropTypes.bool,
+  /**
+  * @param {object} event The event source of the callback.
+  * @param {boolean} expanded The `expanded` state of the card.
+  */
   onToggle: PropTypes.func
 };
 

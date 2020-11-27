@@ -53,14 +53,42 @@ const RegularCard = ({
 };
 
 RegularCard.propTypes = {
+  /**
+ * Override or extend the styles applied to the card
+ */
   customCardClasses: PropTypes.string,
+
+  /**
+   * Override or extend the styles applied to the title of the card
+   */
   customCardTitleClasses: PropTypes.string,
+  /**
+   * If set to true, the background will be transparent
+   */
   plainCard: PropTypes.bool,
+  /**
+ * The title of the card
+ */
   cardTitle: PropTypes.node,
+  /**
+ * The subtitle of the card
+ */
   cardSubtitle: PropTypes.node,
+  /**
+  * The content of the card
+  */
   content: PropTypes.node,
+  /**
+ * Title alignment
+ */
   titleAlign: PropTypes.oneOf(["right", "left", "center"]),
+  /**
+ * Content alignment
+ */
   contentAlign: PropTypes.oneOf(["right", "left", "center"]),
+  /**
+   * Subtitle alignment
+   */
   subtitleAlign: PropTypes.oneOf(["right", "left", "center"])
 };
 

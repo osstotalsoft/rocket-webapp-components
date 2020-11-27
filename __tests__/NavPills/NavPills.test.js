@@ -43,7 +43,7 @@ describe("NavPills", () => {
       />
     );
 
-    expect(wrapper.props().color).toBe("primary")
+    expect(wrapper.props().color).toBe("theme")
     expect(wrapper.props().actions).toStrictEqual([])
     expect(wrapper.props().active).toBe(0)
   });

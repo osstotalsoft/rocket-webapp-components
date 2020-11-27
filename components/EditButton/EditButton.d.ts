@@ -14,13 +14,13 @@ export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'>
     */
     disabled?: boolean
     /**
-    * If true, the edit icon will be visible.
     * @default true
+    * If true, the edit icon will be visible.
     */
     editMode?: boolean
     /**
-    * The color of button.
     * @default "theme"
+    * The color of button.
     */
     color?: "primary" |
     "info" |
@@ -41,13 +41,13 @@ export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'>
     "dangerNoBackground" |
     "roseNoBackground"
     /**
-    * The size of button.
     * @default "medium"
+    * The size of button. 
     */
     size?: "medium" | "small"
     /**
-    * The fontSize of button's content.
     * @default "default"
+    * The fontSize of button's content.
     */
     fontSize?: "inherit" | "default" | "small" | "large"
 }

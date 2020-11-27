@@ -111,7 +111,6 @@ ChartCard.propTypes = {
   StatIcon: PropTypes.any,
   /**
   * The icon's color of chart.
-  * @default "gray"
   */
   statIconColor: PropTypes.oneOf([
     "warning",
@@ -124,7 +123,6 @@ ChartCard.propTypes = {
   ]),
   /**
   * The color of chart.
-  * @default "purple"
   */
   chartColor: PropTypes.oneOf([
     "orange",
@@ -145,7 +143,6 @@ ChartCard.propTypes = {
   statText: PropTypes.node,
   /**
   * If true, the chart moves up on click hover.
-  * @default false
   */
   hover: PropTypes.bool,
   /**
