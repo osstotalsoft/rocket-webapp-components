@@ -34,7 +34,7 @@ describe("NavPills", () => {
   });
 
 
-  it("active, color and actions props shoul be equal to the default values provided", () => {
+  it("active, color and actions props should be equal to the default values provided", () => {
     const wrapper = mount(
       <NavPills
         label="NavPills"
@@ -43,7 +43,7 @@ describe("NavPills", () => {
       />
     );
 
-    expect(wrapper.props().color).toBe("theme")
+    expect(wrapper.props().color).toBe("primary")
     expect(wrapper.props().actions).toStrictEqual([])
     expect(wrapper.props().active).toBe(0)
   });
@@ -60,7 +60,7 @@ describe("NavPills", () => {
     expect(wrapper.find(Tab)).toHaveLength(2)
   });
 
-  it("Tabs should get the values from the taba array provided", () => {
+  it("Tabs should get the values from the tabs array provided", () => {
     const wrapper = mount(
       <NavPills
         label="NavPills"
