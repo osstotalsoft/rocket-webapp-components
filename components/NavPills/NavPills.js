@@ -14,26 +14,27 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
                 <Tabs
                     className={classes.root}
                     TabIndicatorProps={{ className: classes.displayNone }}
+                    orientation={horizontal ? "horizontal" : "vertical"}
                     value={active}
                     onChange={onChange}
                     centered={alignCenter}
                 >
-                    {tabs.map((prop, key) => {
+                    {tabs.map((tab, key) => {
                         var icon = {};
-                        if (prop.tabIcon !== undefined) {
-                            icon["icon"] = <prop.tabIcon className={classes.tabIcon} />;
+                        if (tab.tabIcon !== undefined) {
+                            icon["icon"] = <tab.tabIcon className={classes.tabIcon} />;
                         }
                         const pillsClasses =
                             classes.pills +
                             " " +
                             cx({
-                                [classes.horizontalPills]: horizontal !== undefined,
-                                [classes.pillsWithIcons]: prop.tabIcon !== undefined
+                                [classes.verticalPills]: !horizontal,
+                                [classes.pillsWithIcons]: tab.tabIcon !== undefined
                             });
                         return (
                             <Tab
-                                label={prop.tabButton}
-                                value={prop.value}
+                                label={tab.tabButton}
+                                value={tab.value}
                                 key={key}
                                 {...icon}
                                 classes={{
@@ -45,6 +46,11 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
                     })}
                 </Tabs>
             </Box>
+        </Box>
+    );
+
+    const tabActions = (
+        <Box className={classes.container} >
             {actions.map(
                 (action, index) => (
                     <Box key={index} ml={1}>
@@ -53,37 +59,40 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
                 )
             )}
         </Box>
-    );
+    )
 
     const tabContent = (
         <div className={classes.contentWrapper}>
-            {tabs.map((prop, key) => {
+            {tabs.map((tab, key) => {
                 return (
                     (key === active) && (<div className={classes.tabContent} key={key}>
-                        {prop.tabContent}
+                        {tab.tabContent}
                     </div>)
                 );
             })}
         </div>
     );
 
-    return horizontal !== undefined ? (
-        <Grid container className={classes.grid}>
-            <Grid item lg={11} className={classes.itemGrid} {...horizontal.tabsGrid}>{tabButtons}</Grid><Grid item lg={1} />
-            <Grid item className={classes.itemGrid} {...horizontal.contentGrid}>{tabContent}</Grid>
-        </Grid>
-    ) : (
-            <div>
-                {tabButtons}
-                {tabContent}
-            </div>
-        );
+    return horizontal ? (<>
+        <Box className={classes.grid} display="flex">
+            <Box flexGrow={1} className={classes.tabItemGrid}>{tabButtons}</Box>
+            <Box className={classes.itemGrid}>{tabActions}</Box>
+        </Box>
+        <Box>
+            <Box className={classes.itemGrid}>{tabContent}</Box>
+        </Box>
+    </>) : (<Grid container>
+            <Grid item lg={2}>{tabButtons}</Grid>
+            <Grid item lg={9}>{tabContent}</Grid>
+            <Grid item lg={1}>{tabActions}</Grid>
+        </Grid>);
 }
 
 NavPills.defaultProps = {
     active: 0,
-    color: "theme",
-    actions: []
+    color: "primary",
+    actions: [],
+    horizontal: true
 };
 
 NavPills.propTypes = {
@@ -113,13 +122,7 @@ NavPills.propTypes = {
         "rose",
         "theme"
     ]),
-    horizontal: PropTypes.shape({
-        tabsGrid: PropTypes.object,
-        contentGrid: PropTypes.object
-    }),
-    /**
-    * If set to true, the alignment of pills will be centered
-    */
+    horizontal: PropTypes.bool,
     alignCenter: PropTypes.bool,
     /**
     * This property is required

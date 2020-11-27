@@ -10,7 +10,7 @@ const navPillsStyle = theme => {
     warningColor,
     dangerColor
   } = styles(theme);
-
+  
   return {
     tabsContainer: {
       marginTop: "20px",
@@ -61,7 +61,7 @@ const navPillsStyle = theme => {
       height: "30px",
       display: "block"
     },
-    horizontalPills: {
+    verticalPills: {
       width: "100%",
       float: "none !important",
       "& + button": {
@@ -73,7 +73,11 @@ const navPillsStyle = theme => {
     },
     grid: {
       margin: "0 -15px",
-      width: "calc(100% + 30px)"
+      width: "calc(100% + 30px)",
+    },
+    tabItemGrid: {
+      padding: "0 15px !important",
+      overflowX: "auto"
     },
     itemGrid: {
       padding: "0 15px !important"
