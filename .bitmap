@@ -1314,18 +1314,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/readme@1.4.1": {
-        "files": [
-            {
-                "relativePath": "themes/readme.md",
-                "test": false,
-                "name": "readme.md"
-            }
-        ],
-        "mainFile": "themes/readme.md",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "totalsoft_oss.react-mui/themes/red-theme@1.4.1": {
         "files": [
             {
