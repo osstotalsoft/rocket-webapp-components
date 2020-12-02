@@ -88,11 +88,6 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChan
     */
     autoOk: boolean
     /**
-    * @default false
-    * Disable picker and text field
-    */
-    disabled: boolean
-    /**
     * @default true
     * 12h/24h view for hour selection clock
     */
