@@ -4,7 +4,7 @@ import Autocomplete from '../../components/Autocomplete/Autocomplete';
 
 const arr = [{ id: '1', name: 'Approved' }, { id: '2', name: 'Cancelled' }]
 
-const handleFilterPropertyChange = () => (_, _) => { }
+const handleFilterPropertyChange = () => (prop, value) => { }
 
 describe('Autocomplete', () => {
     it('snapshot', () => {
