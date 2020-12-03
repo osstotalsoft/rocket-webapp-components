@@ -27,7 +27,7 @@ function IconCollapseCard({
   plain,
   customCardContentClass,
   icon: Icon,
-  header,
+  summary,
   canExpand
 }) {
   const [localExpanded, setExpanded] = useState(defaultExpanded || false);
@@ -80,12 +80,12 @@ function IconCollapseCard({
               classes={{ content: classes.content, root: classes.summaryRoot }}
               expandIcon={<ExpandMoreIcon />}
             >
-              {(exp || (!exp && !header)) && (
+              {(exp || (!exp && !summary)) && (
                 <Typography variant="subtitle1" className={classes.cardTitle}>
                   {title}
                 </Typography>
               )}
-              {!exp && header && <div style={{ width: "100%" }}>{header}</div>}
+              {!exp && summary && <div style={{ width: "100%" }}>{summary}</div>}
             </AccordionSummary>
             <AccordionDetails className={classes.expansionPanelDetails}>
               {content}
@@ -100,12 +100,12 @@ function IconCollapseCard({
               <AccordionSummary
                 classes={{ content: classes.content, root: classes.summaryRoot }}
               >
-                {(exp || (!exp && !header)) && (
+                {(exp || (!exp && !summary)) && (
                   <Typography variant="subtitle1" className={classes.cardTitle}>
                     {title}
                   </Typography>
                 )}
-                {!exp && header && <div style={{ width: "100%" }}>{header}</div>}
+                {!exp && summary && <div style={{ width: "100%" }}>{summary}</div>}
               </AccordionSummary>
             </Accordion>
           )}
@@ -157,9 +157,9 @@ IconCollapseCard.propTypes = {
   */
   customCardContentClass: PropTypes.string,
   /**
-  * The header of the card
+  * The summary of the card
   */
-  header: PropTypes.node,
+  summary: PropTypes.node,
   /**
   * If set to true, the card will be expanded
   */

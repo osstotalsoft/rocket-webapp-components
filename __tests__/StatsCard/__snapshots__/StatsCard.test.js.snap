@@ -37,7 +37,6 @@ exports[`StatsCard Snapshot 1`] = `
       className="MuiTypography-root makeStyles-cardTitle-12 MuiTypography-h5"
     >
       Description
-        
     </h2>
   </div>
   <div
@@ -57,7 +56,6 @@ exports[`StatsCard Snapshot 1`] = `
         />
       </svg>
        
-      State text
     </div>
   </div>
 </div>

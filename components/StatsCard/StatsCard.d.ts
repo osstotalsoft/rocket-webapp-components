@@ -33,7 +33,7 @@ export interface Props {
     /**
      * Footer for description
      */
-    Small?: React.ReactNode;
+    subContent?: React.ReactNode;
 
     /**
      * Icon for content
@@ -58,9 +58,9 @@ export interface Props {
     statLink?: Object;
 
     /**
-     * Text for content
+     * The footer
      */
-    statText?: React.ReactNode;
+    footer?: React.ReactNode;
 
     /**
     * Demos:

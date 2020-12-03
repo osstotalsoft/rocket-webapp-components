@@ -41,9 +41,9 @@ export interface Props {
     */
     customCardContentClass?: string;
     /**
-    * The header of the card
+    * The summary of the card
     */
-    header?: React.ReactNode;
+    summary?: React.ReactNode;
     /**
     * If set to true, the card will be expanded
     */

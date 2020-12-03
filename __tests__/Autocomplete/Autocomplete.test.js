@@ -12,8 +12,8 @@ describe('Autocomplete', () => {
             label={"Status"}
             options={arr}
             fullWidth
-            simpleValue={true}
-            isClearable={true}
+            simpleValue
+            isClearable
             value={''}
             onChange={handleFilterPropertyChange('id')}
         />);

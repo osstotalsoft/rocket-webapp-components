@@ -8,8 +8,8 @@ import { Paper, MenuItem, TextField, ListItem, ListItemIcon, ListItemText, Check
 import Typography from '../Typography';
 import autoCompleteStyles from "./autocompleteStyle"
 import { isArray } from 'util';
+import { curry, flatten, prop, map, innerJoin, find, propEq, has, all } from 'ramda';
 import Search from '@material-ui/icons/Search';
-import { curry, prop } from 'ramda';
 import cx from "classnames";
 
 const useStyles = makeStyles(autoCompleteStyles);
@@ -175,13 +175,20 @@ function IndicatorSeparator() {
   return (<span />);
 }
 
-function getSimpleValue(options, value, valueKey, isMultiSelection) {
-  const option = options.filter(a => a[valueKey] === value)[0];
+export const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
+  if (isMultiSelection && !Array.isArray(value))
+    return null;
 
-  if (isMultiSelection) {
-    return options.filter(a => value && value.includes(a[valueKey])) || [];
-  }
-  return option || null;
+  const hasGroups = all(has("options"), options)
+
+  const flattenOptions = hasGroups
+    ? flatten(map(prop("options"), options))
+    : options
+
+  const result = isMultiSelection
+    ? innerJoin((o, v) => o[valueKey] === v, flattenOptions, value)
+    : find(propEq(valueKey, value), flattenOptions)
+  return result;
 }
 
 function DropdownIndicator() {

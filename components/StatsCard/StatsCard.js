@@ -16,8 +16,8 @@ const StatsCard = ({
   title,
   description,
   statLink,
-  Small,
-  statText,
+  subContent,
+  footer,
   statIconColor,
   iconColor,
   Icon,
@@ -39,8 +39,8 @@ const StatsCard = ({
           {title}
         </Typography>
         <Typography variant="h5" component="h2" className={classes.cardTitle}>
-          {description} &nbsp;
-          {Small && <small className={classes.cardTitleSmall}>{Small}</small>}
+          {description}
+          {subContent && <small className={classes.cardTitleSmall}>{subContent}</small>}
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
@@ -56,8 +56,8 @@ const StatsCard = ({
             <a href={statLink.href} className={classes.cardStatsLink}>
               {statLink.text}
             </a>
-          ) : statText !== undefined ? (
-            statText
+          ) : footer !== undefined ? (
+            footer
           ) : null}
         </div>
       </CardActions>
@@ -75,7 +75,7 @@ StatsCard.propTypes = {
   iconColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
   title: PropTypes.node,
   description: PropTypes.node,
-  Small: PropTypes.node,
+  subContent: PropTypes.node,
   StatIcon: PropTypes.any,
   statIconColor: PropTypes.oneOf([
     "warning",
@@ -87,7 +87,7 @@ StatsCard.propTypes = {
     "gray"
   ]),
   statLink: PropTypes.object,
-  statText: PropTypes.node
+  footer: PropTypes.node
 };
 
 export default StatsCard;
