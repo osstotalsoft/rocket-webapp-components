@@ -21,6 +21,10 @@ export interface Props {
     */
     endAdornment?: InputAdornmentProps
     /**
+    * Start adornment of componenent. (Usually an InputAdornment from material-ui)
+    */
+    startAdornment: InputAdornmentProps
+    /**
     * Props applied to the InputLabel element.
     */
     InputLabelProps?: Object

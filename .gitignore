@@ -21,7 +21,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 example/package-lock.json
-package-lock.json
 
 .bit
 coverage

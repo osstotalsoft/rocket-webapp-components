@@ -61,7 +61,7 @@ NumberFormatCustom.defaultProps = {
 const setValueToDesiredFormat = curry((isNumeric, value) => isNumeric ? value : ({ target: { value } }))
 const getValueFromDesiredFormat = curry((isNumeric, e) => isNumeric ? e : e?.target.value)
 
-function CustomTextField({ isNumeric, customInputProps, endAdornment, InputLabelProps,
+function CustomTextField({ isNumeric, customInputProps, endAdornment, startAdornment, InputLabelProps,
   className, value, onChange, debounceBy, ...rest }) {
   const classes = useStyles();
 
@@ -72,14 +72,16 @@ function CustomTextField({ isNumeric, customInputProps, endAdornment, InputLabel
         className: classes.input,
         ...customInputProps
       },
-      endAdornment
+      endAdornment,
+      startAdornment
     }
     : {
       inputProps: {
         className: classes.input,
         ...customInputProps,
       },
-      endAdornment
+      endAdornment,
+      startAdornment
     };
 
   const [localValue, setLocalValue] = useState(value)
@@ -127,9 +129,13 @@ CustomTextField.propTypes = {
   */
   customInputProps: PropTypes.object,
   /**
-  * The adornment of componenent. (Usually an InputAdornment from material-ui)
+  * End adornment of componenent. (Usually an InputAdornment from material-ui)
   */
   endAdornment: PropTypes.any,
+  /**
+  * Start adornment of componenent. (Usually an InputAdornment from material-ui)
+  */
+  startAdornment: PropTypes.any,
   /**
   * Props applied to the InputLabel element.
   */
