@@ -5,7 +5,7 @@ import AssignmentLate from "@material-ui/icons/AssignmentLate";
 import { mount } from 'enzyme';
 
 describe("Render ImageCard", () => {
-  it("render correctly ImageCard component", () => {
+  it("snapshot", () => {
     const component = renderer.create(
       <ImageCard
         image={AssignmentLate}
@@ -18,7 +18,7 @@ describe("Render ImageCard", () => {
     expect(json).toMatchSnapshot();
   });
 
-  it("imageSize should be equal to default value", () => {
+  it("imageSize should be equal to 's'", () => {
     const wrapper = mount(
       <ImageCard
         image={AssignmentLate}

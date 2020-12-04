@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render ImageCard render correctly ImageCard component 1`] = `
+exports[`Render ImageCard snapshot 1`] = `
 <div
   className="makeStyles-card-11"
 >

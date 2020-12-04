@@ -6,11 +6,11 @@ import { Dialog, Typography, IconButton } from "@material-ui/core";
 
 describe('DialogDisplay', () => {
     it('snapshot', () => {
+        const onCloseMock = jest.fn();
         const component = mount(<DialogDisplay
             id="id"
-            open={true}
-            onClose={() => { }
-            }
+            open
+            onClose={onCloseMock}
             content={< div > Content</div >}
         />);
 
@@ -22,7 +22,7 @@ describe('DialogDisplay', () => {
 
         const wrapper = mount(<DialogDisplay
             id="id"
-            open={true}
+            open
             onClose={onCloseMock}
             content={< div > Content</div >}
         />);
@@ -35,7 +35,7 @@ describe('DialogDisplay', () => {
 
         const wrapper = mount(<DialogDisplay
             id="id"
-            open={true}
+            open
             onClose={onCloseMock}
             content={< div > Content</div >}
         />);
@@ -48,7 +48,7 @@ describe('DialogDisplay', () => {
 
         const wrapper = mount(<DialogDisplay
             id="id"
-            open={true}
+            open
             onClose={onCloseMock}
             content={< div > Content</div >}
         />);

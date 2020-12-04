@@ -8,13 +8,13 @@ exports[`DialogDisplay snapshot 1`] = `
     </div>
   }
   id="id"
-  onClose={[Function]}
+  onClose={[MockFunction]}
   open={true}
 >
   <WithStyles(ForwardRef(Dialog))
     aria-labelledby="id-dialog-display-title"
     maxWidth="xl"
-    onClose={[Function]}
+    onClose={[MockFunction]}
     open={true}
   >
     <ForwardRef(Dialog)
@@ -39,7 +39,7 @@ exports[`DialogDisplay snapshot 1`] = `
         }
       }
       maxWidth="xl"
-      onClose={[Function]}
+      onClose={[MockFunction]}
       open={true}
     >
       <ForwardRef(Modal)
@@ -370,7 +370,7 @@ exports[`DialogDisplay snapshot 1`] = `
         closeAfterTransition={true}
         disableBackdropClick={false}
         disableEscapeKeyDown={false}
-        onClose={[Function]}
+        onClose={[MockFunction]}
         open={true}
       >
         <ForwardRef(Portal)
@@ -767,7 +767,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                         <WithStyles(ForwardRef(IconButton))
                                           aria-label="Close"
                                           className="makeStyles-modalCloseButton-2"
-                                          onClick={[Function]}
+                                          onClick={[MockFunction]}
                                           size="small"
                                         >
                                           <ForwardRef(IconButton)
@@ -786,7 +786,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                                 "sizeSmall": "MuiIconButton-sizeSmall",
                                               }
                                             }
-                                            onClick={[Function]}
+                                            onClick={[MockFunction]}
                                             size="small"
                                           >
                                             <WithStyles(ForwardRef(ButtonBase))
@@ -795,7 +795,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                               className="MuiIconButton-root makeStyles-modalCloseButton-2 MuiIconButton-sizeSmall"
                                               disabled={false}
                                               focusRipple={true}
-                                              onClick={[Function]}
+                                              onClick={[MockFunction]}
                                             >
                                               <ForwardRef(ButtonBase)
                                                 aria-label="Close"
@@ -810,14 +810,14 @@ exports[`DialogDisplay snapshot 1`] = `
                                                 }
                                                 disabled={false}
                                                 focusRipple={true}
-                                                onClick={[Function]}
+                                                onClick={[MockFunction]}
                                               >
                                                 <button
                                                   aria-label="Close"
                                                   className="MuiButtonBase-root MuiIconButton-root makeStyles-modalCloseButton-2 MuiIconButton-sizeSmall"
                                                   disabled={false}
                                                   onBlur={[Function]}
-                                                  onClick={[Function]}
+                                                  onClick={[MockFunction]}
                                                   onDragLeave={[Function]}
                                                   onFocus={[Function]}
                                                   onKeyDown={[Function]}
