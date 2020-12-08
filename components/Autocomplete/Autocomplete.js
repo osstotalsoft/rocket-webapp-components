@@ -392,7 +392,8 @@ Autocomplete.propTypes = {
     "rose",
     "theme",
     "white",
-    "black"
+    "black",
+    "blue"
   ])
 };
 

@@ -106,7 +106,8 @@ export interface AutocompleteProps {
   "rose" |
   "theme" |
   "white" |
-  "black"
+  "black" | 
+  "blue"
 }
 /**
  *

@@ -92,7 +92,8 @@ const autocompleteStyle = theme => {
     rose: { color: roseColor },
     white: { color: whiteColor },
     theme: { color: themeColor },
-    black: { color: blackColor }
+    black: { color: blackColor },
+    blue: { color: "#00497b" }
   })
 };
 
