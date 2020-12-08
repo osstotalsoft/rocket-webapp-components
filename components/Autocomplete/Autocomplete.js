@@ -383,18 +383,7 @@ Autocomplete.propTypes = {
   /**
   * The color of selected input.
   */
-  inputSelectedColor: PropTypes.oneOf([
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "rose",
-    "theme",
-    "white",
-    "black",
-    "blue"
-  ])
+  inputSelectedColor: PropTypes.string
 };
 
 export default Autocomplete;

@@ -97,17 +97,7 @@ export interface AutocompleteProps {
   * @default "black"
   * The color of selected input.
   */
-  inputSelectedColor:
-  "primary" |
-  "info" |
-  "success" |
-  "warning" |
-  "danger" |
-  "rose" |
-  "theme" |
-  "white" |
-  "black" | 
-  "blue"
+  inputSelectedColor?: string
 }
 /**
  *
