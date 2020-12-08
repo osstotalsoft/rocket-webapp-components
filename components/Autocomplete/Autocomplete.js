@@ -123,14 +123,10 @@ function Placeholder({ selectProps, innerProps, children }) {
 }
 
 function SingleValue({ selectProps, innerProps, children }) {
-  const inputClasses = cx({
-    [selectProps.classes[selectProps.inputSelectedColor]]: selectProps.inputSelectedColor
-  });
-
   return (
-    <Typography className={selectProps.classes.singleValue + " " + inputClasses}{...innerProps}>
-      {typeof children === 'function' ? children() : children}
-    </Typography>
+      <Typography style={{ color: selectProps.inputSelectedColor }} className={selectProps.classes.singleValue}{...innerProps}>
+          {typeof children === 'function' ? children() : children}
+      </Typography>
   );
 }
 

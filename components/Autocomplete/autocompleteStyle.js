@@ -6,16 +6,10 @@ const autocompleteStyle = theme => {
   const {
     dangerColor,
     successColor,
-    defaultFont,
-    themeColor,
-    primaryColor,
-    infoColor,
-    whiteColor,
-    roseColor,
-    warningColor,
-    blackColor } = styles(theme);
+    defaultFont
+  } = styles(theme);
 
-    
+
   return ({
     root: {
       flexGrow: 1,
@@ -83,17 +77,7 @@ const autocompleteStyle = theme => {
         ...base,
         color: theme.palette?.text?.primary || defaultTheme.palette.text.primary
       })
-    },
-    primary: { color: primaryColor },
-    info: { color: infoColor },
-    success: { color: successColor },
-    warning: { color: warningColor },
-    danger: { color: dangerColor },
-    rose: { color: roseColor },
-    white: { color: whiteColor },
-    theme: { color: themeColor },
-    black: { color: blackColor },
-    blue: { color: "#00497b" }
+    }
   })
 };
 
