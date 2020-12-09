@@ -6,6 +6,33 @@ import CustomTextField from '../../components/CustomTextField';
 import Autocomplete from '../../components/Autocomplete';
 import { Switch } from "@material-ui/core";
 
+jest.mock('@material-ui/core/styles', () => ({
+    ...jest.requireActual('@material-ui/core/styles'),
+    useTheme: () => {
+        return {
+            autoComplete: {
+                valueContainer: {
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flex: 1,
+                    alignItems: 'center',
+                    paddingBottom: '5px'
+                },
+                input: {
+                    fontFamily: 'Source Sans Pro !important',
+                    fontSize: '14px !important',
+                    fontWeight: 'normal !important',
+                    fontStretch: 'normal !important',
+                    fontStyle: 'normal !important',
+                    lineHeight: '1.29 !important',
+                    color: '#a8a8a8 !important',
+                },
+                selectedInputColor: "#000"
+            }
+        }
+    }
+}));
+
 describe('DynamicInput', () => {
     it('snapshot', () => {
         const onChangeMock = jest.fn();
