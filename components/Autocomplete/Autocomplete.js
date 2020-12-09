@@ -6,11 +6,11 @@ import AsyncCreatableSelect from 'react-select/async-creatable';
 import AsyncSelect from 'react-select/async';
 import { Paper, MenuItem, TextField, ListItem, ListItemIcon, ListItemText, Checkbox, makeStyles, InputAdornment } from '@material-ui/core';
 import Typography from '../Typography';
-import autoCompleteStyles from "./autocompleteStyle"
+import autoCompleteStyles, { selectedColor } from "./autocompleteStyle"
 import { isArray } from 'util';
 import { curry, flatten, prop, map, innerJoin, find, propEq, has, all } from 'ramda';
 import Search from '@material-ui/icons/Search';
-import cx from "classnames";
+import { useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(autoCompleteStyles);
 
@@ -123,10 +123,12 @@ function Placeholder({ selectProps, innerProps, children }) {
 }
 
 function SingleValue({ selectProps, innerProps, children }) {
+  const theme = useTheme();
+
   return (
-      <Typography style={{ color: selectProps.inputSelectedColor }} className={selectProps.classes.singleValue}{...innerProps}>
-          {typeof children === 'function' ? children() : children}
-      </Typography>
+    <Typography style={selectedColor(theme, selectProps.inputSelectedColor)} className={selectProps.classes.singleValue}{...innerProps}>
+      {typeof children === 'function' ? children() : children}
+    </Typography>
   );
 }
 
@@ -288,8 +290,7 @@ Autocomplete.defaultProps = {
   error: false,
   value: null,
   creatable: false,
-  typographyContentColor: "textSecondary",
-  inputSelectedColor: "black"
+  typographyContentColor: "textSecondary"
 };
 
 Autocomplete.propTypes = {

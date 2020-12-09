@@ -171,7 +171,8 @@ export const theme = {
             fontStyle: 'normal !important',
             lineHeight: '1.29 !important',
             color: '#a8a8a8 !important',
-        }
+        },
+        selectedInputColor: "#000"
     },
     card: {
         height: 'auto',

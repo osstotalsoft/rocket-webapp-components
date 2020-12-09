@@ -94,7 +94,6 @@ export interface AutocompleteProps {
   'textSecondary' |
   'error'
   /**
-  * @default "black"
   * The color of selected input.
   */
   inputSelectedColor?: string

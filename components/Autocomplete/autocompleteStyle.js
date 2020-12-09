@@ -2,6 +2,10 @@ import { emphasize } from '@material-ui/core/styles/colorManipulator';
 import styles from '../../assets/jss/styles';
 import { theme as defaultTheme } from '../../themes/defaultTheme';
 
+export const selectedColor = (theme, inputSelectedColor) => {
+  return { color: inputSelectedColor ? inputSelectedColor : theme.autoComplete.selectedInputColor }
+}
+
 const autocompleteStyle = theme => {
   const {
     dangerColor,
