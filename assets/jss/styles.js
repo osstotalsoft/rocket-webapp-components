@@ -485,8 +485,8 @@ const styles = (theme) => {
       boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow,
       "&:hover": {
         backgroundColor: whiteColor,
-        color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-        boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow
+        color: theme.palette?.button?.themeHoverColor || defaultTheme.palette.button.theme,
+        boxShadow: theme.palette?.button?.themeHoverShadow|| defaultTheme.palette?.button?.themeShadow
       }
     },
     themeNoBackground: {
@@ -495,18 +495,18 @@ const styles = (theme) => {
       boxShadow: "none",
       "&:hover": {
         backgroundColor: "transparent",
-        color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-        boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow
+        color: theme.palette?.button?.themeHoverColor || defaultTheme.palette.button.theme,
+        boxShadow: theme.palette?.button?.themeHoverShadow|| defaultTheme.palette?.button?.themeShadow
       }
     },
     themeWithBackground: {
       backgroundColor: "transparent",
       color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-      boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow,
+      boxShadow: theme.palette?.button?.themeHoverShadow || defaultTheme.palette?.button?.themeShadow,
       "&:hover": {
         backgroundColor: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-        color: whiteColor,
-        boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow
+        color: theme.palette?.button?.themeHoverColor,
+        boxShadow: theme.palette?.button?.themeHoverShadow || defaultTheme.palette?.button?.themeShadow
       }
     },
     disabled: {

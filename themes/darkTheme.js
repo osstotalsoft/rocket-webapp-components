@@ -1,4 +1,4 @@
-import DefaultLogo from "@bit/totalsoft_oss.react-mui.default-logo";
+import defaultLogo from "assets/img/logo.png";
 
 const defaultFont = {
   fontFamily: "Source Sans Pro",
@@ -8,46 +8,41 @@ const defaultFont = {
 
 const palette = {
   primary: {
-    main: "#00497b"
+    main: "#555555"
   },
   secondary: {
-    main: "#005B94"
+    main: "#00497b"
   },
   text: {
     dark: "rgb(3, 19, 3)",
     white: "rgb(255, 255, 255)",
     darkGrey: "rgb(169,169,169)",
-    highlight: "rgb(36, 76, 140)",
-    primary: "#005B94"
+    highlight: "rgb(36, 76, 140)"
   },
   sideMenu: {
-    bkColor: "#BCE4FA",
+    bkColor: "#000",
     activeLinkColor: "#fff",
-    activeBkColor: "#00497B",
-    hoverBgColor: "#DFF2FD",
-    color: "#00385F",
-    bkOpacity: "1",
-    focusBgColor: "#2273ab"
+    activeBkColor: "#26C6DA",
+    hoverBgColor: "rgba(200, 200, 200, 0.2)",
+    color: "#fff",
+    bkOpacity: "0.8",
+    focusBgColor: "#26C6DA"
   },
   topBar: {
     bkColor: "#FFFF"
   },
   timColors: {
     primary: "#00497b",
-    primaryRGBA: "rgba(0, 73, 123, 0.28)",
-    warningColor: "#FF7900",
-    dangerColor: "#f55",
-    successColor: "#01B25A",
-    infoColor: "#005B94",
-    lightBackground: "#BCE4FA",
+    primaryRGBA: "rgba(85, 85, 85, 1)",
+    warningColor: "#ff9800",
+    dangerColor: "#f44336",
+    successColor: "#4caf50",
+    infoColor: "#00acc1",
     blueColor: "#26C6DA",
-    themeColor: "#005B94",
-    themeColorRGBA: "rgba(0, 91, 148, 0.4)",
-    themeShadowColor: "#26C6DA",
-    themeShadowColorRGBA: "rgb(188 228 250)",
-    roseColor: "#e91e63",
-    grayColor: "#999999",
-    blackColor: "#000"
+    iconCardColor: "#FF6F00",
+    iconCardColorRGBA: "rgba(85, 85, 85, 1)",
+    iconCardShadowColor: "#555555",
+    iconCardShadowColorRGBA: "rgba(51, 51, 51, 0.38)"
   },
   snackbar: {
     infoBgColor: "#ccf1ff",
@@ -62,12 +57,12 @@ const palette = {
   card: {
     gray500: "#D7D7D7",
     orange800: "#B35500",
-    orange500: "#FF7900",
-    orange400: "#FF861A",
-    green500: "#01B25A",
-    green400: "#1ABA6B",
-    blue500: "#0065AC",
-    blue400: "#1A74B4",
+    orange500: "#fb8c00",
+    orange400: "#ffa726",
+    green500: "#43a047",
+    green400: "#66bb6a",
+    blue500: "#26c6da",
+    blue400: "#00acc1",
     red400: "#FF6666",
     red500: "#FF5555"
   },
@@ -75,25 +70,25 @@ const palette = {
     positive: "#01b25a",
     negative: "#f55",
     faded: "#60768f",
-    active: "#00a8ff"
+    active: "#f44336"
   },
   bg: {
-    main: "#F5F8FA"
+    main: "#eee"
   },
-  activeColor: "#00385F",
+  activeColor: "#555555",
   button: {
-    theme: "#00497b",
+    theme: "#555555",
     themeHoverBk: "transparent",
-    themeHoverColor: "#00497b",
+    themeHoverColor: "#555555",
     themeHoverShadow:
-      "0 2px 2px 0 rgba(188, 228, 250, 0.42), 0 3px 1px -2px rgba(188, 228, 250, 0.12), 0 1px 5px 0 rgba(188, 228, 250, 0.2)",
+      "0 2px 2px 0 rgba(85, 85, 85, 0.42), 0 3px 1px -2px rgba(85, 85, 85, 0.12), 0 1px 5px 0 rgba(85, 85, 85, 0.2)",
     themeShadow:
-      "0 2px 2px 0 rgba(188, 228, 250, 0.14), 0 3px 1px -2px rgba(188, 228, 250, 0.2), 0 1px 5px 0 rgba(188, 228, 250, 0.12)"
+      "0 2px 2px 0 rgba(85, 85, 85, 0.14), 0 3px 1px -2px rgba(85, 85, 85, 0.2), 0 1px 5px 0 rgba(85, 85, 85, 0.12)"
   }
 };
 
 export const theme = {
-  logo: DefaultLogo,
+  logo: defaultLogo,
   input: {
     height: "1.1875em"
   },
@@ -139,6 +134,13 @@ export const theme = {
       toolbar: {
         paddingLeft: 0
       }
+    },
+    MuiStepIcon: {
+      root: {
+        "&$active": {
+          color: "#00497b"
+        }
+      }
     }
   },
   table: {
@@ -149,10 +151,10 @@ export const theme = {
     },
     tableHeader: {
       textAlign: "left",
-      backgroundColor: "#00497b",
+      backgroundColor: "#f0fbff",
       padding: "10px",
-      borderBottom: "1px solid #ddd",
-      color: "white"
+      color: "#555555",
+      borderBottom: "1px solid #ddd"
     },
     tableContent: {
       textAlign: "left",
@@ -160,8 +162,8 @@ export const theme = {
       borderBottom: "1px solid #eee"
     },
     itemSelected: {
-      background: "#c1c1c1",
-      color: "white"
+      background: "#ccf1ff",
+      color: "#555555"
     }
   },
   autoComplete: {
