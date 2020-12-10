@@ -1290,18 +1290,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/index@2.3.2": {
-        "files": [
-            {
-                "relativePath": "themes/index.js",
-                "test": false,
-                "name": "index.js"
-            }
-        ],
-        "mainFile": "themes/index.js",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "totalsoft_oss.react-mui/themes/orange-theme@2.3.2": {
         "files": [
             {
@@ -1452,6 +1440,18 @@
         "trackDir": "components/UpwardButton",
         "origin": "AUTHORED",
         "exported": true
+    },
+    "vivid-orange-theme": {
+        "files": [
+            {
+                "relativePath": "themes/vividOrangeTheme.js",
+                "test": false,
+                "name": "vividOrangeTheme.js"
+            }
+        ],
+        "mainFile": "themes/vividOrangeTheme.js",
+        "origin": "AUTHORED",
+        "exported": false
     },
     "version": "14.8.8"
 }

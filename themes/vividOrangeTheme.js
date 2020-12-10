@@ -1,4 +1,4 @@
-import defaultLogo from "assets/img/logo.png";
+import DefaultLogo from "assets/img/logo.png";
 
 const defaultFont = {
   fontFamily: "Source Sans Pro",
@@ -88,7 +88,7 @@ const palette = {
 };
 
 export const theme = {
-  logo: defaultLogo,
+  logo: DefaultLogo,
   input: {
     height: "1.1875em"
   },
