@@ -3,4 +3,4 @@ export { theme as defaultTheme } from "./defaultTheme";
 export { theme as greenTheme } from "./greenTheme";
 export { theme as orangeTheme } from "./orangeTheme";
 export { theme as redTheme } from "./redTheme";
-export { theme as darkTheme } from "./darkTheme";
+export { theme as vividOrangeTheme } from "./vividOrangeTheme";
