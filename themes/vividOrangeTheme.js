@@ -32,7 +32,7 @@ const palette = {
     bkColor: "#FFFF"
   },
   timColors: {
-    primary: "#00497b",
+    primary: "#555555",
     primaryRGBA: "rgba(85, 85, 85, 1)",
     warningColor: "#ff9800",
     dangerColor: "#f44336",
