@@ -40,9 +40,13 @@ const palette = {
     infoColor: "#00acc1",
     blueColor: "#26C6DA",
     iconCardColor: "#FF6F00",
-    iconCardColorRGBA: "rgba(85, 85, 85, 1)",
-    iconCardShadowColor: "#555555",
-    iconCardShadowColorRGBA: "rgba(51, 51, 51, 0.38)"
+    themeColor: "#FF6F00",
+    themeColorRGBA: "rgba(85, 85, 85, 1)",
+    themeShadowColor: "#555555",
+    themeShadowColorRGBA: "rgba(51, 51, 51, 0.38)",
+    roseColor: "#e91e63",
+    grayColor: "#999999",
+    blackColor: "#000"
   },
   snackbar: {
     infoBgColor: "#ccf1ff",
