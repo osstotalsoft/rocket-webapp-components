@@ -28,7 +28,8 @@ function IconCollapseCard({
   customCardContentClass,
   icon: Icon,
   summary,
-  canExpand
+  canExpand,
+  className,
 }) {
   const [localExpanded, setExpanded] = useState(defaultExpanded || false);
   const classes = useStyles();
@@ -51,7 +52,12 @@ function IconCollapseCard({
     " " +
     cx({
       [classes.cardPlain]: plain
+    }) +
+    " " +
+    cx({
+      [className]: className != null
     });
+
   const cardContentClasses =
     classes.cardContent +
     " " +
@@ -64,7 +70,7 @@ function IconCollapseCard({
       <CardHeader
         classes={{
           root: classes.cardHeader + " " + classes[iconColor + "CardHeader"],
-          avatar: classes.cardAvatar
+          avatar: classes.cardAvatar,
         }}
         avatar={<Icon className={classes.cardIcon} />}
       />
@@ -85,30 +91,34 @@ function IconCollapseCard({
                   {title}
                 </Typography>
               )}
-              {!exp && summary && <div style={{ width: "100%" }}>{summary}</div>}
+              {!exp && summary && (
+                <div style={{ width: "100%" }}>{summary}</div>
+              )}
             </AccordionSummary>
             <AccordionDetails className={classes.expansionPanelDetails}>
               {content}
             </AccordionDetails>
           </Accordion>
         ) : (
-            <Accordion
-              onChange={handleToggle}
-              expanded={false}
-              className={classes.accordionRoot}
+          <Accordion
+            onChange={handleToggle}
+            expanded={false}
+            className={classes.accordionRoot}
+          >
+            <AccordionSummary
+              classes={{ content: classes.content, root: classes.summaryRoot }}
             >
-              <AccordionSummary
-                classes={{ content: classes.content, root: classes.summaryRoot }}
-              >
-                {(exp || (!exp && !summary)) && (
-                  <Typography variant="subtitle1" className={classes.cardTitle}>
-                    {title}
-                  </Typography>
-                )}
-                {!exp && summary && <div style={{ width: "100%" }}>{summary}</div>}
-              </AccordionSummary>
-            </Accordion>
-          )}
+              {(exp || (!exp && !summary)) && (
+                <Typography variant="subtitle1" className={classes.cardTitle}>
+                  {title}
+                </Typography>
+              )}
+              {!exp && summary && (
+                <div style={{ width: "100%" }}>{summary}</div>
+              )}
+            </AccordionSummary>
+          </Accordion>
+        )}
       </CardContent>
       {footer && <div className={classes.cardFooter}>{footer}</div>}
     </Card>
@@ -116,17 +126,17 @@ function IconCollapseCard({
 }
 
 IconCollapseCard.defaultProps = {
-  iconColor: "theme"
+  iconColor: "theme",
 };
 
 IconCollapseCard.propTypes = {
   /**
-  * Icon to be displayed. This property is mandatory
-  */
+   * Icon to be displayed. This property is mandatory
+   */
   icon: PropTypes.object.isRequired,
   /**
-  * The color of the icon that will be displayed
-  */
+   * The color of the icon that will be displayed
+   */
   iconColor: PropTypes.oneOf([
     "orange",
     "green",
@@ -134,49 +144,53 @@ IconCollapseCard.propTypes = {
     "blue",
     "purple",
     "rose",
-    "theme"
+    "theme",
   ]),
   /**
-  * The title to be displayed. This property can be a string or a component
-  */
+   * The title to be displayed. This property can be a string or a component
+   */
   title: PropTypes.node,
   /**
-  * The content of the card. This property can be a string or a component
-  */
+   * The content of the card. This property can be a string or a component
+   */
   content: PropTypes.node,
   /**
-  * The footer to be displayed. This property can be a string or a component
-  */
+   * The footer to be displayed. This property can be a string or a component
+   */
   footer: PropTypes.node,
   /**
-  * If set to true, the background will be transparent
-  */
+   * If set to true, the background will be transparent
+   */
   plain: PropTypes.bool,
   /**
-  * Override or extend the styles applied to the content of the card
-  */
+   * Override or extend the styles applied to the content of the card
+   */
   customCardContentClass: PropTypes.string,
   /**
-  * The summary of the card
-  */
+   * The summary of the card
+   */
   summary: PropTypes.node,
   /**
-  * If set to true, the card will be expanded
-  */
+   * If set to true, the card will be expanded
+   */
   expanded: PropTypes.bool,
   /**
-  * If set to true, the card can be expanded
-  */
+   * If set to true, the card can be expanded
+   */
   canExpand: PropTypes.bool,
   /**
-  * Default value for expanded property. If it's not provided will be set to false
-  */
+   * Default value for expanded property. If it's not provided will be set to false
+   */
   defaultExpanded: PropTypes.bool,
   /**
-  * @param {object} event The event source of the callback.
-  * @param {boolean} expanded The `expanded` state of the card.
-  */
-  onToggle: PropTypes.func
+   * @param {object} event The event source of the callback.
+   * @param {boolean} expanded The `expanded` state of the card.
+   */
+  onToggle: PropTypes.func,
+  /**
+   * The className of card.
+   */
+  className: PropTypes.string,
 };
 
 export default IconCollapseCard;
