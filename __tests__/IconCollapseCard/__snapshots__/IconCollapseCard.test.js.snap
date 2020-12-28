@@ -2,7 +2,7 @@
 
 exports[`IconCollapseCard Snapshot 1`] = `
 <div
-  className="MuiPaper-root MuiCard-root makeStyles-card-1  MuiPaper-elevation1 MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root makeStyles-card-1   MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="MuiCardHeader-root makeStyles-cardHeader-3 makeStyles-themeCardHeader-10"
