@@ -10,7 +10,7 @@ const CustomDialog = props => {
     const { id, open, title, content, textContent, onYes,
         onClose, buttonColor, buttonSize, showActions,
         fullWidth, maxWidth, textDialogYes, textDialogNo,
-        otherDialogProps } = props;
+        ...otherDialogProps } = props;
         
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
