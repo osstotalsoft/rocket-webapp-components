@@ -11,7 +11,7 @@ exports[`RegularCard Snapshot 1`] = `
       className="MuiCardHeader-content"
     >
       <span
-        className="MuiTypography-root MuiCardHeader-title makeStyles-cardTitle-4 makeStyles-center-7 undefined MuiTypography-h5 MuiTypography-displayBlock"
+        className="MuiTypography-root MuiCardHeader-title makeStyles-cardTitle-4 makeStyles-center-7 MuiTypography-h5 MuiTypography-displayBlock"
       >
         Title
       </span>
@@ -23,7 +23,7 @@ exports[`RegularCard Snapshot 1`] = `
     </div>
   </div>
   <div
-    className="MuiCardContent-root makeStyles-cardContent-9 undefined makeStyles-center-7"
+    className="MuiCardContent-root makeStyles-cardContent-9 makeStyles-center-7"
   >
     Card content
   </div>

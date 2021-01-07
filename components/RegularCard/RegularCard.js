@@ -36,8 +36,9 @@ const RegularCard = ({
               classes.cardTitle +
               " " +
               classes[titleAlign] +
-              " " +
-              customCardTitleClasses,
+              cx({
+                [" " + customCardTitleClasses]: customCardTitleClasses !== undefined
+              }),
             subheader: classes.cardSubtitle + " " + classes[subtitleAlign]
           }}
           title={cardTitle}
@@ -45,7 +46,12 @@ const RegularCard = ({
         />
       ) : null}
       <CardContent
-        className={classes.cardContent + " " + customCardContentClasses + " " + classes[contentAlign]}
+        className={
+          classes.cardContent + " " + classes[contentAlign] +
+          cx({
+            [" " + customCardContentClasses]: customCardContentClasses !== undefined
+          })
+        }
       >
         {content}
       </CardContent>
@@ -63,9 +69,9 @@ RegularCard.propTypes = {
    * Override or extend the styles applied to the title of the card
    */
   customCardTitleClasses: PropTypes.string,
-   /**
-   * Override or extend the styles applied to the content of the card
-   */
+  /**
+  * Override or extend the styles applied to the content of the card
+  */
   customCardContentClasses: PropTypes.string,
   /**
    * If set to true, the background will be transparent
