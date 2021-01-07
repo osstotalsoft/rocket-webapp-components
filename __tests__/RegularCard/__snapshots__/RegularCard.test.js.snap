@@ -23,7 +23,7 @@ exports[`RegularCard Snapshot 1`] = `
     </div>
   </div>
   <div
-    className="MuiCardContent-root makeStyles-cardContent-9 makeStyles-center-7"
+    className="MuiCardContent-root makeStyles-cardContent-9 undefined makeStyles-center-7"
   >
     Card content
   </div>
