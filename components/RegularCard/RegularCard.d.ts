@@ -15,6 +15,11 @@ export interface Props {
     customCardTitleClasses?: string;
 
     /**
+    * Override or extend the styles applied to the content of the card
+    */
+    customCardContentClasses?: string
+
+    /**
      * If set to true, the background will be transparent
      */
     plainCard?: boolean;
