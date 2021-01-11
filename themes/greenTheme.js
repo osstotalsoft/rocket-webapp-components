@@ -18,7 +18,7 @@ const palette = {
     white: "rgb(255, 255, 255)",
     darkGrey: "rgb(169,169,169)",
     highlight: "rgb(36, 76, 140)",
-    primary: "#005604"
+    primary: "#343434"
   },
   sideMenu: {
     bkColor: "#7eb58b",
@@ -148,9 +148,9 @@ export const theme = {
     },
     tableHeader: {
       textAlign: "left",
-      backgroundColor: "#dff5e1",
+      backgroundColor: "#eff7f0",
       padding: "10px",
-      color: "005604",
+      color: "#005604",
       borderBottom: "1px solid #ddd"
     },
     tableContent: {
