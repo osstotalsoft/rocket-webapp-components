@@ -1254,6 +1254,34 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "totalsoft_oss.react-mui/template-editor@0.0.2": {
+        "files": [
+            {
+                "relativePath": "components/TemplateEditor/TemplateEditor.js",
+                "test": false,
+                "name": "TemplateEditor.js"
+            },
+            {
+                "relativePath": "components/TemplateEditor/TemplateEditor.ts",
+                "test": false,
+                "name": "TemplateEditor.ts"
+            },
+            {
+                "relativePath": "components/TemplateEditor/index.d.ts",
+                "test": false,
+                "name": "index.d.ts"
+            },
+            {
+                "relativePath": "components/TemplateEditor/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "components/TemplateEditor/index.js",
+        "trackDir": "components/TemplateEditor",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "totalsoft_oss.react-mui/themes/blue-theme@2.6.3": {
         "files": [
             {
