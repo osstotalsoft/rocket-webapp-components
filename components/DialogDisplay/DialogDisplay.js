@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { Dialog, DialogTitle, makeStyles, Typography, IconButton, DialogContent, DialogActions } from "@material-ui/core";
+import { Dialog, DialogTitle, makeStyles, IconButton, DialogContent, DialogActions } from "@material-ui/core";
 import CloseIcon from '@material-ui/icons/Close';
 import dialogDisplayStyle from './dialogDisplayStyle';
 
@@ -19,7 +19,7 @@ const DialogDisplay = props => {
             {...rest}
         >
             <DialogTitle id={`${id}-dialog-display-title`}>
-                <Typography className={classes.modalTitle}>{title}</Typography>
+                {title}
                 <IconButton size="small" className={classes.modalCloseButton} aria-label="Close" onClick={onClose}>
                     <CloseIcon fontSize="small" />
                 </IconButton>
@@ -42,8 +42,10 @@ DialogDisplay.propTypes = {
     * If true, the dialog is open.
     */
     open: PropTypes.bool,
-
-    title: PropTypes.string,
+    /**
+    * The title of dialog.
+    */
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /**
     *Callback fired when the component requests to be closed.
     * Signature:

@@ -13,7 +13,7 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
     /**
     * The title of dialog.
     */
-    title?: string
+    title?: string | React.ReactNode
     /**
     * @default "primary"
     * The color of actions.
