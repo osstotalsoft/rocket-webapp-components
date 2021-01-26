@@ -75,7 +75,7 @@ CustomDialog.propTypes = {
     /**
     * The title of dialog.
     */
-    title: PropTypes.string,
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /**
     * The color of actions.
     */
