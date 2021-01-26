@@ -2,7 +2,7 @@ import React from 'react';
 import DialogDisplay from '../../components/DialogDisplay/DialogDisplay';
 import { mount } from 'enzyme';
 import EnzymeToJson from 'enzyme-to-json';
-import { Dialog, Typography, IconButton } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 
 describe('DialogDisplay', () => {
     it('snapshot', () => {
@@ -15,19 +15,6 @@ describe('DialogDisplay', () => {
         />);
 
         expect(EnzymeToJson(component)).toMatchSnapshot();
-    });
-
-    it('Typography has modalTitle class', () => {
-        const onCloseMock = jest.fn();
-
-        const wrapper = mount(<DialogDisplay
-            id="id"
-            open
-            onClose={onCloseMock}
-            content={< div > Content</div >}
-        />);
-
-        expect(wrapper.find(Dialog).find(Typography).at(1).props().className).toContain('modalTitle')
     });
 
     it('IconButton has modalCloseButton class', () => {
