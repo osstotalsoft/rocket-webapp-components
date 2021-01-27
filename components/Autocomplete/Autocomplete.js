@@ -286,7 +286,6 @@ Autocomplete.defaultProps = {
   simpleValue: false,
   valueKey: "id",
   labelKey: "name",
-  label: " ",
   error: false,
   value: null,
   creatable: false,
