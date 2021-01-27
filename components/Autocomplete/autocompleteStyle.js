@@ -65,16 +65,8 @@ const autocompleteStyle = theme => {
     paper: {
       position: 'absolute',
       zIndex: 1,
-      marginTop: theme.spacing(),
       left: 0,
       right: 0,
-    },
-    noLabelPaper: {
-      position: 'absolute',
-      zIndex: 1,
-      marginTop: 0,
-      left: 0,
-      right: 0
     },
     divider: {
       height: theme.spacing(2),
