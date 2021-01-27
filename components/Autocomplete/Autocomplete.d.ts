@@ -54,7 +54,7 @@ export interface AutocompleteProps {
   */
   simpleValue?: boolean
   /**
-  * Label to be displayed in the heading component.
+  * Label to be displayed in the heading component. 
   */
   label?: string
   /**
