@@ -163,7 +163,7 @@ function MultiValue(props) {
 
 function Menu({ selectProps, innerProps, children }) {
   return (
-    <Paper square className={selectProps.classes.paper} {...innerProps}>
+    <Paper square className={selectProps.textFieldProps.label ? selectProps.classes.paper : selectProps.classes.noLabelPaper} {...innerProps}>
       {children}
     </Paper>
   );
