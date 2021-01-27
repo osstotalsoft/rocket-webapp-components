@@ -54,7 +54,8 @@ export interface AutocompleteProps {
   */
   simpleValue?: boolean
   /**
-  * Label to be displayed in the heading component.
+  * Label to be displayed in the heading component. If not explicitly set to null, it will add a marginTop of 16px. 
+  * @default " "
   */
   label?: string
   /**
