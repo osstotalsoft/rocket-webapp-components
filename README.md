@@ -62,7 +62,7 @@ bit import totalsoft_oss.react-mui/add-button
 
 The command is also available on the component page.
 
-![BitImport](/assets/img/bit_1.png)
+![BitImport](/assets/img/bit_1.PNG)
 
 You get a message that the @react/core and @react/common are peer dependencies. This is ok, as your project already contains them.
 
