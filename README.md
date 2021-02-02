@@ -52,14 +52,18 @@ Supposing you have several changes that need to be published on Bit. But how are
 ```bash  
 bit init
 ```  
+
 > ⚠ Make sure you have Bit installed!
 
 After the confirmation message that the workspace was initialized, run the following command:
 ```bash
 bit import totalsoft_oss.react-mui/add-button
 ```
+
 The command is also available on the component page.
-![BitWorkflow](/assets/img/bit_1.png)
+
+![BitImport](/assets/img/bit_1.png)
+
 You get a message that the @react/core and @react/common are peer dependencies. This is ok, as your project already contains them.
 
 Here is what happened:
