@@ -45,7 +45,47 @@ Please, take a look at this video for further understanding of these steps: [Wor
 
 ## Versioning
 Components versioning is done using GitVersion (https://gitversion.net/docs/). Our approach is by using commit messages like so: adding ```+semver: breaking``` or ```+semver: major``` will cause the major version to be increased, ```+semver: feature``` or ```+semver: minor``` will bump minor and ```+semver: patch``` or ```+semver: fix``` will bump the patch.
-  
+
+## Test a specific component on your project before publishing it on Bit
+Supposing you have several changes that need to be published on Bit. But how are you going to know that you are not breaking something else once you publish your changes or maybe you just want to see the behavior of your component under those specific changes you want to do.  For this, you can leverage the CLI of Bit. Bit have an import command which helps you to import the component on your project(see the image below). To get better understanding I will make an example with AddButton component in the next steps:
+ In order to import the component, initiate your project workspace as a Bit workspace: 
+```bash  
+bit init
+```  
+
+> ⚠ Make sure you have Bit installed!
+
+After the confirmation message that the workspace was initialized, run the following command:
+```bash
+bit import totalsoft_oss.react-mui/add-button
+```
+
+The command is also available on the component page.
+
+![BitImport](/assets/img/bit_1.png)
+
+You get a message that the @react/core and @react/common are peer dependencies. This is ok, as your project already contains them.
+
+Here is what happened:
+
+A new top-level `components` folder is created that includes the code of the component, with its compiled code and node_modules.
+The .bitmap file was modified to include the reference to the component
+The package.json file is modified to point to the files rather than the remote package. Your package.json now displays:
+```bash
+{
+  "@bit/totalsoft_oss.react-mui.add-button": "file:./components/add-button"
+}
+```
+ Start your application to make sure it still works. As you'll see, no changes are required: Bit takes care of everything.
+ Let's modify the AddButton component. Change the default value of the size to `small`.
+ Run the React application:
+ The app is not yet changed. That's because the Bit components are compiled by the bit compiler. In a separate terminal, run the `bit build` command to compile the changes. You should see that the compiler is installed:
+ ```bash
+ successfully installed the bit.envs/compilers/react@0.1.3 compiler
+```
+That will be followed by a successful compilation of all of the files.
+Run the app again and you'll now see the changed button.
+
  ##  Bit in a nutshell
 ![BitWorkflow](/assets/img/BitWorkflow.png)
 
