@@ -77,9 +77,13 @@ The package.json file is modified to point to the files rather than the remote p
 }
 ```
  Start your application to make sure it still works. As you'll see, no changes are required: Bit takes care of everything.
+ 
  Let's modify the AddButton component. Change the default value of the size to `small`.
+ 
  Run the React application:
+ 
  The app is not yet changed. That's because the Bit components are compiled by the bit compiler. In a separate terminal, run the `bit build` command to compile the changes. You should see that the compiler is installed:
+ 
  ```bash
  successfully installed the bit.envs/compilers/react@0.1.3 compiler
 ```
