@@ -48,6 +48,7 @@ Components versioning is done using GitVersion (https://gitversion.net/docs/). O
 
 ## Test a specific component on your project before publishing it on Bit
 Supposing you have several changes that need to be published on Bit. But how are you going to know that you are not breaking something else once you publish your changes or maybe you just want to see the behavior of your component under those specific changes you want to do.  For this, you can leverage the CLI of Bit. Bit have an import command which helps you to import the component on your project(see the image below). To get better understanding I will make an example with AddButton component in the next steps:
+
  In order to import the component, initiate your project workspace as a Bit workspace: 
 ```bash  
 bit init
