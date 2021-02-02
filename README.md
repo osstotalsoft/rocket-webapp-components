@@ -45,6 +45,32 @@ Please, take a look at this video for further understanding of these steps: [Wor
 
 ## Versioning
 Components versioning is done using GitVersion (https://gitversion.net/docs/). Our approach is by using commit messages like so: adding ```+semver: breaking``` or ```+semver: major``` will cause the major version to be increased, ```+semver: feature``` or ```+semver: minor``` will bump minor and ```+semver: patch``` or ```+semver: fix``` will bump the patch.
+
+## Test a specific component on your project before publishing it on Bit
+Supposing you have several changes that need to be published on Bit. But how are you going to know that you are not breaking something else once you publish your changes or maybe you just want to see the behavior of your component under those specific changes you want to do.  For this, you can leverage the CLI of Bit. Bit have an import command which helps you to import the component on your project(see the image below). To get better understanding I will make an example with AddButton component in the next steps:
+ In order to import the component, initiate your project workspace as a Bit workspace: 
+```bash  
+bit init
+```  
+(Make sure you have bit installed - https://docs.bit.dev/docs/quick-start)
+ After the confirmation message that the workspace was initialized, run the following command:
+```bash
+bit import totalsoft_oss.react-mui/add-button
+```
+The command is also available on the component page.
+![BitWorkflow](/assets/img/bit_1.png)
+You get a message that the @react/core and @react/common are peer dependencies. This is ok, as your project already contains them.
+
+Here is what happened:
+
+A new top-level components folder is created that includes the code of the component, with its compiled code and node_modules (in this case the node_modules are empty, as all of your node_modules are peer dependencies and are taken from the root project).
+The .bitmap file was modified to include the reference to the component
+The package.json file is modified to point to the files rather than the remote package. Your package.json now displays:
+```bash
+{
+  "@bit/<username>.react-tutorial.product-list": "file:./components/product-list"
+}
+```
   
  ##  Bit in a nutshell
 ![BitWorkflow](/assets/img/BitWorkflow.png)
