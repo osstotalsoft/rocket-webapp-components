@@ -52,8 +52,9 @@ Supposing you have several changes that need to be published on Bit. But how are
 ```bash  
 bit init
 ```  
-(Make sure you have bit installed - https://docs.bit.dev/docs/quick-start)
- After the confirmation message that the workspace was initialized, run the following command:
+> ⚠ Make sure you have Bit installed!
+
+After the confirmation message that the workspace was initialized, run the following command:
 ```bash
 bit import totalsoft_oss.react-mui/add-button
 ```
@@ -63,15 +64,24 @@ You get a message that the @react/core and @react/common are peer dependencies. 
 
 Here is what happened:
 
-A new top-level components folder is created that includes the code of the component, with its compiled code and node_modules (in this case the node_modules are empty, as all of your node_modules are peer dependencies and are taken from the root project).
+A new top-level `components` folder is created that includes the code of the component, with its compiled code and node_modules.
 The .bitmap file was modified to include the reference to the component
 The package.json file is modified to point to the files rather than the remote package. Your package.json now displays:
 ```bash
 {
-  "@bit/<username>.react-tutorial.product-list": "file:./components/product-list"
+  "@bit/totalsoft_oss.react-mui.add-button": "file:./components/add-button"
 }
 ```
-  
+ Start your application to make sure it still works. As you'll see, no changes are required: Bit takes care of everything.
+ Let's modify the AddButton component. Change the default value of the size to `small`.
+ Run the React application:
+ The app is not yet changed. That's because the Bit components are compiled by the bit compiler. In a separate terminal, run the `bit build` command to compile the changes. You should see that the compiler is installed:
+ ```bash
+ successfully installed the bit.envs/compilers/react@0.1.3 compiler
+```
+That will be followed by a successful compilation of all of the files.
+Run the app again and you'll now see the changed button.
+
  ##  Bit in a nutshell
 ![BitWorkflow](/assets/img/BitWorkflow.png)
 
