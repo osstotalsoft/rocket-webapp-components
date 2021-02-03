@@ -2,10 +2,12 @@ import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import PropTypes from 'prop-types'
 
-const TemplateEditor = ({ initialValue, apiKey, height, menubar, plugins, toolbar, onEditorChange, ...other }) =>
+const TemplateEditor = ({ initialValue, apiKey, value, disabled, height, menubar, plugins, toolbar, onEditorChange, ...other }) => (
   <Editor
     initialValue={initialValue}
     apiKey={apiKey}
+    value={value}
+    disabled={disabled}
     init={{
       height: height,
       menubar: menubar,
@@ -15,6 +17,7 @@ const TemplateEditor = ({ initialValue, apiKey, height, menubar, plugins, toolba
     }}
     onEditorChange={onEditorChange}
   />
+)
 
 TemplateEditor.defaultProps = {
   height: 500,
@@ -28,11 +31,19 @@ TemplateEditor.defaultProps = {
 
 TemplateEditor.propTypes = {
   /**
+   *The disabled property can dynamically switch the editor between a “disabled” (read-only) mode (true) and the standard editable mode (false)
+   */
+  disabled: PropTypes.bool,
+  /**
+   * This property allows the editor to be used as a controlled component by setting the value property and using the onEditorChange event
+   */
+  value: PropTypes.string.isRequired,
+  /**
    * Initial content of the editor when the editor is initialized.
    */
   initialValue: PropTypes.string,
   /**
-   * Your API Key is a unique token that links your TinyMCE instances to your account. It grants you access to all of our Premium Plugins
+   * Your API Key is a unique token that links your TinyMCE instances to your account. It grants you access to all of the Premium Plugins
    */
   apiKey: PropTypes.string,
   /**
