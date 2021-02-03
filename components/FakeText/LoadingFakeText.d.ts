@@ -16,6 +16,6 @@ export interface LoadingFakeTextProps extends PaperProps {
 *
 * - https://bit.dev/totalsoft_oss/react-mui/fake-text
 *
- Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/FakeText/LoadingFakeText.js
+ Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/FakeText/LoadingFakeText.js
 */
 export default function LoadingFakeText(props: LoadingFakeTextProps): JSX.Element;

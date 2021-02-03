@@ -16,7 +16,7 @@ export interface PasswordFieldProps extends InputAdornmentProps {
     * 
     * - https://bit.dev/totalsoft_oss/react-mui/password-field
     * 
-    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/PasswordField/PasswordField.js
+    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/PasswordField/PasswordField.js
     */
 
 }

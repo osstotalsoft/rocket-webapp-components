@@ -49,7 +49,7 @@ export interface IconButtonProps extends Omit<BaseProps, 'color'> {
     * 
     * - https://bit.dev/totalsoft_oss/react-mui/icon-button
     * 
-    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/IconButton/IconButton.js
+    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/IconButton/IconButton.js
     */
 }
 

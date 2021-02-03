@@ -66,7 +66,7 @@ export interface Props {
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/icon-collapse-card
      * 
-     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/IconCollapseCard/IconCollapseCard.js
+     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/IconCollapseCard/IconCollapseCard.js
      */
 }
 

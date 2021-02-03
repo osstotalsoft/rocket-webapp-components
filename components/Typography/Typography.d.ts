@@ -52,7 +52,7 @@ export interface TypographyProps extends BaseProps {
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/typography
      * 
-     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/Typography/Typography.js
+     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/Typography/Typography.js
      */
 
 }

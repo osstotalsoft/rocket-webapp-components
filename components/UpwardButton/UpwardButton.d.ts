@@ -57,7 +57,7 @@ export interface UpwardButtonProps {
     * 
     * - https://bit.dev/totalsoft_oss/react-mui/upward-button
     * 
-    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/UpwardButton/UpwardButton.js
+    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/UpwardButton/UpwardButton.js
     */
 
 }

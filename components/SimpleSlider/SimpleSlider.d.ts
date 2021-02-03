@@ -77,7 +77,7 @@ export interface Props {
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/simple-slider
      * 
-     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/SimpleSlider/SimpleSlider.js
+     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/SimpleSlider/SimpleSlider.js
      */
 
 }

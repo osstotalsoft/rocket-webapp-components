@@ -58,6 +58,6 @@ export type CustomTextFieldProps = Props | StandardTextFieldProps | FilledTextFi
  *
  * - https://bit.dev/totalsoft_oss/react-mui/custom-text-field
  *
- *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/CustomTextField/CustomTextField.js
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/CustomTextField/CustomTextField.js
  */
 export default function CustomTextField(props: CustomTextFieldProps): JSX.Element;

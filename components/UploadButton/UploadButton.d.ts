@@ -68,7 +68,7 @@ export interface UploadButtonProps {
     * 
     * - https://bit.dev/totalsoft_oss/react-mui/upload-button
     * 
-    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/UploadButton/UploadButton.js
+    *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/UploadButton/UploadButton.js
     */
 
 }

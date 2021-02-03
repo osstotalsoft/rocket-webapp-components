@@ -54,6 +54,6 @@ export interface ChartFactoryProps {
  *
  * - https://bit.dev/totalsoft_oss/react-mui/charts
  *
- *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/Charts/ChartFactory.js
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/Charts/ChartFactory.js
  */
 export default function Charts(props: ChartFactoryProps): JSX.Element;

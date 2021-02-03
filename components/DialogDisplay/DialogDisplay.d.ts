@@ -37,6 +37,6 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
  *
  * - https://bit.dev/totalsoft_oss/react-mui/dialog-display
  *
- *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/DialogDisplay/DialogDisplay.js
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/DialogDisplay/DialogDisplay.js
  */
 export default function DialogDisplay(props: DialogDisplayProps): JSX.Element;

@@ -52,6 +52,6 @@ export interface CancelButtonProps extends Omit<ButtonProps, 'color'> {
  *
  * - https://bit.dev/totalsoft_oss/react-mui/cancel-button
  *
- *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/CancelButton/CancelButton.js
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/CancelButton/CancelButton.js
  */
 export default function CancelButton(props: CancelButtonProps): JSX.Element;

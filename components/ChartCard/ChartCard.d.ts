@@ -61,7 +61,7 @@ export interface ChartCardProps {
  *
  * - https://bit.dev/totalsoft_oss/react-mui/chart-card
  *
- *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/develop/components/ChartCard/ChartCard.js
+ *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/ChartCard/ChartCard.js
  * 
  * Warning: 
  * This component will be provided only through ChartFactory API. This approach is not compulsory
