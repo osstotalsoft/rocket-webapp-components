@@ -23,9 +23,11 @@ export interface Props {
     /**
     * The title to be displayed. This property can be a string or a component
     */
-    title?: React.ReactNode;
+    title?: string | React.ReactNode;
     /**
     * The content of the card. This property can be a string or a component
+    * @Warning 
+    * if you want to add a component in the title make sure its onClick handler calls event.stopPropagation() to prevent events firing for overlapping components 
     */
     content?: React.ReactNode;
     /**
@@ -66,7 +68,7 @@ export interface Props {
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/icon-collapse-card
      * 
-     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/IconCollapseCard/IconCollapseCard.js
+     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/IconCollapseCard/IconCollapseCard.js 
      */
 }
 
