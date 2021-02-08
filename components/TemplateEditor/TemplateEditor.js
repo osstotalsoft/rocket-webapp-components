@@ -2,17 +2,32 @@ import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import PropTypes from 'prop-types'
 
-const TemplateEditor = ({ initialValue, apiKey, value, disabled, height, menubar, plugins, toolbar, onEditorChange, ...other }) => (
+const TemplateEditor = ({
+  initialValue,
+  apiKey,
+  value,
+  disabled,
+  height,
+  menubar,
+  plugins,
+  toolbar,
+  branding,
+  elementpath,
+  onEditorChange,
+  ...other
+}) => (
   <Editor
     initialValue={initialValue}
     apiKey={apiKey}
     value={value}
     disabled={disabled}
     init={{
-      height: height,
-      menubar: menubar,
-      plugins: plugins,
-      toolbar: toolbar,
+      height,
+      menubar,
+      plugins,
+      toolbar,
+      branding,
+      elementpath,
       ...other
     }}
     onEditorChange={onEditorChange}
@@ -22,11 +37,13 @@ const TemplateEditor = ({ initialValue, apiKey, value, disabled, height, menubar
 TemplateEditor.defaultProps = {
   height: 500,
   menubar: false,
-  plugins: ['table', 'hr', 'emoticons'],
+  branding: false,
+  elementpath: false,
+  plugins: ['table', 'hr', 'emoticons', 'wordcount', 'advlist', 'lists'],
   toolbar:
     'undo redo | formatselect | table| hr | bold italic backcolor |\
    alignleft aligncenter alignright alignjustify | \
-   bullist numlist outdent indent | removeformat | emoticons |help'
+   bullist numlist | outdent indent | removeformat | emoticons '
 }
 
 TemplateEditor.propTypes = {
@@ -68,10 +85,15 @@ TemplateEditor.propTypes = {
    * This option allows you to specify the buttons and the order that they will appear on toolbar.
    * They will be specified in a string separated by white spaces
    */
-  toolbar: PropTypes.string
+  toolbar: PropTypes.string,
   /**
-   *
+   * Use the branding option to enable or disable the “Powered by Tiny” link displayed in the status bar
    */
+  branding: PropTypes.bool,
+  /**
+   * This option allows you to show or not the selected element and its html path 
+   */
+  elementpath: PropTypes.bool
 }
 
 export default TemplateEditor
