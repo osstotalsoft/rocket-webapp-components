@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import PropTypes from 'prop-types'
@@ -15,35 +16,69 @@ const TemplateEditor = ({
   elementpath,
   onEditorChange,
   ...other
-}) => (
-  <Editor
-    initialValue={initialValue}
-    apiKey={apiKey}
-    value={value}
-    disabled={disabled}
-    init={{
-      height,
-      menubar,
-      plugins,
-      toolbar,
-      branding,
-      elementpath,
-      ...other
-    }}
-    onEditorChange={onEditorChange}
-  />
-)
+}) => {
+  const file_picker_callback = cb => {
+    var input = document.createElement('input')
+    input.setAttribute('type', 'file')
+    input.setAttribute('accept', 'image/*')
+
+    input.onchange = function () {
+      var file = this.files[0]
+
+      var reader = new FileReader()
+      reader.onload = function () {
+        //registering the blob in TinyMCEs image blob registry
+        //this part hopefully won't be necessary after release of v4.0.0
+        var id = 'blobid' + new Date().getTime()
+
+        var blobCache = window.tinymce.activeEditor.editorUpload.blobCache
+        var base64 = reader.result.split(',')[1]
+        var blobInfo = blobCache.create(id, file, base64)
+        blobCache.add(blobInfo)
+
+        //calling the callback and populate the Title field with the file name
+        cb(blobInfo.blobUri(), { title: file.name })
+      }
+      reader.readAsDataURL(file)
+    }
+
+    input.click()
+  }
+
+  return (
+    <>
+      <Editor
+        initialValue={initialValue}
+        apiKey={apiKey}
+        value={value}
+        disabled={disabled}
+        init={{
+          height,
+          menubar,
+          plugins,
+          toolbar,
+          branding,
+          elementpath,
+          selector: 'editor',
+          file_picker_callback,
+          ...other
+        }}
+        onEditorChange={onEditorChange}
+      />
+    </>
+  )
+}
 
 TemplateEditor.defaultProps = {
   height: 500,
   menubar: false,
   branding: false,
   elementpath: false,
-  plugins: ['table', 'hr', 'emoticons', 'wordcount', 'advlist', 'lists'],
+  plugins: ['table', 'hr', 'emoticons', 'wordcount', 'advlist', 'lists', 'image'],
   toolbar:
     'undo redo | formatselect | table| hr | bold italic backcolor |\
    alignleft aligncenter alignright alignjustify | \
-   bullist numlist | outdent indent | removeformat | emoticons '
+   bullist numlist | outdent indent | removeformat | image | emoticons '
 }
 
 TemplateEditor.propTypes = {
@@ -91,7 +126,7 @@ TemplateEditor.propTypes = {
    */
   branding: PropTypes.bool,
   /**
-   * This option allows you to show or not the selected element and its html path 
+   * This option allows you to show or not the selected element and its html path
    */
   elementpath: PropTypes.bool
 }
