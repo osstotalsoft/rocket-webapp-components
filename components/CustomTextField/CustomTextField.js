@@ -24,9 +24,7 @@ function NumberFormatCustom(props) {
   return (
     <NumberFormat
       {...other}
-      ref={ref => {
-        inputRef(ref ? ref.inputElement : null);
-      }}
+      getInputRef={inputRef}
       style={{ textAlign: "right" }}
       onValueChange={handleValueChange}
       isAllowed={isAllowed}
