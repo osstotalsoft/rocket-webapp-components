@@ -186,7 +186,7 @@ export const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
   const result = isMultiSelection
     ? innerJoin((o, v) => o[valueKey] === v, flattenOptions, value)
     : find(propEq(valueKey, value), flattenOptions)
-  return result;
+  return result || null;
 }
 
 function DropdownIndicator() {
