@@ -786,7 +786,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                                   <span
                                                     className="MuiIconButton-label"
                                                   >
-                                                    <ForwardRef
+                                                    <ForwardRef(CloseIcon)
                                                       fontSize="small"
                                                     >
                                                       <WithStyles(ForwardRef(SvgIcon))
@@ -820,7 +820,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                                           </svg>
                                                         </ForwardRef(SvgIcon)>
                                                       </WithStyles(ForwardRef(SvgIcon))>
-                                                    </ForwardRef>
+                                                    </ForwardRef(CloseIcon)>
                                                   </span>
                                                   <WithStyles(memo)
                                                     center={true}
