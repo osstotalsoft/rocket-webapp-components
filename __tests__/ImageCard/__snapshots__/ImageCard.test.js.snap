@@ -14,6 +14,8 @@ exports[`Render ImageCard snapshot 1`] = `
         Object {
           "$$typeof": Symbol(react.memo),
           "compare": null,
+          "displayName": "AssignmentLateIcon",
+          "muiName": "SvgIcon",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
