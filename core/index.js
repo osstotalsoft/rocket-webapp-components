@@ -81,4 +81,4 @@ export { default as FileUploadButton } from '@bit/totalsoft_oss.react-mui.file-u
 
 
 //SideMenu
- export { default as SideMenu } from '@bit/totalsoft_oss.react-mui.side-menu'
+export { default as SideMenu } from '@bit/totalsoft_oss.react-mui.side-menu'
