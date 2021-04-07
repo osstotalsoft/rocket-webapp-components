@@ -34,7 +34,6 @@
         "origin": "AUTHORED",
         "exported": false
     },
-    "totalsoft_oss.react-mui/accordion@2.6.13": {
         "files": [
             {
                 "relativePath": "components/Accordion/Accordion.d.ts",
@@ -67,7 +66,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/add-button@2.6.13": {
+    "totalsoft_oss.react-mui/add-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/AddButton/AddButton.d.ts",
@@ -95,7 +94,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/autocomplete@2.6.13": {
+    "totalsoft_oss.react-mui/autocomplete@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Autocomplete/Autocomplete.d.ts",
@@ -128,7 +127,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/back-to-button@2.6.13": {
+    "totalsoft_oss.react-mui/back-to-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/BackToButton/BackToButton.d.ts",
@@ -156,7 +155,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/button@2.6.13": {
+    "totalsoft_oss.react-mui/button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Button/Button.d.ts",
@@ -189,7 +188,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/cancel-button@2.6.13": {
+    "totalsoft_oss.react-mui/cancel-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/CancelButton/CancelButton.d.ts",
@@ -217,7 +216,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/card-title@2.6.13": {
+    "totalsoft_oss.react-mui/card-title@2.6.16": {
         "files": [
             {
                 "relativePath": "components/CardTitle/CardTitle.d.ts",
@@ -250,7 +249,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/card@2.6.13": {
+    "totalsoft_oss.react-mui/card@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Card/Card.d.ts",
@@ -283,7 +282,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/chart-card@2.6.13": {
+    "totalsoft_oss.react-mui/chart-card@2.6.16": {
         "files": [
             {
                 "relativePath": "components/ChartCard/ChartCard.d.ts",
@@ -316,7 +315,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/charts@2.6.13": {
+    "totalsoft_oss.react-mui/charts@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Charts/ChartFactory.d.ts",
@@ -359,7 +358,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/check-internet-connection@2.6.13": {
+    "totalsoft_oss.react-mui/check-internet-connection@2.6.16": {
         "files": [
             {
                 "relativePath": "components/CheckInternetConnection/CheckInternetConnection.js",
@@ -377,7 +376,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-dialog@2.6.13": {
+    "totalsoft_oss.react-mui/custom-dialog@2.6.16": {
         "files": [
             {
                 "relativePath": "components/CustomDialog/CustomDialog.d.ts",
@@ -410,7 +409,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-linear-progress@2.6.13": {
+    "totalsoft_oss.react-mui/custom-linear-progress@2.6.16": {
         "files": [
             {
                 "relativePath": "components/CustomLinearProgress/CustomLinearProgress.d.ts",
@@ -443,7 +442,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/custom-text-field@2.6.13": {
+    "totalsoft_oss.react-mui/custom-text-field@2.6.16": {
         "files": [
             {
                 "relativePath": "components/CustomTextField/CustomTextField.d.ts",
@@ -476,7 +475,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/date-time@2.6.13": {
+    "totalsoft_oss.react-mui/date-time@2.6.16": {
         "files": [
             {
                 "relativePath": "components/DateTime/DateTime.d.ts",
@@ -509,7 +508,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/default-logo@2.6.13": {
+    "totalsoft_oss.react-mui/default-logo@2.6.16": {
         "files": [
             {
                 "relativePath": "assets/img/defaultLogo.png",
@@ -521,7 +520,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/delete-button@2.6.13": {
+    "totalsoft_oss.react-mui/delete-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/DeleteButton/DeleteButton.d.ts",
@@ -549,7 +548,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/dialog-display@2.6.13": {
+    "totalsoft_oss.react-mui/dialog-display@2.6.16": {
         "files": [
             {
                 "relativePath": "components/DialogDisplay/DialogDisplay.d.ts",
@@ -582,7 +581,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/download-button@2.6.13": {
+    "totalsoft_oss.react-mui/download-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/DownloadButton/DownloadButton.d.ts",
@@ -610,7 +609,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/downward-button@2.6.13": {
+    "totalsoft_oss.react-mui/downward-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/DownwardButton/DownwardButton.js",
@@ -638,7 +637,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/dynamic-input@2.6.13": {
+    "totalsoft_oss.react-mui/dynamic-input@2.6.16": {
         "files": [
             {
                 "relativePath": "components/DynamicInput/DynamicInput.d.ts",
@@ -666,7 +665,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/edit-button@2.6.13": {
+    "totalsoft_oss.react-mui/edit-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/EditButton/EditButton.d.ts",
@@ -694,7 +693,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/expanding-text@2.6.13": {
+    "totalsoft_oss.react-mui/expanding-text@2.6.16": {
         "files": [
             {
                 "relativePath": "components/ExpandingText/ExpandingText.d.ts",
@@ -722,7 +721,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/fake-text@2.6.13": {
+    "totalsoft_oss.react-mui/fake-text@2.6.16": {
         "files": [
             {
                 "relativePath": "components/FakeText/LoadingFakeText.d.ts",
@@ -750,7 +749,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/file-upload-button@2.6.13": {
+    "totalsoft_oss.react-mui/file-upload-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/FileUploadButton/FileUploadButton.d.ts",
@@ -778,7 +777,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/forbidden@2.6.13": {
+    "totalsoft_oss.react-mui/forbidden@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Forbidden/Forbidden.d.ts",
@@ -811,7 +810,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/icon-button@2.6.13": {
+    "totalsoft_oss.react-mui/icon-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/IconButton/IconButton.d.ts",
@@ -844,7 +843,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/icon-card@2.6.13": {
+    "totalsoft_oss.react-mui/icon-card@2.6.16": {
         "files": [
             {
                 "relativePath": "components/IconCard/IconCard.d.ts",
@@ -877,7 +876,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/icon-collapse-card@2.6.13": {
+    "totalsoft_oss.react-mui/icon-collapse-card@2.6.16": {
         "files": [
             {
                 "relativePath": "components/IconCollapseCard/IconCollapseCard.d.ts",
@@ -910,7 +909,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/image-card@2.6.13": {
+    "totalsoft_oss.react-mui/image-card@2.6.16": {
         "files": [
             {
                 "relativePath": "components/ImageCard/ImageCard.d.ts",
@@ -943,7 +942,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/kit/core@2.6.13": {
+    "totalsoft_oss.react-mui/kit/core@2.6.16": {
         "files": [
             {
                 "relativePath": "core/index.js",
@@ -961,7 +960,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/nav-pills@2.6.13": {
+    "totalsoft_oss.react-mui/nav-pills@2.6.16": {
         "files": [
             {
                 "relativePath": "components/NavPills/NavPills.d.ts",
@@ -994,7 +993,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/not-found@2.6.13": {
+    "totalsoft_oss.react-mui/not-found@2.6.16": {
         "files": [
             {
                 "relativePath": "components/NotFound/NotFound.d.ts",
@@ -1022,7 +1021,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/pagination@2.6.13": {
+    "totalsoft_oss.react-mui/pagination@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Pagination/Pagination.d.ts",
@@ -1060,7 +1059,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/password-field@2.6.13": {
+    "totalsoft_oss.react-mui/password-field@2.6.16": {
         "files": [
             {
                 "relativePath": "components/PasswordField/PasswordField.d.ts",
@@ -1088,7 +1087,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/prints/blue@2.6.13": {
+    "totalsoft_oss.react-mui/prints/blue@2.6.16": {
         "files": [
             {
                 "relativePath": "assets/prints/Blue.png",
@@ -1100,7 +1099,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/prints/default@2.6.13": {
+    "totalsoft_oss.react-mui/prints/default@2.6.16": {
         "files": [
             {
                 "relativePath": "assets/prints/Default.png",
@@ -1112,7 +1111,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/prints/green@2.6.13": {
+    "totalsoft_oss.react-mui/prints/green@2.6.16": {
         "files": [
             {
                 "relativePath": "assets/prints/Green.png",
@@ -1124,7 +1123,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/prints/orange@2.6.13": {
+    "totalsoft_oss.react-mui/prints/orange@2.6.16": {
         "files": [
             {
                 "relativePath": "assets/prints/Orange.png",
@@ -1136,7 +1135,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/prints/red@2.6.13": {
+    "totalsoft_oss.react-mui/prints/red@2.6.16": {
         "files": [
             {
                 "relativePath": "assets/prints/Red.png",
@@ -1148,7 +1147,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/regular-card@2.6.13": {
+    "totalsoft_oss.react-mui/regular-card@2.6.16": {
         "files": [
             {
                 "relativePath": "components/RegularCard/RegularCard.d.ts",
@@ -1181,7 +1180,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/save-button@2.6.13": {
+    "totalsoft_oss.react-mui/save-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/SaveButton/SaveButton.d.ts",
@@ -1209,7 +1208,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/simple-slider@2.6.13": {
+    "totalsoft_oss.react-mui/simple-slider@2.6.16": {
         "files": [
             {
                 "relativePath": "components/SimpleSlider/SimpleSlider.d.ts",
@@ -1242,7 +1241,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/stats-card@2.6.13": {
+    "totalsoft_oss.react-mui/stats-card@2.6.16": {
         "files": [
             {
                 "relativePath": "components/StatsCard/StatsCard.d.ts",
@@ -1275,7 +1274,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/styles@2.6.13": {
+    "totalsoft_oss.react-mui/styles@2.6.16": {
         "files": [
             {
                 "relativePath": "assets/jss/styles.js",
@@ -1287,7 +1286,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/template-editor@2.6.13": {
+    "totalsoft_oss.react-mui/template-editor@2.6.16": {
         "files": [
             {
                 "relativePath": "components/TemplateEditor/TemplateEditor.js",
@@ -1315,7 +1314,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/blue-theme@2.6.13": {
+    "totalsoft_oss.react-mui/themes/blue-theme@2.6.16": {
         "files": [
             {
                 "relativePath": "themes/blueTheme.js",
@@ -1327,7 +1326,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/default-theme@2.6.13": {
+    "totalsoft_oss.react-mui/themes/default-theme@2.6.16": {
         "files": [
             {
                 "relativePath": "themes/defaultTheme.js",
@@ -1339,7 +1338,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/green-theme@2.6.13": {
+    "totalsoft_oss.react-mui/themes/green-theme@2.6.16": {
         "files": [
             {
                 "relativePath": "themes/greenTheme.js",
@@ -1351,7 +1350,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/orange-theme@2.6.13": {
+    "totalsoft_oss.react-mui/themes/orange-theme@2.6.16": {
         "files": [
             {
                 "relativePath": "themes/orangeTheme.js",
@@ -1363,7 +1362,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/red-theme@2.6.13": {
+    "totalsoft_oss.react-mui/themes/red-theme@2.6.16": {
         "files": [
             {
                 "relativePath": "themes/redTheme.js",
@@ -1375,7 +1374,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/themes/vivid-orange-theme@2.6.13": {
+    "totalsoft_oss.react-mui/themes/vivid-orange-theme@2.6.16": {
         "files": [
             {
                 "relativePath": "themes/vividOrangeTheme.js",
@@ -1387,7 +1386,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/toast@2.6.13": {
+    "totalsoft_oss.react-mui/toast@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Toast/Toast.js",
@@ -1425,7 +1424,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/typography@2.6.13": {
+    "totalsoft_oss.react-mui/typography@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Typography/Typography.d.ts",
@@ -1458,7 +1457,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/upload-button@2.6.13": {
+    "totalsoft_oss.react-mui/upload-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/UploadButton/UploadButton.d.ts",
@@ -1486,7 +1485,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/upward-button@2.6.13": {
+    "totalsoft_oss.react-mui/upward-button@2.6.16": {
         "files": [
             {
                 "relativePath": "components/UpwardButton/UpwardButton.d.ts",

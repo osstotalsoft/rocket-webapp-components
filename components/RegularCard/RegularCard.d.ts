@@ -18,10 +18,14 @@ export interface Props {
     * Override or extend the styles applied to the content of the card
     */
     customCardContentClasses?: string
+    /**
+    * The footer to be displayed. This property can be a string or a component
+    */
+    footer?: React.ReactNode;
 
     /**
-     * If set to true, the background will be transparent
-     */
+    * If set to true, the background will be transparent
+    */
     plainCard?: boolean;
 
     /**
@@ -43,22 +47,22 @@ export interface Props {
      * Title alignment
      */
     titleAlign?: "right" |
-                 "left" |
-                 "center"
+    "left" |
+    "center"
 
     /**
      * Content alignment
      */
     contentAlign?: "right" |
-                    "left" |
-                    "center"
+    "left" |
+    "center"
 
     /**
      * Subtitle alignment
      */
     subtitleAlign?: "right" |
-                    "left" |
-                    "center"
+    "left" |
+    "center"
 
     /**
      * Demos:
