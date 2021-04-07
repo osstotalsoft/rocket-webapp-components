@@ -34,6 +34,7 @@
         "origin": "AUTHORED",
         "exported": false
     },
+    "totalsoft_oss.react-mui/accordion@2.6.16": {
         "files": [
             {
                 "relativePath": "components/Accordion/Accordion.d.ts",
