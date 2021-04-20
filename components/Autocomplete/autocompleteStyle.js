@@ -3,7 +3,7 @@ import styles from '../../assets/jss/styles'
 import { theme as defaultTheme } from '../../themes/defaultTheme'
 
 export const selectedColor = (theme, inputSelectedColor) => {
-  return { color: inputSelectedColor ? inputSelectedColor : theme.autocomplete.selectedInputColor }
+  return { color: inputSelectedColor ? inputSelectedColor : theme.autoComplete.selectedInputColor }
 }
 
 const autocompleteStyle = theme => {
@@ -64,10 +64,14 @@ const autocompleteStyle = theme => {
       height: theme.spacing(2)
     },
     option: {
-      ...theme.autocomplete.option,
+      ...theme.autoComplete.option,
+      '&:selected':{
+        backgroundColor: theme?.autoComplete?.selectedBgColor || defaultTheme.autoComplete.selectedBgColor,
+        color: theme?.autoComplete?.selectedTextColor || defaultTheme.autoComplete.selectedTextColor
+      },
       '&:hover,&:focus,&:visited,&:active': {
-        backgroundColor: theme.autoComplete?.hoverBgColor || defaultTheme.autoComplete.hoverBgColor,
-        color: theme.autoComplete?.hoverTextColor || defaultTheme.autoComplete.hoverTextColor
+        backgroundColor: theme?.autoComplete?.hoverBgColor || defaultTheme.autoComplete.hoverBgColor,
+        color: theme?.autoComplete?.hoverTextColor || defaultTheme.autoComplete.hoverTextColor
       }
     }
   }
