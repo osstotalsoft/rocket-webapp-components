@@ -64,7 +64,6 @@ const autocompleteStyle = theme => {
       height: theme.spacing(2)
     },
     option: {
-      ...theme.autoComplete.option,
       '&:selected':{
         backgroundColor: theme?.autoComplete?.selectedBgColor || defaultTheme.autoComplete.selectedBgColor,
         color: theme?.autoComplete?.selectedTextColor || defaultTheme.autoComplete.selectedTextColor
