@@ -4,7 +4,10 @@ import { makeStyles, Typography as BaseTypography, Tooltip } from "@material-ui/
 import typographyStyle from './typographyStyle';
 
 const useStyles = makeStyles(typographyStyle)
- 
+  
+
+
+
 const Typography = ({ tooltip, ...res }) => {
     const classes = useStyles();
     const base = <BaseTypography className={classes.defaultFont} {...res} />
