@@ -28,8 +28,7 @@ const palette = {
     hoverTextColor: "#00385F",
     color: "#00385F",
     bkOpacity: "1",
-    focusBgColor: "#2273ab",
-    dividerColor: "#00497b"
+    focusBgColor: "#2273ab"
   },
   topBar: {
     bkColor: "#FFFF"
@@ -187,7 +186,7 @@ export const theme = {
     hoverBgColor: "rgba(0, 0, 0, 0.08)",
     hoverTextColor: palette.text.primary,
     selectedBgColor: "rgba(0, 0, 0, 0.14)",
-    selectedTextColor: palette.text.primary,
+    selectedTextColor: palette.text.primary
   },
   card: {
     height: "auto",

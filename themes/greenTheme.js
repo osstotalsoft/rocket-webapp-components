@@ -28,8 +28,7 @@ const palette = {
     hoverTextColor: "#005604",
     color: "#005604",
     bkOpacity: "0.8",
-    focusBgColor: "#2a912f",
-    dividerColor: "#005604"
+    focusBgColor: "#2a912f"
   },
   topBar: {
     bkColor: "#FFFF"

@@ -44,7 +44,6 @@ const palette = {
     lightBackground: "#BCE4FA",
     blueColor: "#26C6DA",
     iconCardColor: "#ff0000",
-    iconCardColorRGBA: "rgba(255, 0, 0, 1)",
     themeColor: "#ff0000",
     themeColorRGBA: "rgba(255, 0, 0, 1)",
     themeShadowColor: "#EA5E6F",
@@ -148,20 +147,6 @@ export const theme = {
       root: {
         "&$active": {
           color: "#ff0000"
-        }
-      }
-    },
-    MuiAccordionSummary: {
-      root: {
-        "&$expanded": {
-          minHeight: 0
-        }
-      },
-      content: {
-        margin: 0,
-        paddingTop: "16px",
-        "&$expanded": {
-          margin: 0
         }
       }
     }
