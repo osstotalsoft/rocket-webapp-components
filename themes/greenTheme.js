@@ -28,7 +28,8 @@ const palette = {
     hoverTextColor: "#005604",
     color: "#005604",
     bkOpacity: "0.8",
-    focusBgColor: "#2a912f"
+    focusBgColor: "#2a912f",
+    dividerColor: "#005604"
   },
   topBar: {
     bkColor: "#FFFF"
@@ -47,7 +48,8 @@ const palette = {
     themeShadowColorRGBA: "rgb(39 108 37)",
     roseColor: "#e91e63",
     grayColor: "#999999",
-    blackColor: "#000"
+    blackColor: "#000",
+    dividerColor: "hsla(0,0%,100%,.3)"
   },
   snackbar: {
     infoBgColor: "#ccf1ff",
