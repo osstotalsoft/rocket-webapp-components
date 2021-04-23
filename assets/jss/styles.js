@@ -161,6 +161,9 @@ const styles = (theme) => {
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)"
   };
+  const purpleBoxShadow = {
+    boxShadow: "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(142, 36, 170, 0.4)"
+  };
   const themeBoxShadow = {
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px " + themeRGBAColor
@@ -197,7 +200,7 @@ const styles = (theme) => {
   };
   const purpleCardHeader = {
     background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
-    ...primaryBoxShadow
+    ...purpleBoxShadow
   };
   const roseCardHeader = {
     background: "linear-gradient(60deg, #ec407a, #d81b60)",
