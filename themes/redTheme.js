@@ -8,42 +8,44 @@ const defaultFont = {
 
 const palette = {
   primary: {
-    main: "#e11932"
+    main: "#444444"
   },
   secondary: {
-    main: "#EA5E6F"
+    main: "#ff0000"
   },
   text: {
     dark: "rgb(3, 19, 3)",
     white: "rgb(255, 255, 255)",
     darkGrey: "rgb(169,169,169)",
     highlight: "rgb(36, 76, 140)",
-    primary: "#343434"
+    primary: "#444444"
   },
   sideMenu: {
     bkColor: "#fff",
     activeLinkColor: "#fff",
-    activeBkColor: "#e11932",
-    hoverBgColor: "rgba(200, 200, 200, 0.2)",
-    hoverTextColor: "#e11932",
-    color: "#e11932",
+    activeBkColor: "#ff0000",
+    hoverBgColor: "transparent",
+    hoverTextColor: "#ff0000",
+    color: "#444444",
     bkOpacity: "0.8",
-    focusBgColor: "#ff8c8c"
+    focusBgColor: "#F6F4F1",
+    dividerColor: "#444444"
   },
   topBar: {
     bkColor: "#FFFF"
   },
   timColors: {
-    primary: "#e11932",
-    primaryRGBA: "rgba(0, 73, 123, 0.28)",
+    primary: "#ff0000",
+    primaryRGBA: "rgba(255, 0, 0, 1)",
     warningColor: "#ff9800",
     dangerColor: "#f44336",
     successColor: "#4caf50",
     infoColor: "#00acc1",
-    iconCardColor: "#e11932",
-    iconCardColorRGBA: "rgba(255, 121, 0, 0.4)",
-    themeColor: "#e11932",
-    themeColorRGBA: "rgba(85, 85, 85, 1)",
+    lightBackground: "#BCE4FA",
+    blueColor: "#26C6DA",
+    iconCardColor: "#ff0000",
+    themeColor: "#ff0000",
+    themeColorRGBA: "rgba(255, 0, 0, 1)",
     themeShadowColor: "#EA5E6F",
     themeShadowColorRGBA: "rgba(225, 25, 50, 1)",
     roseColor: "#e91e63",
@@ -52,7 +54,7 @@ const palette = {
   },
   snackbar: {
     infoBgColor: "#ccf1ff",
-    infoColor: "#555555",
+    infoColor: "#444444",
     dangerBgColor: "#f44336",
     dangerColor: "#ffffff",
     successBgColor: "#36b37e",
@@ -79,13 +81,13 @@ const palette = {
     active: "#f44336"
   },
   bg: {
-    main: "#fff"
+    main: "#ddd8d3"
   },
-  activeColor: "#555555",
+  activeColor: "#444444",
   button: {
-    theme: "#e11932",
+    theme: "#ff0000",
     themeHoverBk: "transparent",
-    themeHoverColor: "#e11932",
+    themeHoverColor: "#ff0000",
     themeHoverShadow:
       "0 2px 2px 0 rgba(225, 25, 50, 0.42), 0 3px 1px -2px rgba(225, 25, 50, 0.12), 0 1px 5px 0 rgba(225, 25, 50, 0.2)",
     themeShadow:
@@ -104,12 +106,15 @@ export const theme = {
     ...defaultFont,
     useNextVariants: true,
     htmlFontSize: 14,
-    fontSize: 14,
     fontWeightMedium: 300,
-    body1: {
-      fontSize: 14
+    button: {
+      ...defaultFont,
+      textAlign: "center",
+      fontStretch: "normal",
+      fontStyle: "normal"
     },
-    body2: {
+    body: {
+      ...defaultFont,
       fontSize: 14
     }
   },
@@ -137,6 +142,13 @@ export const theme = {
       toolbar: {
         paddingLeft: 0
       }
+    },
+    MuiStepIcon: {
+      root: {
+        "&$active": {
+          color: "#ff0000"
+        }
+      }
     }
   },
   table: {
@@ -147,10 +159,10 @@ export const theme = {
     },
     tableHeader: {
       textAlign: "left",
-      backgroundColor: "#fde9ec",
+      backgroundColor: palette.secondary.main,
       padding: "10px",
-      color: "#555555",
-      borderBottom: "1px solid #ddd"
+      borderBottom: "1px solid #ddd",
+      color: palette.text.white
     },
     tableContent: {
       textAlign: "left",
@@ -159,7 +171,7 @@ export const theme = {
     },
     itemSelected: {
       background: "#ccf1ff",
-      color: "#555555"
+      color: palette.text.main
     }
   },
   autoComplete: {
@@ -177,13 +189,13 @@ export const theme = {
       fontStretch: "normal !important",
       fontStyle: "normal !important",
       lineHeight: "1.29 !important",
-      color: "#a8a8a8 !important"
+      color: "#444444 !important"
     },
-    selectedInputColor: "#000",
-    hoverBgColor: "#e11932 !Important",
+    selectedInputColor: palette.text.main,
+    hoverBgColor: "#ff0000 !Important",
     hoverTextColor: "#ffffff",
     selectedBgColor: palette.text.white,
-    selectedTextColor: palette.primary.main,
+    selectedTextColor: palette.secondary.main
   },
   card: {
     height: "auto",

@@ -186,7 +186,7 @@ export const theme = {
     hoverBgColor: "rgba(0, 0, 0, 0.08)",
     hoverTextColor: palette.text.primary,
     selectedBgColor: "rgba(0, 0, 0, 0.14)",
-    selectedTextColor: palette.text.primary,
+    selectedTextColor: palette.text.primary
   },
   card: {
     height: "auto",
