@@ -1,4 +1,5 @@
 import { ButtonProps as BaseProps } from '@material-ui/core/Button';
+import React from 'react';
 
 export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
   /**
@@ -65,7 +66,14 @@ export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
   * The tooltip of the button.
   */
   tooltip?: string
-
+  /**
+   * Element placed before the children.
+   */
+  startIcon?: React.ReactNode
+  /**
+   * Element placed after the children.
+   */
+  endIcon?: React.ReactNode
 }
 /**
  *
@@ -74,5 +82,11 @@ export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
  * - https://bit.dev/totalsoft_oss/react-mui/button
  *
  *   Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/Button/Button.js
+ * 
+ * Material-UI components used:
+ * 
+ * - Button: https://material-ui.com/api/button/
+ * - Tooltip: https://material-ui.com/api/tooltip/
+ * 
  */
 export default function Button(props: ButtonProps): JSX.Element;
