@@ -54,6 +54,10 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
      * If true, hitting escape will not fire the onClose callback.
      */
     disableEscapeKeyDown?: boolean
+    /**
+     * The content will overflow
+     */
+    overflowY?: boolean
 }
 /**
  *

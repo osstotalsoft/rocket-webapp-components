@@ -108,6 +108,14 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
      */
     disableEscapeKeyDown?: boolean
     /**
+     * if true, the dialog will have a close button
+     */
+    showX?: boolean
+    /**
+     * the content will overflow
+     */
+    overflowY?: boolean
+    /**
      * the additional properties you can send to Dialog component
      */
     otherDialogProps: Object
