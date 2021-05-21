@@ -1,13 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
-import { Button, makeStyles, Tooltip } from '@material-ui/core'
-import buttonStyle from './buttonStyle'
+import React from "react";
+import PropTypes from "prop-types";
+import cx from "classnames";
+import { Tooltip, Button, makeStyles } from "@material-ui/core";
+import buttonStyle from "./buttonStyle";
 
-const useStyles = makeStyles(buttonStyle)
+const useStyles = makeStyles(buttonStyle);
 
-function RegularButton({ tooltip, color, round, children, fullWidth, disabled, customClass, right, justIcon, size, wd, ...rest }) {
-  const classes = useStyles()
+function RegularButton({
+  tooltip,
+  color,
+  round,
+  children,
+  fullWidth,
+  disabled,
+  customClass,
+  right,
+  justIcon,
+  size,
+  wd,
+  ...rest
+}) {
+  const classes = useStyles();
   const btnClasses = cx({
     [classes[color]]: color,
     [classes.round]: round,
@@ -18,8 +31,8 @@ function RegularButton({ tooltip, color, round, children, fullWidth, disabled, c
     [classes.justIcon]: justIcon,
     [classes.wd]: wd,
     [classes[size]]: size
-  })
-  const classNames = `${classes.button} ${btnClasses}`
+  });
+  const classNames = `${classes.button} ${btnClasses}`;
 
   return tooltip ? (
     <Tooltip title={tooltip}>
@@ -31,7 +44,7 @@ function RegularButton({ tooltip, color, round, children, fullWidth, disabled, c
     <Button {...rest} className={classNames}>
       {children}
     </Button>
-  )
+  );
 }
 
 RegularButton.propTypes = {
@@ -39,25 +52,25 @@ RegularButton.propTypes = {
    * The color of button.
    */
   color: PropTypes.oneOf([
-    'primary',
-    'info',
-    'success',
-    'warning',
-    'danger',
-    'rose',
-    'theme',
-    'themeNoBackground',
-    'themeWithBackground',
-    'defaultNoBackground',
-    'primaryNoBackground',
-    'infoNoBackground',
-    'successNoBackground',
-    'warningNoBackground',
-    'dangerNoBackground',
-    'roseNoBackground',
-    'white',
-    'simple',
-    'transparent'
+    "primary",
+    "info",
+    "success",
+    "warning",
+    "danger",
+    "rose",
+    "theme",
+    "themeNoBackground",
+    "themeWithBackground",
+    "defaultNoBackground",
+    "primaryNoBackground",
+    "infoNoBackground",
+    "successNoBackground",
+    "warningNoBackground",
+    "dangerNoBackground",
+    "roseNoBackground",
+    "white",
+    "simple",
+    "transparent"
   ]),
   /**
    * If true, rounded corners are enabled.
@@ -94,11 +107,11 @@ RegularButton.propTypes = {
   /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(['sm', 'lg', 'xs']),
+  size: PropTypes.oneOf(["sm", "lg", "xs"]),
   /**
    * The tooltip of the button.
    */
   tooltip: PropTypes.string
-}
+};
 
-export default RegularButton
+export default RegularButton;

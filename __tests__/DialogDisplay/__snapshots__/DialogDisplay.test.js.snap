@@ -10,14 +10,25 @@ exports[`DialogDisplay snapshot 1`] = `
   id="id"
   onClose={[MockFunction]}
   open={true}
+  overflowY="auto"
 >
   <WithStyles(ForwardRef(Dialog))
+    PaperProps={
+      Object {
+        "className": "makeStyles-paper-1",
+      }
+    }
     aria-labelledby="id-dialog-display-title"
     maxWidth="xl"
     onClose={[MockFunction]}
     open={true}
   >
     <ForwardRef(Dialog)
+      PaperProps={
+        Object {
+          "className": "makeStyles-paper-1",
+        }
+      }
       aria-labelledby="id-dialog-display-title"
       classes={
         Object {
@@ -403,11 +414,11 @@ exports[`DialogDisplay snapshot 1`] = `
                   >
                     <div
                       aria-labelledby="id-dialog-display-title"
-                      class="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl MuiPaper-elevation24 MuiPaper-rounded"
+                      class="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl makeStyles-paper-1 MuiPaper-elevation24 MuiPaper-rounded"
                       role="dialog"
                     >
                       <div
-                        class="MuiDialogTitle-root"
+                        class="MuiDialogTitle-root makeStyles-text-4"
                         id="id-dialog-display-title"
                       >
                         <h2
@@ -440,7 +451,7 @@ exports[`DialogDisplay snapshot 1`] = `
                         </h2>
                       </div>
                       <div
-                        class="MuiDialogContent-root"
+                        class="MuiDialogContent-root makeStyles-content-5 makeStyles-auto-7"
                       >
                         <div>
                            Content
@@ -609,13 +620,13 @@ exports[`DialogDisplay snapshot 1`] = `
                     >
                       <WithStyles(ForwardRef(Paper))
                         aria-labelledby="id-dialog-display-title"
-                        className="MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl"
+                        className="MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl makeStyles-paper-1"
                         elevation={24}
                         role="dialog"
                       >
                         <ForwardRef(Paper)
                           aria-labelledby="id-dialog-display-title"
-                          className="MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl"
+                          className="MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl makeStyles-paper-1"
                           classes={
                             Object {
                               "elevation0": "MuiPaper-elevation0",
@@ -653,13 +664,15 @@ exports[`DialogDisplay snapshot 1`] = `
                         >
                           <div
                             aria-labelledby="id-dialog-display-title"
-                            className="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl MuiPaper-elevation24 MuiPaper-rounded"
+                            className="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthXl makeStyles-paper-1 MuiPaper-elevation24 MuiPaper-rounded"
                             role="dialog"
                           >
                             <WithStyles(ForwardRef(DialogTitle))
+                              className="makeStyles-text-4"
                               id="id-dialog-display-title"
                             >
                               <ForwardRef(DialogTitle)
+                                className="makeStyles-text-4"
                                 classes={
                                   Object {
                                     "root": "MuiDialogTitle-root",
@@ -668,7 +681,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                 id="id-dialog-display-title"
                               >
                                 <div
-                                  className="MuiDialogTitle-root"
+                                  className="MuiDialogTitle-root makeStyles-text-4"
                                   id="id-dialog-display-title"
                                 >
                                   <WithStyles(ForwardRef(Typography))
@@ -861,8 +874,11 @@ exports[`DialogDisplay snapshot 1`] = `
                                 </div>
                               </ForwardRef(DialogTitle)>
                             </WithStyles(ForwardRef(DialogTitle))>
-                            <WithStyles(ForwardRef(DialogContent))>
+                            <WithStyles(ForwardRef(DialogContent))
+                              className="makeStyles-content-5 makeStyles-auto-7"
+                            >
                               <ForwardRef(DialogContent)
+                                className="makeStyles-content-5 makeStyles-auto-7"
                                 classes={
                                   Object {
                                     "dividers": "MuiDialogContent-dividers",
@@ -871,7 +887,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                 }
                               >
                                 <div
-                                  className="MuiDialogContent-root"
+                                  className="MuiDialogContent-root makeStyles-content-5 makeStyles-auto-7"
                                 >
                                   <div>
                                      Content

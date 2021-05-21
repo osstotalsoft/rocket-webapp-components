@@ -28,5 +28,10 @@ export interface ExpandingTextProps extends FormControlLabelProps {
  * - https://bit.dev/totalsoft_oss/react-mui/expanding-text
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/ExpandingText/ExpandingText.js
+ * 
+ * Material-UI components used:
+ * 
+ * - FormControlLabel: https://material-ui.com/api/form-control-label/
+ * 
  */
 export default function ExpandingText(props: ExpandingTextProps): JSX.Element;

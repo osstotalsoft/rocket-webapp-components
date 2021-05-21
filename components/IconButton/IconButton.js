@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { IconButton, makeStyles, Tooltip } from "@material-ui/core";
+import { Tooltip, IconButton, makeStyles } from "@material-ui/core";
 import iconButtonStyle from "./iconButtonStyle";
 
 const useStyles = makeStyles(iconButtonStyle);
@@ -23,9 +23,7 @@ const Button = ({ children, color, customClass, ...rest }) => {
 function CustomIconButton({ tooltip, ...rest }) {
   return tooltip ?
     <Tooltip title={tooltip}>
-      <span>
         <Button {...rest} />
-      </span>
     </Tooltip>
     :
     <Button {...rest} />

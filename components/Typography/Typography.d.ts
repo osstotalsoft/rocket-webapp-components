@@ -48,13 +48,43 @@ export interface TypographyProps extends BaseProps {
             'justify'
 
     /**
+     * @default 'initial'
+     * Controls the display type
+     */
+    display?: 'initial' | 'block' | 'inline'
+
+    /**
+     * @default false
+     * If true, the text will have a bottom margin.
+     */
+     gutterBottom?: boolean
+     
+    /**
+     * @default false
+     * If true, the text will not wrap, but instead will truncate with a text overflow ellipsis. 
+     * Note that text overflow can only happen with block or inline-block level elements (the element needs 
+     * to have a width in order to overflow).
+     */
+     noWrap?: boolean
+
+    /**
+     * @default false
+     * If true, the text will have a bottom margin.
+     */
+     paragraph?: boolean
+
+    /**
      * Demos:
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/typography
      * 
      *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/Typography/Typography.js
+     * 
+     * Material-UI component used:
+     * 
+     * - Typography: https://material-ui.com/api/typography/
+     * 
      */
-
 }
 
 export default function Typography(props: TypographyProps): JSX.Element;

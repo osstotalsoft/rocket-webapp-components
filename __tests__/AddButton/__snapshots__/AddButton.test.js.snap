@@ -1,50 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddButton snapshot 1`] = `
-<span
+<button
   aria-describedby={null}
-  className=""
+  aria-label="Add"
+  className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17 Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
+  disabled={true}
   onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
   onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
+  onMouseUp={[Function]}
   onTouchEnd={[Function]}
+  onTouchMove={[Function]}
   onTouchStart={[Function]}
+  tabIndex={-1}
   title="Title"
+  type="button"
 >
-  <button
-    aria-label="Add"
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17 Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
-    disabled={true}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    tabIndex={-1}
-    type="button"
+  <span
+    className="MuiIconButton-label"
   >
-    <span
-      className="MuiIconButton-label"
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-        />
-      </svg>
-    </span>
-  </button>
-</span>
+      <path
+        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+      />
+    </svg>
+  </span>
+</button>
 `;

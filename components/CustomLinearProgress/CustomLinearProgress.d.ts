@@ -24,6 +24,10 @@ export interface CustomLinearProgressProps extends Omit<LinearProgressProps, 'co
         * The value of the progress indicator for the determinate and buffer variants. Value between 0 and 100.
         */
         value?: number
+        /**
+         * The value for the buffer variant. Value between 0 and 100.
+         */
+        valueBuffer?: number
 }
 /**
  *
@@ -32,5 +36,10 @@ export interface CustomLinearProgressProps extends Omit<LinearProgressProps, 'co
  * - https://bit.dev/totalsoft_oss/react-mui/custom-linear-progress
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/CustomLinearProgress/CustomLinearProgress.js
+ * 
+ * Material-UI component used:
+ * 
+ * - LinearProgress: https://material-ui.com/api/linear-progress/
+ * 
  */
 export default function CustomLinearProgress(props: CustomLinearProgressProps): JSX.Element;

@@ -43,6 +43,12 @@ export interface Props {
     step?: number;
 
     /**
+     * Marks indicate predetermined values to which the user can move the slider. If true the marks will be spaced according 
+     * the value of the step prop. If an array, it should contain objects with value and an optional label keys.
+     */
+    marks?: boolean | array;
+
+    /**
      * If true, the error data is provided.
      */
     error?: boolean;
@@ -73,11 +79,26 @@ export interface Props {
     showSliderLimits?: boolean;
 
     /**
+     * The color of the component. It supports those theme colors that make sense for this component.
+     */
+    color?: 'primary' | 'secondary';
+
+    /**
+     * The slider orientation.
+     */
+    orientation?: 'horizontal' | 'vertical';
+
+    /**
      * Demos:
      * 
      * - https://bit.dev/totalsoft_oss/react-mui/simple-slider
      * 
      *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/SimpleSlider/SimpleSlider.js
+     * 
+     * Material-UI component used:
+     * 
+     * - Slider: https://material-ui.com/api/slider/
+     * 
      */
 
 }

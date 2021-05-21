@@ -72,6 +72,14 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChan
     */
     minDateMessage?: React.ReactNode
     /**
+     * Disable past dates
+     */
+    disablePast?: boolean
+    /**
+     * Disable future dates
+     */
+    disableFuture?: boolean
+    /**
     * @default "en"
     * To use another localization import "moment/locale/[lang]" in your app
     * The current language, preferably taken from the i18next (i18.language) or another internationalization library
@@ -100,5 +108,10 @@ export interface DateTimeProps extends Omit<KeyboardDateTimePickerProps, 'onChan
  * - https://bit.dev/totalsoft_oss/react-mui/date-time
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/DateTime/DateTime.js
+ * 
+ * Material-UI component used:
+ * 
+ * - KeyboardDateTimePicker: https://material-ui-pickers.dev/api/KeyboardDateTimePicker
+ * 
  */
 export default function DateTime(props: DateTimeProps): JSX.Element;

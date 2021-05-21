@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles, Typography as BaseTypography, Tooltip } from "@material-ui/core";
-import typographyStyle from './typographyStyle';
+import typographyStyle from "./typographyStyle";
 
 const useStyles = makeStyles(typographyStyle)
 

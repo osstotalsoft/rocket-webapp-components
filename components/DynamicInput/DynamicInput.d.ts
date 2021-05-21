@@ -45,5 +45,13 @@ export interface DynamicInputProps extends SwitchProps {
  * - https://bit.dev/totalsoft_oss/react-mui/dynamic-input
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/DynamicInput/DynamicInput.js
+ * 
+ * Components used:
+ * 
+ * - TextField: https://material-ui.com/api/text-field/
+ * - Switch: https://material-ui.com/api/switch/
+ * - Select: https://react-select.com/home
+ * - FormControlLabel: https://material-ui.com/api/form-control-label/
+ * 
  */
 export default function DynamicInput(props: DynamicInputProps): JSX.Element;
