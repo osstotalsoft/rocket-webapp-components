@@ -58,7 +58,7 @@ const CustomDialog = props => {
     >
       <DialogTitle
         id={`${id}-dialog-yes-no-title`}
-        className={classes.modalTitle}
+        className={classes.text}
       >
         {title}
         {showX && (

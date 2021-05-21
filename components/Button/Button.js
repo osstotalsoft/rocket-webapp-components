@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { Button, makeStyles, Tooltip } from "@material-ui/core";
+import { Button, makeStyles } from "@material-ui/core";
+import Tooltip from '../Tooltip/Tooltip';
 import buttonStyle from "./buttonStyle";
 
 const useStyles = makeStyles(buttonStyle);
@@ -29,9 +30,7 @@ function RegularButton({ tooltip, ...rest }) {
 
   return tooltip ?
     <Tooltip title={tooltip}>
-      <span>
         <ButtonBase {...rest} />
-      </span>
     </Tooltip>
     :
     <ButtonBase {...rest} />

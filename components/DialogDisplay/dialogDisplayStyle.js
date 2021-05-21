@@ -18,8 +18,10 @@ const dialogDisplayStyle = (theme) => {
             ...defaultFont
         },
         content: {
-            ...defaultFont,
-            overflowY: "visible"
+            ...defaultFont
+        },
+        overflowY: {
+            overflowY: 'visible'
         }
     }
 }

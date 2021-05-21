@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import { makeStyles, IconButton } from "@material-ui/core";
 import { Clear, CalendarToday } from "@material-ui/icons";
@@ -26,7 +26,6 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
     showTime, clearable, disabled, error, helperText, invalidDateMessage, minDateMessage, maxDateMessage, language, ...rest }) {
 
     const classes = useStyles();
-    const [open, setOpen] = useState(false);
     const format = showTime ? `${dateFormat} ${timeFormat}` : dateFormat
 
     const errorData = disabled
@@ -34,7 +33,6 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
         : error ? { error, helperText } : {}
 
     const handleChange = useCallback(date => onChange(date ? moment(date).toDate() : null), [onChange])
-    const handleSetOpen = useCallback(value => () => setOpen(value), [])
     const handleClear = useCallback(() => handleChange(null), [handleChange])
 
     const clearablePickerProps = {
@@ -51,7 +49,6 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
                     </IconButton>
                     <IconButton
                         disabled={disabled}
-                        onClick={handleSetOpen(true)}
                         className={classes.dateTimeIconButtons}
                     >
                         <CalendarToday fontSize="small" />
@@ -68,7 +65,7 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
     }
 
     const simplePickerProps = {
-        keyboardIcon: <CalendarToday fontSize="small" onClick={handleSetOpen(true)} />,
+        keyboardIcon: <CalendarToday fontSize="small" />,
         KeyboardButtonProps: {
             disabled: disabled,
             className: classes.dateTimeIconButtons
@@ -82,8 +79,6 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
             <KeyboardDateTimePicker
                 {...pickerProps}
                 fullWidth
-                open={open}
-                onClose={handleSetOpen(false)}
                 value={value}
                 onChange={handleChange}
                 format={format}

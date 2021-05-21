@@ -444,7 +444,7 @@ exports[`CustomDialog snapshot 1`] = `
                         </h2>
                       </div>
                       <div
-                        class="MuiDialogContent-root makeStyles-content-5"
+                        class="MuiDialogContent-root makeStyles-content-5 undefined"
                       >
                         <div
                           class="MuiGrid-root MuiGrid-item MuiGrid-grid-lg-12"
@@ -467,7 +467,7 @@ exports[`CustomDialog snapshot 1`] = `
                           class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-flex-end MuiGrid-grid-lg-12"
                         >
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                             tabindex="0"
                             type="button"
                           >
@@ -481,7 +481,7 @@ exports[`CustomDialog snapshot 1`] = `
                             />
                           </button>
                           <button
-                            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                            class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                             tabindex="0"
                             type="button"
                           >
@@ -776,10 +776,10 @@ exports[`CustomDialog snapshot 1`] = `
                               </ForwardRef(DialogTitle)>
                             </WithStyles(ForwardRef(DialogTitle))>
                             <WithStyles(ForwardRef(DialogContent))
-                              className="makeStyles-content-5"
+                              className="makeStyles-content-5 undefined"
                             >
                               <ForwardRef(DialogContent)
-                                className="makeStyles-content-5"
+                                className="makeStyles-content-5 undefined"
                                 classes={
                                   Object {
                                     "dividers": "MuiDialogContent-dividers",
@@ -788,7 +788,7 @@ exports[`CustomDialog snapshot 1`] = `
                                 }
                               >
                                 <div
-                                  className="MuiDialogContent-root makeStyles-content-5"
+                                  className="MuiDialogContent-root makeStyles-content-5 undefined"
                                 >
                                   <WithStyles(ForwardRef(Grid))
                                     item={true}
@@ -1244,11 +1244,11 @@ exports[`CustomDialog snapshot 1`] = `
                                             size="sm"
                                           >
                                             <WithStyles(ForwardRef(Button))
-                                              className="makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                              className="makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                               onClick={[MockFunction]}
                                             >
                                               <ForwardRef(Button)
-                                                className="makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                className="makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                 classes={
                                                   Object {
                                                     "colorInherit": "MuiButton-colorInherit",
@@ -1285,7 +1285,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                 onClick={[MockFunction]}
                                               >
                                                 <WithStyles(ForwardRef(ButtonBase))
-                                                  className="MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                  className="MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                   component="button"
                                                   disabled={false}
                                                   focusRipple={true}
@@ -1294,7 +1294,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                   type="button"
                                                 >
                                                   <ForwardRef(ButtonBase)
-                                                    className="MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                    className="MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                     classes={
                                                       Object {
                                                         "disabled": "Mui-disabled",
@@ -1310,7 +1310,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                     type="button"
                                                   >
                                                     <button
-                                                      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                       disabled={false}
                                                       onBlur={[Function]}
                                                       onClick={[MockFunction]}
@@ -1380,11 +1380,11 @@ exports[`CustomDialog snapshot 1`] = `
                                             size="sm"
                                           >
                                             <WithStyles(ForwardRef(Button))
-                                              className="makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                              className="makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                               onClick={[MockFunction]}
                                             >
                                               <ForwardRef(Button)
-                                                className="makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                className="makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                 classes={
                                                   Object {
                                                     "colorInherit": "MuiButton-colorInherit",
@@ -1421,7 +1421,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                 onClick={[MockFunction]}
                                               >
                                                 <WithStyles(ForwardRef(ButtonBase))
-                                                  className="MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                  className="MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                   component="button"
                                                   disabled={false}
                                                   focusRipple={true}
@@ -1430,7 +1430,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                   type="button"
                                                 >
                                                   <ForwardRef(ButtonBase)
-                                                    className="MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                    className="MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                     classes={
                                                       Object {
                                                         "disabled": "Mui-disabled",
@@ -1446,7 +1446,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                     type="button"
                                                   >
                                                     <button
-                                                      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-6 makeStyles-info-10 makeStyles-right-7 makeStyles-sm-30"
+                                                      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-info-11 makeStyles-right-8 makeStyles-sm-31"
                                                       disabled={false}
                                                       onBlur={[Function]}
                                                       onClick={[MockFunction]}
