@@ -55,9 +55,9 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
      */
     disableEscapeKeyDown?: boolean
     /**
-     * The content will overflow
+     * The value of the overflowY CSS property
      */
-    overflowY?: boolean
+    overflowY?: "scroll" | "hidden" | "visible" | "auto"
 }
 /**
  *

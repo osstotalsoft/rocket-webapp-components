@@ -20,8 +20,17 @@ const customDialogStyle = (theme) => {
         content: {
             ...defaultFont
         },
-        overflowY: {
+        visible: {
             overflowY: 'visible'
+        },
+        auto: {
+            overflowY: 'auto'
+        },
+        hidden: {
+            overflowY: 'hidden'
+        },
+        scroll: {
+            overflowY: 'scroll'
         }
     }
 }

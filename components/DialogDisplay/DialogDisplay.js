@@ -10,21 +10,15 @@ import {
 } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import dialogDisplayStyle from "./dialogDisplayStyle";
+import cx from "classnames";
 
 const useStyles = makeStyles(dialogDisplayStyle);
 
-const DialogDisplay = props => {
-  const {
-    id,
-    open,
-    title,
-    onClose,
-    content,
-    actions,
-    overflowY,
-    ...rest
-  } = props;
+const DialogDisplay = ({ id, open, title, onClose, content, actions, overflowY, ...rest }) => {
   const classes = useStyles();
+  const contentClasses = cx({
+    [classes[overflowY]]: overflowY
+  });
 
   return (
     <Dialog
@@ -48,15 +42,17 @@ const DialogDisplay = props => {
           <CloseIcon fontSize="small" />
         </IconButton>
       </DialogTitle>
-      <DialogContent
-        className={`${classes.content} ${overflowY && classes.overflowY}`}
-      >
+      <DialogContent className={classes.content + " " + contentClasses}>
         {content}
       </DialogContent>
       <DialogActions>{actions}</DialogActions>
     </Dialog>
   );
 };
+
+DialogDisplay.defaultProps = {
+  overflowY: 'auto'
+}
 
 DialogDisplay.propTypes = {
   /**
@@ -88,9 +84,9 @@ DialogDisplay.propTypes = {
    */
   actions: PropTypes.node,
   /**
-   * The content will overflow
+   * The value of the overflowY CSS property
    */
-  overflowY: PropTypes.bool
+  overflowY: PropTypes.oneOf(["scroll", "hidden", "visible", "auto"])
 };
 
 export default DialogDisplay;

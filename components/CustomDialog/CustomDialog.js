@@ -14,33 +14,18 @@ import {
 import CloseIcon from "@material-ui/icons/Close";
 import Button from "../Button";
 import customDialogStyle from "./customDialogStyle";
+import cx from "classnames";
 
 const useStyles = makeStyles(customDialogStyle);
 
-const CustomDialog = props => {
-  const {
-    id,
-    open,
-    title,
-    content,
-    textContent,
-    onYes,
-    onClose,
-    buttonColor,
-    buttonSize,
-    showActions,
-    fullWidth,
-    maxWidth,
-    textDialogYes,
-    textDialogNo,
-    showX,
-    overflowY,
-    ...otherDialogProps
-  } = props;
-
+const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, buttonColor, buttonSize, showActions, fullWidth,
+  maxWidth, textDialogYes, textDialogNo, showX, overflowY, ...rest }) => {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
+  const contentClasses = cx({
+    [classes[overflowY]]: overflowY
+  });
 
   return (
     <Dialog
@@ -54,7 +39,7 @@ const CustomDialog = props => {
       maxWidth={maxWidth}
       fullScreen={fullScreen}
       fullWidth={fullWidth}
-      {...otherDialogProps}
+      {...rest}
     >
       <DialogTitle
         id={`${id}-dialog-yes-no-title`}
@@ -72,9 +57,7 @@ const CustomDialog = props => {
           </IconButton>
         )}
       </DialogTitle>
-      <DialogContent
-        className={`${classes.content} ${overflowY && classes.overflowY}`}
-      >
+      <DialogContent className={classes.content + " " + contentClasses}>
         <Grid item lg={12}>
           {textContent && (
             <DialogContentText id={`${id}-dialog-yes-no-description`}>
@@ -204,13 +187,9 @@ CustomDialog.propTypes = {
    */
   showX: PropTypes.bool,
   /**
-   * the content will overflow
+   * the value of the overflowY CSS property
    */
-  overflowY: PropTypes.bool,
-  /**
-   * the additional properties you can send to Dialog component
-   */
-  otherDialogProps: PropTypes.object
+  overflowY: PropTypes.oneOf(["scroll", "hidden", "visible", "auto"])
 };
 
 export default CustomDialog;

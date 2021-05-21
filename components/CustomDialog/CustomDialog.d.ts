@@ -112,13 +112,9 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
      */
     showX?: boolean
     /**
-     * the content will overflow
+     * The value of the overflowY CSS property
      */
-    overflowY?: boolean
-    /**
-     * the additional properties you can send to Dialog component
-     */
-    otherDialogProps: Object
+    overflowY?: "scroll" | "hidden" | "visible" | "auto"
 }
 /**
  *

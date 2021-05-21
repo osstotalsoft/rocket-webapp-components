@@ -10,6 +10,7 @@ exports[`DialogDisplay snapshot 1`] = `
   id="id"
   onClose={[MockFunction]}
   open={true}
+  overflowY="auto"
 >
   <WithStyles(ForwardRef(Dialog))
     PaperProps={
@@ -450,7 +451,7 @@ exports[`DialogDisplay snapshot 1`] = `
                         </h2>
                       </div>
                       <div
-                        class="MuiDialogContent-root makeStyles-content-5 undefined"
+                        class="MuiDialogContent-root makeStyles-content-5 makeStyles-auto-7"
                       >
                         <div>
                            Content
@@ -874,10 +875,10 @@ exports[`DialogDisplay snapshot 1`] = `
                               </ForwardRef(DialogTitle)>
                             </WithStyles(ForwardRef(DialogTitle))>
                             <WithStyles(ForwardRef(DialogContent))
-                              className="makeStyles-content-5 undefined"
+                              className="makeStyles-content-5 makeStyles-auto-7"
                             >
                               <ForwardRef(DialogContent)
-                                className="makeStyles-content-5 undefined"
+                                className="makeStyles-content-5 makeStyles-auto-7"
                                 classes={
                                   Object {
                                     "dividers": "MuiDialogContent-dividers",
@@ -886,7 +887,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                 }
                               >
                                 <div
-                                  className="MuiDialogContent-root makeStyles-content-5 undefined"
+                                  className="MuiDialogContent-root makeStyles-content-5 makeStyles-auto-7"
                                 >
                                   <div>
                                      Content
