@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typography Snapshot 1`] = `
-<span
+<p
   aria-describedby={null}
-  className=""
+  className="MuiTypography-root makeStyles-defaultFont-1 MuiTypography-body1 MuiTypography-alignCenter"
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseLeave={[Function]}
@@ -12,10 +12,6 @@ exports[`Typography Snapshot 1`] = `
   onTouchStart={[Function]}
   title="Tooltip"
 >
-  <p
-    className="MuiTypography-root makeStyles-defaultFont-1 MuiTypography-body1 MuiTypography-alignCenter"
-  >
-    Text to be displayed
-  </p>
-</span>
+  Text to be displayed
+</p>
 `;

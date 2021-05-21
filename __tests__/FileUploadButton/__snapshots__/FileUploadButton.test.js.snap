@@ -1,63 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUploadButton Snapshot 1`] = `
-<span
+<label
   aria-describedby={null}
-  className=""
+  aria-disabled={false}
+  aria-label="Upload"
+  className="MuiButtonBase-root MuiIconButton-root makeStyles-button-6 makeStyles-theme-22"
   onBlur={[Function]}
+  onDragLeave={[Function]}
   onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
+  onMouseUp={[Function]}
   onTouchEnd={[Function]}
+  onTouchMove={[Function]}
   onTouchStart={[Function]}
+  role="button"
+  tabIndex={0}
   title="Upload"
+  variant="contained"
 >
-  <label
-    aria-disabled={false}
-    aria-label="Upload"
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-6 makeStyles-theme-22"
-    onBlur={[Function]}
-    onDragLeave={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onKeyUp={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    onTouchEnd={[Function]}
-    onTouchMove={[Function]}
-    onTouchStart={[Function]}
-    role="button"
-    tabIndex={0}
-    variant="contained"
+  <span
+    className="MuiIconButton-label"
   >
-    <span
-      className="MuiIconButton-label"
-    >
-      <input
-        accept="image/*"
-        onChange={[Function]}
-        style={
-          Object {
-            "display": "none",
-          }
+    <input
+      accept="image/*"
+      onChange={[Function]}
+      style={
+        Object {
+          "display": "none",
         }
-        type="file"
-      />
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
-        />
-      </svg>
-    </span>
-    <span
-      className="MuiTouchRipple-root"
+      }
+      type="file"
     />
-  </label>
-</span>
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+      />
+    </svg>
+  </span>
+</label>
 `;
