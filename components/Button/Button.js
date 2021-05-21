@@ -6,8 +6,20 @@ import buttonStyle from "./buttonStyle";
 
 const useStyles = makeStyles(buttonStyle);
 
-// eslint-disable-next-line react/prop-types
-const ButtonBase = ({ color, round, children, fullWidth, disabled, customClass, right, justIcon, size, wd, ...rest }) => {
+function RegularButton({
+  tooltip,
+  color,
+  round,
+  children,
+  fullWidth,
+  disabled,
+  customClass,
+  right,
+  justIcon,
+  size,
+  wd,
+  ...rest
+}) {
   const classes = useStyles();
   const btnClasses = cx({
     [classes[color]]: color,
@@ -20,19 +32,19 @@ const ButtonBase = ({ color, round, children, fullWidth, disabled, customClass, 
     [classes.wd]: wd,
     [classes[size]]: size
   });
-  return <Button {...rest} className={classes.button + " " + btnClasses}>
-    {children}
-  </Button>
-}
+  const classNames = `${classes.button} ${btnClasses}`;
 
-function RegularButton({ tooltip, ...rest }) {
-
-  return tooltip ?
+  return tooltip ? (
     <Tooltip title={tooltip}>
-        <ButtonBase {...rest} />
+      <Button {...rest} className={classNames}>
+        {children}
+      </Button>
     </Tooltip>
-    :
-    <ButtonBase {...rest} />
+  ) : (
+    <Button {...rest} className={classNames}>
+      {children}
+    </Button>
+  );
 }
 
 RegularButton.propTypes = {
@@ -61,24 +73,24 @@ RegularButton.propTypes = {
     "transparent"
   ]),
   /**
-     * If true, rounded corners are enabled.
-     */
+   * If true, rounded corners are enabled.
+   */
   round: PropTypes.bool,
   /**
-  * 	The content of the component.
-  */
+   * 	The content of the component.
+   */
   children: PropTypes.node,
   /**
-  * 	If true, the button will take up the full width of its container.
-  */
+   * 	If true, the button will take up the full width of its container.
+   */
   fullWidth: PropTypes.bool,
   /**
-    * If true, the button will be disabled.
-    */
+   * If true, the button will be disabled.
+   */
   disabled: PropTypes.bool,
   /**
-  * A custom class provided.
-  */
+   * A custom class provided.
+   */
   customClass: PropTypes.string,
   /**
    * If true,  the button's min width will be set to 160px.
@@ -89,12 +101,12 @@ RegularButton.propTypes = {
    */
   justIcon: PropTypes.bool,
   /**
-  * If true, the button will float to the right.
-  */
+   * If true, the button will float to the right.
+   */
   right: PropTypes.bool,
   /**
-  * The size of the button.
-  */
+   * The size of the button.
+   */
   size: PropTypes.oneOf(["sm", "lg", "xs"]),
   /**
    * The tooltip of the button.

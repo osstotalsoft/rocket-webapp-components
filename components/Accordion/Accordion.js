@@ -12,6 +12,7 @@ const Accordion = ({ content, active }) => {
     const classes = useStyles();
 
     return (
+        
         <div className={classes.root}>
             {content.map((prop, key) => {
                 return (

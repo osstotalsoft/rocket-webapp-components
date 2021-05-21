@@ -25,6 +25,7 @@ const palette = {
     activeLinkColor: "#fff",
     activeBkColor: "#26C6DA",
     hoverBgColor: "rgba(200, 200, 200, 0.2)",
+    hoverTextColor: "#fff",
     color: "#fff",
     bkOpacity: "0.8",
     focusBgColor: "#26C6DA"
@@ -180,7 +181,11 @@ export const theme = {
       lineHeight: "1.29 !important",
       color: "#a8a8a8 !important"
     },
-    selectedInputColor: "#000"
+    selectedInputColor: "#000",
+    hoverBgColor: "rgba(0, 0, 0, 0.08)",
+    hoverTextColor: palette.text.primary,
+    selectedBgColor: "rgba(0, 0, 0, 0.14)",
+    selectedTextColor: palette.text.primary
   },
   card: {
     height: "auto",

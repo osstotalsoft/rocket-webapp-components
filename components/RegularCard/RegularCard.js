@@ -16,7 +16,8 @@ const RegularCard = ({
   contentAlign,
   subtitleAlign,
   customCardTitleClasses,
-  customCardContentClasses
+  customCardContentClasses,
+  footer
 }) => {
   const classes = useStyles();
 
@@ -55,6 +56,7 @@ const RegularCard = ({
       >
         {content}
       </CardContent>
+      {footer && <div className={classes.cardFooter}>{footer}</div>}
     </Card>
   );
 };
@@ -73,6 +75,10 @@ RegularCard.propTypes = {
   * Override or extend the styles applied to the content of the card
   */
   customCardContentClasses: PropTypes.string,
+  /**
+  * The footer to be displayed. This property can be a string or a component
+  */
+  footer: PropTypes.node,
   /**
    * If set to true, the background will be transparent
    */
