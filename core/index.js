@@ -78,3 +78,7 @@ export { useToast, ToastContainer } from '@bit/totalsoft_oss.react-mui.toast'
 
 //FileUploadButton
 export { default as FileUploadButton } from '@bit/totalsoft_oss.react-mui.file-upload-button'
+
+
+//SideMenu
+export { default as SideMenu } from '@bit/totalsoft_oss.react-mui.side-menu'

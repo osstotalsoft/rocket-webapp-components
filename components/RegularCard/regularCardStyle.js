@@ -9,6 +9,11 @@ const regularCardStyle = theme => {
       background: "transparent",
       boxShadow: "none"
     },
+    cardFooter: {
+      margin: "0 20px 10px",
+      paddingTop: "10px",
+      borderTop: "1px solid #eeeeee"
+    },
     cardHeader: {
       padding: "15px 20px 0",
       zIndex: "3"

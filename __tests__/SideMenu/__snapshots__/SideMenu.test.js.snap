@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideMenu Snapshot 1`] = `
+<div
+  className="makeStyles-sideMenu-1 "
+>
+  <div
+    className="makeStyles-moreButton-2 "
+    onClick={[Function]}
+  >
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root makeStyles-sideMenuIcon-3  MuiSvgIcon-fontSizeSmall"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M3 18h13v-2H3v2zm0-5h10v-2H3v2zm0-7v2h13V6H3zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59z"
+      />
+    </svg>
+  </div>
+  <div
+    className="makeStyles-menuContainer-4 "
+  >
+    Content of the side-menu
+  </div>
+</div>
+`;
