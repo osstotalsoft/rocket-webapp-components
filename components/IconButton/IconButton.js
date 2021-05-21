@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { IconButton, makeStyles, Tooltip } from "@material-ui/core";
+import { IconButton, makeStyles } from "@material-ui/core";
+import Tooltip from '../Tooltip/Tooltip';
 import iconButtonStyle from "./iconButtonStyle";
 
 const useStyles = makeStyles(iconButtonStyle);
