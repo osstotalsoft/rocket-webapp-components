@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DownwardButton snapshot 1`] = `
+exports[`Tooltip Snapshot 1`] = `
 <span
   aria-describedby={null}
   className=""
@@ -10,14 +10,12 @@ exports[`DownwardButton snapshot 1`] = `
   onMouseOver={[Function]}
   onTouchEnd={[Function]}
   onTouchStart={[Function]}
-  title="Downward"
+  title="Tooltip"
 >
   <button
-    aria-label="Downward"
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17 Mui-disabled Mui-disabled"
-    disabled={true}
+    className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-1 "
+    disabled={false}
     onBlur={[Function]}
-    onClick={[Function]}
     onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -28,23 +26,17 @@ exports[`DownwardButton snapshot 1`] = `
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
     type="button"
   >
     <span
-      className="MuiIconButton-label"
+      className="MuiButton-label"
     >
-      <svg
-        aria-hidden={true}
-        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
-        />
-      </svg>
+      Hover on me
     </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
   </button>
 </span>
 `;
