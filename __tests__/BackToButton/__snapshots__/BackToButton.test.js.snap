@@ -1,41 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BackToButton snapshot 1`] = `
-<button
+<span
   aria-describedby={null}
-  aria-label="Back"
-  className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17"
-  disabled={false}
+  className=""
   onBlur={[Function]}
-  onClick={[Function]}
-  onDragLeave={[Function]}
   onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
-  onMouseUp={[Function]}
   onTouchEnd={[Function]}
-  onTouchMove={[Function]}
   onTouchStart={[Function]}
-  tabIndex={0}
   title="Back"
-  type="button"
 >
-  <span
-    className="MuiIconButton-label"
+  <button
+    aria-label="Back"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
   >
-    <svg
-      aria-hidden={true}
-      className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-      focusable="false"
-      viewBox="0 0 24 24"
+    <span
+      className="MuiIconButton-label"
     >
-      <path
-        d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
-      />
-    </svg>
-  </span>
-</button>
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+        />
+      </svg>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+</span>
 `;
