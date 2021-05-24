@@ -24,9 +24,7 @@ const Button = ({ children, color, customClass, ...rest }) => {
 function CustomIconButton({ tooltip, ...rest }) {
   return tooltip ?
     <Tooltip title={tooltip}>
-      <span>
         <Button {...rest} />
-      </span>
     </Tooltip>
     :
     <Button {...rest} />

@@ -105,5 +105,12 @@ export interface AutocompleteProps {
  * - https://bit.dev/totalsoft_oss/react-mui/autocomplete
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/tree/master/components/Autocomplete
+ * 
+ * Components used:
+ * 
+ * - Select: https://react-select.com/home
+ * - AsyncSelect: https://react-select.com/async
+ * = AsyncCreatableSelect: https://react-select.com/creatable
+ * 
  */
 export default function Autocomplete(props: AutocompleteProps): JSX.Element;

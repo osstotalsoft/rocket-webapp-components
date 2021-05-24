@@ -50,8 +50,13 @@ export interface DownloadButtonProps extends Omit<ButtonProps, 'color'> {
  *
  * Demos:
  *
- * - https://bit.dev/totalsoft_oss/react-mui/delete-button
+ * - https://bit.dev/totalsoft_oss/react-mui/download-button
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/DownloadButton/DownloadButton.js
+ * 
+ * Material-UI component used:
+ * 
+ * - IconButton: https://material-ui.com/api/icon-button/
+ * 
  */
-export default function DeleteButton(props: DownloadButtonProps): JSX.Element;
+export default function DownloadButton(props: DownloadButtonProps): JSX.Element;

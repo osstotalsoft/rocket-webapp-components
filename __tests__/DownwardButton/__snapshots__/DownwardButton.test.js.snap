@@ -1,52 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DownwardButton snapshot 1`] = `
-<span
+<button
   aria-describedby={null}
-  className=""
+  aria-label="Downward"
+  className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17 Mui-disabled Mui-disabled"
+  disabled={true}
   onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
   onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
+  onMouseUp={[Function]}
   onTouchEnd={[Function]}
+  onTouchMove={[Function]}
   onTouchStart={[Function]}
+  tabIndex={-1}
   title="Downward"
+  type="button"
 >
-  <span>
-    <button
-      aria-label="Downward"
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17 Mui-disabled Mui-disabled"
-      disabled={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={-1}
-      type="button"
+  <span
+    className="MuiIconButton-label"
+  >
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <span
-        className="MuiIconButton-label"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
-          />
-        </svg>
-      </span>
-    </button>
+      <path
+        d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+      />
+    </svg>
   </span>
-</span>
+</button>
 `;

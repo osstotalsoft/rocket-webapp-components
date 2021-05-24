@@ -49,5 +49,10 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
  * - https://bit.dev/totalsoft_oss/react-mui/back-to-button
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/BackToButton/BackToButton.js
+ * 
+ * Material-UI component used:
+ * 
+ * - IconButton: https://material-ui.com/api/icon-button/
+ * 
  */
 export default function BackToButton(props: BackToButtonProps): JSX.Element;

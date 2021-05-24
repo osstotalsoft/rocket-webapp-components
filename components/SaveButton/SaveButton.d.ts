@@ -61,6 +61,11 @@ export interface SaveButtonProps {
     * - https://bit.dev/totalsoft_oss/react-mui/save-button
     * 
     *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/SaveButton/SaveButton.js
+    * 
+    * Material-UI component used:
+    * 
+    * - IconButton: https://material-ui.com/api/icon-button/
+    * 
     */
 }
 

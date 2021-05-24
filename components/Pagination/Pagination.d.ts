@@ -67,6 +67,11 @@ export interface Props {
      * - https://bit.dev/totalsoft_oss/react-mui/pagination
      * 
      *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/Pagination/Pagination.js
+     * 
+     * Material-UI components:
+     * 
+     * - TablePagination: https://material-ui.com/api/table-pagination/
+     * 
      */
 
 }

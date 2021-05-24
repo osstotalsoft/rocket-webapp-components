@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles, Typography as BaseTypography } from "@material-ui/core";
 import Tooltip from '../Tooltip/Tooltip';

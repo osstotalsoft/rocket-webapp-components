@@ -55,7 +55,6 @@ exports[`DateTime snapshot 1`] = `
             aria-hidden={true}
             className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
             focusable="false"
-            onClick={[Function]}
             viewBox="0 0 24 24"
           >
             <path
