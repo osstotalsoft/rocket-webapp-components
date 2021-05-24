@@ -1290,14 +1290,14 @@
     "totalsoft_oss.react-mui/template-editor@2.7.2": {
         "files": [
             {
+                "relativePath": "components/TemplateEditor/TemplateEditor.d.ts",
+                "test": false,
+                "name": "TemplateEditor.d.ts"
+            },
+            {
                 "relativePath": "components/TemplateEditor/TemplateEditor.js",
                 "test": false,
                 "name": "TemplateEditor.js"
-            },
-            {
-                "relativePath": "components/TemplateEditor/TemplateEditor.ts",
-                "test": false,
-                "name": "TemplateEditor.ts"
             },
             {
                 "relativePath": "components/TemplateEditor/index.d.ts",
