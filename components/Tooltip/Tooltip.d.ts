@@ -34,7 +34,7 @@ export interface TooltipProps extends BaseProps {
  *
  * Demos:
  *
- * - to be added
+ * - https://bit.dev/totalsoft_oss/react-mui/tooltip
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/Tooltip/Tooltip.js
  * 
