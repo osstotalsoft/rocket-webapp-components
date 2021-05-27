@@ -241,6 +241,7 @@ function Autocomplete({
     <Comp
       {...other}
       classes={classes}
+      menuPortalTarget={document.body}
       options={options}
       loadOptions={loadOptionsAsync}
       defaultOptions={defaultOptions}
