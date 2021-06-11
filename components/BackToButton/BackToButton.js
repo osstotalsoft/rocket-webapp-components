@@ -66,6 +66,7 @@ BackToButton.propTypes = {
         "inherit",
         "default",
         "small",
+        "medium",
         "large"
     ]),
     /**

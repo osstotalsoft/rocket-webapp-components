@@ -66,6 +66,7 @@ AddButton.propTypes = {
         "inherit",
         "default",
         "small",
+        "medium",
         "large"
     ])
 };

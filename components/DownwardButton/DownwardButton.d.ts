@@ -44,7 +44,7 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
     * @default "default"
     * The fontSize of button's content.
     */
-    fontSize?: "inherit" | "default" | "small" | "large"
+    fontSize?: "inherit" | "default" | "small" | "medium" | "large"
 }
 /**
  *

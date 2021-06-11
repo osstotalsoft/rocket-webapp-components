@@ -242,6 +242,7 @@ function Autocomplete({
       {...other}
       classes={classes}
       menuPortalTarget={document.body}
+      styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
       options={options}
       loadOptions={loadOptionsAsync}
       defaultOptions={defaultOptions}
