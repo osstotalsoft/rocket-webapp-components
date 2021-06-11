@@ -61,6 +61,7 @@ export interface UploadButtonProps {
     fontSize?: "inherit" |
                 "default" |
                 "small" |
+                "medium" |
                 "large"
 
     /**

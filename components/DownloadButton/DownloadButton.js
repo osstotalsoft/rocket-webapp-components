@@ -61,6 +61,7 @@ DownloadButton.propTypes = {
         "inherit",
         "default",
         "small",
+        "medium",
         "large"
     ]),
     /**

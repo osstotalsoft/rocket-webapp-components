@@ -60,9 +60,6 @@ const autocompleteStyle = theme => {
       left: 0,
       right: 0
     },
-    menuPortal: {
-      zIndex: 9999
-    },
     divider: {
       height: theme.spacing(2)
     },
