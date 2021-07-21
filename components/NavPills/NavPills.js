@@ -6,7 +6,7 @@ import navPillsStyle from "./navPillsStyle.js";
 
 const useStyles = makeStyles(navPillsStyle);
 
-const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, actions }) => {
+const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, actions, variant }) => {
     const classes = useStyles();
     const tabButtons = (
         <Box className={classes.container} >
@@ -18,6 +18,7 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
                     value={active}
                     onChange={onChange}
                     centered={alignCenter}
+                    variant={variant}
                 >
                     {tabs.map((tab, key) => {
                         var icon = {};
@@ -133,7 +134,18 @@ NavPills.propTypes = {
     /**
     * A list of actions available in this component
     */
-    actions: PropTypes.array
+    actions: PropTypes.array,
+    /**
+     * Determines additional display behavior of the tabs:
+        - scrollable will invoke scrolling properties and allow for horizontally scrolling (or swiping) of the tab bar.
+        - fullWidth will make the tabs grow to use all the available space, which should be used for small views, like on mobile.
+        - standard will render the default state.
+     */
+    variant: PropTypes.oneOf([
+        "scrollable",
+        "fullWidth",
+        "standard"
+    ]),
 };
 
 export default NavPills;
