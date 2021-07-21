@@ -51,6 +51,18 @@ export interface Props {
     * A list of actions available in this component
     */
     actions?: string[];
+
+    /**
+     * @default "standard"
+     * Determines additional display behavior of the tabs:
+        - scrollable will invoke scrolling properties and allow for horizontally scrolling (or swiping) of the tab bar.
+        - fullWidth will make the tabs grow to use all the available space, which should be used for small views, like on mobile.
+        - standard will render the default state.
+     */
+    variant?:   "scrollable" |
+                "fullWidth" |
+                "standard"
+
     /**
     * Demos:
     * 
