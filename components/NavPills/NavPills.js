@@ -93,7 +93,8 @@ NavPills.defaultProps = {
     active: 0,
     color: "primary",
     actions: [],
-    horizontal: true
+    horizontal: true,
+    variant: "standard"
 };
 
 NavPills.propTypes = {
