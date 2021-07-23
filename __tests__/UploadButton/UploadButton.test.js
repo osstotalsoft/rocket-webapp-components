@@ -54,7 +54,7 @@ describe("UploadButton", () => {
       title="Upload" />);
 
     expect(wrapper.props().color).toBe('theme');
-    expect(wrapper.props().fontSize).toBe('default');
+    expect(wrapper.props().fontSize).toBe('medium');
     expect(wrapper.props().size).toBe('medium');
   });
 });

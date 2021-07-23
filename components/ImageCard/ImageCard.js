@@ -11,7 +11,7 @@ function ImageCard({ children, image, imageSize, alternateText, ...rest }) {
 
   return (
     <Card {...rest}>
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         <img
           className={classes.image + " " + classes[imageSize]}
           src={image}

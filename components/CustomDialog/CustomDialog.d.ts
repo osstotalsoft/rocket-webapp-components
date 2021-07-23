@@ -59,10 +59,6 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
      */
     onClose?: () => void
     /**
-     * Callback fired when the backdrop is clicked.
-     */
-    onBackdropClick?: () => void
-    /**
      * @default false
      * If true, the actions(buttons) below are shown.
      */
@@ -97,16 +93,6 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
      * the text content of the second action.(the button for approval)
      */
     textDialogNo?: string
-    /**
-     * @default false
-     * If true, clicking the backdrop will not fire the onClose callback.
-     */
-    disableBackdropClick?: boolean
-    /**
-     * @default false
-     * If true, hitting escape will not fire the onClose callback.
-     */
-    disableEscapeKeyDown?: boolean
     /**
      * if true, the dialog will have a close button
      */

@@ -29,10 +29,6 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
     */
     onClose?: (event: object, reason: string) => void
     /**
-     * Callback fired when the backdrop is clicked.
-     */
-    onBackdropClick?: () => void
-    /**
     * The content of dialog.
     */
     content?: React.ReactNode
@@ -44,16 +40,6 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
      * The title of dialog.
      */
     title?: string | React.ReactNode
-    /**
-     * @default false
-     * If true, clicking the backdrop will not fire the onClose callback.
-     */
-    disableBackdropClick?: boolean
-    /**
-     * @default false
-     * If true, hitting escape will not fire the onClose callback.
-     */
-    disableEscapeKeyDown?: boolean
     /**
      * The value of the overflowY CSS property
      */

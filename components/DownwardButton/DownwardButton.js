@@ -13,7 +13,7 @@ function DownwardButton({ title, onClick, disabled, fontSize, ...rest }) {
 
 DownwardButton.defaultProps = {
     color: "theme",
-    fontSize: "small",
+    fontSize: "medium",
     size: "medium"
 };
 
@@ -65,7 +65,6 @@ DownwardButton.propTypes = {
    */
     fontSize: PropTypes.oneOf([
         "inherit",
-        "default",
         "small",
         "medium",
         "large"

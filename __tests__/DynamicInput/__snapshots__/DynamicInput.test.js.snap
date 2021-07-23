@@ -5,8 +5,8 @@ exports[`DynamicInput snapshot 1`] = `
   className="MuiFormControl-root MuiTextField-root undefined undefined MuiFormControl-fullWidth"
 >
   <label
-    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
-    data-shrink={true}
+    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-1 MuiInputLabel-formControl MuiInputLabel-animated"
+    data-shrink={false}
     htmlFor="testId"
     id="testId-label"
   >

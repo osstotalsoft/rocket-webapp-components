@@ -379,7 +379,6 @@ exports[`DialogDisplay snapshot 1`] = `
         }
         className="MuiDialog-root"
         closeAfterTransition={true}
-        disableBackdropClick={false}
         disableEscapeKeyDown={false}
         onClose={[MockFunction]}
         open={true}

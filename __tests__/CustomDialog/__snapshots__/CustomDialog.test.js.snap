@@ -394,7 +394,6 @@ exports[`CustomDialog snapshot 1`] = `
         }
         className="MuiDialog-root"
         closeAfterTransition={true}
-        disableBackdropClick={false}
         disableEscapeKeyDown={false}
         onClose={[MockFunction]}
         open={true}
@@ -464,7 +463,7 @@ exports[`CustomDialog snapshot 1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-flex-end MuiGrid-grid-lg-12"
+                          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-flex-end MuiGrid-grid-lg-12"
                         >
                           <button
                             class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-10 makeStyles-info-14 makeStyles-right-11 makeStyles-sm-34"
@@ -881,11 +880,11 @@ exports[`CustomDialog snapshot 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1074,11 +1073,11 @@ exports[`CustomDialog snapshot 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1111,7 +1110,7 @@ exports[`CustomDialog snapshot 1`] = `
                                     alignItems="center"
                                     container={true}
                                     item={true}
-                                    justify="flex-end"
+                                    justifyContent="flex-end"
                                     lg={12}
                                   >
                                     <ForwardRef(Grid)
@@ -1202,11 +1201,11 @@ exports[`CustomDialog snapshot 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1225,11 +1224,11 @@ exports[`CustomDialog snapshot 1`] = `
                                       }
                                       container={true}
                                       item={true}
-                                      justify="flex-end"
+                                      justifyContent="flex-end"
                                       lg={12}
                                     >
                                       <div
-                                        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-flex-end MuiGrid-grid-lg-12"
+                                        className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-flex-end MuiGrid-grid-lg-12"
                                       >
                                         <RegularButton
                                           color="info"

@@ -68,7 +68,7 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
         <Grid item lg={12}>
           {content}
         </Grid>
-        <Grid item container justify="flex-end" alignItems="center" lg={12}>
+        <Grid item container justifyContent="flex-end" alignItems="center" lg={12}>
           {showActions && (
             <>
               <Button
@@ -159,9 +159,13 @@ CustomDialog.propTypes = {
    */
   onYes: PropTypes.func,
   /**
-   * Callback fired when a "click" event is detected.
+   *Callback fired when the component requests to be closed.
+   * Signature:
+   * function(event: object, reason: string) => void
+   * event: The event source of the callback.
+   * reason: Can be: "escapeKeyDown", "backdropClick".
    */
-  onClose: PropTypes.func,
+   onClose: PropTypes.func,
   /**
    * If true, the actions(buttons) below are shown.
    */
