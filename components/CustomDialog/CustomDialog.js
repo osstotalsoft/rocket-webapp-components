@@ -165,7 +165,7 @@ CustomDialog.propTypes = {
    * event: The event source of the callback.
    * reason: Can be: "escapeKeyDown", "backdropClick".
    */
-   onClose: PropTypes.func,
+  onClose: PropTypes.func,
   /**
    * If true, the actions(buttons) below are shown.
    */
