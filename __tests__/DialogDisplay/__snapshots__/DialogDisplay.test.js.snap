@@ -731,7 +731,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                         <WithStyles(ForwardRef(IconButton))
                                           aria-label="Close"
                                           className="makeStyles-modalCloseButton-2"
-                                          onClick={[MockFunction]}
+                                          onClick={[Function]}
                                           size="small"
                                         >
                                           <ForwardRef(IconButton)
@@ -750,7 +750,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                                 "sizeSmall": "MuiIconButton-sizeSmall",
                                               }
                                             }
-                                            onClick={[MockFunction]}
+                                            onClick={[Function]}
                                             size="small"
                                           >
                                             <WithStyles(ForwardRef(ButtonBase))
@@ -759,7 +759,7 @@ exports[`DialogDisplay snapshot 1`] = `
                                               className="MuiIconButton-root makeStyles-modalCloseButton-2 MuiIconButton-sizeSmall"
                                               disabled={false}
                                               focusRipple={true}
-                                              onClick={[MockFunction]}
+                                              onClick={[Function]}
                                             >
                                               <ForwardRef(ButtonBase)
                                                 aria-label="Close"
@@ -774,14 +774,14 @@ exports[`DialogDisplay snapshot 1`] = `
                                                 }
                                                 disabled={false}
                                                 focusRipple={true}
-                                                onClick={[MockFunction]}
+                                                onClick={[Function]}
                                               >
                                                 <button
                                                   aria-label="Close"
                                                   className="MuiButtonBase-root MuiIconButton-root makeStyles-modalCloseButton-2 MuiIconButton-sizeSmall"
                                                   disabled={false}
                                                   onBlur={[Function]}
-                                                  onClick={[MockFunction]}
+                                                  onClick={[Function]}
                                                   onDragLeave={[Function]}
                                                   onFocus={[Function]}
                                                   onKeyDown={[Function]}

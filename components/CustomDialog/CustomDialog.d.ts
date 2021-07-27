@@ -55,12 +55,11 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
      */
     onYes?: () => void
     /**
-     *Callback fired when the component requests to be closed.
-    * Signature:
-    * function(event: object, reason: string) => void
-    * event: The event source of the callback.
-    * reason: Can be: "escapeKeyDown", "backdropClick".
-    */
+     * Callback fired when the component requests to be closed.
+     * Signature: function(event: object, reason: string) => void
+     * @param {object} event The event source of the callback.
+     * @param {string} reason Can be: "escapeKeyDown", "backdropClick", "closeActionClick".
+     */
     onClose: PropTypes.func,
     /**
      * @default false

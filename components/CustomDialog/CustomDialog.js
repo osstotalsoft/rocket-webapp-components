@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import {
   makeStyles,
@@ -26,6 +26,8 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
   const contentClasses = cx({
     [classes[overflowY]]: overflowY
   });
+
+  const handleActionClose = useCallback(event => onClose(event, 'closeActionClick'), [onClose])
 
   return (
     <Dialog
@@ -83,7 +85,7 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
                 right
                 size={buttonSize}
                 color={buttonColor}
-                onClick={onClose}
+                onClick={handleActionClose}
               >
                 {textDialogNo}
               </Button>
@@ -159,11 +161,10 @@ CustomDialog.propTypes = {
    */
   onYes: PropTypes.func,
   /**
-   *Callback fired when the component requests to be closed.
-   * Signature:
-   * function(event: object, reason: string) => void
-   * event: The event source of the callback.
-   * reason: Can be: "escapeKeyDown", "backdropClick".
+   * Callback fired when the component requests to be closed.
+   * Signature: function(event: object, reason: string) => void
+   * @param {object} event The event source of the callback.
+   * @param {string} reason Can be: "escapeKeyDown", "backdropClick", "closeActionClick".
    */
   onClose: PropTypes.func,
   /**

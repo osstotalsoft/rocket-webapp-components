@@ -1361,13 +1361,13 @@ exports[`CustomDialog snapshot 1`] = `
                                         </RegularButton>
                                         <RegularButton
                                           color="info"
-                                          onClick={[MockFunction]}
+                                          onClick={[Function]}
                                           right={true}
                                           size="sm"
                                         >
                                           <WithStyles(ForwardRef(Button))
                                             className="makeStyles-button-10 makeStyles-info-14 makeStyles-right-11 makeStyles-sm-34"
-                                            onClick={[MockFunction]}
+                                            onClick={[Function]}
                                           >
                                             <ForwardRef(Button)
                                               className="makeStyles-button-10 makeStyles-info-14 makeStyles-right-11 makeStyles-sm-34"
@@ -1404,7 +1404,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                   "textSizeSmall": "MuiButton-textSizeSmall",
                                                 }
                                               }
-                                              onClick={[MockFunction]}
+                                              onClick={[Function]}
                                             >
                                               <WithStyles(ForwardRef(ButtonBase))
                                                 className="MuiButton-root MuiButton-text makeStyles-button-10 makeStyles-info-14 makeStyles-right-11 makeStyles-sm-34"
@@ -1412,7 +1412,7 @@ exports[`CustomDialog snapshot 1`] = `
                                                 disabled={false}
                                                 focusRipple={true}
                                                 focusVisibleClassName="Mui-focusVisible"
-                                                onClick={[MockFunction]}
+                                                onClick={[Function]}
                                                 type="button"
                                               >
                                                 <ForwardRef(ButtonBase)
@@ -1428,14 +1428,14 @@ exports[`CustomDialog snapshot 1`] = `
                                                   disabled={false}
                                                   focusRipple={true}
                                                   focusVisibleClassName="Mui-focusVisible"
-                                                  onClick={[MockFunction]}
+                                                  onClick={[Function]}
                                                   type="button"
                                                 >
                                                   <button
                                                     className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-10 makeStyles-info-14 makeStyles-right-11 makeStyles-sm-34"
                                                     disabled={false}
                                                     onBlur={[Function]}
-                                                    onClick={[MockFunction]}
+                                                    onClick={[Function]}
                                                     onDragLeave={[Function]}
                                                     onFocus={[Function]}
                                                     onKeyDown={[Function]}
