@@ -50,7 +50,7 @@ function Control({ selectProps, innerRef, children, innerProps }) {
       ...innerProps
     },
     endAdornment: (
-      <InputAdornment>
+      <InputAdornment position="end">
         <Search />
       </InputAdornment>
     )
@@ -77,7 +77,7 @@ function Control({ selectProps, innerRef, children, innerProps }) {
 function Option({ innerRef, isFocused, _isSelected, innerProps, children }) {
   const classes = useStyles()
   return (
-    <MenuItem buttonRef={innerRef} selected={isFocused} component='div' className={classes.option} {...innerProps}>
+    <MenuItem ref={innerRef} selected={isFocused} component='div' className={classes.option} {...innerProps}>
       {typeof children === 'function' ? children() : children}
     </MenuItem>
   )

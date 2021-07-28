@@ -65,7 +65,6 @@ DownwardButton.propTypes = {
    */
     fontSize: PropTypes.oneOf([
         "inherit",
-        "default",
         "small",
         "medium",
         "large"

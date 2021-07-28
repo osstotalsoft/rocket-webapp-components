@@ -11,7 +11,7 @@ const DownloadButton = ({ title, onClick, disabled, fontSize, ...rest }) => (
 
 DownloadButton.defaultProps = {
     color: "theme",
-    fontSize: "default",
+    fontSize: "medium",
     size: "medium"
 };
 
@@ -59,7 +59,6 @@ DownloadButton.propTypes = {
     */
     fontSize: PropTypes.oneOf([
         "inherit",
-        "default",
         "small",
         "medium",
         "large"

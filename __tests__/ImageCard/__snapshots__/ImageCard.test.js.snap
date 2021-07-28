@@ -5,7 +5,7 @@ exports[`Render ImageCard snapshot 1`] = `
   className="makeStyles-card-11"
 >
   <div
-    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+    className="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-center"
   >
     <img
       alt="Image card"

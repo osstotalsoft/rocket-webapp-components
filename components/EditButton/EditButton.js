@@ -15,7 +15,7 @@ const EditButton = ({ title, onClick, editMode, disabled, fontSize, ...rest }) =
 EditButton.defaultProps = {
     editMode: true,
     color: "theme",
-    fontSize: "default",
+    fontSize: "medium",
     size: "medium"
 };
 
@@ -71,7 +71,6 @@ EditButton.propTypes = {
     */
     fontSize: PropTypes.oneOf([
         "inherit",
-        "default",
         "small",
         "medium",
         "large"

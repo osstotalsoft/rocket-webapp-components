@@ -44,7 +44,7 @@ export interface CancelButtonProps extends Omit<ButtonProps, 'color'> {
     *@default "small"
     * The fontSize of button's content.
     */
-    fontSize?: "inherit" | "default" | "small" | "large"
+    fontSize?: "inherit" | "medium" | "small" | "large"
 }
 /**
  *

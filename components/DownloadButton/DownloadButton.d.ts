@@ -41,10 +41,10 @@ export interface DownloadButtonProps extends Omit<ButtonProps, 'color'> {
     */
     size?: "medium" | "small"
     /**
-    *  @default "default"
+    *  @default "medium"
     * The fontSize of button's content.
     */
-    fontSize?: "inherit" | "default" | "small" | "medium" | "large"
+    fontSize?: "inherit" | "small" | "medium" | "large"
 }
 /**
  *

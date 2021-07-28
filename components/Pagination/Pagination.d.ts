@@ -21,7 +21,7 @@ export interface Props {
      * This function is called when the number of rows per page is changed
      * @param {object} event The event source of the callback.
      */
-    onChangeRowsPerPage?: (event: React.SyntheticEvent) => void;
+    onRowsPerPageChange?: (event: React.SyntheticEvent) => void;
 
     /**
      * This function is called when the page is changed
@@ -29,7 +29,7 @@ export interface Props {
      * @param {number} newPage The page you want to navigate
      * @param {number} direction 0 => navigate to a previous page and 1 => navigate to a next page
      */
-    onChangePage?: (event: React.SyntheticEvent, newPage: number, direction: 0 | 1) => void;
+    onPageChange?: (event: React.SyntheticEvent, newPage: number, direction: 0 | 1) => void;
 
     /**
     * @default () => { } 

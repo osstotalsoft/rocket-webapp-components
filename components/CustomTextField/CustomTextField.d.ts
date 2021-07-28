@@ -31,13 +31,13 @@ export interface Props {
      */
     multiline?: boolean
     /**
-     * Number of rows to display when multiline option is set to true.
+     * Minimum number of rows to display when multiline option is set to true.
      */
-    rows?: number | string
+    minRows?: number | string
     /**
      * Maximum number of rows to display when multiline option is set to true.
      */
-    rowsMax?: number | string
+    maxRows?: number | string
     /**
      * @default false
      * If true, the input will accept only numeric values.

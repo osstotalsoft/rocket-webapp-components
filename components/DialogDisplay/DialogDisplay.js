@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import {
   Dialog,
@@ -20,6 +20,8 @@ const DialogDisplay = ({ id, open, title, onClose, content, actions, overflowY, 
     [classes[overflowY]]: overflowY
   });
 
+  const handleActionClose = useCallback(event => onClose(event, 'closeActionClick'), [onClose])
+
   return (
     <Dialog
       PaperProps={{
@@ -37,7 +39,7 @@ const DialogDisplay = ({ id, open, title, onClose, content, actions, overflowY, 
           size="small"
           className={classes.modalCloseButton}
           aria-label="Close"
-          onClick={onClose}
+          onClick={handleActionClose}
         >
           <CloseIcon fontSize="small" />
         </IconButton>
@@ -68,11 +70,10 @@ DialogDisplay.propTypes = {
    */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /**
-   *Callback fired when the component requests to be closed.
-   * Signature:
-   * function(event: object, reason: string) => void
-   * event: The event source of the callback.
-   * reason: Can be: "escapeKeyDown", "backdropClick".
+   * Callback fired when the component requests to be closed.
+   * Signature: function(event: object, reason: string) => void
+   * @param {object} event The event source of the callback.
+   * @param {string} reason Can be: "escapeKeyDown", "backdropClick", "closeActionClick".
    */
   onClose: PropTypes.func,
   /**

@@ -48,7 +48,6 @@ export interface UpwardButtonProps {
    
      */
     fontSize?: "inherit" |
-                "default" |
                 "small" |
                 "medium" |
                 "large"
