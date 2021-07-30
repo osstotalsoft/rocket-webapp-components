@@ -67,8 +67,8 @@ CustomIconButton.propTypes = {
     "medium"
   ]),
   /**
- * Override or extend the styles applied to the component
- */
+  * Override or extend the styles applied to the component
+  */
   customClass: PropTypes.string,
   /**
   * If true, button will be disabled. Default is set to false

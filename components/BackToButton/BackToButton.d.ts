@@ -41,6 +41,32 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   * The path where the browser will be directed to when the button is clicked.
   */
   path?: string
+  /**
+  * Override or extend the styles applied to the component
+  */
+  customClass?: string
+  /**
+  * @default "false"
+  * If true, button will be disabled.
+  */
+  disabled?: boolean
+  /**
+  * @default "false"
+  * If true, the keyboard focus ripple will be disabled. 
+  */
+  disableFocusRipple?: boolean
+  /**
+  * If true, the ripple effect will be disabled.
+  */
+  disableRipple?: boolean
+  /**
+  * @default "false"
+  * If given, uses a negative margin to counteract the padding on one side 
+  * (this is often helpful for aligning the left or right side of the icon 
+  * with content above or below, without ruining the border size and shape).
+  */
+  edge?: "start" | "end" | "false"
+  
 }
 /**
  *
@@ -50,9 +76,9 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/BackToButton/BackToButton.js
  * 
- * Material-UI component used:
+ * Bit component used:
  * 
- * - IconButton: https://material-ui.com/api/icon-button/
+ * - IconButton: https://bit.dev/totalsoft_oss/react-mui/icon-button
  * 
  */
 export default function BackToButton(props: BackToButtonProps): JSX.Element;

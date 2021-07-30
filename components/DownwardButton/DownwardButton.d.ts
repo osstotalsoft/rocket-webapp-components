@@ -45,6 +45,26 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
     * The fontSize of button's content.
     */
     fontSize?: "inherit" | "small" | "medium" | "large"
+    /**
+    * Override or extend the styles applied to the component
+    */
+    customClass?: string
+    /**
+    * @default "false"
+    * If true, the keyboard focus ripple will be disabled. 
+    */
+    disableFocusRipple?: boolean
+    /**
+     * If true, the ripple effect will be disabled.
+     */
+    disableRipple?: boolean
+    /**
+     * @default "false"
+     * If given, uses a negative margin to counteract the padding on one side 
+     * (this is often helpful for aligning the left or right side of the icon 
+     * with content above or below, without ruining the border size and shape).
+     */
+    edge?: "start" | "end" | "false"
 }
 /**
  *
@@ -54,9 +74,9 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
  *
  *  Take a look over the code for further information:https://github.com/osstotalsoft/rocket-webapp-components/blob/master/components/DownwardButton/DownwardButton.js
  * 
- * Material-UI component used:
+ * Bit component used:
  * 
- * - IconButton: https://material-ui.com/api/icon-button/
+ * - IconButton: https://bit.dev/totalsoft_oss/react-mui/icon-button
  * 
  */
 export default function DownwardButton(props: DownwardButtonProps): JSX.Element;
