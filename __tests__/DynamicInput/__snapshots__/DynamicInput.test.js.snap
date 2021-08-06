@@ -19,7 +19,7 @@ exports[`DynamicInput snapshot 1`] = `
     <input
       aria-invalid={false}
       autoFocus={false}
-      className="MuiInputBase-input MuiInput-input makeStyles-input-2"
+      className="MuiInputBase-input MuiInput-input makeStyles-input-2 "
       disabled={false}
       id="testId"
       inputMode="numeric"

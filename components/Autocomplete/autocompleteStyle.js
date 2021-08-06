@@ -2,16 +2,11 @@ import { emphasize } from '@material-ui/core/styles/colorManipulator'
 import styles from '../../assets/jss/styles'
 import { theme as defaultTheme } from '../../themes/defaultTheme'
 
-export const selectedColor = (theme, inputSelectedColor) => {
-  return { color: inputSelectedColor ? inputSelectedColor : theme.autoComplete.selectedInputColor }
-}
-
 const autocompleteStyle = theme => {
   const { dangerColor, successColor, defaultFont } = styles(theme)
 
   return {
     root: {
-      flexGrow: 1,
       height: 250
     },
     input: {
@@ -43,6 +38,7 @@ const autocompleteStyle = theme => {
       backgroundColor: emphasize(theme.palette.type === 'light' ? theme.palette.grey[300] : theme.palette.grey[700], 0.08)
     },
     noOptionsMessage: {
+      ...defaultFont,
       padding: `${theme.spacing()}px ${theme.spacing(2)}px`
     },
     singleValue: {
@@ -64,7 +60,7 @@ const autocompleteStyle = theme => {
       height: theme.spacing(2)
     },
     option: {
-      '&:selected':{
+      '&:selected': {
         backgroundColor: theme?.autoComplete?.selectedBgColor || defaultTheme.autoComplete.selectedBgColor,
         color: theme?.autoComplete?.selectedTextColor || defaultTheme.autoComplete.selectedTextColor
       },
@@ -72,6 +68,24 @@ const autocompleteStyle = theme => {
         backgroundColor: theme?.autoComplete?.hoverBgColor || defaultTheme.autoComplete.hoverBgColor,
         color: theme?.autoComplete?.hoverTextColor || defaultTheme.autoComplete.hoverTextColor
       }
+    },
+    colorInherit: {
+      color: 'inherit'
+    },
+    colorPrimary: {
+      color: theme.palette.primary.main
+    },
+    colorSecondary: {
+      color: theme.palette.secondary.main
+    },
+    colorTextPrimary: {
+      color: theme.palette.text.primary
+    },
+    colorTextSecondary: {
+      color: theme.palette.text.secondary
+    },
+    colorError: {
+      color: theme.palette.error.main
     }
   }
 }

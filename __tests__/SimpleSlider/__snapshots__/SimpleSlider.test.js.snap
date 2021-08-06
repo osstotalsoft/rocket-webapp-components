@@ -27,7 +27,8 @@ exports[`SimpleSlider Snapshot 1`] = `
       <input
         aria-invalid={false}
         autoFocus={false}
-        className="MuiInputBase-input MuiInput-input makeStyles-input-8"
+        className="MuiInputBase-input MuiInput-input makeStyles-input-8 "
+        decimalScale={2}
         disabled={false}
         onAnimationStart={[Function]}
         onBlur={[Function]}
