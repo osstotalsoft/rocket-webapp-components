@@ -2,13 +2,13 @@ import { DialogProps } from '@material-ui/core/Dialog';
 
 export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'> {
     /**
-    * The id(s) of the element(s) that label the dialog.
-    */
+     * The id(s) of the element(s) that label the dialog.
+     */
     id: string;
     /**
     *  @default false
-    * If true, the dialog is open.
-    */
+     * If true, the dialog is open.
+     */
     open?: boolean
     /**
      * @default false
@@ -21,39 +21,24 @@ export interface DialogDisplayProps extends Omit<DialogProps, 'open' | 'onClose'
      */
     scroll?: 'body' | 'paper'
     /**
-    *Callback fired when the component requests to be closed.
-    * Signature:
-    * function(event: object, reason: string) => void
-    * event: The event source of the callback.
-    * reason: Can be: "escapeKeyDown", "backdropClick".
-    */
+     * Callback fired when the component requests to be closed.
+     * Signature: function(event: object, reason: string) => void
+     * @param {object} event The event source of the callback.
+     * @param {string} reason Can be: "escapeKeyDown", "backdropClick", "closeActionClick".
+     */
     onClose?: (event: object, reason: string) => void
     /**
-     * Callback fired when the backdrop is clicked.
+     * The content of dialog.
      */
-    onBackdropClick?: () => void
-    /**
-    * The content of dialog.
-    */
     content?: React.ReactNode
     /**
-    * The actions provided below the dialog.
-    */
+     * The actions provided below the dialog.
+     */
     actions?: React.ReactNode
     /**
      * The title of dialog.
      */
     title?: string | React.ReactNode
-    /**
-     * @default false
-     * If true, clicking the backdrop will not fire the onClose callback.
-     */
-    disableBackdropClick?: boolean
-    /**
-     * @default false
-     * If true, hitting escape will not fire the onClose callback.
-     */
-    disableEscapeKeyDown?: boolean
     /**
      * The value of the overflowY CSS property
      */

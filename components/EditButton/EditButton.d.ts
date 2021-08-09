@@ -46,10 +46,10 @@ export interface EditButtonProps extends Omit<ButtonProps, 'color' | 'disabled'>
     */
     size?: "medium" | "small"
     /**
-    * @default "default"
+    * @default "medium"
     * The fontSize of button's content.
     */
-    fontSize?: "inherit" | "default" | "small" | "medium" | "large"
+    fontSize?: "inherit" | "small" | "medium" | "large"
 }
 /**
  *

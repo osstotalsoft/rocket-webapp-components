@@ -4,15 +4,15 @@ import { IconButton } from '@material-ui/core';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
-function TablePaginationActions({ count, page, rowsPerPage, onChangePage }) {
+function TablePaginationActions({ count, page, rowsPerPage, onPageChange }) {
 
     const handleBackButtonClick = useCallback(event => {
-        onChangePage(event, page - 1, 0);
-    }, [onChangePage, page])
+        onPageChange(event, page - 1, 0);
+    }, [onPageChange, page])
 
     const handleNextButtonClick = useCallback(event => {
-        onChangePage(event, page + 1, 1);
-    }, [onChangePage, page])
+        onPageChange(event, page + 1, 1);
+    }, [onPageChange, page])
 
     return (
         <div style={{ display: "flex" }}>
@@ -36,7 +36,7 @@ function TablePaginationActions({ count, page, rowsPerPage, onChangePage }) {
 
 TablePaginationActions.propTypes = {
     count: PropTypes.number.isRequired,
-    onChangePage: PropTypes.func.isRequired,
+    onPageChange: PropTypes.func.isRequired,
     page: PropTypes.number.isRequired,
     rowsPerPage: PropTypes.number.isRequired
 };

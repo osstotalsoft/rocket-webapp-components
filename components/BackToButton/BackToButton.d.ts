@@ -36,7 +36,7 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   * @default "small"
   * The fontsize of button's content.
   */
-  fontSize?: "inherit" | "default" | "small" | "medium" | "large"
+  fontSize?: "inherit" | "small" | "medium" | "large"
   /**
   * The path where the browser will be directed to when the button is clicked.
   */

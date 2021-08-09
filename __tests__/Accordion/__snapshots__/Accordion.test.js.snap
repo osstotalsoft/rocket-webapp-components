@@ -73,7 +73,7 @@ exports[`Accordion First child is expanded 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-entered"
+      className="MuiCollapse-root MuiCollapse-entered"
       style={
         Object {
           "minHeight": "0px",
@@ -170,7 +170,7 @@ exports[`Accordion First child is expanded 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-hidden"
+      className="MuiCollapse-root MuiCollapse-hidden"
       style={
         Object {
           "minHeight": "0px",
@@ -267,7 +267,7 @@ exports[`Accordion First child is expanded 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-hidden"
+      className="MuiCollapse-root MuiCollapse-hidden"
       style={
         Object {
           "minHeight": "0px",
@@ -368,7 +368,7 @@ exports[`Accordion Third child is expanded 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-hidden"
+      className="MuiCollapse-root MuiCollapse-hidden"
       style={
         Object {
           "minHeight": "0px",
@@ -462,7 +462,7 @@ exports[`Accordion Third child is expanded 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-hidden"
+      className="MuiCollapse-root MuiCollapse-hidden"
       style={
         Object {
           "minHeight": "0px",
@@ -556,7 +556,7 @@ exports[`Accordion Third child is expanded 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-entered"
+      className="MuiCollapse-root MuiCollapse-entered"
       style={
         Object {
           "minHeight": "0px",
@@ -657,7 +657,7 @@ exports[`Accordion Three children are expected to render 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-entered"
+      className="MuiCollapse-root MuiCollapse-entered"
       style={
         Object {
           "minHeight": "0px",
@@ -751,7 +751,7 @@ exports[`Accordion Three children are expected to render 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-hidden"
+      className="MuiCollapse-root MuiCollapse-hidden"
       style={
         Object {
           "minHeight": "0px",
@@ -845,7 +845,7 @@ exports[`Accordion Three children are expected to render 1`] = `
       </div>
     </div>
     <div
-      className="MuiCollapse-container MuiCollapse-hidden"
+      className="MuiCollapse-root MuiCollapse-hidden"
       style={
         Object {
           "minHeight": "0px",

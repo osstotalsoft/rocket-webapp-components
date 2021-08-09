@@ -54,12 +54,11 @@ export interface UploadButtonProps {
            "medium"
 
     /**
-     * @default "small"
+     * @default "medium"
      * The size of the font
      
      */
     fontSize?: "inherit" |
-                "default" |
                 "small" |
                 "medium" |
                 "large"

@@ -13,7 +13,7 @@ const UploadButton = ({ title, onClick, disabled, children, fontSize, ...rest })
 UploadButton.defaultProps = {
     color: "theme",
     size: "medium",
-    fontSize: "default"
+    fontSize: "medium"
 };
 
 UploadButton.propTypes = {
@@ -47,7 +47,6 @@ UploadButton.propTypes = {
     ]),
     fontSize: PropTypes.oneOf([
         "inherit",
-        "default",
         "small",
         "medium",
         "large"

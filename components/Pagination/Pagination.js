@@ -13,16 +13,16 @@ const displayedRows = rowsOfText => ({ from, to, count }) => {
 }
 
 export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOptions, onRefresh,
-  onChangePage, onChangeRowsPerPage, rowsPerPageText, rowsOfText }) => {
+  onPageChange, onRowsPerPageChange, rowsPerPageText, rowsOfText }) => {
   const classes = useStyles();
 
   const internalChangePage = useCallback((_event, newPage, direction) => {
-    onChangePage(newPage, direction);
-  }, [onChangePage])
+    onPageChange(newPage, direction);
+  }, [onPageChange])
 
   const internalChangePageSize = useCallback(event => {
-    onChangeRowsPerPage(event.target.value);
-  }, [onChangeRowsPerPage])
+    onRowsPerPageChange(event.target.value);
+  }, [onRowsPerPageChange])
 
   const actualRowsPerPage = rowsPerPageOptions ? rowsPerPageOptions : [10, 25, 50, 100];
 
@@ -37,8 +37,8 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
           count={totalCount}
           rowsPerPage={pageSize}
           page={page}
-          onChangePage={internalChangePage}
-          onChangeRowsPerPage={internalChangePageSize}
+          onPageChange={internalChangePage}
+          onRowsPerPageChange={internalChangePageSize}
           labelRowsPerPage={rowsPerPageText}
           labelDisplayedRows={displayedRows(rowsOfText)}
           SelectProps={{
@@ -82,14 +82,14 @@ Pagination.propTypes = {
   * This function is called when the number of rows per page is changed
   * @param {object} event The event source of the callback.
   */
-  onChangeRowsPerPage: PropTypes.func,
+  onRowsPerPageChange: PropTypes.func,
   /**
   * This function is called when the page is changed
   * @param {object} event The event source of the callback.
   * @param {number} newPage The page you want to navigate
   * @param {number} direction 0 => navigate to a previous page and 1 => navigate to a next page
   */
-  onChangePage: PropTypes.func,
+  onPageChange: PropTypes.func,
   /**
   * The function called on refresh. Thi property is required 
   */
