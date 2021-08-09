@@ -1,10 +1,14 @@
 import React, { useCallback, useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import autoCompleteStyles from "./autocompleteStyle";
+import cx from "classnames";
 import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
-import PropTypes from "prop-types";
-import autoCompleteStyles from "./autocompleteStyle";
 import { Chip, makeStyles, Checkbox } from "@material-ui/core";
+import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
+import CustomTextField from "../CustomTextField";
+import Typography from "../Typography";
 import {
   flatten,
   prop,
@@ -17,36 +21,13 @@ import {
   omit,
   contains
 } from "ramda";
-import { emptyArray, emptyString } from "../../utils/constants";
-import CustomTextField from "../CustomTextField";
-import Typography from "../Typography";
-import cx from "classnames";
 import humps from "humps";
-import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
-
-function deprecated(propType, explanation) {
-  return function validate(props, propName, componentName, ...rest) {
-    if (props[propName] != null) {
-      let warned = {};
-      const message = `"${propName}" property of "${componentName}" has been deprecated.\n${
-        explanation ? explanation : emptyString
-      }`;
-      if (!warned[message]) {
-        console.warn(message);
-        warned[message] = true;
-      }
-    }
-
-    return propType(props, propName, componentName, ...rest);
-  };
-}
+import { emptyArray, emptyString } from "../../utils/constants";
+import { deprecated } from "../../utils/functions";
 
 const useStyles = makeStyles(autoCompleteStyles);
 
-const isPrimitive = value =>
-  typeof value === "string" ||
-  typeof value === "number" ||
-  typeof value === "boolean";
+const isString = value => typeof value === "string";
 
 const filter = createFilterOptions();
 const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
@@ -57,7 +38,7 @@ const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
   // Suggest the creation of a new value
   if (creatable && params.inputValue !== "") {
     filtered.push(
-      isPrimitive(options[0])
+      isString(options[0])
         ? {
             primitiveValue: params.inputValue,
             createdLabel: createdLabel
@@ -102,12 +83,12 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
 };
 
 const getOptionLabel = labelKey => option => {
-  if (isPrimitive(option)) return option;
+  if (isString(option)) return option;
   return option[labelKey] ? option[labelKey] : emptyString;
 };
 
 const getOptionSelected = (option, value) => {
-  return isPrimitive(option)
+  return isString(option)
     ? option === value
     : JSON.stringify(option) === JSON.stringify(value);
 };
@@ -199,7 +180,7 @@ const Autocomplete = ({
         </>
       ) : (
         <Typography className={classes.input}>
-          {isPrimitive(option)
+          {isString(option)
             ? option
             : option.createdLabel
             ? option.createdLabel
@@ -215,7 +196,7 @@ const Autocomplete = ({
         <Chip
           key={index}
           label={
-            isPrimitive(option)
+            isString(option)
               ? option
               : option.primitiveValue
               ? option.primitiveValue
@@ -230,13 +211,13 @@ const Autocomplete = ({
   const handleChange = useCallback(
     (_event, inputValue) => {
       if (!inputValue) return;
-      if (isPrimitive(inputValue)) return onChange(inputValue);
+      if (isString(inputValue)) return onChange(inputValue);
       if (isMultiSelection)
         return onChange(
           simpleValue
             ? inputValue.map(a => (a[valueKey] ? a[valueKey] : a[labelKey]))
             : inputValue.map(a =>
-                isPrimitive(a)
+                isString(a)
                   ? a
                   : a.primitiveValue
                   ? a.primitiveValue
@@ -281,7 +262,7 @@ const Autocomplete = ({
       selectOnFocus
       clearOnBlur
       disableCloseOnSelect={isMultiSelection}
-      filterSelectedOptions={simpleValue && isMultiSelection && !withCheckboxes}
+      filterSelectedOptions={isMultiSelection && !withCheckboxes}
       filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
       getOptionLabel={getOptionLabel(labelKey)}
       getOptionSelected={!simpleValue ? getOptionSelected : undefined}
@@ -319,16 +300,6 @@ Autocomplete.defaultProps = {
 };
 
 Autocomplete.propTypes = {
-  /**
-   * If true, the portion of the selected suggestion that has not been typed by the user,
-   * known as the completion string, appears inline after the input cursor in the textbox.
-   * The inline completion string is visually highlighted and has a selected state.
-   */
-  autoComplete: PropTypes.bool,
-  /**
-   * If true, the first option is automatically highlighted.
-   */
-  autoHighlight: PropTypes.bool,
   /**
    * The array of options from which the client can select a value.
    */
@@ -372,7 +343,8 @@ Autocomplete.propTypes = {
    */
   isSearchable: deprecated(PropTypes.bool),
   /**
-   * If true, the Autocomplete is free solo, meaning that the user input is not bound to provided options
+   * If true, the Autocomplete is free solo, meaning that the user input is not bound to provided options and can add
+   * his own values.
    */
   creatable: PropTypes.bool,
   /**
