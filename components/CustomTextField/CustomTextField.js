@@ -144,7 +144,7 @@ function CustomTextField({
         className: classes.label,
         ...InputLabelProps
       }}
-    ></TextField>
+    />
   );
 }
 

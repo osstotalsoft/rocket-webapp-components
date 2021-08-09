@@ -12,11 +12,11 @@ export interface AutocompleteProps {
    * @default []
    * The array of options from which the client can select a value.
    */
-  options?: []
+  options: [OptionType | string]
   /**
    * Function that returns a promise, which is the set of options to be used once the promise resolves.
    */
-  loadOptions(inputValue: string, callback: (options: OptionsType<OptionType>) => void): void;
+  loadOptions?: (() => Promise)
   /**
    * @default null
    * The selected value from list of options.
@@ -25,7 +25,7 @@ export interface AutocompleteProps {
   /**
    * Handle change events on the select.
    */
-  onChange: () => void
+  onChange: (event: Object, value: T | T[], reason: string) => void
   /**
    * Handle the menu opening.
    */
@@ -100,25 +100,25 @@ export interface AutocompleteProps {
   /**
    * The color of selected input.
    */
-  inputSelectedColor?: string,
+  inputSelectedColor?: string
   /**
    * @default true
    * If true, the portion of the selected suggestion that has not been typed by the user,
    * known as the completion string, appears inline after the input cursor in the textbox.
    * The inline completion string is visually highlighted and has a selected state.
    */
-  autoComplete: boolean,
+  autoComplete?: boolean
   /**
    * @default true
    * If true, the first option is automatically highlighted.
    */
-  autoHighlight: boolean,
+  autoHighlight?: boolean
   /**
    * @default false
    * If true, the selected option becomes the value of the input when the Autocomplete loses focus 
    * unless the user chooses a different option or changes the character string in the input.
    */
-  autoSelect: boolean,
+  autoSelect?: boolean
   /**
    * @default false
    * Control if the input should be blurred when an option is selected:
@@ -127,191 +127,191 @@ export interface AutocompleteProps {
    * - 'touch': the input is blurred after a touch event. 
    * - 'mouse': the input is blurred after a mouse event.
    */
-  blurOnSelect: 'mouse' | 'touch' | boolean,
+  blurOnSelect?: 'mouse' | 'touch' | boolean
   /**
    * Props applied to the Chip element.
    */
-  ChipProps: Object,
+  ChipProps?: Object
   /**
    * Override or extend the styles applied to the component. See CSS API below for more details.
    */
-  classes: Object,
+  classes?: Object
   /**
    * @default !props.freeSolo
    * If true, the input's text will be cleared on blur if no value is selected. 
    * Set to true if you want to help the user enter a new value. 
    * Set to false if you want to help the user resume his search.
    */
-  clearOnBlur: boolean,
+  clearOnBlur?: boolean
   /**
    * @default false
    * If true, clear all values when the user presses escape and the popup is closed.
    */
-  clearOnEscape: boolean,
+  clearOnEscape?: boolean
   /**
    * @default 'Clear'
    * Override the default text for the clear icon button. 
    * For localization purposes, you can use the provided translations.
    */
-  clearText: string,
+  clearText?: string
   /**
    * @default false
    * If true, the popup will ignore the blur event if the input is filled. 
    * You can inspect the popup markup with your browser tools. 
    * Consider this option when you need to customize the component.
    */
-  debug: boolean,
+  debug?: boolean
   /**
    * The default input value. Use when the component is not controlled.
    */
-  defaultValue: any,
+  defaultValue?: any
   /**
    * @default false
    * If true, the input can't be cleared.
    */
-  disableClearable: boolean,
+  disableClearable?: boolean
   /**
    * @default false
    * If true, the popup won't close when a value is selected.
    */
-  disableCloseOnSelect: boolean,
+  disableCloseOnSelect?: boolean
   /**
    * @default false
    * If true, will allow focus on disabled items.
    */
-  disabledItemsFocusable: boolean,
+  disabledItemsFocusable?: boolean
   /**
    * If true, the list box in the popup will not wrap focus.
    */
-  disableListWrap: boolean,
+  disableListWrap?: boolean
   /**
    * @default false
    * Disable the portal behavior. The children stay within it's parent DOM hierarchy.
    */
-  disablePortal: boolean,
+  disablePortal?: boolean
   /**
    * A filter function that determines the options that are eligible.
    */
-  filterOptions: () => void,
+  filterOptions?: () => void
   /**
    * If true, hide the selected options from the list box.
    */
-  filterSelectedOptions: boolean,
+  filterSelectedOptions?: boolean
   /**
    * @default 'auto'
    * Force the visibility display of the popup icon.
    */
-  forcePopupIcon: 'auto' | boolean,
+  forcePopupIcon?: 'auto' | boolean
   /**
    * If true, the Autocomplete is free solo, meaning that the user input is not bound to provided options.
    */
-  freeSolo: boolean,
+  freeSolo?: boolean
   /**
    * If true, the input will take up the full width of its container.
    */
-  fullWidth: boolean,
+  fullWidth?: boolean
   /**
    * The label to display when the tags are truncated (limitTags).
    */
-  getLimitTagsText: (more: number) => React.ReactNode,
+  getLimitTagsText?: (more: number) => React.ReactNode
   /**
    * Used to determine the disabled state for a given option.
    */
-  getOptionDisabled: (option: OptionType) => boolean,
+  getOptionDisabled?: (option: OptionType) => boolean
   /**
    * Used to determine the string value for a given option.
    * It's used to fill the input (and the list box options if renderOption is not provided).
    */
-  getOptionLabel: (option: OptionType) => string,
+  getOptionLabel?: (option: OptionType) => string
   /**
    * Used to determine if an option is selected, considering the current value. 
    * Uses strict equality by default.
    */
-  getOptionSelected: (option: OptionType, value: ValueType) => boolean,
+  getOptionSelected?: (option: OptionType, value: ValueType) => boolean
   /**
    * If provided, the options will be grouped under the returned string. 
    * The groupBy value is also used as the text for group headings when renderGroup is not provided.
    */
-  groupBy: (option: OptionType) => string,
+  groupBy?: (option: OptionType) => string
   /**
    * @default true
    * If true, the component handles the "Home" and "End" keys when the popup is open. 
    * It should move focus to the first option and last option, respectively.
    */
-  handleHomeEndKeys: boolean,
+  handleHomeEndKeys?: boolean
   /**
    * @default false
    * If true, the highlight can move to the input.
    */
-  includeInputInList: boolean,
+  includeInputInList?: boolean
   /**
    * The input value.
    */
-  inputValue: string,
+  inputValue?: string
   /**
    * @default -1
    * The maximum number of tags that will be visible when not focused. 
    * Set -1 to disable the limit.
    */
-  limitTags: number,
+  limitTags?: number
   /**
    * @default 'ul'
    * The component used to render the listbox.
    */
-  ListboxComponent: React.ComponentType<React.HTMLAttributes<HTMLElement>>,
+  ListboxComponent?: React.ComponentType<React.HTMLAttributes<HTMLElement>>
   /**
    * Props applied to the Listbox element.
    */
-  ListboxProps?: object,
+  ListboxProps?: object
   /**
    * If `true`, the component is in a loading state.
    */
-  loading?: boolean,
+  loading?: boolean
   /**
    * Text to display when in a loading state.
    */
-  loadingText?: React.ReactNode,
+  loadingText?: React.ReactNode
   /**
    * Text to display when there are no options.
    * For localization purposes, you can use the provided translations.
    */
-  noOptionsText?: React.ReactNode,
+  noOptionsText?: React.ReactNode
   /**
    * Override the default text for the *open popup* icon button.
    */
-  openText?: string,
+  openText?: string
   /**
    * The component used to render the body of the popup.
    */
-  PaperComponent?: React.ComponentType<React.HTMLAttributes<HTMLElement>>,
+  PaperComponent?: React.ComponentType<React.HTMLAttributes<HTMLElement>>
   /**
    * The component used to position the popup.
    */
-  PopperComponent?: React.ComponentType<PopperProps>,
+  PopperComponent?: React.ComponentType<PopperProps>
   /**
    * The icon to display in place of the default popup icon.
    */
-  popupIcon?: React.ReactNode,
+  popupIcon?: React.ReactNode
   /**
    * Render the group.
    */
-  renderGroup?: (option: any) => React.ReactNode,
+  renderGroup?: (option: any) => React.ReactNode
   /**
    * Render the input.
    */
-  renderInput: (params: Object) => React.ReactNode,
+  renderInput: (params: Object) => React.ReactNode
   /**
    * Render the option, use `getOptionLabel` by default.
    */
-  renderOption?: (option: any, state: Object) => React.ReactNode,
+  renderOption?: (option: any, state: Object) => React.ReactNode
   /**
    * Render the selected value.
    */
-  renderTags?: (value: T[], getTagProps: function) => React.ReactNode,
+  renderTags?: (value: T[], getTagProps: function) => React.ReactNode
   /**
    * The size of the autocomplete.
    */
-  size?: 'small' | 'medium';
+  size?: 'small' | 'medium'
 }
 /**
  *
