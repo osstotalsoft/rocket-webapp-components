@@ -44,10 +44,13 @@ export interface Props {
      */
     isNumeric?: boolean
     /**
-     * Other properties you can provide to the component. Chech here: https://github.com/s-yadav/react-number-format 
-     * Please see the example provided in the documentation.
+     * Other properties you can provide to the Input component.
      */
     customInputProps?: Object
+    /**
+     * Attributes applied to the input element.
+     */
+    inputProps?: Object
     /**
      * The short hint displayed in the input before the user enters a value.
      */
