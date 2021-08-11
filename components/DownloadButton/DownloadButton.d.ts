@@ -48,9 +48,9 @@ export interface DownloadButtonProps extends Omit<ButtonProps, 'color'> {
     /**
     * Override or extend the styles applied to the component
     */
-    customClass?: string
+    className?: string
     /**
-    * @default "false"
+    * @default false
     * If true, the keyboard focus ripple will be disabled. 
     */
     disableFocusRipple?: boolean

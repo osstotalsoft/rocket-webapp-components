@@ -14,7 +14,7 @@ function RegularButton({
   children,
   fullWidth,
   disabled,
-  customClass,
+  className,
   right,
   justIcon,
   size,
@@ -27,7 +27,7 @@ function RegularButton({
     [classes.round]: round,
     [classes.fullWidth]: fullWidth,
     [classes.disabled]: disabled,
-    [customClass]: customClass,
+    [className]: className,
     [classes.right]: right,
     [classes.justIcon]: justIcon,
     [classes.wd]: wd,
@@ -92,7 +92,7 @@ RegularButton.propTypes = {
   /**
    * A custom class provided.
    */
-  customClass: PropTypes.string,
+  className: PropTypes.string,
   /**
    * If true,  the button's min width will be set to 160px.
    */

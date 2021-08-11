@@ -8,13 +8,13 @@ import iconButtonStyle from "./iconButtonStyle";
 const useStyles = makeStyles(iconButtonStyle);
 
 // eslint-disable-next-line react/prop-types
-const Button = ({ children, color, customClass, ...rest }) => {
+const Button = ({ children, color, className, ...rest }) => {
   const classes = useStyles();
   const buttonClasses =
     classes.button +
     cx({
       [" " + classes[color]]: color,
-      [" " + customClass]: customClass
+      [" " + className]: className
     });
   return <IconButton {...rest} className={buttonClasses}>
     {children}
@@ -69,7 +69,7 @@ CustomIconButton.propTypes = {
   /**
   * Override or extend the styles applied to the component
   */
-  customClass: PropTypes.string,
+  className: PropTypes.string,
   /**
   * If true, button will be disabled. Default is set to false
   */

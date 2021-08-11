@@ -42,7 +42,7 @@ export interface UpwardButtonProps {
              "medium"
     /**
     * @default "small" 
-    * The fontSize of button's content.
+    * The size of the font.
     */
     fontSize?: "inherit" |
                 "small" |
@@ -51,9 +51,9 @@ export interface UpwardButtonProps {
     /**
     * Override or extend the styles applied to the component
     */
-    customClass?: string
+    className?: string
     /**
-    * @default "false"
+    * @default false
     * If true, the keyboard focus ripple will be disabled. 
     */
     disableFocusRipple?: boolean
@@ -78,7 +78,7 @@ export interface UpwardButtonProps {
     * 
     * Bit component used:
     * 
-    * - IconButton: https://material-ui.com/api/icon-button/
+    * - IconButton: https://bit.dev/totalsoft_oss/react-mui/icon-button
     *
     */
 

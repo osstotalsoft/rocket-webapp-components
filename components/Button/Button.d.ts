@@ -45,7 +45,7 @@ export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
   /**
   * A custom class provided.
   */
-  customClass?: string
+  className?: string
   /**
   * If true,  the button's min width will be set to 160px.
   */
