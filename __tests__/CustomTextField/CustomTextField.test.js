@@ -63,6 +63,6 @@ describe('CustomTextField', () => {
             onChange={onCustomInputChange}
         />);
 
-        expect(wrapper.find(TextField).props().InputProps.inputProps.className).toContain('input')
+        expect(wrapper.find(TextField).props().inputProps.className).toContain('input')
     });
 });
