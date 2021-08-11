@@ -5,7 +5,7 @@ export const deprecated = (propType, explanation) => (
   ...rest
 ) => {
   if (props[propName] != null) {
-    let warned = {};
+    let warned = emptyObject;
     const message = `"${propName}" property of "${componentName}" has been deprecated.\n${
       explanation ? explanation : emptyString
     }`;

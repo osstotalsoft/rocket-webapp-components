@@ -284,8 +284,8 @@ const Autocomplete = ({
 };
 
 Autocomplete.defaultProps = {
-  options: [],
-  defaultOptions: [],
+  options: emptyArray,
+  defaultOptions: emptyArray,
   isMultiSelection: false,
   withCheckboxes: false,
   isClearable: false,

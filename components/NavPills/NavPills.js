@@ -21,7 +21,7 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
                     variant={variant}
                 >
                     {tabs.map((tab, key) => {
-                        var icon = {};
+                        var icon = emptyObject;
                         if (tab.tabIcon !== undefined) {
                             icon["icon"] = <tab.tabIcon className={classes.tabIcon} />;
                         }
@@ -92,7 +92,7 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
 NavPills.defaultProps = {
     active: 0,
     color: "primary",
-    actions: [],
+    actions: emptyArray,
     horizontal: true,
     variant: "standard"
 };

@@ -30,7 +30,7 @@ function DateTime({ value, onChange, dateFormat, timeFormat,
 
     const errorData = disabled
         ? { error: false, helperText: null }
-        : error ? { error, helperText } : {}
+        : error ? { error, helperText } : emptyObject
 
     const handleChange = useCallback(date => onChange(date ? moment(date).toDate() : null), [onChange])
     const handleClear = useCallback(() => handleChange(null), [handleChange])

@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import { FormControlLabel, Switch } from "@material-ui/core";
 import AutoComplete from "../Autocomplete";
 import CustomTextField from "../CustomTextField";
+import { emptyArray, emptyString } from "../../utils/constants";
 
 function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, defaultCompProps, ...other }) {
-  const [comboOptions, setComboOptions] = useState([]);
+  const [comboOptions, setComboOptions] = useState(emptyArray);
 
   const comboOpen = useCallback(async () => {
     if (comboOptions.length === 0) {
@@ -37,7 +38,7 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
 
   const integer = <CustomTextField
     isNumeric={true}
-    value={value || ''}
+    value={value || emptyString}
     onChange={onPropertyChange}
     fullWidth
     {...other}
@@ -46,8 +47,8 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
     onChange={onPropertyChange}
     isNumeric={true}
     fullWidth
-    inputProps={{ decimalScale: 0, thousandSeparator: '' }}
-    value={value || ''}
+    inputProps={{ decimalScale: 0, thousandSeparator: emptyString }}
+    value={value || emptyString}
     {...other} />;
   const comboField = <AutoComplete {...other}
     fullWidth
@@ -68,7 +69,7 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
   />
   const stringField = <CustomTextField onChange={onInputChange}
     fullWidth
-    value={value || ''}
+    value={value || emptyString}
     {...other} />;
 
   const defaultField = <DefaultComp

@@ -3,6 +3,7 @@ import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import Autocomplete from "../../components/Autocomplete/Autocomplete";
 import MuiAutocomplete from "@material-ui/lab/Autocomplete";
+import { emptyFunction } from "../../utils/constants";
 
 const options = [
   { id: "1", name: "Approved" },
@@ -86,7 +87,7 @@ describe("Autocomplete", () => {
   it("loads options at mount when defaultOptions is true", () => {
     const loadOptions = jest
       .fn()
-      .mockImplementation(() => new Promise(() => {}));
+      .mockImplementation(() => new Promise(emptyFunction));
 
     mount(
       <Autocomplete
@@ -104,7 +105,7 @@ describe("Autocomplete", () => {
   it("doesn't load options at mount if defaultOptions is not true", () => {
     const loadOptions = jest
       .fn()
-      .mockImplementation(() => new Promise(() => {}));
+      .mockImplementation(() => new Promise(emptyFunction));
 
     mount(
       <Autocomplete
