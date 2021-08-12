@@ -3,6 +3,7 @@ import cx from "classnames";
 import PropTypes from "prop-types";
 import { Tab, Tabs, Grid, Box, makeStyles } from "@material-ui/core";
 import navPillsStyle from "./navPillsStyle.js";
+import { emptyObject, emptyArray } from "../../utils/constants.js";
 
 const useStyles = makeStyles(navPillsStyle);
 

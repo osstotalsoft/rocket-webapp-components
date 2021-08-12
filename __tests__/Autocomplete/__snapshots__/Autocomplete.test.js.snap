@@ -15,7 +15,7 @@ exports[`Autocomplete snapshot 1`] = `
     className="MuiFormControl-root MuiTextField-root undefined undefined MuiFormControl-fullWidth"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-21 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
+      className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-9 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
       data-shrink={false}
       id="undefined-label"
     >
@@ -33,7 +33,7 @@ exports[`Autocomplete snapshot 1`] = `
         autoCapitalize="none"
         autoComplete="off"
         autoFocus={false}
-        className="MuiInputBase-input MuiInput-input makeStyles-input-22 MuiAutocomplete-input MuiAutocomplete-inputFocused makeStyles-input-2 MuiInputBase-inputAdornedEnd MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+        className="MuiInputBase-input MuiInput-input makeStyles-input-10 MuiAutocomplete-input MuiAutocomplete-inputFocused makeStyles-input-1 MuiInputBase-inputAdornedEnd MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
         disabled={false}
         onAnimationStart={[Function]}
         onBlur={[Function]}
