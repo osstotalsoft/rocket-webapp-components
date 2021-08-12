@@ -12,7 +12,7 @@ exports[`Autocomplete snapshot 1`] = `
   role="combobox"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root undefined undefined MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-9 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"

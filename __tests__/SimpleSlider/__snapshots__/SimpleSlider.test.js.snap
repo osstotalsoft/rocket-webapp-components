@@ -5,7 +5,7 @@ exports[`SimpleSlider Snapshot 1`] = `
   className="MuiFormControl-root makeStyles-formControl-5 MuiFormControl-fullWidth"
 >
   <div
-    className="MuiFormControl-root MuiTextField-root undefined undefined MuiFormControl-fullWidth"
+    className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
   >
     <label
       className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-7 MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required"

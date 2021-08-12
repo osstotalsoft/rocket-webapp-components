@@ -137,7 +137,7 @@ function CustomTextField({
       onChange={handleChange}
       value={localValue}
       {...rest}
-      className={classes.textField + " " + className}
+      className={className ? `${classes.textField} ${className}` : classes.textField}
       InputProps={customMuiInput}
       inputProps={customReactInput}
       InputLabelProps={{
