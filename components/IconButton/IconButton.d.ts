@@ -33,6 +33,11 @@ export interface IconButtonProps extends Omit<BaseProps, 'color'> {
     */
     size?: "small" | "medium"
     /**
+    * Override or extend the styles applied to the component 
+    * @deprecated Use `className` instead.
+    */
+    customClass?: string
+    /**
     * Override or extend the styles applied to the component
     */
     className?: string

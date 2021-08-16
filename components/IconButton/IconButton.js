@@ -4,6 +4,7 @@ import cx from "classnames";
 import { IconButton, makeStyles } from "@material-ui/core";
 import Tooltip from '../Tooltip/Tooltip';
 import iconButtonStyle from "./iconButtonStyle";
+import { deprecatedPropType } from "@material-ui/core";
 
 const useStyles = makeStyles(iconButtonStyle);
 
@@ -66,6 +67,13 @@ CustomIconButton.propTypes = {
     "small",
     "medium"
   ]),
+  /**
+  * Override or extend the styles applied to the component
+  */
+  customClass: deprecatedPropType(
+    PropTypes.string,
+    'Use `className` instead.',
+  ),
   /**
   * Override or extend the styles applied to the component
   */
