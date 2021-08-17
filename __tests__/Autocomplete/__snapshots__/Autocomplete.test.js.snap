@@ -27,7 +27,7 @@ exports[`Autocomplete snapshot 1`] = `
     >
       <input
         aria-activedescendant={null}
-        aria-autocomplete="both"
+        aria-autocomplete="list"
         aria-controls={null}
         aria-invalid={false}
         autoCapitalize="none"

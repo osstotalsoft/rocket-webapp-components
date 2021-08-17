@@ -9,25 +9,19 @@ import { Chip, makeStyles, Checkbox } from "@material-ui/core";
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
-import {
-  flatten,
-  prop,
-  map,
-  innerJoin,
-  find,
-  propEq,
-  has,
-  all,
-  omit,
-  contains
-} from "ramda";
+import { flatten, prop, map, innerJoin, find, propEq, has, all, omit, contains, is, props, isNil, length } from "ramda";
 import humps from "humps";
 import { emptyArray, emptyString } from "../../utils/constants";
 import { deprecated } from "../../utils/functions";
 
 const useStyles = makeStyles(autoCompleteStyles);
 
-const isString = value => typeof value === "string";
+const flattenOptions = options => {
+  const hasGroups = all(has("options"), options);
+  return hasGroups ? flatten(map(prop("options"), options)) : options;
+};
+
+const hasStringOptions = options => all(is(String), flattenOptions(options));
 
 const filter = createFilterOptions();
 const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
@@ -38,7 +32,7 @@ const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
   // Suggest the creation of a new value
   if (creatable && params.inputValue !== "") {
     filtered.push(
-      isString(options[0])
+      hasStringOptions(options)
         ? {
             primitiveValue: params.inputValue,
             createdLabel: createdLabel
@@ -59,36 +53,35 @@ const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
 };
 
 const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
-  if (isMultiSelection && !Array.isArray(value)) return emptyArray;
+  if (isMultiSelection && !is(Array, value)) return emptyArray;
 
-  const hasGroups = all(has("options"), options);
-  const flattenOptions = hasGroups
-    ? flatten(map(prop("options"), options))
-    : options;
+  const flatOptions = flattenOptions(options);
+
+  if (!all(is(Object), flatOptions)) return value;
 
   // Add new options if the Autocomplete is multiSelection and creatable
-  if (Array.isArray(value)) {
-    const flattenOptionsSimpleValues = map(prop(valueKey), flattenOptions);
+  if (is(Array, value)) {
+    const flattenOptionsSimpleValues = map(prop(valueKey), flatOptions);
     value?.map(v => {
       if (!contains(v, flattenOptionsSimpleValues))
-        flattenOptions.push({ [valueKey]: v });
+        flatOptions.push({ [valueKey]: v });
     });
   }
 
   const result = isMultiSelection
-    ? innerJoin((o, v) => o[valueKey] === v, flattenOptions, value)
-    : find(propEq(valueKey, value), flattenOptions);
+    ? innerJoin((o, v) => o[valueKey] === v, flatOptions, value)
+    : find(propEq(valueKey, value), flatOptions);
 
   return result || null;
 };
 
 const getOptionLabel = labelKey => option => {
-  if (isString(option)) return option;
-  return option[labelKey] ? option[labelKey] : emptyString;
+  if (is(String, option)) return option;
+  return prop(labelKey, option) || emptyString;
 };
 
 const getOptionSelected = (option, value) => {
-  return isString(option)
+  return is(String, option)
     ? option === value
     : JSON.stringify(option) === JSON.stringify(value);
 };
@@ -103,7 +96,6 @@ const Autocomplete = ({
   value,
   isMultiSelection,
   withCheckboxes,
-  isSearchable,
   isClearable,
   disabled,
   simpleValue,
@@ -115,6 +107,7 @@ const Autocomplete = ({
   createdLabel,
   typographyContentColor,
   inputSelectedColor,
+  isSearchable,
   ...other
 }) => {
   const classes = useStyles();
@@ -125,19 +118,16 @@ const Autocomplete = ({
   });
 
   const [options, setOptions] = useState(
-    receivedOptions || (Array.isArray(defaultOptions) && defaultOptions)
+    receivedOptions || (is(Array, defaultOptions) && defaultOptions)
   );
 
   const handleOpen = useCallback(() => {
-    if (
-      loadOptions &&
-      options.length ===
-        (Array.isArray(defaultOptions) ? defaultOptions.length : 0)
-    )
+    if (loadOptions && options.length === (length(defaultOptions) || 0))
       loadOptions().then(loadedOptions => {
         setOptions(loadedOptions || emptyArray);
       });
-    if (onMenuOpen) onMenuOpen();
+
+    onMenuOpen && onMenuOpen();
   }, [defaultOptions, loadOptions, onMenuOpen, options.length]);
 
   const renderInput = useCallback(
@@ -167,8 +157,14 @@ const Autocomplete = ({
   );
 
   const renderOption = useCallback(
-    (option, { selected }) =>
-      withCheckboxes ? (
+    (option, { selected }) => {
+      const optionLabel = is(String, option)
+        ? option
+        : find(
+            x => !isNil(x),
+            props(["createdLabel", labelKey, valueKey], option)
+          );
+      return withCheckboxes ? (
         <>
           <Checkbox
             icon={<CheckBoxOutlineBlank fontSize="small" />}
@@ -176,18 +172,13 @@ const Autocomplete = ({
             style={{ marginRight: 8 }}
             checked={selected}
           />
-          {option.createdLabel ? option.createdLabel : option[labelKey]}
+          {optionLabel}
         </>
       ) : (
-        <Typography className={classes.input}>
-          {isString(option)
-            ? option
-            : option.createdLabel
-            ? option.createdLabel
-            : option[labelKey]}
-        </Typography>
-      ),
-    [classes.input, labelKey, withCheckboxes]
+        <Typography className={classes.input}>{optionLabel}</Typography>
+      );
+    },
+    [classes.input, labelKey, valueKey, withCheckboxes]
   );
 
   const renderTags = useCallback(
@@ -196,42 +187,49 @@ const Autocomplete = ({
         <Chip
           key={index}
           label={
-            isString(option)
+            is(String, option)
               ? option
-              : option.primitiveValue
-              ? option.primitiveValue
-              : option[labelKey]
+              : find(
+                  x => !isNil(x),
+                  props(["primitiveValue", labelKey, valueKey], option)
+                )
           }
           {...getTagProps({ index })}
         />
       )),
-    [labelKey]
+    [labelKey, valueKey]
   );
 
   const handleChange = useCallback(
-    (_event, inputValue) => {
+    (event, inputValue) => {
       if (!inputValue) return;
-      if (isString(inputValue)) return onChange(inputValue);
+      if (is(String, inputValue)) return onChange(inputValue);
+
       if (isMultiSelection)
         return onChange(
           simpleValue
-            ? inputValue.map(a => (a[valueKey] ? a[valueKey] : a[labelKey]))
-            : inputValue.map(a =>
-                isString(a)
+            ? inputValue.map(a =>
+                is(String, a)
                   ? a
-                  : a.primitiveValue
-                  ? a.primitiveValue
-                  : omit(["createdLabel"], a)
+                  : find(
+                      x => !isNil(x),
+                      props([valueKey, labelKey, "primitiveValue"], a)
+                    )
+              )
+            : inputValue.map(a =>
+                is(String, a)
+                  ? a
+                  : prop("primitiveValue", a) || omit(["createdLabel"], a)
               )
         );
+
       if (simpleValue)
         return onChange(
-          inputValue[valueKey] ? inputValue[valueKey] : inputValue[labelKey]
+          prop(valueKey, inputValue) || prop(labelKey, inputValue)
         );
+
       return onChange(
-        inputValue.primitiveValue
-          ? inputValue.primitiveValue
-          : omit(["createdLabel"], inputValue)
+        prop("primitiveValue", inputValue) || omit(["createdLabel"], inputValue)
       );
     },
     [isMultiSelection, labelKey, onChange, simpleValue, valueKey]
@@ -247,8 +245,6 @@ const Autocomplete = ({
 
   return (
     <MuiAutocomplete
-      autoComplete
-      autoHighlight
       size="small"
       classes={{
         noOptions: `${classes.noOptionsMessage} ${typographyClasses}`
@@ -258,11 +254,12 @@ const Autocomplete = ({
       disabled={disabled}
       onOpen={handleOpen}
       options={options || emptyArray}
+      autoHighlight
       handleHomeEndKeys
       selectOnFocus
       clearOnBlur
       disableCloseOnSelect={isMultiSelection}
-      filterSelectedOptions={isMultiSelection && !withCheckboxes}
+      filterSelectedOptions={simpleValue && isMultiSelection && !withCheckboxes}
       filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
       getOptionLabel={getOptionLabel(labelKey)}
       getOptionSelected={!simpleValue ? getOptionSelected : undefined}

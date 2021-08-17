@@ -2,8 +2,11 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import Autocomplete from "../../components/Autocomplete/Autocomplete";
-import MuiAutocomplete from "@material-ui/lab/Autocomplete";
 import { emptyFunction } from "../../utils/constants";
+
+// although we are importing act right, we are still getting a warning in the console
+// might be related to this issue https://github.com/enzymejs/enzyme/issues/2370
+const { act } = renderer;
 
 const options = [
   { id: "1", name: "Approved" },
@@ -99,7 +102,7 @@ describe("Autocomplete", () => {
       />
     );
 
-    expect(loadOptions).toBeCalled;
+    expect(loadOptions).toBeCalled();
   });
 
   it("doesn't load options at mount if defaultOptions is not true", () => {
@@ -116,7 +119,7 @@ describe("Autocomplete", () => {
       />
     );
 
-    expect(loadOptions.mock.calls.length).toBe(0);
+    expect(loadOptions).not.toBeCalled();
   });
 
   it("when simpleValue is falsy and the options are objects, displays value[labelKey] in the input", () => {
@@ -131,7 +134,7 @@ describe("Autocomplete", () => {
 
     const input = wrapper.find("input").at(0);
 
-    expect(input.props().value).toEqual("Approved");
+    expect(input.props().value).toEqual(options[0].name);
   });
 
   it("works for primitive options", () => {
@@ -165,13 +168,19 @@ describe("Autocomplete", () => {
         simpleValue
         isClearable
         value={"2"}
+        open
         onChange={onChange}
       />
     );
 
-    const muiAutocomplete = wrapper.find(MuiAutocomplete);
-    muiAutocomplete.props().onChange({ target: { value: "1" } });
+    act(() => {
+      wrapper
+        .find("li")
+        .at(0)
+        .props()
+        .onClick({ currentTarget: { getAttribute: () => 0 } });
+    });
 
-    expect(onChange).toBeCalled;
+    expect(onChange).toBeCalled();
   });
 });
