@@ -16,7 +16,7 @@ export interface AutocompleteProps {
   /**
    * Function that returns a promise, which is the set of options to be used once the promise resolves.
    */
-  loadOptions?: (() => Promise)
+  loadOptions?: (() => Promise<[OptionType | string]>)
   /**
    * @default null
    * The selected value from list of options.
