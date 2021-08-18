@@ -3,6 +3,7 @@ import cx from "classnames";
 import PropTypes from "prop-types";
 import { Tab, Tabs, Grid, Box, makeStyles } from "@material-ui/core";
 import navPillsStyle from "./navPillsStyle.js";
+import { emptyObject, emptyArray } from "../../utils/constants.js";
 
 const useStyles = makeStyles(navPillsStyle);
 
@@ -21,7 +22,7 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
                     variant={variant}
                 >
                     {tabs.map((tab, key) => {
-                        var icon = {};
+                        var icon = emptyObject;
                         if (tab.tabIcon !== undefined) {
                             icon["icon"] = <tab.tabIcon className={classes.tabIcon} />;
                         }
@@ -92,7 +93,7 @@ const NavPills = ({ tabs, color, horizontal, alignCenter, active, onChange, acti
 NavPills.defaultProps = {
     active: 0,
     color: "primary",
-    actions: [],
+    actions: emptyArray,
     horizontal: true,
     variant: "standard"
 };

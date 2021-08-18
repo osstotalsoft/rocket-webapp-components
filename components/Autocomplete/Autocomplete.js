@@ -1,172 +1,92 @@
-/* eslint-disable react/prop-types */
-import React, { useCallback } from 'react'
-import PropTypes from 'prop-types'
-import Select from 'react-select'
-import AsyncCreatableSelect from 'react-select/async-creatable'
-import AsyncSelect from 'react-select/async'
-import { Paper, MenuItem, TextField, ListItem, ListItemIcon, ListItemText, Checkbox, makeStyles, InputAdornment } from '@material-ui/core'
-import Typography from '../Typography'
-import autoCompleteStyles, { selectedColor } from './autocompleteStyle'
-import { isArray } from 'util'
-import { curry, flatten, prop, map, innerJoin, find, propEq, has, all } from 'ramda'
-import Search from '@material-ui/icons/Search'
-import { useTheme } from '@material-ui/core/styles'
+import React, { useCallback, useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import autoCompleteStyles from "./autocompleteStyle";
+import cx from "classnames";
+import MuiAutocomplete, {
+  createFilterOptions
+} from "@material-ui/lab/Autocomplete";
+import { Chip, makeStyles, Checkbox, deprecatedPropType } from "@material-ui/core";
+import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
+import CustomTextField from "../CustomTextField";
+import Typography from "../Typography";
+import { flatten, prop, map, innerJoin, find, propEq, has, all, omit, contains, is, props, isNil, length } from "ramda";
+import humps from "humps";
+import { emptyArray, emptyString } from "../../utils/constants";
 
-const useStyles = makeStyles(autoCompleteStyles)
+const useStyles = makeStyles(autoCompleteStyles);
 
-function NoOptionsMessage({ selectProps, innerProps, children }) {
-  return (
-    <Typography color={selectProps.typographyProps.color} className={selectProps.classes.noOptionsMessage} {...innerProps}>
-      {children}
-    </Typography>
-  )
-}
+const flattenOptions = options => {
+  const hasGroups = all(has("options"), options);
+  return hasGroups ? flatten(map(prop("options"), options)) : options;
+};
 
-function inputComponent({ inputRef, ...props }) {
-  return <div ref={inputRef} {...props} />
-}
+const hasStringOptions = options => all(is(String), flattenOptions(options));
 
-function controlHasValue(selectProps) {
-  if (selectProps.inputValue.length > 0) {
-    return true
-  }
-  if (selectProps.value === null || selectProps.value === undefined) {
-    return false
-  }
-  if (isArray(selectProps.value) && selectProps.value.length === 0) {
-    return false
-  }
-
-  return true
-}
-
-function Control({ selectProps, innerRef, children, innerProps }) {
-  const inputProps = {
-    inputComponent,
-    inputProps: {
-      className: selectProps.classes.input,
-      inputRef: innerRef,
-      children: children,
-      ...innerProps
-    },
-    endAdornment: (
-      <InputAdornment position="end">
-        <Search />
-      </InputAdornment>
-    )
+const filter = createFilterOptions();
+const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
+  options,
+  params
+) => {
+  const filtered = filter(options, params);
+  // Suggest the creation of a new value
+  if (creatable && params.inputValue !== "") {
+    filtered.push(
+      hasStringOptions(options)
+        ? {
+            primitiveValue: params.inputValue,
+            createdLabel: createdLabel
+              ? `${createdLabel} '${params.inputValue}'`
+              : params.inputValue
+          }
+        : {
+            [valueKey]: undefined,
+            [labelKey]: params.inputValue,
+            createdLabel: createdLabel
+              ? `${createdLabel} '${params.inputValue}'`
+              : params.inputValue
+          }
+    );
   }
 
-  if (!selectProps.isSearchable) {
-    delete inputProps.endAdornment
+  return filtered;
+};
+
+const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
+  if (isMultiSelection && !is(Array, value)) return emptyArray;
+
+  const flatOptions = flattenOptions(options);
+
+  if (!all(is(Object), flatOptions)) return value;
+
+  // Add new options if the Autocomplete is multiSelection and creatable
+  if (is(Array, value)) {
+    const flattenOptionsSimpleValues = map(prop(valueKey), flatOptions);
+    value?.map(v => {
+      if (!contains(v, flattenOptionsSimpleValues))
+        flatOptions.push({ [valueKey]: v });
+    });
   }
-
-  return (
-    <TextField
-      fullWidth
-      InputProps={inputProps}
-      InputLabelProps={{
-        shrink: controlHasValue(selectProps),
-        style: { fontSize: 'inherit' }
-      }}
-      value={selectProps.value ? selectProps.getOptionValue(selectProps.value) : null}
-      {...selectProps.textFieldProps}
-    />
-  )
-}
-
-function Option({ innerRef, isFocused, _isSelected, innerProps, children }) {
-  const classes = useStyles()
-  return (
-    <MenuItem ref={innerRef} selected={isFocused} component='div' className={classes.option} {...innerProps}>
-      {typeof children === 'function' ? children() : children}
-    </MenuItem>
-  )
-}
-
-const MultiOption = props => {
-  const classes = useStyles()
-  return (
-    <ListItem dense button selected={props.isSelected} className={classes.option} {...props.innerProps}>
-      <ListItemIcon>
-        <Checkbox edge='start' checked={props.isSelected} tabIndex={-1} disableRipple />
-      </ListItemIcon>
-      <ListItemText primary={props.label} />
-    </ListItem>
-  )
-}
-
-function Placeholder({ selectProps, innerProps, children }) {
-  return (
-    <Typography color={selectProps.typographyProps.color} className={selectProps.classes.placeholder} {...innerProps}>
-      {children}
-    </Typography>
-  )
-}
-
-function SingleValue({ selectProps, innerProps, children }) {
-  const theme = useTheme()
-
-  return (
-    <Typography style={selectedColor(theme, selectProps.inputSelectedColor)} className={selectProps.classes.singleValue} {...innerProps}>
-      {typeof children === 'function' ? children() : children}
-    </Typography>
-  )
-}
-
-function ValueContainer({ selectProps, children }) {
-  return <div className={selectProps.classes.valueContainer}>{children}</div>
-}
-
-function MultiValueDisplay(text) {
-  return <span key={text}>{text}</span>
-}
-
-function MultiValueContainer({ selectProps, children }) {
-  let elements = Object.assign([], children)
-  if (children.length > 0 && children[0] && children[0].length > 1) {
-    elements[0] = MultiValueDisplay(`(${children[0].length} selected)`)
-  }
-
-  return <div className={selectProps.classes.valueContainer}>{elements}</div>
-}
-
-function MultiValue(props) {
-  return <span>{props.children}</span>
-}
-
-function Menu({ selectProps, innerProps, children }) {
-  return (
-    <Paper square className={selectProps.classes.paper} {...innerProps}>
-      {children}
-    </Paper>
-  )
-}
-
-function IndicatorSeparator() {
-  return <span />
-}
-
-export const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
-  if (isMultiSelection && !Array.isArray(value)) return null
-
-  const hasGroups = all(has('options'), options)
-
-  const flattenOptions = hasGroups ? flatten(map(prop('options'), options)) : options
 
   const result = isMultiSelection
-    ? innerJoin((o, v) => o[valueKey] === v, flattenOptions, value)
-    : find(propEq(valueKey, value), flattenOptions)
-  return result || null
-}
+    ? innerJoin((o, v) => o[valueKey] === v, flatOptions, value)
+    : find(propEq(valueKey, value), flatOptions);
 
-function DropdownIndicator() {
-  return <span />
-}
+  return result || null;
+};
 
-const formatCreateLabel = curry((createdLabel, text) => createdLabel.concat(text))
+const getOptionLabel = labelKey => option => {
+  if (is(String, option)) return option;
+  return prop(labelKey, option) || emptyString;
+};
 
-function Autocomplete({
-  options,
+const getOptionSelected = (option, value) => {
+  return is(String, option)
+    ? option === value
+    : JSON.stringify(option) === JSON.stringify(value);
+};
+
+const Autocomplete = ({
+  options: receivedOptions,
   defaultOptions,
   loadOptions,
   onChange,
@@ -174,8 +94,8 @@ function Autocomplete({
   onMenuOpen,
   value,
   isMultiSelection,
+  withCheckboxes,
   isClearable,
-  isSearchable,
   disabled,
   simpleValue,
   label,
@@ -186,110 +106,194 @@ function Autocomplete({
   createdLabel,
   typographyContentColor,
   inputSelectedColor,
+  isSearchable,
   ...other
-}) {
-  const classes = useStyles()
+}) => {
+  const classes = useStyles();
 
-  const handleOnChange = useCallback(
-    inputValue => {
-      if (simpleValue && inputValue) {
-        if (isMultiSelection) {
-          return onChange(inputValue.map(a => a[valueKey]))
-        } else {
-          return onChange(inputValue[valueKey])
-        }
-      }
+  const typographyClasses = cx({
+    [classes[`color${humps.pascalize(typographyContentColor)}`]]:
+      typographyContentColor !== "initial"
+  });
 
-      return onChange(inputValue)
+  const [options, setOptions] = useState(
+    receivedOptions || (is(Array, defaultOptions) && defaultOptions)
+  );
+
+  const handleOpen = useCallback(() => {
+    if (loadOptions && options.length === (length(defaultOptions) || 0))
+      loadOptions().then(loadedOptions => {
+        setOptions(loadedOptions || emptyArray);
+      });
+
+    onMenuOpen && onMenuOpen();
+  }, [defaultOptions, loadOptions, onMenuOpen, options.length]);
+
+  const renderInput = useCallback(
+    params => {
+      params.inputProps.className = `${params.inputProps.className} ${classes.input}`;
+      if (inputSelectedColor)
+        params.inputProps.style = { color: inputSelectedColor };
+
+      const textFieldProps = {
+        label,
+        error,
+        helperText
+      };
+
+      return (
+        <CustomTextField
+          fullWidth
+          {...params}
+          customInputProps={params.InputProps}
+          startAdornment={params.InputProps.startAdornment}
+          endAdornment={params.InputProps.endAdornment}
+          {...textFieldProps}
+        />
+      );
     },
-    [isMultiSelection, onChange, simpleValue, valueKey]
-  )
+    [classes.input, error, helperText, inputSelectedColor, label]
+  );
 
-  const getNewOptionData = useCallback(
-    (inputValue, optionLabel) => ({
-      [labelKey]: optionLabel,
-      [valueKey]: undefined
-    }),
+  const renderOption = useCallback(
+    (option, { selected }) => {
+      const optionLabel = is(String, option)
+        ? option
+        : find(
+            x => !isNil(x),
+            props(["createdLabel", labelKey, valueKey], option)
+          );
+      return withCheckboxes ? (
+        <>
+          <Checkbox
+            icon={<CheckBoxOutlineBlank fontSize="small" />}
+            checkedIcon={<CheckBox fontSize="small" />}
+            style={{ marginRight: 8 }}
+            checked={selected}
+          />
+          {optionLabel}
+        </>
+      ) : (
+        <Typography className={classes.input}>{optionLabel}</Typography>
+      );
+    },
+    [classes.input, labelKey, valueKey, withCheckboxes]
+  );
+
+  const renderTags = useCallback(
+    (value, getTagProps) =>
+      value.map((option, index) => (
+        <Chip
+          key={index}
+          label={
+            is(String, option)
+              ? option
+              : find(
+                  x => !isNil(x),
+                  props(["primitiveValue", labelKey, valueKey], option)
+                )
+          }
+          {...getTagProps({ index })}
+        />
+      )),
     [labelKey, valueKey]
-  )
+  );
 
-  const Comp = loadOptions ? (creatable ? AsyncCreatableSelect : AsyncSelect) : Select
-  const loadOptionsAsync = useCallback(
-    input => {
-      return loadOptions(input)
+  const handleChange = useCallback(
+    (event, inputValue) => {
+      if (!inputValue) return onChange(inputValue);
+      if (is(String, inputValue)) return onChange(inputValue);
+
+      if (isMultiSelection)
+        return onChange(
+          simpleValue
+            ? inputValue.map(a =>
+                is(String, a)
+                  ? a
+                  : find(
+                      x => !isNil(x),
+                      props([valueKey, labelKey, "primitiveValue"], a)
+                    )
+              )
+            : inputValue.map(a =>
+                is(String, a)
+                  ? a
+                  : prop("primitiveValue", a) || omit(["createdLabel"], a)
+              )
+        );
+
+      if (simpleValue)
+        return onChange(
+          prop(valueKey, inputValue) || prop(labelKey, inputValue)
+        );
+
+      return onChange(
+        prop("primitiveValue", inputValue) || omit(["createdLabel"], inputValue)
+      );
     },
-    [loadOptions]
-  )
+    [isMultiSelection, labelKey, onChange, simpleValue, valueKey]
+  );
 
-  const components = {
-    Control,
-    Menu,
-    MultiValue,
-    NoOptionsMessage,
-    Option: isMultiSelection ? MultiOption : Option,
-    Placeholder,
-    SingleValue,
-    ValueContainer: isMultiSelection ? MultiValueContainer : ValueContainer,
-    IndicatorSeparator
-  }
+  useEffect(() => {
+    if (defaultOptions === true) handleOpen();
+  }, [defaultOptions, handleOpen]);
 
-  if (isSearchable) {
-    components.DropdownIndicator = DropdownIndicator
-  }
+  useEffect(() => {
+    setOptions(receivedOptions || emptyArray);
+  }, [receivedOptions]);
 
   return (
-    <Comp
+    <MuiAutocomplete
+      size="small"
+      classes={{
+        noOptions: `${classes.noOptionsMessage} ${typographyClasses}`
+      }}
+      forcePopupIcon
+      label={label}
+      disabled={disabled}
+      onOpen={handleOpen}
+      options={options || emptyArray}
+      autoHighlight
+      handleHomeEndKeys
+      selectOnFocus
+      clearOnBlur
+      disableCloseOnSelect={isMultiSelection}
+      filterSelectedOptions={simpleValue && isMultiSelection && !withCheckboxes}
+      filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
+      getOptionLabel={getOptionLabel(labelKey)}
+      getOptionSelected={!simpleValue ? getOptionSelected : undefined}
+      value={
+        simpleValue
+          ? getSimpleValue(options, value, valueKey, isMultiSelection)
+          : value
+      }
+      multiple={isMultiSelection}
+      onChange={handleChange}
+      disableClearable={!isClearable}
+      renderOption={renderOption}
+      renderInput={renderInput}
+      renderTags={renderTags}
+      freeSolo={creatable}
       {...other}
-      classes={classes}
-      menuPortalTarget={document.body}
-      styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
-      options={options}
-      loadOptions={loadOptionsAsync}
-      defaultOptions={defaultOptions}
-      components={components}
-      closeMenuOnSelect={isMultiSelection ? false : true}
-      value={simpleValue ? getSimpleValue(options, value, valueKey, isMultiSelection) : value}
-      onChange={handleOnChange}
-      onMenuOpen={onMenuOpen}
-      textFieldProps={{
-        label: label,
-        error: error,
-        helperText: helperText
-      }}
-      typographyProps={{
-        color: typographyContentColor
-      }}
-      multiValueRemove={false}
-      creatable={creatable}
-      hideSelectedOptions={false}
-      placeholder={null}
-      isMulti={isMultiSelection}
-      isClearable={isClearable}
-      isSearchable={isSearchable}
-      isDisabled={disabled}
-      getOptionLabel={prop(labelKey)}
-      getOptionValue={prop(valueKey)}
-      formatCreateLabel={formatCreateLabel(createdLabel)}
-      getNewOptionData={getNewOptionData}
-      inputSelectedColor={inputSelectedColor}
     />
-  )
-}
+  );
+};
 
 Autocomplete.defaultProps = {
-  options: [],
+  options: emptyArray,
+  defaultOptions: emptyArray,
   isMultiSelection: false,
+  withCheckboxes: false,
   isClearable: false,
-  isSearchable: false,
   disabled: false,
   simpleValue: false,
-  valueKey: 'id',
-  labelKey: 'name',
+  valueKey: "id",
+  labelKey: "name",
   error: false,
   value: null,
   creatable: false,
-  typographyContentColor: 'textSecondary'
-}
+  typographyContentColor: "textSecondary"
+};
 
 Autocomplete.propTypes = {
   /**
@@ -303,9 +307,15 @@ Autocomplete.propTypes = {
   /**
    * The selected value from list of options.
    */
-  value: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.number, PropTypes.string, PropTypes.bool]),
+  value: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.bool
+  ]),
   /**
-   * Handle change events on the select.
+   * Handle change events on the autocomplete.
    */
   onChange: PropTypes.func.isRequired,
   /**
@@ -317,19 +327,28 @@ Autocomplete.propTypes = {
    */
   isMultiSelection: PropTypes.bool,
   /**
+   * If true, the options list will have checkboxes.
+   */
+  withCheckboxes: PropTypes.bool,
+  /**
    * If true, the user can clear the selected value.
    */
   isClearable: PropTypes.bool,
   /**
-   * If true, the search functionality is enabled.
+   * This prop is deprecated, because the new implementation of Autocomplete is searchable by default.
    */
-  isSearchable: PropTypes.bool,
+  isSearchable: deprecatedPropType(PropTypes.bool),
   /**
-   * If true, the Select is disabled.
+   * If true, the Autocomplete is free solo, meaning that the user input is not bound to provided options and can add
+   * his own values.
+   */
+  creatable: PropTypes.bool,
+  /**
+   * If true, the Autocomplete is disabled.
    */
   disabled: PropTypes.bool,
   /**
-   * @TODO
+   * If true, options will be an array of simple values, instead of objects.
    */
   simpleValue: PropTypes.bool,
   /**
@@ -338,13 +357,16 @@ Autocomplete.propTypes = {
   label: PropTypes.string,
   /**
    * The key of values from options.
-   * @TODO
    */
   valueKey: PropTypes.string,
   /**
-   * @TODO
+   * The key of the displayed label for each option.
    */
   labelKey: PropTypes.string,
+  /**
+   * The text to appear below the input, usually coming from a validation.
+   */
+  helperText: PropTypes.string,
   /**
    * If true, the helper text is displayed when an error pops up.
    */
@@ -360,11 +382,19 @@ Autocomplete.propTypes = {
   /**
    * The color of both the text displayed when there are no options and placeholder. It supports those theme colors that make sense for this component.
    */
-  typographyContentColor: PropTypes.oneOf(['initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary', 'error']),
+  typographyContentColor: PropTypes.oneOf([
+    "initial",
+    "inherit",
+    "primary",
+    "secondary",
+    "textPrimary",
+    "textSecondary",
+    "error"
+  ]),
   /**
    * The color of selected input.
    */
   inputSelectedColor: PropTypes.string
-}
+};
 
-export default Autocomplete
+export default Autocomplete;

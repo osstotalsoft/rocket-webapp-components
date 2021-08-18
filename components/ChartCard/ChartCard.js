@@ -4,6 +4,7 @@ import cx from "classnames";
 import { Card, CardContent, CardHeader, CardActions, makeStyles } from "@material-ui/core";
 import Typography from '../Typography';
 import chartCardStyle from "./chartCardStyle";
+import { emptyObject } from "../../utils/constants";
 
 const useStyles = makeStyles(chartCardStyle);
 
@@ -29,7 +30,7 @@ function ChartCard(props) {
     cx({
       [" " + classes.moveChartUp]: hoverLocal && hover
     });
-  var addHoverEvent = {};
+  var addHoverEvent = emptyObject;
 
   if (hover) {
     if (navigator.userAgent.match(/iPad/i) != null) {

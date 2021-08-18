@@ -6,7 +6,7 @@ import { makeStyles, TextField } from "@material-ui/core";
 import textFieldStyle from "./textFieldStyle";
 import { useDebounce } from "use-debounce";
 import { curry } from "ramda";
-import { emptyString } from "../../utils/constants";
+import { emptyFunction, emptyString } from "../../utils/constants";
 
 const useStyles = makeStyles(textFieldStyle);
 
@@ -137,7 +137,7 @@ function CustomTextField({
       onChange={handleChange}
       value={localValue}
       {...rest}
-      className={classes.textField + " " + className}
+      className={className ? `${classes.textField} ${className}` : classes.textField}
       InputProps={customMuiInput}
       inputProps={customReactInput}
       InputLabelProps={{
@@ -151,7 +151,7 @@ function CustomTextField({
 CustomTextField.defaultProps = {
   isNumeric: false,
   debounceBy: 0,
-  onChange: () => {}
+  onChange: emptyFunction
 };
 
 CustomTextField.propTypes = {
