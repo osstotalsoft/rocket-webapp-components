@@ -201,7 +201,7 @@ const Autocomplete = ({
 
   const handleChange = useCallback(
     (event, inputValue) => {
-      if (!inputValue) return;
+      if (!inputValue) return onChange(inputValue);
       if (is(String, inputValue)) return onChange(inputValue);
 
       if (isMultiSelection)
