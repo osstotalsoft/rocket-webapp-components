@@ -5,14 +5,13 @@ import cx from "classnames";
 import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
-import { Chip, makeStyles, Checkbox } from "@material-ui/core";
+import { Chip, makeStyles, Checkbox, deprecatedPropType } from "@material-ui/core";
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
 import { flatten, prop, map, innerJoin, find, propEq, has, all, omit, contains, is, props, isNil, length } from "ramda";
 import humps from "humps";
 import { emptyArray, emptyString } from "../../utils/constants";
-import { deprecated } from "../../utils/functions";
 
 const useStyles = makeStyles(autoCompleteStyles);
 
@@ -338,7 +337,7 @@ Autocomplete.propTypes = {
   /**
    * This prop is deprecated, because the new implementation of Autocomplete is searchable by default.
    */
-  isSearchable: deprecated(PropTypes.bool),
+  isSearchable: deprecatedPropType(PropTypes.bool),
   /**
    * If true, the Autocomplete is free solo, meaning that the user input is not bound to provided options and can add
    * his own values.
