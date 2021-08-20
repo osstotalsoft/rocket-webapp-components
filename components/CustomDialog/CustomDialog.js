@@ -46,17 +46,12 @@ const CustomDialog = ({
     [classes[overflowY]]: overflowY
   });
 
-  const handleActionClose = useCallback(
-    event => onClose(event, "closeActionClick"),
-    [onClose]
-  );
-
   const handleClose = useCallback(
     (event, reason) => {
       if (disableBackdropClick && reason === "backdropClick") return;
       if (disableEscapeKeyDown && reason === "escapeKeyDown") return;
 
-      onClose();
+      onClose(event, reason ? reason : "closeActionClick");
     },
     [disableBackdropClick, disableEscapeKeyDown, onClose]
   );
@@ -120,7 +115,7 @@ const CustomDialog = ({
                 right
                 size={buttonSize}
                 color={buttonColor}
-                onClick={handleActionClose}
+                onClick={handleClose}
               >
                 {textDialogNo}
               </Button>
