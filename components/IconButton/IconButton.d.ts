@@ -2,9 +2,9 @@ import { IconButtonProps as BaseProps } from '@material-ui/core/IconButton';
 
 export interface IconButtonProps extends Omit<BaseProps, 'color'> {
     /**
-     * The content of the button
-     */
-    children?: React.ReactNode;
+    * The content of the button
+    */
+    children?: React.ReactNode
     /**
     * @default "theme"
     * The color of the button
@@ -33,17 +33,39 @@ export interface IconButtonProps extends Omit<BaseProps, 'color'> {
     */
     size?: "small" | "medium"
     /**
-     * Override or extend the styles applied to the component
-     */
-    customClass?: string;
-    /**
-    * If true, button will be disabled. Default is set to false
+    * Override or extend the styles applied to the component 
+    * @deprecated Use `className` instead.
     */
-    disabled?: boolean;
+    customClass?: string
     /**
-     * The text to be displayed when the user hover over the button
-     */
-    tooltip?: string;
+    * Override or extend the styles applied to the component
+    */
+    className?: string
+    /**
+    * @default false
+    * If true, button will be disabled.
+    */
+    disabled?: boolean
+    /**
+    * @default false
+    * If true, the keyboard focus ripple will be disabled. 
+    */
+    disableFocusRipple?: boolean
+    /**
+    * If true, the ripple effect will be disabled.
+    */
+    disableRipple?: boolean
+    /**
+    * @default "false"
+    * If given, uses a negative margin to counteract the padding on one side 
+    * (this is often helpful for aligning the left or right side of the icon 
+    * with content above or below, without ruining the border size and shape).
+    */
+    edge?: "start" | "end" | "false"
+    /**
+    * The text to be displayed when the user hovers over the button
+    */
+    tooltip?: string
     /**
     * Demos:
     * 

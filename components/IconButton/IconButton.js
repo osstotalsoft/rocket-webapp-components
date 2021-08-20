@@ -4,17 +4,18 @@ import cx from "classnames";
 import { IconButton, makeStyles } from "@material-ui/core";
 import Tooltip from '../Tooltip/Tooltip';
 import iconButtonStyle from "./iconButtonStyle";
+import { deprecatedPropType } from "@material-ui/core";
 
 const useStyles = makeStyles(iconButtonStyle);
 
 // eslint-disable-next-line react/prop-types
-const Button = ({ children, color, customClass, ...rest }) => {
+const Button = ({ children, color, className, ...rest }) => {
   const classes = useStyles();
   const buttonClasses =
     classes.button +
     cx({
       [" " + classes[color]]: color,
-      [" " + customClass]: customClass
+      [" " + className]: className
     });
   return <IconButton {...rest} className={buttonClasses}>
     {children}
@@ -67,9 +68,16 @@ CustomIconButton.propTypes = {
     "medium"
   ]),
   /**
- * Override or extend the styles applied to the component
- */
-  customClass: PropTypes.string,
+  * Override or extend the styles applied to the component
+  */
+  customClass: deprecatedPropType(
+    PropTypes.string,
+    'Use `className` instead.',
+  ),
+  /**
+  * Override or extend the styles applied to the component
+  */
+  className: PropTypes.string,
   /**
   * If true, button will be disabled. Default is set to false
   */

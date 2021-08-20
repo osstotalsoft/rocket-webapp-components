@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { Button, makeStyles } from "@material-ui/core";
-import Tooltip from '../Tooltip/Tooltip';
+import Tooltip from "../Tooltip/Tooltip";
 import buttonStyle from "./buttonStyle";
 
 const useStyles = makeStyles(buttonStyle);
@@ -14,7 +14,7 @@ function RegularButton({
   children,
   fullWidth,
   disabled,
-  customClass,
+  className,
   right,
   justIcon,
   size,
@@ -27,7 +27,7 @@ function RegularButton({
     [classes.round]: round,
     [classes.fullWidth]: fullWidth,
     [classes.disabled]: disabled,
-    [customClass]: customClass,
+    [className]: className,
     [classes.right]: right,
     [classes.justIcon]: justIcon,
     [classes.wd]: wd,
@@ -90,9 +90,13 @@ RegularButton.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
+   * Override or extend the styles applied to the component
+   */
+  customClass: deprecatedPropType(PropTypes.string, "Use `className` instead."),
+  /**
    * A custom class provided.
    */
-  customClass: PropTypes.string,
+  className: PropTypes.string,
   /**
    * If true,  the button's min width will be set to 160px.
    */

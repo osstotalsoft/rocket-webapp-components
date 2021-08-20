@@ -43,9 +43,14 @@ export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
   */
   disabled?: boolean
   /**
-  * A custom class provided.
+  * Override or extend the styles applied to the component 
+  * @deprecated Use `className` instead.
   */
   customClass?: string
+  /**
+  * A custom class provided.
+  */
+  className?: string
   /**
   * If true,  the button's min width will be set to 160px.
   */
