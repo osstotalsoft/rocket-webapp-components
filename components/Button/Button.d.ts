@@ -43,6 +43,11 @@ export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
   */
   disabled?: boolean
   /**
+  * Override or extend the styles applied to the component 
+  * @deprecated Use `className` instead.
+  */
+  customClass?: string
+  /**
   * A custom class provided.
   */
   className?: string

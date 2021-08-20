@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { Button, makeStyles } from "@material-ui/core";
-import Tooltip from '../Tooltip/Tooltip';
+import Tooltip from "../Tooltip/Tooltip";
 import buttonStyle from "./buttonStyle";
 
 const useStyles = makeStyles(buttonStyle);
@@ -89,6 +89,10 @@ RegularButton.propTypes = {
    * If true, the button will be disabled.
    */
   disabled: PropTypes.bool,
+  /**
+   * Override or extend the styles applied to the component
+   */
+  customClass: deprecatedPropType(PropTypes.string, "Use `className` instead."),
   /**
    * A custom class provided.
    */
