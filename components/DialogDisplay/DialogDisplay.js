@@ -14,13 +14,32 @@ import cx from "classnames";
 
 const useStyles = makeStyles(dialogDisplayStyle);
 
-const DialogDisplay = ({ id, open, title, onClose, content, actions, overflowY, ...rest }) => {
+const DialogDisplay = ({
+  id,
+  open,
+  title,
+  onClose,
+  content,
+  actions,
+  overflowY,
+  disableBackdropClick,
+  disableEscapeKeyDown,
+  ...rest
+}) => {
   const classes = useStyles();
   const contentClasses = cx({
     [classes[overflowY]]: overflowY
   });
 
-  const handleActionClose = useCallback(event => onClose(event, 'closeActionClick'), [onClose])
+  const handleClose = useCallback(
+    (event, reason) => {
+      if (disableBackdropClick && reason === "backdropClick") return;
+      if (disableEscapeKeyDown && reason === "escapeKeyDown") return;
+
+      onClose(event, reason ? reason : "closeActionClick");
+    },
+    [disableBackdropClick, disableEscapeKeyDown, onClose]
+  );
 
   return (
     <Dialog
@@ -28,7 +47,7 @@ const DialogDisplay = ({ id, open, title, onClose, content, actions, overflowY, 
         className: classes.paper
       }}
       open={open}
-      onClose={onClose}
+      onClose={handleClose}
       aria-labelledby={`${id}-dialog-display-title`}
       maxWidth="xl"
       {...rest}
@@ -39,7 +58,7 @@ const DialogDisplay = ({ id, open, title, onClose, content, actions, overflowY, 
           size="small"
           className={classes.modalCloseButton}
           aria-label="Close"
-          onClick={handleActionClose}
+          onClick={handleClose}
         >
           <CloseIcon fontSize="small" />
         </IconButton>
@@ -53,8 +72,8 @@ const DialogDisplay = ({ id, open, title, onClose, content, actions, overflowY, 
 };
 
 DialogDisplay.defaultProps = {
-  overflowY: 'auto'
-}
+  overflowY: "auto"
+};
 
 DialogDisplay.propTypes = {
   /**
@@ -87,7 +106,15 @@ DialogDisplay.propTypes = {
   /**
    * The value of the overflowY CSS property
    */
-  overflowY: PropTypes.oneOf(["scroll", "hidden", "visible", "auto"])
+  overflowY: PropTypes.oneOf(["scroll", "hidden", "visible", "auto"]),
+  /**
+   * If true, clicking the backdrop will not fire the onClose callback.
+   */
+  disableBackdropClick: PropTypes.bool,
+  /**
+   * If true, hitting escape will not fire the onClose callback.
+   */
+  disableEscapeKeyDown: PropTypes.bool
 };
 
 export default DialogDisplay;

@@ -20,7 +20,7 @@ exports[`DialogDisplay snapshot 1`] = `
     }
     aria-labelledby="id-dialog-display-title"
     maxWidth="xl"
-    onClose={[MockFunction]}
+    onClose={[Function]}
     open={true}
   >
     <ForwardRef(Dialog)
@@ -50,7 +50,7 @@ exports[`DialogDisplay snapshot 1`] = `
         }
       }
       maxWidth="xl"
-      onClose={[MockFunction]}
+      onClose={[Function]}
       open={true}
     >
       <ForwardRef(Modal)
@@ -380,7 +380,7 @@ exports[`DialogDisplay snapshot 1`] = `
         className="MuiDialog-root"
         closeAfterTransition={true}
         disableEscapeKeyDown={false}
-        onClose={[MockFunction]}
+        onClose={[Function]}
         open={true}
       >
         <ForwardRef(Portal)

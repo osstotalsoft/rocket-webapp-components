@@ -18,8 +18,27 @@ import cx from "classnames";
 
 const useStyles = makeStyles(customDialogStyle);
 
-const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, buttonColor, buttonSize, showActions, fullWidth,
-  maxWidth, textDialogYes, textDialogNo, showX, overflowY, ...rest }) => {
+const CustomDialog = ({
+  id,
+  open,
+  title,
+  content,
+  textContent,
+  onYes,
+  onClose,
+  buttonColor,
+  buttonSize,
+  showActions,
+  fullWidth,
+  maxWidth,
+  textDialogYes,
+  textDialogNo,
+  showX,
+  overflowY,
+  disableBackdropClick,
+  disableEscapeKeyDown,
+  ...rest
+}) => {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const classes = useStyles();
@@ -27,7 +46,15 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
     [classes[overflowY]]: overflowY
   });
 
-  const handleActionClose = useCallback(event => onClose(event, 'closeActionClick'), [onClose])
+  const handleClose = useCallback(
+    (event, reason) => {
+      if (disableBackdropClick && reason === "backdropClick") return;
+      if (disableEscapeKeyDown && reason === "escapeKeyDown") return;
+
+      onClose(event, reason ? reason : "closeActionClick");
+    },
+    [disableBackdropClick, disableEscapeKeyDown, onClose]
+  );
 
   return (
     <Dialog
@@ -35,7 +62,7 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
         className: classes.paper
       }}
       open={open}
-      onClose={onClose}
+      onClose={handleClose}
       aria-labelledby={`${id}-dialog-yes-no-title`}
       aria-describedby={`${id}-dialog-yes-no-description`}
       maxWidth={maxWidth}
@@ -43,10 +70,7 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
       fullWidth={fullWidth}
       {...rest}
     >
-      <DialogTitle
-        id={`${id}-dialog-yes-no-title`}
-        className={classes.text}
-      >
+      <DialogTitle id={`${id}-dialog-yes-no-title`} className={classes.text}>
         {title}
         {showX && (
           <IconButton
@@ -70,7 +94,13 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
         <Grid item lg={12}>
           {content}
         </Grid>
-        <Grid item container justifyContent="flex-end" alignItems="center" lg={12}>
+        <Grid
+          item
+          container
+          justifyContent="flex-end"
+          alignItems="center"
+          lg={12}
+        >
           {showActions && (
             <>
               <Button
@@ -85,7 +115,7 @@ const CustomDialog = ({ id, open, title, content, textContent, onYes, onClose, b
                 right
                 size={buttonSize}
                 color={buttonColor}
-                onClick={handleActionClose}
+                onClick={handleClose}
               >
                 {textDialogNo}
               </Button>
@@ -194,7 +224,15 @@ CustomDialog.propTypes = {
   /**
    * the value of the overflowY CSS property
    */
-  overflowY: PropTypes.oneOf(["scroll", "hidden", "visible", "auto"])
+  overflowY: PropTypes.oneOf(["scroll", "hidden", "visible", "auto"]),
+  /**
+   * If true, clicking the backdrop will not fire the onClose callback.
+   */
+  disableBackdropClick: PropTypes.bool,
+  /**
+   * If true, hitting escape will not fire the onClose callback.
+   */
+  disableEscapeKeyDown: PropTypes.bool
 };
 
 export default CustomDialog;
