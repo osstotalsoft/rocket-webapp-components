@@ -32,7 +32,7 @@ exports[`CustomDialog snapshot 1`] = `
     fullScreen={false}
     fullWidth={true}
     maxWidth="md"
-    onClose={[MockFunction]}
+    onClose={[Function]}
     open={true}
   >
     <ForwardRef(Dialog)
@@ -65,7 +65,7 @@ exports[`CustomDialog snapshot 1`] = `
       fullScreen={false}
       fullWidth={true}
       maxWidth="md"
-      onClose={[MockFunction]}
+      onClose={[Function]}
       open={true}
     >
       <ForwardRef(Modal)
@@ -395,7 +395,7 @@ exports[`CustomDialog snapshot 1`] = `
         className="MuiDialog-root"
         closeAfterTransition={true}
         disableEscapeKeyDown={false}
-        onClose={[MockFunction]}
+        onClose={[Function]}
         open={true}
       >
         <ForwardRef(Portal)

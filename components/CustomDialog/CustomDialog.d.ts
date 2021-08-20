@@ -104,6 +104,16 @@ export interface CustomDialogProps extends Omit<DialogProps, 'open' | 'fullWidth
      * The value of the overflowY CSS property
      */
     overflowY?: "scroll" | "hidden" | "visible" | "auto"
+    /**
+     * @default false
+     * If true, clicking the backdrop will not fire the onClose callback.
+     */
+    disableBackdropClick?: boolean
+    /**
+     * @default false
+     * If true, hitting escape will not fire the onClose callback.
+     */
+    disableEscapeKeyDown?: boolean
 }
 /**
  *
