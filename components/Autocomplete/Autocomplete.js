@@ -145,7 +145,6 @@ const Autocomplete = ({
         <CustomTextField
           fullWidth
           {...params}
-          customInputProps={params.InputProps}
           startAdornment={params.InputProps.startAdornment}
           endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}

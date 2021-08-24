@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import NumberFormat from "react-number-format";
-import { makeStyles, TextField } from "@material-ui/core";
+import { makeStyles, TextField, deprecatedPropType } from "@material-ui/core";
 import textFieldStyle from "./textFieldStyle";
 import { useDebounce } from "use-debounce";
 import { curry } from "ramda";
@@ -81,6 +81,7 @@ function CustomTextField({
   isNumeric,
   customInputProps,
   inputProps,
+  InputProps,
   endAdornment,
   startAdornment,
   InputLabelProps,
@@ -97,13 +98,12 @@ function CustomTextField({
     ? {
         inputComponent: NumberFormatCustom,
         endAdornment,
-        startAdornment,
-        ...customInputProps
+        startAdornment
       }
     : {
         endAdornment,
         startAdornment,
-        ...customInputProps
+        ...InputProps
       };
 
   // attributes applied to the input element
@@ -164,13 +164,18 @@ CustomTextField.propTypes = {
    */
   isNumeric: PropTypes.bool,
   /**
-   * Other properties you can provide to the Input component.
+   * Other properties you can provide to the component.
    */
-  customInputProps: PropTypes.object,
+  customInputProps: deprecatedPropType(PropTypes.object, "Use `inputProps` instead."),
   /**
    * Attributes applied to the input element.
+   * For the numeric input, you can provide properties like thousandSeparator, decimalScale and allowNegative.
    */
   inputProps: PropTypes.object,
+  /**
+   * Other properties you can provide to the Input component.
+   */
+  InputProps: PropTypes.object,
   /**
    * End adornment of componenent. (Usually an InputAdornment from material-ui)
    */
