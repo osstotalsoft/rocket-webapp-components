@@ -21,7 +21,7 @@ const PasswordField = ({ showPasswordText, hidePasswordText, ...rest }) => {
   return (
     <CustomTextField
       {...rest}
-      customInputProps={{
+      inputProps={{
         type: showPassword ? "text" : "password"
       }}
       endAdornment={

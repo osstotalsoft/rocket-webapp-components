@@ -44,13 +44,19 @@ export interface Props {
      */
     isNumeric?: boolean
     /**
-     * Other properties you can provide to the Input component.
+     * Other properties you can provide to the component.
+     * @deprecated Use `inputProps` instead.
      */
     customInputProps?: Object
     /**
      * Attributes applied to the input element.
+     * For the numeric input, you can provide properties like thousandSeparator, decimalScale and allowNegative.
      */
     inputProps?: Object
+    /**
+     * Other properties you can provide to the Input component.
+     */
+    InputProps?: Object
     /**
      * The short hint displayed in the input before the user enters a value.
      */

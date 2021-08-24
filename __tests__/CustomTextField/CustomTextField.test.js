@@ -27,7 +27,7 @@ describe('CustomTextField', () => {
             label={'CustomTextField'}
             value={12 || ""}
             onChange={onCustomInputChange}
-            customInputProps={{
+            inputProps={{
                 decimalScale: 3,
                 thousandSeparator: true,
                 prefix: '$'

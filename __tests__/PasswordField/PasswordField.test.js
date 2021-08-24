@@ -34,10 +34,10 @@ describe("PasswordField", () => {
         showPasswordText="Show password text" />
     );
 
-    expect(wrapper.find(CustomTextField).props().customInputProps.type).toBe('password')
+    expect(wrapper.find(CustomTextField).props().inputProps.type).toBe('password')
 
     wrapper.find(IconButton).simulate('click');
 
-    expect(wrapper.find(CustomTextField).props().customInputProps.type).toBe('text')
+    expect(wrapper.find(CustomTextField).props().inputProps.type).toBe('text')
   });
 });
