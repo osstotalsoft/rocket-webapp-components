@@ -121,7 +121,7 @@ const Autocomplete = ({
   );
 
   const handleOpen = useCallback(() => {
-    if (loadOptions && options.length === (length(defaultOptions) || 0))
+    if (loadOptions)
       loadOptions().then(loadedOptions => {
         setOptions(loadedOptions || emptyArray);
       });
