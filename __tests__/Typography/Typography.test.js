@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import Typography from "../../components/Typography/Typography";
-import { mount } from 'enzyme';
+import { mount } from "enzyme";
 
 describe("Typography", () => {
-  it("Snapshot", () => {
+  test("Snapshot", () => {
     const component = renderer.create(
       <Typography tooltip="Tooltip" variant="body1" align="center">
         Text to be displayed
@@ -15,7 +15,7 @@ describe("Typography", () => {
     expect(json).toMatchSnapshot();
   });
 
-  it("varaint property shoulb be equalt to the default value provided", () => {
+  test("variant property should be equal to the default value provided", () => {
     const wrapper = mount(
       <Typography tooltip="Tooltip" align="center">
         Text to be displayed
