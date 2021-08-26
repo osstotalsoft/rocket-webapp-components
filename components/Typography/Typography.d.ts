@@ -4,7 +4,7 @@ export interface TypographyProps extends BaseProps {
   /**
    * If provided, a text will appear on hover
    */
-  tooltip?: string;
+  tooltip?: string | React.ReactNode;
 
   /**
          * @default 'inherit' 
