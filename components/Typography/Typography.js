@@ -6,8 +6,11 @@ import typographyStyle, { emphasisType } from "./typographyStyle";
 import * as R from "ramda";
 
 const useStyles = makeStyles(typographyStyle);
+const multipleValueCssProp = ["textDecoration"];
+
+const checkCssProp = R.flip(R.contains)(multipleValueCssProp);
 const getEmphasis = R.flip(R.prop)(emphasisType);
-const mergeStyles = (k, l, r) => (k === "textDecoration" ? `${l} ${r}` : r);
+const mergeStyles = (k, l, r) => (checkCssProp(k) ? `${l} ${r}` : r);
 const reduceEmphasis = R.reduce(
   (acc, elem) => R.mergeWithKey(mergeStyles, acc, getEmphasis(elem)),
   {}
