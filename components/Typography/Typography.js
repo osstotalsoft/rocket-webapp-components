@@ -7,7 +7,7 @@ import * as R from "ramda";
 
 const useStyles = makeStyles(typographyStyle);
 const getEmphasis = R.flip(R.prop)(emphasisType);
-const mergeStyles = (k, r, l) => (k === "textDecoration" ? `${r} ${l}` : l);
+const mergeStyles = (k, l, r) => (k === "textDecoration" ? `${l} ${r}` : r);
 const reduceEmphasis = R.reduce(
   (acc, elem) => R.mergeWithKey(mergeStyles, acc, getEmphasis(elem)),
   {}
