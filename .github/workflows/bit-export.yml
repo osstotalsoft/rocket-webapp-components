@@ -1,8 +1,8 @@
 name: Bit export CI
 
 on:
-  push:
-    branches: [master]
+  release:
+    types: [published]
 
 jobs:
   bit-export:
@@ -28,6 +28,8 @@ jobs:
           bit config set anonymous_reporting false
           bit config set user.token $BIT_TOKEN
           bit config
+      - name: Run tests
+        run: npm test
       - name: bit import
         run: |
           bit -v && bit import
@@ -35,7 +37,7 @@ jobs:
         run: |
           bit status
           bit tag -a
-          bit export
+          bit export ${{ secrets.BIT_COLLECTION }}
       - name: Commit changes
         run: |
           git config --global user.name '${{ github.actor }}'
