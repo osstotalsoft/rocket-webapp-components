@@ -922,7 +922,7 @@
       "origin": "AUTHORED",
       "exported": true
   },
-  "totalsoft_oss.react-mui/kit/core@2.9.6": {
+  "totalsoft_oss.react-mui/kit/core@2.9.7": {
       "files": [
           {
               "relativePath": "core/index.js",
