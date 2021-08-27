@@ -32,7 +32,7 @@ jobs:
         run: npm run test:ci
       - name: bit import
         run: |
-          bit -v && bit import
+          bit -v && bit import && bit build
       - name: bit export
         run: |
           bit status
