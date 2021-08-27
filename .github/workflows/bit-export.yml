@@ -29,7 +29,7 @@ jobs:
           bit config set user.token $BIT_TOKEN
           bit config
       - name: Run tests
-        run: npm test
+        run: npm run test:ci
       - name: bit import
         run: |
           bit -v && bit import
