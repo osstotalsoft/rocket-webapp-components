@@ -5,11 +5,30 @@ import cx from "classnames";
 import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
-import { Chip, makeStyles, Checkbox, deprecatedPropType } from "@material-ui/core";
+import {
+  Chip,
+  makeStyles,
+  Checkbox,
+  deprecatedPropType
+} from "@material-ui/core";
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
-import { flatten, prop, map, innerJoin, find, propEq, has, all, omit, contains, is, props, isNil, length } from "ramda";
+import {
+  flatten,
+  prop,
+  map,
+  innerJoin,
+  find,
+  propEq,
+  has,
+  all,
+  omit,
+  contains,
+  is,
+  props,
+  isNil
+} from "ramda";
 import humps from "humps";
 import { emptyArray, emptyString } from "../../utils/constants";
 
@@ -127,7 +146,7 @@ const Autocomplete = ({
       });
 
     onMenuOpen && onMenuOpen();
-  }, [defaultOptions, loadOptions, onMenuOpen, options.length]);
+  }, [defaultOptions, loadOptions, onMenuOpen]);
 
   const renderInput = useCallback(
     params => {
@@ -200,7 +219,7 @@ const Autocomplete = ({
 
   const handleChange = useCallback(
     (event, inputValue) => {
-      if (!inputValue) return onChange(inputValue);
+      if (isNil(inputValue)) return onChange(inputValue);
       if (is(String, inputValue)) return onChange(inputValue);
 
       if (isMultiSelection)
@@ -223,7 +242,7 @@ const Autocomplete = ({
 
       if (simpleValue)
         return onChange(
-          prop(valueKey, inputValue) || prop(labelKey, inputValue)
+          find(x => !isNil(x), props([valueKey, labelKey], inputValue))
         );
 
       return onChange(
