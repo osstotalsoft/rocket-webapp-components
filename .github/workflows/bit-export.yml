@@ -33,6 +33,9 @@ jobs:
       - name: bit import
         run: |
           bit -v && bit import && bit build
+      - name: Test
+        run: |
+          echo ${{ env.RELEASE_VERSION }}
       - name: bit export
         run: |
           bit status
