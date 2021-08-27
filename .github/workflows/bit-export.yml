@@ -1,0 +1,45 @@
+name: Bit export CI
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  bit-export:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip-ci')"
+    env:
+      BIT_TOKEN: ${{ secrets.BIT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      # Install dependencies and build app
+      - name: Install Dependencies
+        run: npm install
+      - name: Install bit-bin
+        run: install bit-bin -g  
+      - name: bit config
+        run: |
+          bit config set analytics_reporting false
+          bit config set anonymous_reporting false
+          bit config set user.token $BIT_TOKEN
+          bit config
+      - name: bit import
+        run: |
+          bit -v && bit import
+      - name: bit export
+        run: |
+          bit status
+          bit tag -a
+          bit export
+      - name: Commit changes
+        run: |
+          git config --global user.name '${{ github.actor }}'
+          git config --global user.email '${{ github.actor }}@users.noreply.github.com'
+          git add .bitmap
+          git commit -am "Automated commit"
+          git push
