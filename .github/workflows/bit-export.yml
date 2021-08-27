@@ -36,7 +36,7 @@ jobs:
       - name: bit export
         run: |
           bit status
-          bit tag --scope ${{ env.RELEASE_VERSION }} --ignore-newest-version
+          bit tag --scope ${{ env.RELEASE_VERSION }}
           bit export ${{ secrets.BIT_COLLECTION }}
       - name: Commit changes
         run: |
