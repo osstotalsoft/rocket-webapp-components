@@ -62,7 +62,7 @@
       "origin": "AUTHORED",
       "exported": true
   },
-  "totalsoft_oss.react-mui/autocomplete@2.9.7": {
+  "totalsoft_oss.react-mui/autocomplete@2.9.21": {
       "files": [
           {
               "relativePath": "components/Autocomplete/Autocomplete.d.ts",
@@ -617,7 +617,7 @@
       "origin": "AUTHORED",
       "exported": true
   },
-  "totalsoft_oss.react-mui/dynamic-input@2.9.7": {
+  "totalsoft_oss.react-mui/dynamic-input@2.9.21": {
       "files": [
           {
               "relativePath": "components/DynamicInput/DynamicInput.d.ts",
@@ -922,7 +922,7 @@
       "origin": "AUTHORED",
       "exported": true
   },
-  "totalsoft_oss.react-mui/kit/core@2.9.7": {
+  "totalsoft_oss.react-mui/kit/core@2.9.21": {
       "files": [
           {
               "relativePath": "core/index.js",
