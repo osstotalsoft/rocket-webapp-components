@@ -43,6 +43,6 @@ jobs:
           bit status
           bit tag --scope ${{ env.RELEASE_VERSION }}
           bit export ${{ secrets.BIT_COLLECTION }}
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v4.11.0
         with:
          commit_message: Updated bitmap file
