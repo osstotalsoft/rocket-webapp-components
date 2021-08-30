@@ -12,6 +12,8 @@ jobs:
       BIT_TOKEN: ${{ secrets.BIT_TOKEN }}
     steps:
       - uses: actions/checkout@v2
+        with:
+         ref: ${{ github.head_ref }}
       - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
@@ -40,11 +42,6 @@ jobs:
           bit status
           bit tag --scope ${{ env.RELEASE_VERSION }}
           bit export ${{ secrets.BIT_COLLECTION }}
-      - name: Commit changes
-        run: |
-          git config --global user.name '${{ github.actor }}'
-          git config --global user.email '${{ github.actor }}@users.noreply.github.com'
-          git checkout master
-          git add .bitmap
-          git commit -am "Automated commit"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+         commit_message: Updated bitmap file
