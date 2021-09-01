@@ -35,7 +35,7 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v}" >> $GITHUB_ENV
       - name: bit import
         run: |
-          bit -v && bit import
+          bit -v && bit import -v
       - name: bit export
         run: |
           bit status
