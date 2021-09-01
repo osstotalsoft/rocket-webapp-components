@@ -15,10 +15,6 @@ jobs:
         with:
          ref: ${{ github.head_ref }}
          token: ${{ secrets.PAT }}
-      - name: Use Node.js 12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
 
       # Install dependencies and build app
       - name: Install Dependencies
@@ -37,7 +33,7 @@ jobs:
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/v}" >> $GITHUB_ENV
       - name: bit import
         run: |
-          bit -v && bit import && bit build
+          bit -v && bit import
       - name: bit export
         run: |
           bit status
