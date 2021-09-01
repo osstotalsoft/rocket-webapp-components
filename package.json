@@ -123,6 +123,7 @@
       "compiler": "bit.envs/compilers/react@1.0.32"
     },
     "componentsDefaultDirectory": "components/{name}",
+    "defaultScope":"totalsoft_oss.react-mui"
     "packageManager": "npm",
     "overrides": {
       "kit/*": {
