@@ -1,7 +1,5 @@
 {
-  "engines": {
-    "node": ">=10"
-  },
+  "name": "rocket-webapp-components",
   "jest": {
     "setupFilesAfterEnv": [
       "./setupTests.js"
@@ -124,6 +122,7 @@
     },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm",
+    "defaultScope": "totalsoft_oss.react-mui",
     "overrides": {
       "kit/*": {
         "dependencies": {

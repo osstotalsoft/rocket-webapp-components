@@ -1,5 +1,8 @@
 # :boom: rocket-webapp-components
 
+[![Bit export CI](https://github.com/osstotalsoft/rocket-webapp-components/actions/workflows/bit-export.yml/badge.svg)](https://github.com/osstotalsoft/rocket-webapp-components/actions/workflows/bit-export.yml)
+[![components](https://img.shields.io/bit/collection/total-components/totalsoft_oss/react-mui)](https://bit.dev/totalsoft_oss/react-mui)
+
 ![Core](/assets/img/rocket-components-small.png)
 
 
