@@ -15,13 +15,11 @@ import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
 import {
-  flatten,
   prop,
   map,
   innerJoin,
   find,
   propEq,
-  has,
   all,
   omit,
   contains,
@@ -34,12 +32,7 @@ import { emptyArray, emptyString } from "../../utils/constants";
 
 const useStyles = makeStyles(autoCompleteStyles);
 
-const flattenOptions = options => {
-  const hasGroups = all(has("options"), options);
-  return hasGroups ? flatten(map(prop("options"), options)) : options;
-};
-
-const hasStringOptions = options => all(is(String), flattenOptions(options));
+const hasStringOptions = options => all(is(String), options);
 
 const filter = createFilterOptions();
 const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
@@ -73,22 +66,20 @@ const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
 const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
   if (isMultiSelection && !is(Array, value)) return emptyArray;
 
-  const flatOptions = flattenOptions(options);
-
-  if (!all(is(Object), flatOptions)) return value;
+  if (!all(is(Object), options)) return value;
 
   // Add new options if the Autocomplete is multiSelection and creatable
   if (is(Array, value)) {
-    const flattenOptionsSimpleValues = map(prop(valueKey), flatOptions);
+    const optionsSimpleValues = map(prop(valueKey), options);
     value?.map(v => {
-      if (!contains(v, flattenOptionsSimpleValues))
-        flatOptions.push({ [valueKey]: v });
+      if (!contains(v, optionsSimpleValues))
+        options.push({ [valueKey]: v });
     });
   }
 
   const result = isMultiSelection
-    ? innerJoin((o, v) => o[valueKey] === v, flatOptions, value)
-    : find(propEq(valueKey, value), flatOptions);
+    ? innerJoin((o, v) => o[valueKey] === v, options, value)
+    : find(propEq(valueKey, value), options);
 
   return result || null;
 };
