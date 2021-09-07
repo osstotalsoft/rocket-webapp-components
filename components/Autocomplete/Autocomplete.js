@@ -393,7 +393,7 @@ Autocomplete.propTypes = {
    */
   error: PropTypes.bool,
   /**
-   * Marks the input field as required (with a *).
+   * Marks the input field as required (with an *).
    */
   required: PropTypes.bool,
   /**

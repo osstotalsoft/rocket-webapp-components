@@ -79,7 +79,7 @@ export interface AutocompleteProps {
   error?: boolean
   /**
    * @default false
-   * Marks the input field as required (with a *)
+   * Marks the input field as required (with an *)
    */
   required?: boolean
   /**
