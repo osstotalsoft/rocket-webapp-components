@@ -122,6 +122,7 @@ const Autocomplete = ({
   labelKey,
   error,
   helperText,
+  required,
   createdLabel,
   typographyContentColor,
   inputSelectedColor,
@@ -157,7 +158,8 @@ const Autocomplete = ({
       const textFieldProps = {
         label,
         error,
-        helperText
+        helperText,
+        required
       };
 
       return (
@@ -308,6 +310,7 @@ Autocomplete.defaultProps = {
   valueKey: "id",
   labelKey: "name",
   error: false,
+  required: false,
   value: null,
   creatable: false,
   typographyContentColor: "textSecondary"
@@ -389,6 +392,10 @@ Autocomplete.propTypes = {
    * If true, the helper text is displayed when an error pops up.
    */
   error: PropTypes.bool,
+  /**
+   * Marks the input field as required (with an *).
+   */
+  required: PropTypes.bool,
   /**
    * The value of label when a new option is added.
    */

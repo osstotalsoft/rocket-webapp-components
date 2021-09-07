@@ -78,6 +78,11 @@ export interface AutocompleteProps {
    */
   error?: boolean
   /**
+   * @default false
+   * Marks the input field as required (with an *)
+   */
+  required?: boolean
+  /**
    * The value of label when a new option is added.
    */
   createdLabel?: string
