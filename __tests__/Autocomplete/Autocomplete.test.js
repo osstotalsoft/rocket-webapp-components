@@ -183,4 +183,20 @@ describe("Autocomplete", () => {
 
     expect(onChange).toBeCalled();
   });
+
+  it("Adds a * to the label when Autocomplete is required", () => {
+    const onChange = jest.fn();
+    const wrapper = mount(
+      <Autocomplete
+        label={"Status"}
+        options={options}
+        simpleValue
+        value={"2"}
+        required
+        onChange={onChange}
+      />
+    );
+
+    expect(wrapper.find("span.MuiInputLabel-asterisk").length).toEqual(1)
+  })
 });
