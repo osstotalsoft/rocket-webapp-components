@@ -70,7 +70,6 @@ RegularButton.propTypes = {
     "dangerNoBackground",
     "roseNoBackground",
     "white",
-    "simple",
     "transparent"
   ]),
   /**

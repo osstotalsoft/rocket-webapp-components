@@ -553,43 +553,6 @@ const styles = theme => {
         color: grayColor
       }
     },
-    simple: {
-      "&,&:focus,&:hover": {
-        color: whiteColor,
-        background: "transparent",
-        boxShadow: "none"
-      },
-      "&$primary": {
-        "&,&:focus,&:hover,&:visited": {
-          color: primaryColor
-        }
-      },
-      "&$info": {
-        "&,&:focus,&:hover,&:visited": {
-          color: infoColor
-        }
-      },
-      "&$success": {
-        "&,&:focus,&:hover,&:visited": {
-          color: successColor
-        }
-      },
-      "&$warning": {
-        "&,&:focus,&:hover,&:visited": {
-          color: warningColor
-        }
-      },
-      "&$rose": {
-        "&,&:focus,&:hover,&:visited": {
-          color: roseColor
-        }
-      },
-      "&$danger": {
-        "&,&:focus,&:hover,&:visited": {
-          color: dangerColor
-        }
-      }
-    },
     transparent: {
       "&,&:focus,&:hover": {
         color: "inherit",

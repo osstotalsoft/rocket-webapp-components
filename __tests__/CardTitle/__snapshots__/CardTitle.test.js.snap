@@ -13,7 +13,7 @@ exports[`CardTitle snapshot 1`] = `
     className="MuiBox-root MuiBox-root-6"
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-disabled-28"
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-7 makeStyles-disabled-27"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

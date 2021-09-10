@@ -14,7 +14,7 @@ exports[`BackToButton snapshot 1`] = `
 >
   <button
     aria-label="Back"
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-16"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}

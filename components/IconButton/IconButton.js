@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { IconButton, makeStyles } from "@material-ui/core";
+import { IconButton, makeStyles, deprecatedPropType } from "@material-ui/core";
 import Tooltip from '../Tooltip/Tooltip';
 import iconButtonStyle from "./iconButtonStyle";
-import { deprecatedPropType } from "@material-ui/core";
 
 const useStyles = makeStyles(iconButtonStyle);
 
@@ -51,7 +50,6 @@ CustomIconButton.propTypes = {
     "danger",
     "rose",
     "white",
-    "simple",
     "defaultNoBackground",
     "primaryNoBackground",
     "infoNoBackground",

@@ -24,7 +24,6 @@ export interface ButtonProps extends Omit<BaseProps, 'color' | 'size'> {
   "dangerNoBackground" |
   "roseNoBackground" |
   "white" |
-  "simple" |
   "transparent"
   /**
    * If true, rounded corners are enabled.
