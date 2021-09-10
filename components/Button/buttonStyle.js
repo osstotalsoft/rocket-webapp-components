@@ -110,7 +110,7 @@ const buttonStyle = theme => {
       ...buttonColors.disabled,
       "&$justIcon": {
         pointerEvents: "none",
-        color: grayColor
+        color: whiteColor
       }
     },
     transparent: buttonColors.transparent,
