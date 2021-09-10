@@ -1,4 +1,4 @@
-import styles from './styles'
+import styles from '../../assets/jss/styles';	
 
 const buttonStyle = theme => {
   const { grayColor, whiteColor, hexToRgb, defaultFont, buttonColors } = styles(theme)
