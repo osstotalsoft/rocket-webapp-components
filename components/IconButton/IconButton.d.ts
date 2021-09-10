@@ -19,7 +19,6 @@ export interface IconButtonProps extends Omit<BaseProps, 'color'> {
     "danger" |
     "rose" |
     "white" |
-    "simple" |
     "defaultNoBackground" |
     "primaryNoBackground" |
     "infoNoBackground" |

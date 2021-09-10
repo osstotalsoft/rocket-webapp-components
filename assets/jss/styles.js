@@ -1,6 +1,6 @@
-import { theme as defaultTheme } from '../../themes/defaultTheme';
+import { theme as defaultTheme } from "../../themes/defaultTheme";
 
-const styles = (theme) => {
+const styles = theme => {
   const hexToRgb = input => {
     input = input + "";
     input = input.replace("#", "");
@@ -99,47 +99,105 @@ const styles = (theme) => {
   };
 
   const defaultFont = {
-    ...theme.defaultFont || defaultTheme.defaultFont,
+    ...(theme.defaultFont || defaultTheme.defaultFont),
     fontWeight: "300",
     lineHeight: "1.5em"
   };
 
-  const primaryColor = theme.palette.timColors?.primary || defaultTheme.palette?.timColors.primary;
-  const primaryColorRGBA = theme.palette.timColors?.primaryRGBA || defaultTheme.palette?.timColors.primaryRGBA;
-  const warningColor = theme.palette.timColors?.warningColor || defaultTheme.palette?.timColors.warningColor;
-  const dangerColor = theme.palette.timColors?.dangerColor || defaultTheme.palette?.timColors.dangerColor;
-  const successColor = theme.palette.timColors?.successColor || defaultTheme.palette?.timColors.successColor;
-  const infoColor = theme.palette.timColors?.infoColor || defaultTheme.palette?.timColors.infoColor;
-  const blueColor = theme.palette.timColors?.blueColor || defaultTheme.palette?.timColors.blueColor;
-  const roseColor = theme.palette.timColors?.roseColor || defaultTheme.palette?.timColors.roseColor;
-  const grayColor = theme.palette.timColors?.grayColor || defaultTheme.palette?.timColors.grayColor;
-  const blackColor = theme.palette.timColors?.blackColor || defaultTheme.palette?.timColors.blackColor;
+  const primaryColor =
+    theme.palette.timColors?.primary || defaultTheme.palette?.timColors.primary;
+  const primaryColorRGBA =
+    theme.palette.timColors?.primaryRGBA ||
+    defaultTheme.palette?.timColors.primaryRGBA;
+  const warningColor =
+    theme.palette.timColors?.warningColor ||
+    defaultTheme.palette?.timColors.warningColor;
+  const dangerColor =
+    theme.palette.timColors?.dangerColor ||
+    defaultTheme.palette?.timColors.dangerColor;
+  const successColor =
+    theme.palette.timColors?.successColor ||
+    defaultTheme.palette?.timColors.successColor;
+  const infoColor =
+    theme.palette.timColors?.infoColor ||
+    defaultTheme.palette?.timColors.infoColor;
+  const blueColor =
+    theme.palette.timColors?.blueColor ||
+    defaultTheme.palette?.timColors.blueColor;
+  const roseColor =
+    theme.palette.timColors?.roseColor ||
+    defaultTheme.palette?.timColors.roseColor;
+  const grayColor =
+    theme.palette.timColors?.grayColor ||
+    defaultTheme.palette?.timColors.grayColor;
+  const blackColor =
+    theme.palette.timColors?.blackColor ||
+    defaultTheme.palette?.timColors.blackColor;
   //theme colors
-  const themeColor = theme.palette?.timColors?.themeColor || defaultTheme.palette.timColors.themeColor;
-  const themeRGBAColor = theme.palette?.timColors?.themeColorRGBA || defaultTheme.palette.timColors.themeColorRGBA;
-  const themeShadowColor = theme.palette?.timColors?.themeShadowColor || defaultTheme.palette.timColors.themeShadowColor;
-  const themeShadowRGBAColor = theme.palette?.timColors?.themeShadowColorRGBA || defaultTheme.palette.timColors.themeShadowColorRGBA;
+  const themeColor =
+    theme.palette?.timColors?.themeColor ||
+    defaultTheme.palette.timColors.themeColor;
+  const themeRGBAColor =
+    theme.palette?.timColors?.themeColorRGBA ||
+    defaultTheme.palette.timColors.themeColorRGBA;
+  const themeShadowColor =
+    theme.palette?.timColors?.themeShadowColor ||
+    defaultTheme.palette.timColors.themeShadowColor;
+  const themeShadowRGBAColor =
+    theme.palette?.timColors?.themeShadowColorRGBA ||
+    defaultTheme.palette.timColors.themeShadowColorRGBA;
 
-  const menuActiveColor = theme.palette?.sideMenu?.activeLinkColor || defaultTheme.palette.sideMenu.activeLinkColor;
-  const menuActiveBkColor = theme.palette?.sideMenu?.activeBkColor || defaultTheme.palette.sideMenu.activeBkColor;
-  const menuBkColor = theme.palette?.sideMenu?.bkColor || defaultTheme.palette.sideMenu.bkColor;
-  const menuColor = theme.palette?.sideMenu?.color || defaultTheme.palette.sideMenu.color;
-  const menuBkOpacity = theme.palette?.sideMenu?.bkOpacity || defaultTheme.palette.sideMenu.bkOpacity;
-  const topBarBkColor = theme.palette?.topBar?.bkColor || defaultTheme.palette.topBar.bkColor;
+  const menuActiveColor =
+    theme.palette?.sideMenu?.activeLinkColor ||
+    defaultTheme.palette.sideMenu.activeLinkColor;
+  const menuActiveBkColor =
+    theme.palette?.sideMenu?.activeBkColor ||
+    defaultTheme.palette.sideMenu.activeBkColor;
+  const menuBkColor =
+    theme.palette?.sideMenu?.bkColor || defaultTheme.palette.sideMenu.bkColor;
+  const menuColor =
+    theme.palette?.sideMenu?.color || defaultTheme.palette.sideMenu.color;
+  const menuBkOpacity =
+    theme.palette?.sideMenu?.bkOpacity ||
+    defaultTheme.palette.sideMenu.bkOpacity;
+  const topBarBkColor =
+    theme.palette?.topBar?.bkColor || defaultTheme.palette.topBar.bkColor;
 
-  const snackSuccessBgColor = theme.palette?.snackbar?.successBgColor || defaultTheme.palette?.snackbar?.successBgColor;
-  const snackSuccessColor = theme.palette?.snackbar?.successColor || defaultTheme.palette?.snackbar?.successColor;
-  const snackWarningBgColor = theme.palette?.snackbar?.warningBgColor || defaultTheme.palette?.snackbar?.warningBgColor;
-  const snackWarningColor = theme.palette?.snackbar?.warningColor || defaultTheme.palette?.snackbar?.warningColor;
-  const snackInfoBgColor = theme.palette?.snackbar?.infoBgColor || defaultTheme.palette?.snackbar?.infoBgColor;
-  const snackInfoColor = theme.palette?.snackbar?.infoColor || defaultTheme.palette?.snackbar?.infoColor;
-  const snackDangerBgColor = theme.palette?.snackbar?.dangerBgColor || defaultTheme.palette?.snackbar?.dangerBgColor;
-  const snackDangerColor = theme.palette?.snackbar?.dangerColor || defaultTheme.palette?.snackbar?.dangerColor;
-  const activeColor = theme.palette?.activeColor || defaultTheme.palette?.activeColor;
+  const snackSuccessBgColor =
+    theme.palette?.snackbar?.successBgColor ||
+    defaultTheme.palette?.snackbar?.successBgColor;
+  const snackSuccessColor =
+    theme.palette?.snackbar?.successColor ||
+    defaultTheme.palette?.snackbar?.successColor;
+  const snackWarningBgColor =
+    theme.palette?.snackbar?.warningBgColor ||
+    defaultTheme.palette?.snackbar?.warningBgColor;
+  const snackWarningColor =
+    theme.palette?.snackbar?.warningColor ||
+    defaultTheme.palette?.snackbar?.warningColor;
+  const snackInfoBgColor =
+    theme.palette?.snackbar?.infoBgColor ||
+    defaultTheme.palette?.snackbar?.infoBgColor;
+  const snackInfoColor =
+    theme.palette?.snackbar?.infoColor ||
+    defaultTheme.palette?.snackbar?.infoColor;
+  const snackDangerBgColor =
+    theme.palette?.snackbar?.dangerBgColor ||
+    defaultTheme.palette?.snackbar?.dangerBgColor;
+  const snackDangerColor =
+    theme.palette?.snackbar?.dangerColor ||
+    defaultTheme.palette?.snackbar?.dangerColor;
+  const activeColor =
+    theme.palette?.activeColor || defaultTheme.palette?.activeColor;
 
   const primaryBoxShadow = {
     boxShadow:
-      "0 12px 20px -10px " + primaryColorRGBA + ", 0 4px 20px 0px " + primaryColorRGBA + ", 0 7px 8px -5px " + primaryColorRGBA
+      "0 12px 20px -10px " +
+      primaryColorRGBA +
+      ", 0 4px 20px 0px " +
+      primaryColorRGBA +
+      ", 0 7px 8px -5px " +
+      primaryColorRGBA
   };
   const infoBoxShadow = {
     boxShadow:
@@ -162,7 +220,8 @@ const styles = (theme) => {
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)"
   };
   const purpleBoxShadow = {
-    boxShadow: "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(142, 36, 170, 0.4)"
+    boxShadow:
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(142, 36, 170, 0.4)"
   };
   const themeBoxShadow = {
     boxShadow:
@@ -171,31 +230,44 @@ const styles = (theme) => {
 
   const themeBoxSecondaryShadow = {
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px " + themeShadowRGBAColor
+      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px " +
+      themeShadowRGBAColor
   };
 
   const orangeCardHeader = {
-    background: "linear-gradient(60deg, " + (theme.palette?.card?.orange400
-      || defaultTheme.palette?.card.orange400) + ", " + (theme.palette?.card?.orange500
-        || defaultTheme.palette?.card.orange500) + ")",
+    background:
+      "linear-gradient(60deg, " +
+      (theme.palette?.card?.orange400 || defaultTheme.palette?.card.orange400) +
+      ", " +
+      (theme.palette?.card?.orange500 || defaultTheme.palette?.card.orange500) +
+      ")",
     ...warningBoxShadow
   };
   const greenCardHeader = {
-    background: "linear-gradient(60deg, " + (theme.palette?.card?.green400
-      || defaultTheme.palette?.card.green400) + ", " + (theme.palette?.card?.green500
-        || defaultTheme.palette?.card.green500) + ")",
+    background:
+      "linear-gradient(60deg, " +
+      (theme.palette?.card?.green400 || defaultTheme.palette?.card.green400) +
+      ", " +
+      (theme.palette?.card?.green500 || defaultTheme.palette?.card.green500) +
+      ")",
     ...successBoxShadow
   };
   const redCardHeader = {
-    background: "linear-gradient(60deg, " + (theme.palette?.card?.red400
-      || defaultTheme.palette.card.red400) + ", " + (theme.palette?.card?.red500
-        || defaultTheme.palette.card.red500) + ")",
+    background:
+      "linear-gradient(60deg, " +
+      (theme.palette?.card?.red400 || defaultTheme.palette.card.red400) +
+      ", " +
+      (theme.palette?.card?.red500 || defaultTheme.palette.card.red500) +
+      ")",
     ...dangerBoxShadow
   };
   const blueCardHeader = {
-    background: "linear-gradient(60deg, " + (theme.palette?.card?.blue400
-      || defaultTheme.palette.card.blue400) + ", " + (theme.palette?.card?.blue500
-        || defaultTheme.palette.card.blue500) + ")",
+    background:
+      "linear-gradient(60deg, " +
+      (theme.palette?.card?.blue400 || defaultTheme.palette.card.blue400) +
+      ", " +
+      (theme.palette?.card?.blue500 || defaultTheme.palette.card.blue500) +
+      ")",
     ...infoBoxShadow
   };
   const purpleCardHeader = {
@@ -207,9 +279,10 @@ const styles = (theme) => {
     ...roseBoxShadow
   };
   const themeCardHeader = {
-    background: "linear-gradient(60deg, " + themeColor + ", " + themeColor + ")",
+    background:
+      "linear-gradient(60deg, " + themeColor + ", " + themeColor + ")",
     ...themeBoxShadow
-  }
+  };
 
   const cardActions = {
     margin: "0 20px 10px",
@@ -247,7 +320,8 @@ const styles = (theme) => {
       "0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2)",
     maxWidth: "200px",
     textAlign: "center",
-    fontFamily: theme.defaultFont?.fontFamily || defaultTheme.defaultFont?.fontFamily,
+    fontFamily:
+      theme.defaultFont?.fontFamily || defaultTheme.defaultFont?.fontFamily,
     fontSize: "12px",
     fontStyle: "normal",
     fontWeight: "400",
@@ -319,10 +393,18 @@ const styles = (theme) => {
       }
     },
     infoNoBackground: {
-      "&,&:hover,&:focus": {
+      color: infoColor,
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      "&:hover,&:focus": {
+        backgroundColor: "transparent",
         color: infoColor,
-        boxShadow: "none",
-        backgroundColor: "transparent"
+        boxShadow:
+          "0 14px 26px -12px rgba(" +
+          hexToRgb(infoColor) +
+          ", 0.42), 0 4px 23px 0px rgba(" +
+          hexToRgb(infoColor) +
+          ", 0.2)"
       }
     },
     success: {
@@ -346,10 +428,18 @@ const styles = (theme) => {
       }
     },
     successNoBackground: {
-      "&,&:hover,&:focus": {
+      color: successColor,
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      "&:hover,&:focus": {
+        backgroundColor: "transparent",
         color: successColor,
-        boxShadow: "none",
-        backgroundColor: "transparent"
+        boxShadow:
+          "0 14px 26px -12px rgba(" +
+          hexToRgb(successColor) +
+          ", 0.42), 0 4px 23px 0px rgba(" +
+          hexToRgb(successColor) +
+          ", 0.2)"
       }
     },
     warning: {
@@ -373,10 +463,18 @@ const styles = (theme) => {
       }
     },
     warningNoBackground: {
-      "&,&:hover,&:focus": {
+      color: warningColor,
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      "&:hover,&:focus": {
+        backgroundColor: "transparent",
         color: warningColor,
-        boxShadow: "none",
-        backgroundColor: "transparent"
+        boxShadow:
+          "0 14px 26px -12px rgba(" +
+          hexToRgb(warningColor) +
+          ", 0.42), 0 4px 23px 0px rgba(" +
+          hexToRgb(warningColor) +
+          ", 0.2)"
       }
     },
     danger: {
@@ -400,10 +498,18 @@ const styles = (theme) => {
       }
     },
     dangerNoBackground: {
-      "&,&:hover,&:focus": {
+      color: dangerColor,
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      "&:hover,&:focus": {
+        backgroundColor: "transparent",
         color: dangerColor,
-        boxShadow: "none",
-        backgroundColor: "transparent"
+        boxShadow:
+          "0 14px 26px -12px rgba(" +
+          hexToRgb(dangerColor) +
+          ", 0.42), 0 4px 23px 0px rgba(" +
+          hexToRgb(dangerColor) +
+          ", 0.2)"
       }
     },
     rose: {
@@ -427,10 +533,18 @@ const styles = (theme) => {
       }
     },
     roseNoBackground: {
-      "&,&:hover,&:focus": {
+      color: roseColor,
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      "&:hover,&:focus": {
+        backgroundColor: "transparent",
         color: roseColor,
-        boxShadow: "none",
-        backgroundColor: "transparent"
+        boxShadow:
+          "0 14px 26px -12px rgba(" +
+          hexToRgb(roseColor) +
+          ", 0.42), 0 4px 23px 0px rgba(" +
+          hexToRgb(roseColor) +
+          ", 0.2)"
       }
     },
     white: {
@@ -439,98 +553,101 @@ const styles = (theme) => {
         color: grayColor
       }
     },
-    simple: {
-      "&,&:focus,&:hover": {
-        color: whiteColor,
-        background: "transparent",
-        boxShadow: "none"
-      },
-      "&$primary": {
-        "&,&:focus,&:hover,&:visited": {
-          color: primaryColor
-        }
-      },
-      "&$info": {
-        "&,&:focus,&:hover,&:visited": {
-          color: infoColor
-        }
-      },
-      "&$success": {
-        "&,&:focus,&:hover,&:visited": {
-          color: successColor
-        }
-      },
-      "&$warning": {
-        "&,&:focus,&:hover,&:visited": {
-          color: warningColor
-        }
-      },
-      "&$rose": {
-        "&,&:focus,&:hover,&:visited": {
-          color: roseColor
-        }
-      },
-      "&$danger": {
-        "&,&:focus,&:hover,&:visited": {
-          color: dangerColor
-        }
-      },
-    },
     transparent: {
       "&,&:focus,&:hover": {
         color: "inherit",
         background: "transparent",
-        boxShadow: "none"
+        boxShadow: "none",
+        "& svg": {
+          color: "inherit"
+        },
+        "&$justIcon": {
+          color: "inherit"
+        }
       }
     },
     theme: {
-      backgroundColor: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-      boxShadow: theme.palette?.button?.themeShadow || defaultTheme.palette?.button?.themeShadow,
-      "&:hover": {
+      backgroundColor:
+        theme.palette?.button?.theme || defaultTheme.palette.button.theme,
+      boxShadow:
+        theme.palette?.button?.themeShadow ||
+        defaultTheme.palette?.button?.themeShadow,
+      "&:hover,&:focus": {
         backgroundColor: whiteColor,
-        color: theme.palette?.button?.themeHoverColor || defaultTheme.palette.button.themeHoverColor,
-        boxShadow: theme.palette?.button?.themeHoverShadow|| defaultTheme.palette?.button?.themeHoverShadow
+        color:
+          theme.palette?.button?.themeHoverColor ||
+          defaultTheme.palette.button.themeHoverColor,
+        boxShadow:
+          theme.palette?.button?.themeHoverShadow ||
+          defaultTheme.palette?.button?.themeHoverShadow
       }
     },
     themeNoBackground: {
       backgroundColor: "transparent",
       color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
       boxShadow: "none",
-      "&:hover": {
+      "&:hover,&:focus": {
         backgroundColor: "transparent",
-        color: theme.palette?.button?.themeHoverColor || defaultTheme.palette.button.themeHoverColor,
-        boxShadow: theme.palette?.button?.themeHoverShadow|| defaultTheme.palette?.button?.themeHoverShadow
+        color:
+          theme.palette?.button?.themeHoverColor ||
+          defaultTheme.palette.button.themeHoverColor,
+        boxShadow:
+          theme.palette?.button?.themeHoverShadow ||
+          defaultTheme.palette?.button?.themeHoverShadow
       }
     },
     themeWithBackground: {
       backgroundColor: "transparent",
       color: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-      boxShadow: theme.palette?.button?.themeHoverShadow || defaultTheme.palette?.button?.themeHoverShadow,
-      "&:hover": {
-        backgroundColor: theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-        color: theme.palette?.button?.themeHoverColor || defaultTheme.palette.button.themeHoverColor,
-        boxShadow: theme.palette?.button?.themeHoverShadow || defaultTheme.palette?.button?.themeHoverShadow
+      boxShadow:
+        theme.palette?.button?.themeHoverShadow ||
+        defaultTheme.palette?.button?.themeHoverShadow,
+      "&:hover,&:focus": {
+        backgroundColor:
+          theme.palette?.button?.theme || defaultTheme.palette.button.theme,
+        color:
+          theme.palette?.button?.themeHoverColor ||
+          defaultTheme.palette.button.themeHoverColor,
+        boxShadow:
+          theme.palette?.button?.themeHoverShadow ||
+          defaultTheme.palette?.button?.themeHoverShadow
       }
     },
     disabled: {
       opacity: "0.65",
       pointerEvents: "none",
       backgroundColor: grayColor,
-      "& svg": {
-        color: grayColor
+      color: whiteColor,
+      "&$justIcon &svg": {
+        pointerEvents: "none",
+        color: whiteColor
+      },
+      "&$roseNoBackground,&$themeNoBackground,&$defaultNoBackground,&$primaryNoBackground,&$infoNoBackground,&$successNoBackground,&$warningNoBackground,&$dangerNoBackground,&$white,&$transparent": {
+        background: "transparent",
+        color: grayColor,
+        "&$justIcon &svg": {
+          color: grayColor
+        }
       }
     },
     defaultNoBackground: {
-      "&,&:hover,&:focus": {
+      color: grayColor,
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      "&:hover,&:focus": {
         color: grayColor,
-        boxShadow: "none",
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
+        boxShadow:
+          "0 14px 26px -12px rgba(" +
+          hexToRgb(grayColor) +
+          ", 0.42), 0 4px 23px 0px rgba(" +
+          hexToRgb(grayColor) +
+          ", 0.2)"
       }
     }
-  }
+  };
 
   return {
-    //variables
     drawerWidth,
     rightDrawerWidth,
     drawerMiniWidth,

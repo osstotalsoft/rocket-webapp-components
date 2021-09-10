@@ -157,7 +157,7 @@ exports[`Pagination Snapshot 1`] = `
     className="makeStyles-refreshButton-2"
   >
     <button
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-button-7 makeStyles-defaultNoBackground-16"
+      className="MuiButtonBase-root MuiIconButton-root makeStyles-button-7 makeStyles-defaultNoBackground-15"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

@@ -43,7 +43,6 @@ const iconButtonStyle = theme => {
     danger: buttonColors.danger,
     rose: buttonColors.rose,
     white: buttonColors.white,
-    simple: buttonColors.simple,
     defaultNoBackground: buttonColors.defaultNoBackground,
     primaryNoBackground: buttonColors.primaryNoBackground,
     infoNoBackground: buttonColors.infoNoBackground,

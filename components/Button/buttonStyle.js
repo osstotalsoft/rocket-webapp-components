@@ -95,7 +95,6 @@ const buttonStyle = theme => {
     danger: buttonColors.danger,
     rose: buttonColors.rose,
     white: buttonColors.white,
-    simple: buttonColors.simple,
     defaultNoBackground: buttonColors.defaultNoBackground,
     primaryNoBackground: buttonColors.primaryNoBackground,
     infoNoBackground: buttonColors.infoNoBackground,
@@ -110,7 +109,7 @@ const buttonStyle = theme => {
       ...buttonColors.disabled,
       "&$justIcon": {
         pointerEvents: "none",
-        color: grayColor
+        color: whiteColor
       }
     },
     transparent: buttonColors.transparent,
