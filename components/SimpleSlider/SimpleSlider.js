@@ -80,7 +80,7 @@ SimpleSlider.propTypes = {
     helperText: PropTypes.string,
     required: PropTypes.bool,
     decimalScale: PropTypes.number,
-    thousandSeparator: PropTypes.bool,
+    thousandSeparator: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     disabled: PropTypes.bool,
     showSliderLimits: PropTypes.bool
 };
