@@ -11,7 +11,7 @@ import simpleSliderStyle from "./simpleSliderStyle";
 const useStyles = makeStyles(simpleSliderStyle);
 
 const SimpleSlider = ({ label, fullWidth, value, min, max, step, onChange, error,
-    helperText, required, decimalScale, disabled, showSliderLimits, ...other }) => {
+    helperText, required, decimalScale, thousandSeparator, disabled, showSliderLimits, ...other }) => {
     const classes = useStyles();
 
     const onTextChanged = useCallback(event => {
@@ -41,7 +41,8 @@ const SimpleSlider = ({ label, fullWidth, value, min, max, step, onChange, error
                 required={required}
                 value={value}
                 onChange={OnTextChangedDebounced}
-                inputProps={{ decimalScale: decimalScale }}
+                isNumeric={true}
+                inputProps={{ decimalScale: decimalScale, thousandSeparator: thousandSeparator }}
                 disabled={disabled}
             />
 
@@ -79,6 +80,7 @@ SimpleSlider.propTypes = {
     helperText: PropTypes.string,
     required: PropTypes.bool,
     decimalScale: PropTypes.number,
+    thousandSeparator: PropTypes.bool,
     disabled: PropTypes.bool,
     showSliderLimits: PropTypes.bool
 };
