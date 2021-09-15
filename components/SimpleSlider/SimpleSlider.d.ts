@@ -69,7 +69,7 @@ export interface Props {
     decimalScale?: number;
   
     /**
-    * Add thousand separators on number; single character string or boolean true
+    * Add thousand separators on number; single character string or boolean true (true is default to ,)
     */
     thousandSeparator?: boolean | string;
 
