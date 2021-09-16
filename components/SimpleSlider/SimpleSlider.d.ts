@@ -67,6 +67,11 @@ export interface Props {
      * number of decimals to be displayed
      */
     decimalScale?: number;
+  
+    /**
+    * Add thousand separators on number; single character string or boolean true (true is default to ,)
+    */
+    thousandSeparator?: boolean | string;
 
     /**
      * If true, the slider will be disabled
