@@ -28,15 +28,22 @@ exports[`SimpleSlider Snapshot 1`] = `
         aria-invalid={false}
         autoFocus={false}
         className="MuiInputBase-input MuiInput-input makeStyles-input-8 "
-        decimalScale={2}
         disabled={false}
+        inputMode="numeric"
         onAnimationStart={[Function]}
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
         required={true}
+        style={
+          Object {
+            "textAlign": "right",
+          }
+        }
         type="text"
-        value={null}
+        value=""
       />
     </div>
   </div>
