@@ -14,7 +14,7 @@ exports[`UpwardButton Snapshot 1`] = `
 >
   <button
     aria-label="Upward"
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-16"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-button-1 makeStyles-theme-17"
     disabled={false}
     onBlur={[Function]}
     onDragLeave={[Function]}

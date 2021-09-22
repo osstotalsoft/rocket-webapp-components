@@ -56,19 +56,6 @@ const buttonStyle = theme => {
         height: '25px',
         marginRight: '4px',
         verticalAlign: 'middle'
-      },
-      '&$justIcon': {
-        '& .fab,& .fas,& .far,& .fal,& .material-icons': {
-          marginTop: '0px',
-          position: 'absolute',
-          width: '100%',
-          transform: 'none',
-          left: '0px',
-          top: '0px',
-          height: '100%',
-          lineHeight: '41px',
-          fontSize: '20px'
-        }
       }
     },
     right: {
@@ -96,10 +83,6 @@ const buttonStyle = theme => {
     themeWithBackground: buttonColors.themeWithBackground,
     disabled: {
       ...buttonColors.disabled,
-      '&$justIcon': {
-        pointerEvents: 'none',
-        color: whiteColor
-      },
       '& svg': {
         color: whiteColor
       }
@@ -107,11 +90,6 @@ const buttonStyle = theme => {
     transparent: buttonColors.transparent,
     lg: {
       ...defaultFont,
-      '&$justIcon': {
-        '& .fab,& .fas,& .far,& .fal,& svg,& .material-icons': {
-          marginTop: '-4px'
-        }
-      },
       padding: '1.125rem 2.25rem',
       fontSize: '14px',
       lineHeight: '1.333333',
@@ -119,11 +97,6 @@ const buttonStyle = theme => {
     },
     sm: {
       ...defaultFont,
-      '&$justIcon': {
-        '& .fab,& .fas,& .far,& .fal,& svg,& .material-icons': {
-          marginTop: '1px'
-        }
-      },
       padding: '0.40625rem 1.25rem',
       fontSize: '12px',
       lineHeight: '1.5',
