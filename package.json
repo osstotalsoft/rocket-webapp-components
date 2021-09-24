@@ -193,6 +193,31 @@
         "env": {
           "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
         }
+      },
+      "totalsoft_oss.react-mui/accordion": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@2.0.0"
+        }
+      },
+      "totalsoft_oss.react-mui/autocomplete": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@2.0.0"
+        }
+      },
+      "totalsoft_oss.react-mui/date-time": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@2.0.0"
+        }
+      },
+      "totalsoft_oss.react-mui/pagination": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@2.0.0"
+        }
+      },
+      "totalsoft_oss.react-mui/regular-card": {
+        "env": {
+          "compiler": "bit.envs/compilers/react@2.0.0"
+        }
       }
     }
   }
