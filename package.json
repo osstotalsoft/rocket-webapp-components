@@ -148,6 +148,51 @@
           "react-toastify": "^6.0.8",
           "react-select": "^3.1.0"
         }
+      },
+      "totalsoft_oss.react-mui/cancel-button": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/card-title": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/card": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/charts": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/check-internet-connection": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/constants": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/custom-dialog": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/custom-linear-progress": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
+      },
+      "totalsoft_oss.react-mui/custom-text-field": {
+        "env": {
+          "compiler": "totalsoft_oss.react-mui/compilers/react@1.0.32"
+        }
       }
     }
   }
