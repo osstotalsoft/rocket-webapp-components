@@ -14,16 +14,16 @@ const SimpleSlider = ({ label, fullWidth, value, min, max, step, onChange, error
     helperText, required, decimalScale, thousandSeparator, disabled, showSliderLimits, ...other }) => {
     const classes = useStyles();
 
-    const onTextChanged = useCallback(event => {
-        if (event.target && event.target.value) {
-            if (event.target.value <= min) {
+    const onTextChanged = useCallback(value => {
+        if (value) {
+            if (value <= min) {
                 onChange(null, min);
             }
-            else if (event.target.value >= max) {
+            else if (value >= max) {
                 onChange(null, max);
             }
             else {
-                onChange(null, event.target.value);
+                onChange(null, value);
             }
         }
         else {
