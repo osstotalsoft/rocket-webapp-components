@@ -11,7 +11,7 @@ import MomentUtils from "@date-io/moment";
 
 import dateTimeStyle from "./dateTimeStyle";
 import moment from "moment";
-import { emptyObject } from "../../utils/constants.js";
+import { emptyObject } from "../../utils/constants";
 
 // ! To use another localization import "moment/locale/[lang]" in your app
 moment.locale("en");
