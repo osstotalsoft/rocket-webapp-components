@@ -27,6 +27,10 @@ export interface AutocompleteProps {
    */
   onChange: (event: Object, value: T | T[], reason: string) => void
   /**
+   * Callback fired when the popup requests to be opened.
+   */
+  onInputChange?: (event: React.SyntheticEvent, value: string, reason: string) => void;
+  /**
    * Handle the menu opening.
    */
   onMenuOpen?: () => void
