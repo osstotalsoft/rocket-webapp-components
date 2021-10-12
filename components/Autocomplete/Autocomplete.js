@@ -14,19 +14,7 @@ import {
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
-import {
-  prop,
-  map,
-  innerJoin,
-  find,
-  propEq,
-  all,
-  omit,
-  contains,
-  is,
-  props,
-  isNil
-} from "ramda";
+import { prop, map, innerJoin, find, propEq, all, omit, contains, is, props, isNil } from "ramda";
 import humps from "humps";
 import { emptyArray, emptyString } from "../../utils/constants";
 
@@ -100,6 +88,7 @@ const Autocomplete = ({
   defaultOptions,
   loadOptions,
   onChange,
+  onInputChange,
   creatable,
   onMenuOpen,
   value,
@@ -131,14 +120,16 @@ const Autocomplete = ({
     receivedOptions || (is(Array, defaultOptions) && defaultOptions)
   );
 
+  const [localInput, setLocalInput] = useState()
+
   const handleOpen = useCallback(() => {
     if (loadOptions)
-      loadOptions().then(loadedOptions => {
+      loadOptions(localInput).then(loadedOptions => {
         setOptions(loadedOptions || emptyArray);
       });
 
     onMenuOpen && onMenuOpen();
-  }, [defaultOptions, loadOptions, onMenuOpen]);
+  }, [loadOptions, localInput, onMenuOpen]);
 
   const renderInput = useCallback(
     params => {
@@ -163,7 +154,7 @@ const Autocomplete = ({
         />
       );
     },
-    [classes.input, error, helperText, inputSelectedColor, label]
+    [classes.input, error, helperText, inputSelectedColor, label, required]
   );
 
   const renderOption = useCallback(
@@ -245,6 +236,12 @@ const Autocomplete = ({
     [isMultiSelection, labelKey, onChange, simpleValue, valueKey]
   );
 
+  const handleInputChange = useCallback((event, value) => {
+    value && setLocalInput(value);
+    onInputChange && onInputChange(event, value);
+    value !== localInput && loadOptions && loadOptions(value);
+  }, [loadOptions, localInput, onInputChange])
+
   useEffect(() => {
     if (defaultOptions === true) handleOpen();
   }, [defaultOptions, handleOpen]);
@@ -280,6 +277,7 @@ const Autocomplete = ({
       }
       multiple={isMultiSelection}
       onChange={handleChange}
+      onInputChange={handleInputChange}
       disableClearable={!isClearable}
       renderOption={renderOption}
       renderInput={renderInput}
@@ -330,6 +328,10 @@ Autocomplete.propTypes = {
    * Handle change events on the autocomplete.
    */
   onChange: PropTypes.func.isRequired,
+  /**
+   * Callback fired when the input value changes.
+   */
+  onInputChange: PropTypes.func,
   /**
    * Handle the menu opening.
    */
