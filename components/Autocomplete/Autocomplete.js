@@ -236,10 +236,10 @@ const Autocomplete = ({
     [isMultiSelection, labelKey, onChange, simpleValue, valueKey]
   );
 
-  const handleInputChange = useCallback((_event, value) => {
-    value && setLocalInput(value)
-    onInputChange && onInputChange(value)
-    value !== localInput && loadOptions && loadOptions(value)
+  const handleInputChange = useCallback((event, value) => {
+    value && setLocalInput(value);
+    onInputChange && onInputChange(event, value);
+    value !== localInput && loadOptions && loadOptions(value);
   }, [loadOptions, localInput, onInputChange])
 
   useEffect(() => {
