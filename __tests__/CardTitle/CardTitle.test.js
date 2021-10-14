@@ -46,7 +46,6 @@ describe('CardTitle', () => {
 
         const testInstance = wrapper.root;
 
-        console.log(testInstance.findAllByType(Box)[2].findByType(Button).props);
         testInstance.findAllByType(Box)[2].findByType(Button).props.onClick()
         expect(onClickMock).toHaveBeenCalledTimes(1);
     });

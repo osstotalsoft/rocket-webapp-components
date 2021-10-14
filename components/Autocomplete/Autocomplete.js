@@ -15,6 +15,7 @@ import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
 import { prop, map, innerJoin, find, propEq, all, omit, contains, is, props, isNil } from "ramda";
+import { isEqual } from 'lodash';
 import humps from "humps";
 import { emptyArray, emptyString } from "../../utils/constants";
 
@@ -75,12 +76,6 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
 const getOptionLabel = labelKey => option => {
   if (is(String, option)) return option;
   return prop(labelKey, option) || emptyString;
-};
-
-const getOptionSelected = (option, value) => {
-  return is(String, option)
-    ? option === value
-    : JSON.stringify(option) === JSON.stringify(value);
 };
 
 const Autocomplete = ({
@@ -201,6 +196,12 @@ const Autocomplete = ({
     [labelKey, valueKey]
   );
 
+  const getOptionSelected = useCallback(
+    (option, value) =>
+      is(String, option) ? option === value : simpleValue ? option[valueKey] === value[valueKey] : isEqual(option, value),
+    [simpleValue, valueKey]
+  );
+
   const handleChange = useCallback(
     (event, inputValue) => {
       if (isNil(inputValue)) return onChange(inputValue);
@@ -269,7 +270,7 @@ const Autocomplete = ({
       filterSelectedOptions={simpleValue && isMultiSelection && !withCheckboxes}
       filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
       getOptionLabel={getOptionLabel(labelKey)}
-      getOptionSelected={!simpleValue ? getOptionSelected : undefined}
+      getOptionSelected={getOptionSelected}
       value={
         simpleValue
           ? getSimpleValue(options, value, valueKey, isMultiSelection)
