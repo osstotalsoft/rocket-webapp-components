@@ -35,8 +35,6 @@ describe('CustomTextField', () => {
             isNumeric
         />);
 
-        console.log(wrapper.find(TextField).props())
-
         expect(wrapper.find(TextField).props().InputProps.inputComponent).not.toBeUndefined()
     });
 

@@ -64,7 +64,6 @@ describe('Card', () => {
 
         const testInstance = wrapper.root;
 
-        console.log(testInstance.findByType('div').props)
         expect(testInstance.findByType('div').props.className).toContain('card');
         expect(testInstance.findByType('div').props.className).toContain('rose');
     });
