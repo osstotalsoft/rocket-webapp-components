@@ -17,7 +17,7 @@ import Typography from "../Typography";
 import { prop, map, innerJoin, find, propEq, all, omit, contains, is, props, isNil } from "ramda";
 import { isEqual } from 'lodash';
 import humps from "humps";
-import { emptyArray, emptyString } from "../../utils/constants";
+import { emptyArray } from "../../utils/constants";
 
 const useStyles = makeStyles(autoCompleteStyles);
 
@@ -73,15 +73,11 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
   return result || null;
 };
 
-const getOptionLabel = labelKey => option => {
-  if (is(String, option)) return option;
-  return prop(labelKey, option) || emptyString;
-};
-
 const Autocomplete = ({
   options: receivedOptions,
   defaultOptions,
   loadOptions,
+  getOptionLabel,
   onChange,
   onInputChange,
   creatable,
@@ -152,14 +148,12 @@ const Autocomplete = ({
     [classes.input, error, helperText, inputSelectedColor, label, required]
   );
 
+  const handleOptionLabel = useCallback((option) => (getOptionLabel && getOptionLabel(option)) ? getOptionLabel(option) : is(String, option) ? option : find(x => !isNil(x), props(['createdLabel', labelKey, valueKey], option)), [getOptionLabel, labelKey, valueKey]);
+
   const renderOption = useCallback(
     (option, { selected }) => {
-      const optionLabel = is(String, option)
-        ? option
-        : find(
-            x => !isNil(x),
-            props(["createdLabel", labelKey, valueKey], option)
-          );
+      const optionLabel = handleOptionLabel(option);
+
       return withCheckboxes ? (
         <>
           <Checkbox
@@ -174,7 +168,7 @@ const Autocomplete = ({
         <Typography className={classes.input}>{optionLabel}</Typography>
       );
     },
-    [classes.input, labelKey, valueKey, withCheckboxes]
+    [classes.input, labelKey, valueKey, withCheckboxes, handleOptionLabel]
   );
 
   const renderTags = useCallback(
@@ -269,7 +263,7 @@ const Autocomplete = ({
       disableCloseOnSelect={isMultiSelection}
       filterSelectedOptions={simpleValue && isMultiSelection && !withCheckboxes}
       filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
-      getOptionLabel={getOptionLabel(labelKey)}
+      getOptionLabel={handleOptionLabel}
       getOptionSelected={getOptionSelected}
       value={
         simpleValue
@@ -315,6 +309,10 @@ Autocomplete.propTypes = {
    * Function that returns a promise, which is the set of options to be used once the promise resolves.
    */
   loadOptions: PropTypes.func,
+  /**
+   * Used to determine the string value for a given option.
+   */
+  getOptionLabel: PropTypes.func,
   /**
    * The selected value from list of options.
    */
