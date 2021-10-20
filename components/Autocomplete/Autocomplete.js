@@ -191,7 +191,7 @@ const Autocomplete = ({
 
   const getOptionSelected = useCallback(
     (option, value) =>
-      is(String, option) ? option === value : simpleValue ? option[valueKey] === value[valueKey] : equals(option, value),
+      simpleValue ? option[valueKey] === value[valueKey] : equals(option, value),
     [simpleValue, valueKey]
   );
 
