@@ -14,8 +14,7 @@ import {
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
-import { prop, map, innerJoin, find, propEq, all, omit, contains, is, props, isNil } from "ramda";
-import { isEqual } from 'lodash';
+import { prop, map, innerJoin, find, propEq, all, omit, contains, is, props, isNil, equals } from "ramda";
 import humps from "humps";
 import { emptyArray } from "../../utils/constants";
 
@@ -192,7 +191,7 @@ const Autocomplete = ({
 
   const getOptionSelected = useCallback(
     (option, value) =>
-      is(String, option) ? option === value : simpleValue ? option[valueKey] === value[valueKey] : isEqual(option, value),
+      is(String, option) ? option === value : simpleValue ? option[valueKey] === value[valueKey] : equals(option, value),
     [simpleValue, valueKey]
   );
 
