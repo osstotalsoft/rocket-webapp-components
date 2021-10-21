@@ -3,6 +3,7 @@
 exports[`DateTime snapshot 1`] = `
 <div
   className="MuiFormControl-root MuiTextField-root makeStyles-defaultFont-6 MuiFormControl-fullWidth"
+  onClick={[Function]}
 >
   <label
     className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-2 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
