@@ -12,12 +12,12 @@ describe('DateTime', () => {
         const defaultTimeFormat = "HH:mm"
 
         const component = renderer.create(<DateTime
-            value={null}
+            value={'20190101'}
             label={'Datetime'}
             onChange={onDateTimeChanged}
             dateFormat="DD-MMMM-YYYY"
             timeFormat={defaultTimeFormat}
-            clearable={false}
+            clearable={true}
         />);
 
         const json = component.toJSON();
