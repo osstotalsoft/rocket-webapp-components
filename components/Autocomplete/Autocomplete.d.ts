@@ -31,9 +31,13 @@ export interface AutocompleteProps {
    */
   onInputChange?: (event: React.SyntheticEvent, value: string, reason: string) => void;
   /**
-   * Handle the menu opening.
+   * Handles the menu opening.
    */
   onMenuOpen?: () => void
+  /**
+   * Handles the menu closing.
+   */
+  onClose?: () => void
   /**
    * @default false  
    * If true, the user can select multiple values from list.
