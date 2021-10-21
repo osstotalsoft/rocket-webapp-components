@@ -45,7 +45,7 @@ describe("DateTime", () => {
   });
 
   it("if clearable and value are false then InputProps node will be made of one CalendarToday node", () => {
-    const onDateTimeChanged = value => {};
+    const onDateTimeChanged = () => {};
     const defaultTimeFormat = "HH:mm";
 
     const wrapper = mount(
