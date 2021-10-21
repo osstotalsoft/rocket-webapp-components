@@ -3,10 +3,9 @@
 exports[`DateTime snapshot 1`] = `
 <div
   className="MuiFormControl-root MuiTextField-root makeStyles-defaultFont-6 MuiFormControl-fullWidth"
-  onClick={[Function]}
 >
   <label
-    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-2 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+    className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-2 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
     data-shrink={true}
   >
     Datetime
@@ -72,41 +71,8 @@ exports[`DateTime snapshot 1`] = `
       onFocus={[Function]}
       required={false}
       type="text"
-      value="01-January-2019"
+      value=""
     />
-    <button
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-dateTimeIconButtons-4"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
-    >
-      <span
-        className="MuiIconButton-label"
-      >
-        <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-          />
-        </svg>
-      </span>
-    </button>
     <button
       className="MuiButtonBase-root MuiIconButton-root makeStyles-dateTimeIconButtons-4"
       disabled={false}

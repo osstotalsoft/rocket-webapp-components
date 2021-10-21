@@ -9,18 +9,16 @@ import { KeyboardDateTimePicker } from "@material-ui/pickers";
 describe("DateTime", () => {
   it("snapshot", () => {
     const onDateTimeChanged = () => {};
-    const onHandleClick = () => {};
     const defaultTimeFormat = "HH:mm";
 
     const component = renderer.create(
       <DateTime
-        value={"20190101"}
+        value={null}
         label={"Datetime"}
         onChange={onDateTimeChanged}
-        onClick={onHandleClick}
         dateFormat="DD-MMMM-YYYY"
         timeFormat={defaultTimeFormat}
-        clearable={true}
+        clearable={false}
       />
     );
 
@@ -30,7 +28,6 @@ describe("DateTime", () => {
 
   it("if clearable and value are true then InputProps node will be made up of two IconButtons", () => {
     const onDateTimeChanged = jest.fn();
-    const onHandleClick = jest.fn();
     const defaultTimeFormat = "HH:mm";
 
     const wrapper = mount(
@@ -41,7 +38,6 @@ describe("DateTime", () => {
         dateFormat="DD-MMMM-YYYY"
         timeFormat={defaultTimeFormat}
         clearable={true}
-        onClick={onHandleClick}
       />
     );
 
@@ -49,7 +45,7 @@ describe("DateTime", () => {
   });
 
   it("if clearable and value are false then InputProps node will be made of one CalendarToday node", () => {
-    const onDateTimeChanged = () => {};
+    const onDateTimeChanged = value => {};
     const defaultTimeFormat = "HH:mm";
 
     const wrapper = mount(
