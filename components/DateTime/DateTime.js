@@ -58,9 +58,7 @@ function DateTime({
 
   const handleSetOpen = useCallback(value => () => setOpen(value), []);
   const handleChange = useCallback(
-    date => {
-      onChange(date ? moment(date).toDate() : null);
-    },
+    date => onChange(date ? moment(date).toDate() : null),
     [onChange]
   );
   const handleClear = useCallback(() => handleChange(null), [handleChange]);
