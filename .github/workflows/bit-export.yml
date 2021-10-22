@@ -40,7 +40,7 @@ jobs:
           bit import
           bit build
       - name: Run tests
-        run: npm run test:ci -- -u Datetime
+        run: npm run test:ci
       - name: bit export
         run: |
           bit status
