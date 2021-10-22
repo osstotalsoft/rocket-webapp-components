@@ -15,9 +15,9 @@ jobs:
         with:
          fetch-depth: 0
          token: ${{ secrets.PAT }}
-      - uses: actions/setup-node@v2
-        with:
-         node-version: '14'
+      # - uses: actions/setup-node@v2
+      #   with:
+      #    node-version: '14.x'
       - run: git checkout master
 
       # Install dependencies and build app
@@ -40,7 +40,7 @@ jobs:
           bit import
           bit build
       - name: Run tests
-        run: npm run test:ci
+        run: npm run test:ci -- -u
       - name: bit export
         run: |
           bit status
