@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import { makeStyles, IconButton } from "@material-ui/core";
 import { Clear, CalendarToday } from "@material-ui/icons";
@@ -47,7 +47,6 @@ function DateTime({
   ...rest
 }) {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
   const format = showTime ? `${dateFormat} ${timeFormat}` : dateFormat;
 
   const errorData = disabled
@@ -56,7 +55,6 @@ function DateTime({
     ? { error, helperText }
     : emptyObject;
 
-  const handleSetOpen = useCallback(value => () => setOpen(value), []);
   const handleChange = useCallback(
     date => onChange(date ? moment(date).toDate() : null),
     [onChange]
@@ -77,7 +75,6 @@ function DateTime({
           <IconButton
             disabled={disabled}
             className={classes.dateTimeIconButtons}
-            onClick={handleSetOpen(true)}
           >
             <CalendarToday fontSize="small" />
           </IconButton>
@@ -93,22 +90,10 @@ function DateTime({
   };
 
   const simplePickerProps = {
-    InputProps: {
-      endAdornment: (
-        <IconButton
-          disabled={disabled}
-          className={classes.dateTimeIconButtons}
-          onClick={handleSetOpen(true)}
-        >
-          <CalendarToday fontSize="small" />
-        </IconButton>
-      )
-    },
-    InputAdornmentProps: {
-      position: "start",
-      style: {
-        display: "none"
-      }
+    keyboardIcon: <CalendarToday fontSize="small" />,
+    KeyboardButtonProps: {
+      disabled: disabled,
+      className: classes.dateTimeIconButtons
     }
   };
 
@@ -125,8 +110,6 @@ function DateTime({
         {...pickerProps}
         fullWidth
         value={value}
-        open={open}
-        onClose={handleSetOpen(false)}
         onChange={handleChange}
         format={format}
         invalidDateMessage={invalidDateMessage}
