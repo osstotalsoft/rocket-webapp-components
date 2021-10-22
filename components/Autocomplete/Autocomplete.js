@@ -6,6 +6,7 @@ import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
 import {
+  CircularProgress,
   Chip,
   makeStyles,
   Checkbox,
@@ -81,6 +82,7 @@ const Autocomplete = ({
   onInputChange,
   creatable,
   onMenuOpen,
+  onClose,
   value,
   isMultiSelection,
   withCheckboxes,
@@ -110,16 +112,30 @@ const Autocomplete = ({
     receivedOptions || (is(Array, defaultOptions) && defaultOptions)
   );
 
+  const [open, setOpen] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [localInput, setLocalInput] = useState()
 
-  const handleOpen = useCallback(() => {
-    if (loadOptions)
+  const handleLoadOptions = useCallback(() => {
+    if (loadOptions) {
+      setLoading(true)
       loadOptions(localInput).then(loadedOptions => {
-        setOptions(loadedOptions || emptyArray);
-      });
+        setOptions(loadedOptions || emptyArray)
+        setLoading(false)
+      })
+    }
+  }, [loadOptions, localInput])
 
-    onMenuOpen && onMenuOpen();
-  }, [loadOptions, localInput, onMenuOpen]);
+  const handleMenuOpen = useCallback(() => {
+    handleLoadOptions()
+    setOpen(true)
+    onMenuOpen && onMenuOpen()
+  }, [handleLoadOptions, onMenuOpen])
+
+  const handleMenuClose = useCallback(() => {
+    setOpen(false)
+    onClose && onClose()
+  }, [onClose])
 
   const renderInput = useCallback(
     params => {
@@ -134,17 +150,23 @@ const Autocomplete = ({
         required
       };
 
+      params.InputProps.endAdornment = (
+        <>
+          {loading && open && <CircularProgress size={18} color='inherit' />}
+          {params.InputProps.endAdornment}
+        </>
+      )
+
       return (
         <CustomTextField
           fullWidth
           {...params}
           startAdornment={params.InputProps.startAdornment}
-          endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}
         />
       );
     },
-    [classes.input, error, helperText, inputSelectedColor, label, required]
+    [classes.input, error, helperText, inputSelectedColor, label, loading, open, required]
   );
 
   const handleOptionLabel = useCallback((option) => (getOptionLabel && getOptionLabel(option)) ? getOptionLabel(option) : is(String, option) ? option : find(x => !isNil(x), props(['createdLabel', labelKey, valueKey], option)), [getOptionLabel, labelKey, valueKey]);
@@ -167,7 +189,7 @@ const Autocomplete = ({
         <Typography className={classes.input}>{optionLabel}</Typography>
       );
     },
-    [classes.input, labelKey, valueKey, withCheckboxes, handleOptionLabel]
+    [classes.input, withCheckboxes, handleOptionLabel]
   );
 
   const renderTags = useCallback(
@@ -237,8 +259,8 @@ const Autocomplete = ({
   }, [loadOptions, localInput, onInputChange])
 
   useEffect(() => {
-    if (defaultOptions === true) handleOpen();
-  }, [defaultOptions, handleOpen]);
+    if (defaultOptions === true) handleLoadOptions();
+  }, [defaultOptions, handleLoadOptions]);
 
   useEffect(() => {
     setOptions(receivedOptions || emptyArray);
@@ -253,7 +275,9 @@ const Autocomplete = ({
       forcePopupIcon
       label={label}
       disabled={disabled}
-      onOpen={handleOpen}
+      loading={loading}
+      onOpen={handleMenuOpen}
+      onClose={handleMenuClose}
       options={options || emptyArray}
       autoHighlight
       handleHomeEndKeys
@@ -334,6 +358,10 @@ Autocomplete.propTypes = {
    * Handle the menu opening.
    */
   onMenuOpen: PropTypes.func,
+  /**
+   * Handle the menu closing.
+   */
+  onClose: PropTypes.func,
   /**
    * If true, the user can select multiple values from list.
    */

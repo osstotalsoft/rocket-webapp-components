@@ -31,6 +31,10 @@ export interface AutocompleteProps {
    */
   onMenuOpen?: () => void
   /**
+   * Handle the menu closing.  
+   */
+  onClose?: () => void
+  /**
    * @default false  
    * If true, the user can select multiple values from list.
    */
