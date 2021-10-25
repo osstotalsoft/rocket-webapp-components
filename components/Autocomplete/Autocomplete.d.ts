@@ -273,11 +273,13 @@ export interface AutocompleteProps {
    */
   ListboxProps?: object
   /**
-   * If `true`, the component is in a loading state.
+   * If true, the component is in a loading state. 
+   * By default, this shows a linear progress instead of options. 
+   * This can be changed by sending the loadingText prop to Autocomplete.
    */
   loading?: boolean
   /**
-   * Text to display when in a loading state.
+   * Text/component to display when in a loading state.
    */
   loadingText?: React.ReactNode
   /**

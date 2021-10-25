@@ -7,6 +7,7 @@ import MuiAutocomplete, {
 } from "@material-ui/lab/Autocomplete";
 import {
   CircularProgress,
+  LinearProgress,
   Chip,
   makeStyles,
   Checkbox,
@@ -17,7 +18,7 @@ import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
 import { prop, map, innerJoin, find, propEq, all, omit, contains, is, props, isNil, equals } from "ramda";
 import humps from "humps";
-import { emptyArray } from "../../utils/constants";
+import { emptyArray, emptyString } from "../../utils/constants";
 
 const useStyles = makeStyles(autoCompleteStyles);
 
@@ -77,6 +78,8 @@ const Autocomplete = ({
   options: receivedOptions,
   defaultOptions,
   loadOptions,
+  loading: receivedLoading,
+  loadingText,
   getOptionLabel,
   onChange,
   onInputChange,
@@ -113,15 +116,19 @@ const Autocomplete = ({
   );
 
   const [open, setOpen] = useState(false)
-  const [loading, setLoading] = useState(false)
+
+  const [localLoading, setLocalLoading] = useState(false)
+  const loading = receivedLoading || localLoading
+
   const [localInput, setLocalInput] = useState()
 
   const handleLoadOptions = useCallback(() => {
     if (loadOptions) {
-      setLoading(true)
+      setLocalLoading(true)
+      setOptions(emptyArray)
       loadOptions(localInput).then(loadedOptions => {
         setOptions(loadedOptions || emptyArray)
-        setLoading(false)
+        setLocalLoading(false)
       })
     }
   }, [loadOptions, localInput])
@@ -169,7 +176,7 @@ const Autocomplete = ({
     [classes.input, error, helperText, inputSelectedColor, label, loading, open, required]
   );
 
-  const handleOptionLabel = useCallback((option) => (getOptionLabel && getOptionLabel(option)) ? getOptionLabel(option) : is(String, option) ? option : find(x => !isNil(x), props(['createdLabel', labelKey, valueKey], option)), [getOptionLabel, labelKey, valueKey]);
+  const handleOptionLabel = useCallback((option) => (getOptionLabel && getOptionLabel(option)) ? getOptionLabel(option) : is(String, option) ? option : (find(x => !isNil(x), props(['createdLabel', labelKey, valueKey], option)) || emptyString), [getOptionLabel, labelKey, valueKey]);
 
   const renderOption = useCallback(
     (option, { selected }) => {
@@ -276,6 +283,7 @@ const Autocomplete = ({
       label={label}
       disabled={disabled}
       loading={loading}
+      loadingText={loadingText}
       onOpen={handleMenuOpen}
       onClose={handleMenuClose}
       options={options || emptyArray}
@@ -320,7 +328,8 @@ Autocomplete.defaultProps = {
   required: false,
   value: null,
   creatable: false,
-  typographyContentColor: "textSecondary"
+  typographyContentColor: "textSecondary",
+  loadingText: <LinearProgress />
 };
 
 Autocomplete.propTypes = {
@@ -332,6 +341,16 @@ Autocomplete.propTypes = {
    * Function that returns a promise, which is the set of options to be used once the promise resolves.
    */
   loadOptions: PropTypes.func,
+  /**
+   * If true, the component is in a loading state. 
+   * By default, this shows a linear progress instead of options. 
+   * This can be changed by sending the loadingText prop to Autocomplete.
+   */
+  loading: PropTypes.bool,
+  /**
+   * Text/component to display when in a loading state.
+   */
+  loadingText: PropTypes.node,
   /**
    * Used to determine the string value for a given option.
    */
