@@ -15,7 +15,20 @@ import {
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
-import { prop, map, innerJoin, find, propEq, all, omit, contains, is, props, isNil, equals } from "ramda";
+import {
+  prop,
+  map,
+  innerJoin,
+  find,
+  propEq,
+  all,
+  omit,
+  contains,
+  is,
+  props,
+  isNil,
+  equals
+} from "ramda";
 import humps from "humps";
 import { emptyArray, emptyString } from "../../utils/constants";
 
@@ -61,8 +74,7 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
   if (is(Array, value)) {
     const optionsSimpleValues = map(prop(valueKey), options);
     value?.map(v => {
-      if (!contains(v, optionsSimpleValues))
-        options.push({ [valueKey]: v });
+      if (!contains(v, optionsSimpleValues)) options.push({ [valueKey]: v });
     });
   }
 
@@ -114,30 +126,30 @@ const Autocomplete = ({
     receivedOptions || (is(Array, defaultOptions) && defaultOptions)
   );
 
-  const [localLoading, setLocalLoading] = useState(false)
-  const loading = receivedLoading || localLoading
+  const [localLoading, setLocalLoading] = useState(false);
+  const loading = receivedLoading || localLoading;
 
-  const [localInput, setLocalInput] = useState()
+  const [localInput, setLocalInput] = useState();
 
   const handleLoadOptions = useCallback(() => {
     if (loadOptions) {
-      setLocalLoading(true)
-      setOptions(emptyArray)
+      setLocalLoading(true);
+      setOptions(emptyArray);
       loadOptions(localInput).then(loadedOptions => {
-        setOptions(loadedOptions || emptyArray)
-        setLocalLoading(false)
-      })
+        setOptions(loadedOptions || emptyArray);
+        setLocalLoading(false);
+      });
     }
-  }, [loadOptions, localInput])
+  }, [loadOptions, localInput]);
 
   const handleMenuOpen = useCallback(() => {
-    handleLoadOptions()
-    onMenuOpen && onMenuOpen()
-  }, [handleLoadOptions, onMenuOpen])
+    handleLoadOptions();
+    onMenuOpen && onMenuOpen();
+  }, [handleLoadOptions, onMenuOpen]);
 
   const handleMenuClose = useCallback(() => {
-    onClose && onClose()
-  }, [onClose])
+    onClose && onClose();
+  }, [onClose]);
 
   const renderInput = useCallback(
     params => {
@@ -152,9 +164,6 @@ const Autocomplete = ({
         required
       };
 
-      const InputProps = { ...params.InputProps, margin: 'none' }
-      const InputLabelProps = { ...params.InputLabelProps, margin: emptyString }
-
       return (
         <CustomTextField
           fullWidth
@@ -162,15 +171,26 @@ const Autocomplete = ({
           startAdornment={params.InputProps.startAdornment}
           endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}
-          InputProps={InputProps}
-          InputLabelProps={InputLabelProps}
+          InputProps={{ ...params.InputProps, margin: "none" }}
+          InputLabelProps={{ ...params.InputLabelProps, margin: emptyString }}
         />
       );
     },
     [classes.input, error, helperText, inputSelectedColor, label, required]
   );
 
-  const handleOptionLabel = useCallback((option) => (getOptionLabel && getOptionLabel(option)) ? getOptionLabel(option) : is(String, option) ? option : (find(x => !isNil(x), props(['createdLabel', labelKey, valueKey], option)) || emptyString), [getOptionLabel, labelKey, valueKey]);
+  const handleOptionLabel = useCallback(
+    option =>
+      getOptionLabel && getOptionLabel(option)
+        ? getOptionLabel(option)
+        : is(String, option)
+        ? option
+        : find(
+            x => !isNil(x),
+            props(["createdLabel", labelKey, valueKey], option)
+          ) || emptyString,
+    [getOptionLabel, labelKey, valueKey]
+  );
 
   const renderOption = useCallback(
     (option, { selected }) => {
@@ -214,7 +234,9 @@ const Autocomplete = ({
 
   const getOptionSelected = useCallback(
     (option, value) =>
-      simpleValue ? option[valueKey] === value[valueKey] : equals(option, value),
+      simpleValue
+        ? option[valueKey] === value[valueKey]
+        : equals(option, value),
     [simpleValue, valueKey]
   );
 
@@ -253,11 +275,14 @@ const Autocomplete = ({
     [isMultiSelection, labelKey, onChange, simpleValue, valueKey]
   );
 
-  const handleInputChange = useCallback((event, value) => {
-    value && setLocalInput(value);
-    onInputChange && onInputChange(event, value);
-    value !== localInput && loadOptions && loadOptions(value);
-  }, [loadOptions, localInput, onInputChange])
+  const handleInputChange = useCallback(
+    (event, value) => {
+      value && setLocalInput(value);
+      onInputChange && onInputChange(event, value);
+      value !== localInput && loadOptions && loadOptions(value);
+    },
+    [loadOptions, localInput, onInputChange]
+  );
 
   useEffect(() => {
     if (defaultOptions === true) handleLoadOptions();
@@ -336,8 +361,8 @@ Autocomplete.propTypes = {
    */
   loadOptions: PropTypes.func,
   /**
-   * If true, the component is in a loading state. 
-   * By default, this shows a linear progress instead of options. 
+   * If true, the component is in a loading state.
+   * By default, this shows a linear progress instead of options.
    * This can be changed by sending the loadingText prop to Autocomplete.
    */
   loading: PropTypes.bool,
