@@ -152,6 +152,9 @@ const Autocomplete = ({
         required
       };
 
+      const InputProps = { ...params.InputProps, margin: 'none' }
+      const InputLabelProps = { ...params.InputLabelProps, margin: emptyString }
+
       return (
         <CustomTextField
           fullWidth
@@ -159,6 +162,8 @@ const Autocomplete = ({
           startAdornment={params.InputProps.startAdornment}
           endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}
+          InputProps={InputProps}
+          InputLabelProps={InputLabelProps}
         />
       );
     },
