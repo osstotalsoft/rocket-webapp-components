@@ -6,7 +6,6 @@ import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
 import {
-  CircularProgress,
   LinearProgress,
   Chip,
   makeStyles,
@@ -115,8 +114,6 @@ const Autocomplete = ({
     receivedOptions || (is(Array, defaultOptions) && defaultOptions)
   );
 
-  const [open, setOpen] = useState(false)
-
   const [localLoading, setLocalLoading] = useState(false)
   const loading = receivedLoading || localLoading
 
@@ -135,12 +132,10 @@ const Autocomplete = ({
 
   const handleMenuOpen = useCallback(() => {
     handleLoadOptions()
-    setOpen(true)
     onMenuOpen && onMenuOpen()
   }, [handleLoadOptions, onMenuOpen])
 
   const handleMenuClose = useCallback(() => {
-    setOpen(false)
     onClose && onClose()
   }, [onClose])
 
@@ -157,23 +152,17 @@ const Autocomplete = ({
         required
       };
 
-      params.InputProps.endAdornment = (
-        <>
-          {loading && open && <CircularProgress size={18} color='inherit' />}
-          {params.InputProps.endAdornment}
-        </>
-      )
-
       return (
         <CustomTextField
           fullWidth
           {...params}
           startAdornment={params.InputProps.startAdornment}
+          endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}
         />
       );
     },
-    [classes.input, error, helperText, inputSelectedColor, label, loading, open, required]
+    [classes.input, error, helperText, inputSelectedColor, label, required]
   );
 
   const handleOptionLabel = useCallback((option) => (getOptionLabel && getOptionLabel(option)) ? getOptionLabel(option) : is(String, option) ? option : (find(x => !isNil(x), props(['createdLabel', labelKey, valueKey], option)) || emptyString), [getOptionLabel, labelKey, valueKey]);
