@@ -15,14 +15,14 @@ exports[`Autocomplete snapshot 1`] = `
     className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
   >
     <label
-      className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-9 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
+      className="MuiFormLabel-root MuiInputLabel-root makeStyles-label-9 MuiInputLabel-formControl MuiInputLabel-animated"
       data-shrink={false}
       id="undefined-label"
     >
       Status
     </label>
     <div
-      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd MuiInputBase-marginDense MuiInput-marginDense"
+      className="MuiInputBase-root MuiInput-root MuiInput-underline MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
       onClick={[Function]}
     >
       <input
@@ -33,7 +33,7 @@ exports[`Autocomplete snapshot 1`] = `
         autoCapitalize="none"
         autoComplete="off"
         autoFocus={false}
-        className="MuiInputBase-input MuiInput-input makeStyles-input-10 MuiAutocomplete-input MuiAutocomplete-inputFocused makeStyles-input-1 MuiInputBase-inputAdornedEnd MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+        className="MuiInputBase-input MuiInput-input makeStyles-input-10 MuiAutocomplete-input MuiAutocomplete-inputFocused makeStyles-input-1 MuiInputBase-inputAdornedEnd"
         disabled={false}
         onAnimationStart={[Function]}
         onBlur={[Function]}
