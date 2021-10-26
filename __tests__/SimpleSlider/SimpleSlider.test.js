@@ -2,8 +2,15 @@ import React from "react";
 import renderer from "react-test-renderer";
 import SimpleSlider from "../../components/SimpleSlider/SimpleSlider";
 
+jest.mock('react-dom', () => ({
+  findDOMNode: (instance) => {
+    return { ownerDocument: instance };
+  },
+}));
+
 describe("SimpleSlider", () => {
   it("Snapshot", () => {
+    let eventListenerFn = jest.fn();
     const component = renderer.create(
       <SimpleSlider
         fullWidth
@@ -17,7 +24,15 @@ describe("SimpleSlider", () => {
         onChange={() => { }}
         decimalScale={2}
         showSliderLimits={true}
-      />
+      />, {
+      createNodeMock: (element) => {
+        if (element.type === 'span') {
+          return {
+            addEventListener: eventListenerFn,
+          };
+        }
+      }
+    }
     );
 
     const json = component.toJSON();

@@ -19,7 +19,7 @@
     "bit-build": "bit -v && bit import && bit build",
     "update-snapshots": "jest --updateSnapshot",
     "test": "jest --watchAll",
-    "test:ci": "jest --reporters=default --reporters=jest-junit --coverage --coverageReporters=cobertura --coverageReporters=lcov --coverageReporters=html"
+    "test:ci": "jest --reporters=default --reporters=jest-junit --coverage --coverageReporters=cobertura --coverageReporters=lcov --coverageReporters=html --maxWorkers=2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.0",
