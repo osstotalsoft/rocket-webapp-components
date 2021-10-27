@@ -5,18 +5,6 @@ import { mount } from 'enzyme';
 import { IconButton } from "@material-ui/core";
 
 describe('DeleteButton', () => {
-    it('snapshot', () => {
-        const component = renderer.create(<DeleteButton
-            title="Delete"
-            onClick={() => { }}
-            disabled={true}
-            fontSize="small"
-        ></DeleteButton>);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
     it('onClick should be called', () => {
         const onClickMock = jest.fn();
 
