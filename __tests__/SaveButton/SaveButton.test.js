@@ -1,20 +1,9 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import SaveButton from "../../components/SaveButton/SaveButton";
 import { mount } from 'enzyme';
 import { IconButton } from "@material-ui/core";
 
 describe("SaveButton", () => {
-  it("Snapshot", () => {
-    const onClickMock = jest.fn();
-    const component = renderer.create(<SaveButton
-      title="Save"
-      onClick={onClickMock} />);
-
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
-  });
-
   it("onClick should be called", () => {
     const onClickMock = jest.fn();
     const wrapper = mount(<SaveButton

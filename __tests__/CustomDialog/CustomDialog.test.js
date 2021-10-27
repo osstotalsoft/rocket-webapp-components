@@ -1,31 +1,10 @@
 import React from 'react';
 import CustomDialog from '../../components/CustomDialog/CustomDialog';
 import { mount } from 'enzyme';
-import EnzymeToJson from 'enzyme-to-json';
 import { Dialog, DialogTitle, DialogContent, DialogContentText } from "@material-ui/core";
 import Button from '../../components/Button/Button';
 
 describe('CustomDialog', () => {
-    it('snapshot', () => {
-        const onYesMock = jest.fn();
-        const onCloseMock = jest.fn();
-
-        const wrapper = mount(<CustomDialog
-            id="1"
-            title="title"
-            content={<div>Content</div>}
-            textContent="text content"
-            onYes={onYesMock}
-            onClose={onCloseMock}
-            buttonColor="info"
-            buttonSize="sm"
-            open={true}
-            showActions={true}
-        />);
-
-        expect(EnzymeToJson(wrapper)).toMatchSnapshot();
-    });
-
     it('if showActions is true then both actions are visible', () => {
 
         const onCloseMock = jest.fn();

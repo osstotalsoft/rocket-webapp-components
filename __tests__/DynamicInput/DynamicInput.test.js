@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import DynamicInput from '../../components/DynamicInput/DynamicInput';
 import { mount } from 'enzyme';
 import CustomTextField from '../../components/CustomTextField';
@@ -34,22 +33,6 @@ jest.mock('@material-ui/core/styles', () => ({
 }));
 
 describe('DynamicInput', () => {
-    it('snapshot', () => {
-        const onChangeMock = jest.fn();
-
-        const component = renderer.create(<DynamicInput
-            label='DynamicInput - NumberTextField'
-            id={'testId'}
-            controlType={"NUM"}
-            onChange={onChangeMock}
-            value={"test"}
-            disabled={false}
-        />);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
     it('if controlType is INT then the input is a CustomTextField without inputProps associated', () => {
 
         const onChangeMock = jest.fn();

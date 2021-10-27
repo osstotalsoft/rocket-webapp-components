@@ -1,23 +1,9 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import ImageCard from "../../components/ImageCard/ImageCard";
 import AssignmentLate from "@material-ui/icons/AssignmentLate";
 import { mount } from 'enzyme';
 
 describe("Render ImageCard", () => {
-  it("snapshot", () => {
-    const component = renderer.create(
-      <ImageCard
-        image={AssignmentLate}
-        imageSize="m"
-        alternateText="Image card"
-      />
-    );
-
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
-  });
-
   it("imageSize should be equal to 's'", () => {
     const wrapper = mount(
       <ImageCard

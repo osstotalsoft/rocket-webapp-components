@@ -1,18 +1,9 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import UpwardButton from "../../components/UpwardButton/UpwardButton";
 import { mount } from 'enzyme';
 import { IconButton } from "@material-ui/core";
 
 describe("UpwardButton", () => {
-  it("Snapshot", () => {
-    const component = renderer.create(<UpwardButton
-      title="Upward" />);
-
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
-  });
-
   it("onClick should be called", () => {
     const onClickMock = jest.fn();
     const wrapper = mount(<UpwardButton

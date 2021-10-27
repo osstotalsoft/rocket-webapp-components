@@ -1,23 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import PasswordField from "../../components/PasswordField/PasswordField";
 import { mount } from 'enzyme';
 import IconButton from "../../components/IconButton/IconButton";
 import CustomTextField from "../../components/CustomTextField/CustomTextField";
 
 describe("PasswordField", () => {
-  it("Snapshot", () => {
-    const component = renderer.create(
-      <PasswordField
-        hidePasswordText="Hide password"
-        showPasswordText="Show password text"
-      />
-    );
-
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
-  });
-
   it("default props should be provided", () => {
     const wrapper = mount(
       <PasswordField />

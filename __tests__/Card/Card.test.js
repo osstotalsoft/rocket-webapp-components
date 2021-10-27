@@ -3,60 +3,6 @@ import renderer from 'react-test-renderer';
 import Card from '../../components/Card/Card';
 
 describe('Card', () => {
-    it('snapshot - primary', () => {
-        const component = renderer.create(<Card color="primary">
-            <div> Card</ div>
-        </Card>);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
-    it('snapshot - info', () => {
-        const component = renderer.create(<Card color="info">
-            <div> Card</ div>
-        </Card>);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
-    it('snapshot - success', () => {
-        const component = renderer.create(<Card color="success">
-            <div> Card</ div>
-        </Card>);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
-    it('snapshot - warning', () => {
-        const component = renderer.create(<Card color="warning">
-            <div> Card</ div>
-        </Card>);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
-    it('snapshot - danger', () => {
-        const component = renderer.create(<Card color="danger">
-            <div> Card</ div>
-        </Card>);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
-    it('snapshot - rose', () => {
-        const component = renderer.create(<Card color="rose">
-            <div> Card</ div>
-        </Card>);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
     it('classes card and rose are present', () => {
         const wrapper = renderer.create(<Card color="rose">
             <div> Card</ div>

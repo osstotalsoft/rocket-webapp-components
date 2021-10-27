@@ -1,18 +1,9 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import UploadButton from "../../components/UploadButton/UploadButton";
 import { mount } from 'enzyme';
 import { IconButton } from "@material-ui/core";
 
 describe("UploadButton", () => {
-  it("Snapshot", () => {
-    const component = renderer.create(<UploadButton
-      title="Upload" />);
-
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
-  });
-
   it("onClick should be called", () => {
     const onClickMock = jest.fn();
     const wrapper = mount(<UploadButton

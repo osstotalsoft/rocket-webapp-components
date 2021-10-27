@@ -1,24 +1,9 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import CustomTextField from '../../components/CustomTextField/CustomTextField';
 import { mount } from 'enzyme';
 import { TextField } from "@material-ui/core";
 
 describe('CustomTextField', () => {
-    it('snapshot', () => {
-        const onCustomInputChange = jest.fn()
-
-        const component = renderer.create(<CustomTextField
-            fullWidth
-            label={'CustomTextField'}
-            value={12 || ""}
-            onChange={onCustomInputChange}
-        />);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
     it('if isNumeric is true then inputComponent node of type NumberFormatCustom exists', () => {
         const onCustomInputChange = jest.fn()
 

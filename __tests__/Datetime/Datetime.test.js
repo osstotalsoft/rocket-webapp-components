@@ -1,5 +1,4 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import DateTime from "../../components/DateTime/DateTime";
 import { mount } from "enzyme";
 import { IconButton } from "@material-ui/core";
@@ -7,25 +6,6 @@ import { CalendarToday } from "@material-ui/icons";
 import { KeyboardDateTimePicker } from "@material-ui/pickers";
 
 describe("DateTime", () => {
-  it("snapshot", () => {
-    const onDateTimeChanged = () => {};
-    const defaultTimeFormat = "HH:mm";
-
-    const component = renderer.create(
-      <DateTime
-        value={null}
-        label={"Datetime"}
-        onChange={onDateTimeChanged}
-        dateFormat="DD-MMMM-YYYY"
-        timeFormat={defaultTimeFormat}
-        clearable={false}
-      />
-    );
-
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
-  });
-
   it("if clearable and value are true then InputProps node will be made up of two IconButtons", () => {
     const onDateTimeChanged = jest.fn();
     const defaultTimeFormat = "HH:mm";

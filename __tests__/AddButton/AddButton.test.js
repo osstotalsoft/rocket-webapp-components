@@ -1,22 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { mount } from "enzyme";
 import AddButton from '../../components/AddButton/AddButton';
 
 describe('AddButton', () => {
-    it('snapshot', () => {
-        const component = renderer.create(<AddButton
-            title="Title"
-            onClick={() => { }}
-            disabled={true}
-            fontSize="small"
-            size="small"
-        />);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
     it('the button is disabled', () => {
         const wrapper = mount(<AddButton
             title="Title"
