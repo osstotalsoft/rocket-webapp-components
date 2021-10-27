@@ -6,6 +6,7 @@ import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
 import {
+  LinearProgress,
   Chip,
   makeStyles,
   Checkbox,
@@ -25,7 +26,8 @@ import {
   contains,
   is,
   props,
-  isNil
+  isNil,
+  equals
 } from "ramda";
 import humps from "humps";
 import { emptyArray, emptyString } from "../../utils/constants";
@@ -72,8 +74,7 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
   if (is(Array, value)) {
     const optionsSimpleValues = map(prop(valueKey), options);
     value?.map(v => {
-      if (!contains(v, optionsSimpleValues))
-        options.push({ [valueKey]: v });
+      if (!contains(v, optionsSimpleValues)) options.push({ [valueKey]: v });
     });
   }
 
@@ -84,24 +85,18 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
   return result || null;
 };
 
-const getOptionLabel = labelKey => option => {
-  if (is(String, option)) return option;
-  return prop(labelKey, option) || emptyString;
-};
-
-const getOptionSelected = (option, value) => {
-  return is(String, option)
-    ? option === value
-    : JSON.stringify(option) === JSON.stringify(value);
-};
-
 const Autocomplete = ({
   options: receivedOptions,
   defaultOptions,
   loadOptions,
+  loading: receivedLoading,
+  loadingText,
+  getOptionLabel,
   onChange,
+  onInputChange,
   creatable,
   onMenuOpen,
+  onClose,
   value,
   isMultiSelection,
   withCheckboxes,
@@ -131,14 +126,30 @@ const Autocomplete = ({
     receivedOptions || (is(Array, defaultOptions) && defaultOptions)
   );
 
-  const handleOpen = useCallback(() => {
-    if (loadOptions)
-      loadOptions().then(loadedOptions => {
-        setOptions(loadedOptions || emptyArray);
-      });
+  const [localLoading, setLocalLoading] = useState(false);
+  const loading = receivedLoading || localLoading;
 
+  const [localInput, setLocalInput] = useState();
+
+  const handleLoadOptions = useCallback(() => {
+    if (loadOptions) {
+      setLocalLoading(true);
+      setOptions(emptyArray);
+      loadOptions(localInput).then(loadedOptions => {
+        setOptions(loadedOptions || emptyArray);
+        setLocalLoading(false);
+      });
+    }
+  }, [loadOptions, localInput]);
+
+  const handleMenuOpen = useCallback(() => {
+    handleLoadOptions();
     onMenuOpen && onMenuOpen();
-  }, [defaultOptions, loadOptions, onMenuOpen]);
+  }, [handleLoadOptions, onMenuOpen]);
+
+  const handleMenuClose = useCallback(() => {
+    onClose && onClose();
+  }, [onClose]);
 
   const renderInput = useCallback(
     params => {
@@ -160,20 +171,31 @@ const Autocomplete = ({
           startAdornment={params.InputProps.startAdornment}
           endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}
+          InputProps={{ ...params.InputProps, margin: "none" }}
+          InputLabelProps={{ ...params.InputLabelProps, margin: emptyString }}
         />
       );
     },
-    [classes.input, error, helperText, inputSelectedColor, label]
+    [classes.input, error, helperText, inputSelectedColor, label, required]
   );
 
-  const renderOption = useCallback(
-    (option, { selected }) => {
-      const optionLabel = is(String, option)
+  const handleOptionLabel = useCallback(
+    option =>
+      getOptionLabel && getOptionLabel(option)
+        ? getOptionLabel(option)
+        : is(String, option)
         ? option
         : find(
             x => !isNil(x),
             props(["createdLabel", labelKey, valueKey], option)
-          );
+          ) || emptyString,
+    [getOptionLabel, labelKey, valueKey]
+  );
+
+  const renderOption = useCallback(
+    (option, { selected }) => {
+      const optionLabel = handleOptionLabel(option);
+
       return withCheckboxes ? (
         <>
           <Checkbox
@@ -188,7 +210,7 @@ const Autocomplete = ({
         <Typography className={classes.input}>{optionLabel}</Typography>
       );
     },
-    [classes.input, labelKey, valueKey, withCheckboxes]
+    [classes.input, withCheckboxes, handleOptionLabel]
   );
 
   const renderTags = useCallback(
@@ -208,6 +230,14 @@ const Autocomplete = ({
         />
       )),
     [labelKey, valueKey]
+  );
+
+  const getOptionSelected = useCallback(
+    (option, value) =>
+      simpleValue
+        ? option[valueKey] === value[valueKey]
+        : equals(option, value),
+    [simpleValue, valueKey]
   );
 
   const handleChange = useCallback(
@@ -245,9 +275,18 @@ const Autocomplete = ({
     [isMultiSelection, labelKey, onChange, simpleValue, valueKey]
   );
 
+  const handleInputChange = useCallback(
+    (event, value) => {
+      value && setLocalInput(value);
+      onInputChange && onInputChange(event, value);
+      value !== localInput && loadOptions && loadOptions(value);
+    },
+    [loadOptions, localInput, onInputChange]
+  );
+
   useEffect(() => {
-    if (defaultOptions === true) handleOpen();
-  }, [defaultOptions, handleOpen]);
+    if (defaultOptions === true) handleLoadOptions();
+  }, [defaultOptions, handleLoadOptions]);
 
   useEffect(() => {
     setOptions(receivedOptions || emptyArray);
@@ -262,7 +301,10 @@ const Autocomplete = ({
       forcePopupIcon
       label={label}
       disabled={disabled}
-      onOpen={handleOpen}
+      loading={loading}
+      loadingText={loadingText}
+      onOpen={handleMenuOpen}
+      onClose={handleMenuClose}
       options={options || emptyArray}
       autoHighlight
       handleHomeEndKeys
@@ -271,8 +313,8 @@ const Autocomplete = ({
       disableCloseOnSelect={isMultiSelection}
       filterSelectedOptions={simpleValue && isMultiSelection && !withCheckboxes}
       filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
-      getOptionLabel={getOptionLabel(labelKey)}
-      getOptionSelected={!simpleValue ? getOptionSelected : undefined}
+      getOptionLabel={handleOptionLabel}
+      getOptionSelected={getOptionSelected}
       value={
         simpleValue
           ? getSimpleValue(options, value, valueKey, isMultiSelection)
@@ -280,6 +322,7 @@ const Autocomplete = ({
       }
       multiple={isMultiSelection}
       onChange={handleChange}
+      onInputChange={handleInputChange}
       disableClearable={!isClearable}
       renderOption={renderOption}
       renderInput={renderInput}
@@ -304,7 +347,8 @@ Autocomplete.defaultProps = {
   required: false,
   value: null,
   creatable: false,
-  typographyContentColor: "textSecondary"
+  typographyContentColor: "textSecondary",
+  loadingText: <LinearProgress />
 };
 
 Autocomplete.propTypes = {
@@ -316,6 +360,20 @@ Autocomplete.propTypes = {
    * Function that returns a promise, which is the set of options to be used once the promise resolves.
    */
   loadOptions: PropTypes.func,
+  /**
+   * If true, the component is in a loading state.
+   * By default, this shows a linear progress instead of options.
+   * This can be changed by sending the loadingText prop to Autocomplete.
+   */
+  loading: PropTypes.bool,
+  /**
+   * Text/component to display when in a loading state.
+   */
+  loadingText: PropTypes.node,
+  /**
+   * Used to determine the string value for a given option.
+   */
+  getOptionLabel: PropTypes.func,
   /**
    * The selected value from list of options.
    */
@@ -331,9 +389,17 @@ Autocomplete.propTypes = {
    */
   onChange: PropTypes.func.isRequired,
   /**
+   * Callback fired when the input value changes.
+   */
+  onInputChange: PropTypes.func,
+  /**
    * Handle the menu opening.
    */
   onMenuOpen: PropTypes.func,
+  /**
+   * Handle the menu closing.
+   */
+  onClose: PropTypes.func,
   /**
    * If true, the user can select multiple values from list.
    */
