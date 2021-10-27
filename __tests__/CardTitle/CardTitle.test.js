@@ -5,18 +5,6 @@ import Button from '../../components/Button/Button';
 import { Box } from "@material-ui/core";
 
 describe('CardTitle', () => {
-    it('snapshot', () => {
-        const component = renderer.create(<CardTitle
-            title="Add person"
-            actions={[<Button key='button'
-                onClick={() => { }}
-                disabled={true} />]}
-        />);
-
-        const json = component.toJSON();
-        expect(json).toMatchSnapshot();
-    });
-
     it('classes container and cardTitle are present', () => {
         const onClickMock = jest.fn();
 

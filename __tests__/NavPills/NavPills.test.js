@@ -1,7 +1,5 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import NavPills from "../../components/NavPills/NavPills";
-import AddButton from "../../components/AddButton/AddButton";
 import { mount } from "enzyme";
 import { Tab } from "@material-ui/core";
 import { emptyArray, emptyFunction } from "../../utils/constants";
@@ -18,22 +16,6 @@ const tabsArray = [
 ];
 
 describe("NavPills", () => {
-  it("Snapshot", () => {
-    const component = renderer.create(
-      <NavPills
-        label="NavPills"
-        color="primary"
-        active={0}
-        tabs={tabsArray}
-        onChange={emptyFunction}
-        actions={[<AddButton onClick={emptyFunction} />]}
-      />
-    );
-
-    const json = component.toJSON();
-    expect(json).toMatchSnapshot();
-  });
-
   it("active, color and actions props should be equal to the default values provided", () => {
     const wrapper = mount(
       <NavPills label="NavPills" tabs={tabsArray} onChange={emptyFunction} />

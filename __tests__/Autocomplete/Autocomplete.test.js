@@ -16,24 +16,6 @@ const options = [
 const primitiveOptions = ["Approved", "Cancelled"];
 
 describe("Autocomplete", () => {
-  it("snapshot", () => {
-    const component = renderer.create(
-      <Autocomplete
-        fullWidth
-        label={"Status"}
-        options={options}
-        simpleValue
-        isClearable
-        value={""}
-        onChange={jest.fn()}
-      />
-    );
-
-    const json = component.toJSON();
-
-    expect(json).toMatchSnapshot();
-  });
-
   it("renders all the options", () => {
     const wrapper = mount(
       <Autocomplete
