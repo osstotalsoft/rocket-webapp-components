@@ -1,125 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="105" failures="0" time="30.393">
-  <testsuite name="ChartCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:31" time="5.193" tests="1">
-    <testcase classname="ChartCard snapshot" name="ChartCard snapshot" time="0.147">
+<testsuites name="jest tests" tests="105" failures="0" time="29.13">
+  <testsuite name="ChartCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:39" time="4.945" tests="1">
+    <testcase classname="ChartCard snapshot" name="ChartCard snapshot" time="0.131">
     </testcase>
   </testsuite>
-  <testsuite name="DynamicInput" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:36" time="5.943" tests="6">
-    <testcase classname="DynamicInput if controlType is INT then the input is a CustomTextField without inputProps associated" name="DynamicInput if controlType is INT then the input is a CustomTextField without inputProps associated" time="0.164">
+  <testsuite name="Autocomplete" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:39" time="10.405" tests="9">
+    <testcase classname="Autocomplete renders all the options" name="Autocomplete renders all the options" time="0.4">
     </testcase>
-    <testcase classname="DynamicInput if controlType is INT then the input is a CustomTextField with inputProps associated" name="DynamicInput if controlType is INT then the input is a CustomTextField with inputProps associated" time="0.023">
+    <testcase classname="Autocomplete the correct option is selected" name="Autocomplete the correct option is selected" time="0.068">
     </testcase>
-    <testcase classname="DynamicInput if controlType is NUM then the input is a CustomTextField with inputProps associated" name="DynamicInput if controlType is NUM then the input is a CustomTextField with inputProps associated" time="0.026">
+    <testcase classname="Autocomplete renders the clear button when clearable" name="Autocomplete renders the clear button when clearable" time="0.072">
+    </testcase>
+    <testcase classname="Autocomplete loads options at mount when defaultOptions is true" name="Autocomplete loads options at mount when defaultOptions is true" time="0.021">
+    </testcase>
+    <testcase classname="Autocomplete doesn&apos;t load options at mount if defaultOptions is not true" name="Autocomplete doesn&apos;t load options at mount if defaultOptions is not true" time="0.016">
+    </testcase>
+    <testcase classname="Autocomplete when simpleValue is falsy and the options are objects, displays value[labelKey] in the input" name="Autocomplete when simpleValue is falsy and the options are objects, displays value[labelKey] in the input" time="0.023">
+    </testcase>
+    <testcase classname="Autocomplete works for primitive options" name="Autocomplete works for primitive options" time="0.066">
+    </testcase>
+    <testcase classname="Autocomplete calls the onChange function provided as a prop" name="Autocomplete calls the onChange function provided as a prop" time="0.108">
+    </testcase>
+    <testcase classname="Autocomplete Adds a * to the label when Autocomplete is required" name="Autocomplete Adds a * to the label when Autocomplete is required" time="0.043">
+    </testcase>
+  </testsuite>
+  <testsuite name="DynamicInput" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:44" time="5.536" tests="6">
+    <testcase classname="DynamicInput if controlType is INT then the input is a CustomTextField without inputProps associated" name="DynamicInput if controlType is INT then the input is a CustomTextField without inputProps associated" time="0.163">
+    </testcase>
+    <testcase classname="DynamicInput if controlType is INT then the input is a CustomTextField with inputProps associated" name="DynamicInput if controlType is INT then the input is a CustomTextField with inputProps associated" time="0.021">
+    </testcase>
+    <testcase classname="DynamicInput if controlType is NUM then the input is a CustomTextField with inputProps associated" name="DynamicInput if controlType is NUM then the input is a CustomTextField with inputProps associated" time="0.025">
     </testcase>
     <testcase classname="DynamicInput if controlType is CLST then the input is an Autocomplete" name="DynamicInput if controlType is CLST then the input is an Autocomplete" time="0.087">
     </testcase>
-    <testcase classname="DynamicInput if controlType is BOOL then the input is a Switch" name="DynamicInput if controlType is BOOL then the input is a Switch" time="0.064">
+    <testcase classname="DynamicInput if controlType is BOOL then the input is a Switch" name="DynamicInput if controlType is BOOL then the input is a Switch" time="0.041">
     </testcase>
-    <testcase classname="DynamicInput should rended a default component if controlType does not match any other case label" name="DynamicInput should rended a default component if controlType does not match any other case label" time="0.011">
-    </testcase>
-  </testsuite>
-  <testsuite name="Autocomplete" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:31" time="11.166" tests="9">
-    <testcase classname="Autocomplete renders all the options" name="Autocomplete renders all the options" time="0.442">
-    </testcase>
-    <testcase classname="Autocomplete the correct option is selected" name="Autocomplete the correct option is selected" time="0.082">
-    </testcase>
-    <testcase classname="Autocomplete renders the clear button when clearable" name="Autocomplete renders the clear button when clearable" time="0.069">
-    </testcase>
-    <testcase classname="Autocomplete loads options at mount when defaultOptions is true" name="Autocomplete loads options at mount when defaultOptions is true" time="0.018">
-    </testcase>
-    <testcase classname="Autocomplete doesn&apos;t load options at mount if defaultOptions is not true" name="Autocomplete doesn&apos;t load options at mount if defaultOptions is not true" time="0.032">
-    </testcase>
-    <testcase classname="Autocomplete when simpleValue is falsy and the options are objects, displays value[labelKey] in the input" name="Autocomplete when simpleValue is falsy and the options are objects, displays value[labelKey] in the input" time="0.03">
-    </testcase>
-    <testcase classname="Autocomplete works for primitive options" name="Autocomplete works for primitive options" time="0.067">
-    </testcase>
-    <testcase classname="Autocomplete calls the onChange function provided as a prop" name="Autocomplete calls the onChange function provided as a prop" time="0.137">
-    </testcase>
-    <testcase classname="Autocomplete Adds a * to the label when Autocomplete is required" name="Autocomplete Adds a * to the label when Autocomplete is required" time="0.054">
+    <testcase classname="DynamicInput should rended a default component if controlType does not match any other case label" name="DynamicInput should rended a default component if controlType does not match any other case label" time="0.01">
     </testcase>
   </testsuite>
-  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:42" time="0.815" tests="6">
-    <testcase classname="Button button will be rounded" name="Button button will be rounded" time="0.046">
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:49" time="0.791" tests="6">
+    <testcase classname="Button button will be rounded" name="Button button will be rounded" time="0.045">
     </testcase>
-    <testcase classname="Button button will not be rounded" name="Button button will not be rounded" time="0.016">
+    <testcase classname="Button button will not be rounded" name="Button button will not be rounded" time="0.015">
     </testcase>
     <testcase classname="Button button will not be fullWidth" name="Button button will not be fullWidth" time="0.002">
     </testcase>
-    <testcase classname="Button button will be fullWidth" name="Button button will be fullWidth" time="0.015">
+    <testcase classname="Button button will be fullWidth" name="Button button will be fullWidth" time="0.007">
     </testcase>
     <testcase classname="Button button will be disabled" name="Button button will be disabled" time="0.002">
     </testcase>
-    <testcase classname="Button button will not be disabled" name="Button button will not be disabled" time="0.017">
+    <testcase classname="Button button will not be disabled" name="Button button will not be disabled" time="0.007">
     </testcase>
   </testsuite>
-  <testsuite name="CustomDialog" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:42" time="1.314" tests="5">
-    <testcase classname="CustomDialog if showActions is true then both actions are visible" name="CustomDialog if showActions is true then both actions are visible" time="0.266">
+  <testsuite name="CustomDialog" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:49" time="1.205" tests="5">
+    <testcase classname="CustomDialog if showActions is true then both actions are visible" name="CustomDialog if showActions is true then both actions are visible" time="0.232">
     </testcase>
-    <testcase classname="CustomDialog if showActions is false then both actions are not visible" name="CustomDialog if showActions is false then both actions are not visible" time="0.028">
+    <testcase classname="CustomDialog if showActions is false then both actions are not visible" name="CustomDialog if showActions is false then both actions are not visible" time="0.044">
     </testcase>
-    <testcase classname="CustomDialog if textContent is provided then the DialogContentText node will be visible" name="CustomDialog if textContent is provided then the DialogContentText node will be visible" time="0.031">
+    <testcase classname="CustomDialog if textContent is provided then the DialogContentText node will be visible" name="CustomDialog if textContent is provided then the DialogContentText node will be visible" time="0.02">
     </testcase>
-    <testcase classname="CustomDialog onYes handler should be called" name="CustomDialog onYes handler should be called" time="0.043">
+    <testcase classname="CustomDialog onYes handler should be called" name="CustomDialog onYes handler should be called" time="0.034">
     </testcase>
-    <testcase classname="CustomDialog classes test and content are present" name="CustomDialog classes test and content are present" time="0.042">
-    </testcase>
-  </testsuite>
-  <testsuite name="Accordion" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:43" time="0.953" tests="3">
-    <testcase classname="Accordion Three children are expected to render" name="Accordion Three children are expected to render" time="0.044">
-    </testcase>
-    <testcase classname="Accordion Second child is expanded" name="Accordion Second child is expanded" time="0.139">
-    </testcase>
-    <testcase classname="Accordion Third child is expanded" name="Accordion Third child is expanded" time="0.051">
+    <testcase classname="CustomDialog classes test and content are present" name="CustomDialog classes test and content are present" time="0.041">
     </testcase>
   </testsuite>
-  <testsuite name="DeleteButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:44" time="0.801" tests="4">
-    <testcase classname="DeleteButton onClick should be called" name="DeleteButton onClick should be called" time="0.077">
+  <testsuite name="Accordion" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:50" time="0.929" tests="3">
+    <testcase classname="Accordion Three children are expected to render" name="Accordion Three children are expected to render" time="0.022">
     </testcase>
-    <testcase classname="DeleteButton the button should be disabled" name="DeleteButton the button should be disabled" time="0.012">
+    <testcase classname="Accordion Second child is expanded" name="Accordion Second child is expanded" time="0.137">
     </testcase>
-    <testcase classname="DeleteButton the button should be enabled" name="DeleteButton the button should be enabled" time="0.018">
-    </testcase>
-    <testcase classname="DeleteButton the color, fontSize and size props should be equal to the default values if they are not provided" name="DeleteButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.009">
+    <testcase classname="Accordion Third child is expanded" name="Accordion Third child is expanded" time="0.046">
     </testcase>
   </testsuite>
-  <testsuite name="DateTime" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:44" time="2.368" tests="3">
-    <testcase classname="DateTime if clearable and value are true then InputProps node will be made up of two IconButtons" name="DateTime if clearable and value are true then InputProps node will be made up of two IconButtons" time="0.263">
+  <testsuite name="DeleteButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:51" time="0.824" tests="4">
+    <testcase classname="DeleteButton onClick should be called" name="DeleteButton onClick should be called" time="0.072">
     </testcase>
-    <testcase classname="DateTime if clearable and value are false then InputProps node will be made of one CalendarToday node" name="DateTime if clearable and value are false then InputProps node will be made of one CalendarToday node" time="0.02">
+    <testcase classname="DeleteButton the button should be disabled" name="DeleteButton the button should be disabled" time="0.013">
     </testcase>
-    <testcase classname="DateTime classes defaultFont and dateTimeInput should be present" name="DateTime classes defaultFont and dateTimeInput should be present" time="0.042">
+    <testcase classname="DeleteButton the button should be enabled" name="DeleteButton the button should be enabled" time="0.016">
     </testcase>
-  </testsuite>
-  <testsuite name="CardTitle" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:46" time="0.671" tests="3">
-    <testcase classname="CardTitle classes container and cardTitle are present" name="CardTitle classes container and cardTitle are present" time="0.046">
-    </testcase>
-    <testcase classname="CardTitle should be able to click the button" name="CardTitle should be able to click the button" time="0.023">
-    </testcase>
-    <testcase classname="CardTitle the button is expected to be disabled" name="CardTitle the button is expected to be disabled" time="0.01">
+    <testcase classname="DeleteButton the color, fontSize and size props should be equal to the default values if they are not provided" name="DeleteButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.008">
     </testcase>
   </testsuite>
-  <testsuite name="DownwardButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:45" time="2.115" tests="4">
-    <testcase classname="DownwardButton onClick should be called" name="DownwardButton onClick should be called" time="0.079">
+  <testsuite name="DateTime" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:50" time="2.311" tests="3">
+    <testcase classname="DateTime if clearable and value are true then InputProps node will be made up of two IconButtons" name="DateTime if clearable and value are true then InputProps node will be made up of two IconButtons" time="0.201">
     </testcase>
-    <testcase classname="DownwardButton the button should be disabled" name="DownwardButton the button should be disabled" time="0.013">
+    <testcase classname="DateTime if clearable and value are false then InputProps node will be made of one CalendarToday node" name="DateTime if clearable and value are false then InputProps node will be made of one CalendarToday node" time="0.03">
     </testcase>
-    <testcase classname="DownwardButton the button should be enabled" name="DownwardButton the button should be enabled" time="0.017">
-    </testcase>
-    <testcase classname="DownwardButton the color, fontSize and size props should be equal to the default values if they are not provided" name="DownwardButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.008">
+    <testcase classname="DateTime classes defaultFont and dateTimeInput should be present" name="DateTime classes defaultFont and dateTimeInput should be present" time="0.054">
     </testcase>
   </testsuite>
-  <testsuite name="DownloadButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:47" time="0.632" tests="4">
-    <testcase classname="DownloadButton onClick should be called" name="DownloadButton onClick should be called" time="0.058">
+  <testsuite name="CardTitle" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:53" time="0.706" tests="3">
+    <testcase classname="CardTitle classes container and cardTitle are present" name="CardTitle classes container and cardTitle are present" time="0.048">
     </testcase>
-    <testcase classname="DownloadButton the button should be disabled" name="DownloadButton the button should be disabled" time="0.022">
+    <testcase classname="CardTitle should be able to click the button" name="CardTitle should be able to click the button" time="0.02">
     </testcase>
-    <testcase classname="DownloadButton the button should be enabled" name="DownloadButton the button should be enabled" time="0.015">
-    </testcase>
-    <testcase classname="DownloadButton the color, fontSize and size props should be equal to the default values if they are not provided" name="DownloadButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.013">
+    <testcase classname="CardTitle the button is expected to be disabled" name="CardTitle the button is expected to be disabled" time="0.004">
     </testcase>
   </testsuite>
-  <testsuite name="Card" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:47" time="0.477" tests="5">
-    <testcase classname="Card classes card and rose are present" name="Card classes card and rose are present" time="0.008">
+  <testsuite name="DownwardButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:52" time="1.953" tests="4">
+    <testcase classname="DownwardButton onClick should be called" name="DownwardButton onClick should be called" time="0.084">
+    </testcase>
+    <testcase classname="DownwardButton the button should be disabled" name="DownwardButton the button should be disabled" time="0.012">
+    </testcase>
+    <testcase classname="DownwardButton the button should be enabled" name="DownwardButton the button should be enabled" time="0.016">
+    </testcase>
+    <testcase classname="DownwardButton the color, fontSize and size props should be equal to the default values if they are not provided" name="DownwardButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="DownloadButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:53" time="0.728" tests="4">
+    <testcase classname="DownloadButton onClick should be called" name="DownloadButton onClick should be called" time="0.056">
+    </testcase>
+    <testcase classname="DownloadButton the button should be disabled" name="DownloadButton the button should be disabled" time="0.021">
+    </testcase>
+    <testcase classname="DownloadButton the button should be enabled" name="DownloadButton the button should be enabled" time="0.029">
+    </testcase>
+    <testcase classname="DownloadButton the color, fontSize and size props should be equal to the default values if they are not provided" name="DownloadButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Card" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:54" time="0.51" tests="5">
+    <testcase classname="Card classes card and rose are present" name="Card classes card and rose are present" time="0.011">
     </testcase>
     <testcase classname="Card class danger are present" name="Card class danger are present" time="0.002">
     </testcase>
@@ -127,168 +127,168 @@
     </testcase>
     <testcase classname="Card class info are present" name="Card class info are present" time="0.002">
     </testcase>
-    <testcase classname="Card class primary are present" name="Card class primary are present" time="0.001">
+    <testcase classname="Card class primary are present" name="Card class primary are present" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="CustomTextField" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:47" time="0.639" tests="3">
-    <testcase classname="CustomTextField if isNumeric is true then inputComponent node of type NumberFormatCustom exists" name="CustomTextField if isNumeric is true then inputComponent node of type NumberFormatCustom exists" time="0.109">
+  <testsuite name="CustomTextField" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:54" time="0.705" tests="3">
+    <testcase classname="CustomTextField if isNumeric is true then inputComponent node of type NumberFormatCustom exists" name="CustomTextField if isNumeric is true then inputComponent node of type NumberFormatCustom exists" time="0.1">
     </testcase>
-    <testcase classname="CustomTextField if isNumeric is false then inputComponent node of type NumberFormatCustom does not exist" name="CustomTextField if isNumeric is false then inputComponent node of type NumberFormatCustom does not exist" time="0.013">
+    <testcase classname="CustomTextField if isNumeric is false then inputComponent node of type NumberFormatCustom does not exist" name="CustomTextField if isNumeric is false then inputComponent node of type NumberFormatCustom does not exist" time="0.017">
     </testcase>
-    <testcase classname="CustomTextField inputProps class input is present" name="CustomTextField inputProps class input is present" time="0.016">
-    </testcase>
-  </testsuite>
-  <testsuite name="AddButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:48" time="0.638" tests="4">
-    <testcase classname="AddButton the button is disabled" name="AddButton the button is disabled" time="0.052">
-    </testcase>
-    <testcase classname="AddButton the button is enabled" name="AddButton the button is enabled" time="0.019">
-    </testcase>
-    <testcase classname="AddButton the sended props are the same as the expected ones" name="AddButton the sended props are the same as the expected ones" time="0.031">
-    </testcase>
-    <testcase classname="AddButton the button is expected to be called" name="AddButton the button is expected to be called" time="0.012">
+    <testcase classname="CustomTextField inputProps class input is present" name="CustomTextField inputProps class input is present" time="0.009">
     </testcase>
   </testsuite>
-  <testsuite name="IconCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:48" time="0.734" tests="3">
-    <testcase classname="IconCard classes cardStyle and textStyle should be present" name="IconCard classes cardStyle and textStyle should be present" time="0.065">
+  <testsuite name="AddButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:54" time="0.592" tests="4">
+    <testcase classname="AddButton the button is disabled" name="AddButton the button is disabled" time="0.051">
     </testcase>
-    <testcase classname="IconCard if footer is provided then classFooter should be present" name="IconCard if footer is provided then classFooter should be present" time="0.012">
+    <testcase classname="AddButton the button is enabled" name="AddButton the button is enabled" time="0.013">
+    </testcase>
+    <testcase classname="AddButton the sended props are the same as the expected ones" name="AddButton the sended props are the same as the expected ones" time="0.008">
+    </testcase>
+    <testcase classname="AddButton the button is expected to be called" name="AddButton the button is expected to be called" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="UploadButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:55" time="0.599" tests="4">
+    <testcase classname="UploadButton onClick should be called" name="UploadButton onClick should be called" time="0.068">
+    </testcase>
+    <testcase classname="UploadButton the button should be disabled" name="UploadButton the button should be disabled" time="0.028">
+    </testcase>
+    <testcase classname="UploadButton the button should be enabled" name="UploadButton the button should be enabled" time="0.013">
+    </testcase>
+    <testcase classname="UploadButton the color, fontSize and size props should be equal to the default values if they are not provided" name="UploadButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="IconCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:55" time="0.787" tests="3">
+    <testcase classname="IconCard classes cardStyle and textStyle should be present" name="IconCard classes cardStyle and textStyle should be present" time="0.056">
+    </testcase>
+    <testcase classname="IconCard if footer is provided then classFooter should be present" name="IconCard if footer is provided then classFooter should be present" time="0.016">
     </testcase>
     <testcase classname="IconCard if footer is not provided then classFooter should not be present" name="IconCard if footer is not provided then classFooter should not be present" time="0.012">
     </testcase>
   </testsuite>
-  <testsuite name="UploadButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:48" time="0.631" tests="4">
-    <testcase classname="UploadButton onClick should be called" name="UploadButton onClick should be called" time="0.079">
+  <testsuite name="SaveButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:56" time="0.598" tests="4">
+    <testcase classname="SaveButton onClick should be called" name="SaveButton onClick should be called" time="0.067">
     </testcase>
-    <testcase classname="UploadButton the button should be disabled" name="UploadButton the button should be disabled" time="0.013">
+    <testcase classname="SaveButton the button should be disabled" name="SaveButton the button should be disabled" time="0.011">
     </testcase>
-    <testcase classname="UploadButton the button should be enabled" name="UploadButton the button should be enabled" time="0.013">
+    <testcase classname="SaveButton the button should be enabled" name="SaveButton the button should be enabled" time="0.018">
     </testcase>
-    <testcase classname="UploadButton the color, fontSize and size props should be equal to the default values if they are not provided" name="UploadButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.009">
-    </testcase>
-  </testsuite>
-  <testsuite name="SaveButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:49" time="0.689" tests="4">
-    <testcase classname="SaveButton onClick should be called" name="SaveButton onClick should be called" time="0.068">
-    </testcase>
-    <testcase classname="SaveButton the button should be disabled" name="SaveButton the button should be disabled" time="0.02">
-    </testcase>
-    <testcase classname="SaveButton the button should be enabled" name="SaveButton the button should be enabled" time="0.012">
-    </testcase>
-    <testcase classname="SaveButton the color, fontSize and size props should be equal to the default values if they are not provided" name="SaveButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.009">
+    <testcase classname="SaveButton the color, fontSize and size props should be equal to the default values if they are not provided" name="SaveButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.007">
     </testcase>
   </testsuite>
-  <testsuite name="NavPills" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:50" time="0.801" tests="3">
-    <testcase classname="NavPills active, color and actions props should be equal to the default values provided" name="NavPills active, color and actions props should be equal to the default values provided" time="0.111">
+  <testsuite name="NavPills" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:56" time="0.711" tests="3">
+    <testcase classname="NavPills active, color and actions props should be equal to the default values provided" name="NavPills active, color and actions props should be equal to the default values provided" time="0.084">
     </testcase>
-    <testcase classname="NavPills should have two children" name="NavPills should have two children" time="0.063">
+    <testcase classname="NavPills should have two children" name="NavPills should have two children" time="0.028">
     </testcase>
-    <testcase classname="NavPills Tabs should get the values from the tabs array provided" name="NavPills Tabs should get the values from the tabs array provided" time="0.032">
-    </testcase>
-  </testsuite>
-  <testsuite name="UpwardButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:49" time="1.895" tests="4">
-    <testcase classname="UpwardButton onClick should be called" name="UpwardButton onClick should be called" time="0.097">
-    </testcase>
-    <testcase classname="UpwardButton the button should be disabled" name="UpwardButton the button should be disabled" time="0.018">
-    </testcase>
-    <testcase classname="UpwardButton the button should be enabled" name="UpwardButton the button should be enabled" time="0.048">
-    </testcase>
-    <testcase classname="UpwardButton the color, fontSize and size props should be equal to the default values if they are not provided" name="UpwardButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.012">
+    <testcase classname="NavPills Tabs should get the values from the tabs array provided" name="NavPills Tabs should get the values from the tabs array provided" time="0.039">
     </testcase>
   </testsuite>
-  <testsuite name="IconCollapseCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:50" time="1.032" tests="3">
-    <testcase classname="IconCollapseCard iconColor should be equal to default value" name="IconCollapseCard iconColor should be equal to default value" time="0.104">
+  <testsuite name="UpwardButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:56" time="1.852" tests="4">
+    <testcase classname="UpwardButton onClick should be called" name="UpwardButton onClick should be called" time="0.059">
     </testcase>
-    <testcase classname="IconCollapseCard if canExpand is undefined then Accordion is by default expandable and enabled" name="IconCollapseCard if canExpand is undefined then Accordion is by default expandable and enabled" time="0.024">
+    <testcase classname="UpwardButton the button should be disabled" name="UpwardButton the button should be disabled" time="0.027">
     </testcase>
-    <testcase classname="IconCollapseCard if canExpand is false then Accordion is by default not-expandable and disabled" name="IconCollapseCard if canExpand is false then Accordion is by default not-expandable and disabled" time="0.017">
+    <testcase classname="UpwardButton the button should be enabled" name="UpwardButton the button should be enabled" time="0.013">
     </testcase>
-  </testsuite>
-  <testsuite name="DialogDisplay" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:52" time="0.976" tests="2">
-    <testcase classname="DialogDisplay IconButton has modalCloseButton class" name="DialogDisplay IconButton has modalCloseButton class" time="0.13">
-    </testcase>
-    <testcase classname="DialogDisplay onClose handler should be called" name="DialogDisplay onClose handler should be called" time="0.026">
+    <testcase classname="UpwardButton the color, fontSize and size props should be equal to the default values if they are not provided" name="UpwardButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.018">
     </testcase>
   </testsuite>
-  <testsuite name="PasswordField" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:51" time="2.444" tests="2">
-    <testcase classname="PasswordField default props should be provided" name="PasswordField default props should be provided" time="0.091">
+  <testsuite name="IconCollapseCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:57" time="1.11" tests="3">
+    <testcase classname="IconCollapseCard iconColor should be equal to default value" name="IconCollapseCard iconColor should be equal to default value" time="0.149">
     </testcase>
-    <testcase classname="PasswordField after pressing the button the input should turn into a text field" name="PasswordField after pressing the button the input should turn into a text field" time="0.034">
+    <testcase classname="IconCollapseCard if canExpand is undefined then Accordion is by default expandable and enabled" name="IconCollapseCard if canExpand is undefined then Accordion is by default expandable and enabled" time="0.03">
     </testcase>
-  </testsuite>
-  <testsuite name="SimpleSlider" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:53" time="0.73" tests="1">
-    <testcase classname="SimpleSlider Snapshot" name="SimpleSlider Snapshot" time="0.095">
+    <testcase classname="IconCollapseCard if canExpand is false then Accordion is by default not-expandable and disabled" name="IconCollapseCard if canExpand is false then Accordion is by default not-expandable and disabled" time="0.012">
     </testcase>
   </testsuite>
-  <testsuite name="ExpandingText" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:53" time="0.556" tests="1">
-    <testcase classname="ExpandingText snapshot" name="ExpandingText snapshot" time="0.013">
+  <testsuite name="DialogDisplay" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:58" time="1.058" tests="2">
+    <testcase classname="DialogDisplay IconButton has modalCloseButton class" name="DialogDisplay IconButton has modalCloseButton class" time="0.311">
+    </testcase>
+    <testcase classname="DialogDisplay onClose handler should be called" name="DialogDisplay onClose handler should be called" time="0.02">
     </testcase>
   </testsuite>
-  <testsuite name="Render ImageCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:53" time="0.597" tests="2">
-    <testcase classname="Render ImageCard imageSize should be equal to &apos;s&apos;" name="Render ImageCard imageSize should be equal to &apos;s&apos;" time="0.037">
+  <testsuite name="PasswordField" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:58" time="2.452" tests="2">
+    <testcase classname="PasswordField default props should be provided" name="PasswordField default props should be provided" time="0.071">
     </testcase>
-    <testcase classname="Render ImageCard alternateText prop should be present in the html attribute alt" name="Render ImageCard alternateText prop should be present in the html attribute alt" time="0.006">
-    </testcase>
-  </testsuite>
-  <testsuite name="StatsCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:54" time="0.663" tests="1">
-    <testcase classname="StatsCard Snapshot" name="StatsCard Snapshot" time="0.065">
+    <testcase classname="PasswordField after pressing the button the input should turn into a text field" name="PasswordField after pressing the button the input should turn into a text field" time="0.047">
     </testcase>
   </testsuite>
-  <testsuite name="EditButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:54" time="0.586" tests="1">
-    <testcase classname="EditButton the color, fontSize and size props should be equal to the default values if they are not provided" name="EditButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.052">
+  <testsuite name="SimpleSlider" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:32:59" time="0.709" tests="1">
+    <testcase classname="SimpleSlider Snapshot" name="SimpleSlider Snapshot" time="0.059">
     </testcase>
   </testsuite>
-  <testsuite name="CancelButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:54" time="0.534" tests="1">
-    <testcase classname="CancelButton the color, fontSize and size props should be equal to the default values if they are not provided" name="CancelButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.05">
+  <testsuite name="ExpandingText" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:00" time="0.541" tests="1">
+    <testcase classname="ExpandingText snapshot" name="ExpandingText snapshot" time="0.026">
     </testcase>
   </testsuite>
-  <testsuite name="Pagination" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:55" time="0.658" tests="1">
-    <testcase classname="Pagination Snapshot" name="Pagination Snapshot" time="0.054">
+  <testsuite name="Render ImageCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:00" time="0.615" tests="2">
+    <testcase classname="Render ImageCard imageSize should be equal to &apos;s&apos;" name="Render ImageCard imageSize should be equal to &apos;s&apos;" time="0.035">
+    </testcase>
+    <testcase classname="Render ImageCard alternateText prop should be present in the html attribute alt" name="Render ImageCard alternateText prop should be present in the html attribute alt" time="0.004">
     </testcase>
   </testsuite>
-  <testsuite name="RegularCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:56" time="0.636" tests="1">
-    <testcase classname="RegularCard Snapshot" name="RegularCard Snapshot" time="0.043">
+  <testsuite name="EditButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:01" time="0.549" tests="1">
+    <testcase classname="EditButton the color, fontSize and size props should be equal to the default values if they are not provided" name="EditButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.05">
     </testcase>
   </testsuite>
-  <testsuite name="BackToButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:55" time="1.828" tests="1">
-    <testcase classname="BackToButton the color, fontSize and size props should be equal to the default values if they are not provided" name="BackToButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.057">
+  <testsuite name="StatsCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:01" time="0.692" tests="1">
+    <testcase classname="StatsCard Snapshot" name="StatsCard Snapshot" time="0.034">
     </testcase>
   </testsuite>
-  <testsuite name="Forbidden" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:56" time="0.634" tests="1">
-    <testcase classname="Forbidden classes cardHeader, cardAvatar should be present" name="Forbidden classes cardHeader, cardAvatar should be present" time="0.055">
+  <testsuite name="CancelButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:01" time="0.555" tests="1">
+    <testcase classname="CancelButton the color, fontSize and size props should be equal to the default values if they are not provided" name="CancelButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.052">
     </testcase>
   </testsuite>
-  <testsuite name="CustomLinearProgress" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:57" time="0.592" tests="1">
-    <testcase classname="CustomLinearProgress snapshot" name="CustomLinearProgress snapshot" time="0.017">
+  <testsuite name="Pagination" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:02" time="0.648" tests="1">
+    <testcase classname="Pagination Snapshot" name="Pagination Snapshot" time="0.046">
     </testcase>
   </testsuite>
-  <testsuite name="IconButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:56" time="1.723" tests="1">
-    <testcase classname="IconButton render correctly IconButton component" name="IconButton render correctly IconButton component" time="0.036">
+  <testsuite name="RegularCard" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:02" time="0.551" tests="1">
+    <testcase classname="RegularCard Snapshot" name="RegularCard Snapshot" time="0.019">
     </testcase>
   </testsuite>
-  <testsuite name="FileUploadButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:58" time="0.871" tests="1">
-    <testcase classname="FileUploadButton Snapshot" name="FileUploadButton Snapshot" time="0.075">
+  <testsuite name="BackToButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:01" time="1.75" tests="1">
+    <testcase classname="BackToButton the color, fontSize and size props should be equal to the default values if they are not provided" name="BackToButton the color, fontSize and size props should be equal to the default values if they are not provided" time="0.046">
     </testcase>
   </testsuite>
-  <testsuite name="SideMenu" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:58" time="0.644" tests="1">
-    <testcase classname="SideMenu Snapshot" name="SideMenu Snapshot" time="0.033">
+  <testsuite name="Forbidden" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:03" time="0.588" tests="1">
+    <testcase classname="Forbidden classes cardHeader, cardAvatar should be present" name="Forbidden classes cardHeader, cardAvatar should be present" time="0.041">
     </testcase>
   </testsuite>
-  <testsuite name="Tooltip" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:58" time="0.522" tests="1">
+  <testsuite name="CustomLinearProgress" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:04" time="0.498" tests="1">
+    <testcase classname="CustomLinearProgress snapshot" name="CustomLinearProgress snapshot" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="IconButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:03" time="1.826" tests="1">
+    <testcase classname="IconButton render correctly IconButton component" name="IconButton render correctly IconButton component" time="0.053">
+    </testcase>
+  </testsuite>
+  <testsuite name="FileUploadButton" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:04" time="0.757" tests="1">
+    <testcase classname="FileUploadButton Snapshot" name="FileUploadButton Snapshot" time="0.077">
+    </testcase>
+  </testsuite>
+  <testsuite name="Tooltip" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:05" time="0.504" tests="1">
     <testcase classname="Tooltip Snapshot" name="Tooltip Snapshot" time="0.042">
     </testcase>
   </testsuite>
-  <testsuite name="Typography" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:59" time="0.614" tests="1">
-    <testcase classname="Typography variant property should be equal to the default value provided" name="Typography variant property should be equal to the default value provided" time="0.033">
+  <testsuite name="SideMenu" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:05" time="0.648" tests="1">
+    <testcase classname="SideMenu Snapshot" name="SideMenu Snapshot" time="0.028">
     </testcase>
   </testsuite>
-  <testsuite name="LoadingFakeText" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:59" time="0.564" tests="1">
-    <testcase classname="LoadingFakeText snapshot" name="LoadingFakeText snapshot" time="0.008">
+  <testsuite name="Typography" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:05" time="0.538" tests="1">
+    <testcase classname="Typography variant property should be equal to the default value provided" name="Typography variant property should be equal to the default value provided" time="0.03">
     </testcase>
   </testsuite>
-  <testsuite name="Render NotFound" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:26:59" time="0.407" tests="1">
-    <testcase classname="Render NotFound render correctly NotFound component" name="Render NotFound render correctly NotFound component" time="0.009">
+  <testsuite name="LoadingFakeText" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:06" time="0.543" tests="1">
+    <testcase classname="LoadingFakeText snapshot" name="LoadingFakeText snapshot" time="0.006">
     </testcase>
   </testsuite>
-  <testsuite name="ToastContainer" errors="0" failures="0" skipped="0" timestamp="2021-10-28T08:27:00" time="0.458" tests="1">
+  <testsuite name="Render NotFound" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:06" time="0.381" tests="1">
+    <testcase classname="Render NotFound render correctly NotFound component" name="Render NotFound render correctly NotFound component" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="ToastContainer" errors="0" failures="0" skipped="0" timestamp="2021-10-28T10:33:06" time="0.466" tests="1">
     <testcase classname="ToastContainer Snapshot" name="ToastContainer Snapshot" time="0.007">
     </testcase>
   </testsuite>
