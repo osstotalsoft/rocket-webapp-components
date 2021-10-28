@@ -31,10 +31,6 @@ export interface AutocompleteProps {
    */
   onMenuOpen?: () => void
   /**
-   * Handle the menu closing.  
-   */
-  onClose?: () => void
-  /**
    * @default false  
    * If true, the user can select multiple values from list.
    */
@@ -273,13 +269,11 @@ export interface AutocompleteProps {
    */
   ListboxProps?: object
   /**
-   * If true, the component is in a loading state. 
-   * By default, this shows a linear progress instead of options. 
-   * This can be changed by sending the loadingText prop to Autocomplete.
+   * If `true`, the component is in a loading state.
    */
   loading?: boolean
   /**
-   * Text/component to display when in a loading state.
+   * Text to display when in a loading state.
    */
   loadingText?: React.ReactNode
   /**
