@@ -172,7 +172,7 @@ const Autocomplete = ({
           endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}
           InputProps={{ ...params.InputProps, margin: "none" }}
-          InputLabelProps={{ ...params.InputLabelProps, margin: emptyString }}
+          InputLabelProps={{ ...params.InputLabelProps, margin: null }}
         />
       );
     },
