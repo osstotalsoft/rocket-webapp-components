@@ -36,7 +36,7 @@ jobs:
       - name: bit import
         run: |
           bit -v
-          bit import totalsoft_oss.react-mui/cancel-button totalsoft_oss.react-mui/card-title totalsoft_oss.react-mui/card totalsoft_oss.react-mui/charts totalsoft_oss.react-mui/check-internet-connection totalsoft_oss.react-mui/constants totalsoft_oss.react-mui/custom-dialog totalsoft_oss.react-mui/custom-linear-progress totalsoft_oss.react-mui/custom-text-field totalsoft_oss.react-mui/accordion totalsoft_oss.react-mui/autocomplete totalsoft_oss.react-mui/date-time totalsoft_oss.react-mui/pagination totalsoft_oss.react-mui/regular-card totalsoft_oss.react-mui/icon-card totalsoft_oss.react-mui/simple-slider totalsoft_oss.react-mui/button totalsoft_oss.react-mui/edit-button totalsoft_oss.react-mui/toast --override
+          bit import totalsoft_oss.react-mui/cancel-button totalsoft_oss.react-mui/card-title totalsoft_oss.react-mui/card totalsoft_oss.react-mui/charts totalsoft_oss.react-mui/check-internet-connection totalsoft_oss.react-mui/constants totalsoft_oss.react-mui/custom-dialog totalsoft_oss.react-mui/custom-linear-progress totalsoft_oss.react-mui/custom-text-field totalsoft_oss.react-mui/accordion totalsoft_oss.react-mui/date-time totalsoft_oss.react-mui/pagination totalsoft_oss.react-mui/regular-card totalsoft_oss.react-mui/icon-card totalsoft_oss.react-mui/simple-slider totalsoft_oss.react-mui/button totalsoft_oss.react-mui/edit-button totalsoft_oss.react-mui/toast --override
           bit import
           bit build
       - name: Run tests
