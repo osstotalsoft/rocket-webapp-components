@@ -93,24 +93,12 @@ function DateTime({
   };
 
   const simplePickerProps = {
-    InputProps: {
-      endAdornment: (
-        <IconButton
-          disabled={disabled}
-          className={classes.dateTimeIconButtons}
-          onClick={handleSetOpen(true)}
-        >
-          <CalendarToday fontSize="small" />
-        </IconButton>
-      )
-    },
-    InputAdornmentProps: {
-      position: "start",
-      style: {
-        display: "none"
-      }
+    keyboardIcon: <CalendarToday fontSize='small' onClick={handleSetOpen(true)} />,
+    KeyboardButtonProps: {
+      disabled: disabled,
+      className: classes.dateTimeIconButtons
     }
-  };
+  }
 
   const pickerProps =
     clearable && value ? clearablePickerProps : simplePickerProps;
