@@ -38,7 +38,7 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
 
   const integer = <CustomTextField
     isNumeric={true}
-    value={value || emptyString}
+    value={value ?? emptyString}
     onChange={onPropertyChange}
     fullWidth
     {...other}
@@ -48,7 +48,7 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
     isNumeric={true}
     fullWidth
     inputProps={{ decimalScale: 0, thousandSeparator: emptyString }}
-    value={value || emptyString}
+    value={value ?? emptyString}
     {...other} />;
   const comboField = <AutoComplete {...other}
     fullWidth
@@ -69,11 +69,11 @@ function DynamicInput({ controlType, onChange, loadOptions, value, DefaultComp, 
   />
   const stringField = <CustomTextField onChange={onInputChange}
     fullWidth
-    value={value || emptyString}
+    value={value ?? emptyString}
     {...other} />;
 
   const defaultField = <DefaultComp
-    value={value || ""}
+    value={value ?? emptyString}
     onChange={onInputChange}
     {...defaultCompProps}
   />
