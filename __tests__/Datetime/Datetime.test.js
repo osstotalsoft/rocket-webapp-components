@@ -25,7 +25,7 @@ describe("DateTime", () => {
   });
 
   it("if clearable and value are false then InputProps node will be made of one CalendarToday node", () => {
-    const onDateTimeChanged = () => {};
+    const onDateTimeChanged = () => { };
     const defaultTimeFormat = "HH:mm";
 
     const wrapper = mount(
@@ -50,6 +50,7 @@ describe("DateTime", () => {
       <DateTime
         value={null}
         label={"Datetime"}
+        showTime={true}
         onChange={onDateTimeChanged}
         dateFormat="DD-MMMM-YYYY"
         timeFormat={defaultTimeFormat}

@@ -5,13 +5,15 @@ import { Clear, CalendarToday } from "@material-ui/icons";
 
 import {
   MuiPickersUtilsProvider,
-  KeyboardDateTimePicker
+  KeyboardDateTimePicker,
+  KeyboardDatePicker
 } from "@material-ui/pickers";
 import MomentUtils from "@date-io/moment";
 
 import dateTimeStyle from "./dateTimeStyle";
 import moment from "moment";
 import { emptyObject } from "../../utils/constants";
+import { includes } from "ramda";
 
 // ! To use another localization import "moment/locale/[lang]" in your app
 moment.locale("en");
@@ -44,6 +46,7 @@ function DateTime({
   minDateMessage,
   maxDateMessage,
   language,
+  views,
   ...rest
 }) {
   const classes = useStyles();
@@ -53,8 +56,8 @@ function DateTime({
   const errorData = disabled
     ? { error: false, helperText: null }
     : error
-    ? { error, helperText }
-    : emptyObject;
+      ? { error, helperText }
+      : emptyObject;
 
   const handleSetOpen = useCallback(value => () => setOpen(value), []);
   const handleChange = useCallback(
@@ -102,6 +105,7 @@ function DateTime({
 
   const pickerProps =
     clearable && value ? clearablePickerProps : simplePickerProps;
+  const withTime = showTime || includes('hours', views) || includes('minutes', views)
 
   return (
     <MuiPickersUtilsProvider
@@ -109,36 +113,61 @@ function DateTime({
       utils={MomentUtils}
       locale={language}
     >
-      <KeyboardDateTimePicker
-        {...pickerProps}
-        fullWidth
-        value={value}
-        open={open}
-        onClose={handleSetOpen(false)}
-        onChange={handleChange}
-        format={format}
-        invalidDateMessage={invalidDateMessage}
-        minDateMessage={minDateMessage}
-        maxDateMessage={maxDateMessage}
-        className={classes.defaultFont}
-        InputProps={{
-          disabled,
-          className: classes.dateTimeInput,
-          ...pickerProps.InputProps
-        }}
-        InputLabelProps={{
-          className: classes.label
-        }}
-        {...errorData}
-        {...rest}
-      />
+      {withTime ? (
+        <KeyboardDateTimePicker
+          {...pickerProps}
+          fullWidth
+          value={value}
+          open={open}
+          onClose={handleSetOpen(false)}
+          onChange={handleChange}
+          format={format}
+          invalidDateMessage={invalidDateMessage}
+          minDateMessage={minDateMessage}
+          maxDateMessage={maxDateMessage}
+          className={classes.defaultFont}
+          InputProps={{
+            disabled,
+            className: classes.dateTimeInput,
+            ...pickerProps.InputProps
+          }}
+          InputLabelProps={{
+            className: classes.label
+          }}
+          {...errorData}
+          {...rest}
+        />) : (
+        <KeyboardDatePicker
+          {...pickerProps}
+          fullWidth
+          value={value}
+          open={open}
+          onClose={handleSetOpen(false)}
+          onChange={handleChange}
+          format={format}
+          invalidDateMessage={invalidDateMessage}
+          minDateMessage={minDateMessage}
+          maxDateMessage={maxDateMessage}
+          className={classes.defaultFont}
+          InputProps={{
+            disabled,
+            className: classes.dateTimeInput,
+            ...pickerProps.InputProps
+          }}
+          InputLabelProps={{
+            className: classes.label
+          }}
+          {...errorData}
+          {...rest}
+        />
+      )}
     </MuiPickersUtilsProvider>
   );
 }
 
 DateTime.defaultProps = {
   value: null,
-  onChange: () => {},
+  onChange: () => { },
   dateFormat: defaultDateFormat,
   timeFormat: defaultTimeFormat,
   variant: "inline",
@@ -149,7 +178,8 @@ DateTime.defaultProps = {
   maxDateMessage: "Date should not be after maximal date",
   disableToolbar: true,
   autoOk: true,
-  ampm: false
+  ampm: false,
+  showTime: false
 };
 
 DateTime.propTypes = {
