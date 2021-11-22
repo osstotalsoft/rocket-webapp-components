@@ -9,8 +9,7 @@ import {
   LinearProgress,
   Chip,
   makeStyles,
-  Checkbox,
-  deprecatedPropType
+  Checkbox
 } from "@material-ui/core";
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
@@ -156,6 +155,7 @@ const Autocomplete = ({
       params.inputProps.className = `${params.inputProps.className} ${classes.input}`;
       if (inputSelectedColor)
         params.inputProps.style = { color: inputSelectedColor };
+      params.inputProps.readOnly = !isSearchable
 
       const textFieldProps = {
         label,
@@ -176,7 +176,7 @@ const Autocomplete = ({
         />
       );
     },
-    [classes.input, error, helperText, inputSelectedColor, label, required]
+    [classes.input, error, helperText, inputSelectedColor, label, required, isSearchable]
   );
 
   const handleOptionLabel = useCallback(
@@ -337,6 +337,7 @@ Autocomplete.defaultProps = {
   options: emptyArray,
   defaultOptions: emptyArray,
   isMultiSelection: false,
+  isSearchable: true,
   withCheckboxes: false,
   isClearable: false,
   disabled: false,
@@ -413,7 +414,7 @@ Autocomplete.propTypes = {
    */
   isClearable: PropTypes.bool,
   /**
-   * This prop is deprecated, because the new implementation of Autocomplete is searchable by default.
+   * If false, the user cannot type in Autocomplete, filter options or create new ones.
    */
   isSearchable: deprecatedPropType(PropTypes.bool),
   /**

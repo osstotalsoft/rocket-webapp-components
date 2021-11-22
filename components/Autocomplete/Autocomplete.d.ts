@@ -45,8 +45,8 @@ export interface AutocompleteProps {
    */
   isClearable?: boolean;
   /**
-   * @default false
-   * If true, the search functionality is enabled.
+   * @default true
+   * If false, the user cannot type in Autocomplete, filter options or create new ones.
    */
   isSearchable?: boolean;
   /**
