@@ -5,7 +5,7 @@ import NumberFormat from "react-number-format";
 import { makeStyles, TextField, deprecatedPropType } from "@material-ui/core";
 import textFieldStyle from "./textFieldStyle";
 import { useDebounce } from "use-debounce";
-import { curry } from "ramda";
+import { curry, is, head } from "ramda";
 import { emptyFunction, emptyString } from "../../utils/constants";
 
 const useStyles = makeStyles(textFieldStyle);
@@ -89,6 +89,7 @@ function CustomTextField({
   value,
   onChange,
   debounceBy,
+  helperText,
   ...rest
 }) {
   const classes = useStyles();
@@ -117,15 +118,14 @@ function CustomTextField({
   const [localValue, setLocalValue] = useState(value);
   const [debouncedValue] = useDebounce(localValue, debounceBy);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     debouncedValue !== value &&
       onChange(setValueToDesiredFormat(isNumeric)(debouncedValue));
-  }, [debouncedValue]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedValue]); // eslint-disable-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     value !== localValue && setLocalValue(value);
-  }, [value]);
+  }, [value]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleChange = useCallback(
     e => setLocalValue(getValueFromDesiredFormat(isNumeric)(e)),
@@ -136,6 +136,7 @@ function CustomTextField({
     <TextField
       onChange={handleChange}
       value={localValue}
+      helperText={is(Array, helperText) ? head(helperText) : helperText}
       {...rest}
       className={className ? `${classes.textField} ${className}` : classes.textField}
       InputProps={customMuiInput}
@@ -192,6 +193,10 @@ CustomTextField.propTypes = {
    * The value of the `input` element, required for a controlled component.
    */
   value: PropTypes.any,
+  /**
+   * The content of the helper under the input.
+   */
+  helperText: PropTypes.node,
   /**
    * Callback fired when the value is changed.
    *
