@@ -416,7 +416,7 @@ Autocomplete.propTypes = {
   /**
    * If false, the user cannot type in Autocomplete, filter options or create new ones.
    */
-  isSearchable: deprecatedPropType(PropTypes.bool),
+  isSearchable: PropTypes.bool,
   /**
    * If true, the Autocomplete is free solo, meaning that the user input is not bound to provided options and can add
    * his own values.
@@ -443,9 +443,9 @@ Autocomplete.propTypes = {
    */
   labelKey: PropTypes.string,
   /**
-   * The text to appear below the input, usually coming from a validation.
+   * The content of the helper under the input.
    */
-  helperText: PropTypes.string,
+  helperText: PropTypes.node,
   /**
    * If true, the helper text is displayed when an error pops up.
    */

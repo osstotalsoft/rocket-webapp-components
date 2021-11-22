@@ -23,6 +23,10 @@ export interface AutocompleteProps {
    */
   value?: Object | [] | number | string | boolean;
   /**
+   * The content of the helper under the input.
+   */
+  helperText?: React.ReactNode;
+  /**
    * Handle change events on the select.
    */
   onChange: (event: Object, value: T | T[], reason: string) => void;

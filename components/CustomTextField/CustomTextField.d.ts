@@ -96,7 +96,7 @@ export interface Props {
      */
     error?: boolean
     /**
-     * The helper text content.
+     * The content of the helper under the input.
      */
     helperText?: React.ReactNode
     /**
