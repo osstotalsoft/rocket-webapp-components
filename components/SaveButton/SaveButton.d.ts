@@ -37,7 +37,8 @@ export interface SaveButtonProps {
     "successNoBackground" |
     "warningNoBackground" |
     "dangerNoBackground" |
-    "roseNoBackground"
+    "roseNoBackground" |
+    "themeWithGradient"
 
     /**
     * @default "medium"

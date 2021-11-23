@@ -26,7 +26,8 @@ export interface BackToButtonProps extends Omit<ButtonProps, 'color'> {
   "successNoBackground" |
   "warningNoBackground" |
   "dangerNoBackground" |
-  "roseNoBackground"
+  "roseNoBackground" |
+  "themeWithGradient"
   /**
   * @default "medium"
   * The size of button.

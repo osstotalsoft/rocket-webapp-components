@@ -34,7 +34,8 @@ export interface DownwardButtonProps extends Omit<ButtonProps, 'color' | 'size'>
     "successNoBackground" |
     "warningNoBackground" |
     "dangerNoBackground" |
-    "roseNoBackground"
+    "roseNoBackground" |
+    "themeWithGradient"
     /**
     * @default "medium"
     * The size of button.

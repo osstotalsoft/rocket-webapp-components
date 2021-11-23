@@ -138,8 +138,7 @@ const styles = theme => {
     theme.palette?.timColors?.themeColor ||
     defaultTheme.palette.timColors.themeColor;
   const themeColorGradient = 
-    theme.palette?.timColors?.themeColorGradient || 
-    defaultTheme.palette.timColors.themeColorGradient
+    theme.palette?.timColors?.themeColorGradient 
   const themeRGBAColor =
     theme.palette?.timColors?.themeColorRGBA ||
     defaultTheme.palette.timColors.themeColorRGBA;
