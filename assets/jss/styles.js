@@ -156,8 +156,7 @@ const styles = theme => {
     theme.palette?.sideMenu?.activeBkColor ||
     defaultTheme.palette.sideMenu.activeBkColor;
   const menuActiveBk = 
-    theme.palette?.sideMenu?.activeBk || 
-    defaultTheme.palette.sideMenu.activeBk
+    theme.palette?.sideMenu?.activeBk
   const menuBkColor =
     theme.palette?.sideMenu?.bkColor || defaultTheme.palette.sideMenu.bkColor;
   const menuColor =
@@ -288,7 +287,7 @@ const styles = theme => {
       "linear-gradient(60deg, " + themeColor + ", " + themeColor + ")",
     ...themeBoxShadow
   };
-  const themeGradientCardHeader = {
+  const themeWithGradientCardHeader = {
     background: `linear-gradient(60deg, ${themeColorGradient[0]}, ${themeColorGradient[1]})`,
     ...themeBoxShadow
   }
@@ -625,7 +624,7 @@ const styles = theme => {
     themeWithGradient: {
       background: `linear-gradient(60deg, ${themeColorGradient[0]}, ${themeColorGradient[1]})`,
       '&:hover,&:focus': {
-        backgroundColor: 'linear-gradient(60deg, ' + themeColorGradient[0] + ', ' + themeColorGradient[1] + ')',
+        backgroundColor: `linear-gradient(60deg, ${themeColorGradient[0]}, ${themeColorGradient[1]})`,
         boxShadow:
           '0 14px 26px -12px rgba(' +
           hexToRgb(themeColorGradient[0]) +
@@ -701,7 +700,7 @@ const styles = theme => {
     purpleCardHeader,
     roseCardHeader,
     themeCardHeader,
-    themeGradientCardHeader,
+    themeWithGradientCardHeader,
     themeBoxShadow,
     cardActions,
     cardHeader,

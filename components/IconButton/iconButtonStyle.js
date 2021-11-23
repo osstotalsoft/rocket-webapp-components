@@ -47,7 +47,7 @@ const iconButtonStyle = theme => {
     theme: buttonColors.theme,
     themeNoBackground: buttonColors.themeNoBackground,
     themeWithBackground: buttonColors.themeWithBackground,
-    themeWithGradient:buttonColors.themeWithGradient,
+    themeWithGradient: buttonColors.themeWithGradient,
     disabled: buttonColors.disabled,
     justIcon: { ...defaultFont }
   }
