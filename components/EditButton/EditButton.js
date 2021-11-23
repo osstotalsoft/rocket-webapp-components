@@ -57,7 +57,8 @@ EditButton.propTypes = {
         "successNoBackground",
         "warningNoBackground",
         "dangerNoBackground",
-        "roseNoBackground"
+        "roseNoBackground",
+        "themeWithGradient"
     ]),
     /**
     * The size of button.

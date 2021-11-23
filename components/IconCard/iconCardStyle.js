@@ -11,7 +11,8 @@ const iconCardStyle = theme => {
     blueCardHeader,
     purpleCardHeader,
     roseCardHeader,
-    themeCardHeader
+    themeCardHeader,
+    themeGradientCardHeader
   } = styles(theme);
 
   return {
@@ -31,6 +32,7 @@ const iconCardStyle = theme => {
     purpleCardHeader,
     roseCardHeader,
     themeCardHeader,
+    themeGradientCardHeader,
     cardContent: {
       padding: "15px 20px",
       position: "relative"

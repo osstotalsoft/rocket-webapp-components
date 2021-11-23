@@ -39,7 +39,8 @@ UploadButton.propTypes = {
         "successNoBackground",
         "warningNoBackground",
         "dangerNoBackground",
-        "roseNoBackground"
+        "roseNoBackground",
+        "themeWithGradient"
     ]),
     size: PropTypes.oneOf([
         "small",
