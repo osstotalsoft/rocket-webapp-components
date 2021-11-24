@@ -24,7 +24,7 @@ const palette = {
     bkColor: "#7eb58b",
     activeLinkColor: "#fff",
     activeBkColor: "#005604",
-    activeBk: "#005604",
+    activeBk: "linear-gradient(60deg, #005604, #007d06)",
     hoverBgColor: "rgb(239,247,240, 0.5)",
     hoverTextColor: "#005604",
     color: "#005604",
