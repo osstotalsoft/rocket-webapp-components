@@ -138,7 +138,8 @@ const styles = theme => {
     theme.palette?.timColors?.themeColor ||
     defaultTheme.palette.timColors.themeColor;
   const themeColorGradient = 
-    theme.palette?.timColors?.themeColorGradient 
+    theme.palette?.timColors?.themeColorGradient ||
+    defaultTheme.palette.timColors.themeColorGradient
   const themeRGBAColor =
     theme.palette?.timColors?.themeColorRGBA ||
     defaultTheme.palette.timColors.themeColorRGBA;
@@ -156,7 +157,8 @@ const styles = theme => {
     theme.palette?.sideMenu?.activeBkColor ||
     defaultTheme.palette.sideMenu.activeBkColor;
   const menuActiveBk = 
-    theme.palette?.sideMenu?.activeBk
+    theme.palette?.sideMenu?.activeBk ||
+    defaultTheme.palette.sideMenu.activeBk
   const menuBkColor =
     theme.palette?.sideMenu?.bkColor || defaultTheme.palette.sideMenu.bkColor;
   const menuColor =
