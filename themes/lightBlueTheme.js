@@ -23,7 +23,7 @@ const palette = {
   sideMenu: {
     bkColor: 'white',
     activeLinkColor: '#fff',
-    activeBkColor:'linear-gradient(60deg, #00529f, #00aeef)', 
+    activeBkColor:'#00529f', 
     activeBk: 'linear-gradient(60deg, #00529f, #00aeef)' ,
     hoverBgColor: '#DFF2FD',
     hoverTextColor: '#00385F',
