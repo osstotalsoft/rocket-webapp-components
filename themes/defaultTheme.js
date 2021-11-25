@@ -24,6 +24,7 @@ const palette = {
     bkColor: "#000",
     activeLinkColor: "#fff",
     activeBkColor: "#26C6DA",
+    activeBk: "linear-gradient(60deg, #0077c7, #26C6DA)",
     hoverBgColor: "rgba(200, 200, 200, 0.2)",
     hoverTextColor: "#fff",
     color: "#fff",
@@ -42,6 +43,7 @@ const palette = {
     infoColor: "#00acc1",
     blueColor: "#26C6DA",
     themeColor: "#26C6DA",
+    themeColorGradient:["#0077c7", "#26C6DA"],
     themeColorRGBA: "rgba(85, 85, 85, 1)",
     themeShadowColor: "#26C6DA",
     themeShadowColorRGBA: "rgba(38, 198, 218, 1)",
@@ -215,3 +217,4 @@ export const theme = {
     }
   }
 };
+

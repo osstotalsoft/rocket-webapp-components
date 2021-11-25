@@ -33,7 +33,8 @@ export interface UpwardButtonProps {
             "successNoBackground" |
             "warningNoBackground" |
             "dangerNoBackground" |
-            "roseNoBackground"
+            "roseNoBackground" |
+            "themeWithGradient"
     /**
      * The size of the button
      * @default "medium"

@@ -25,7 +25,8 @@ export interface IconButtonProps extends Omit<BaseProps, 'color'> {
     "successNoBackground" |
     "warningNoBackground" |
     "dangerNoBackground" |
-    "roseNoBackground"
+    "roseNoBackground" |
+    "themeWithGradient"
     /**
     * @default "medium"
     * The size of the button

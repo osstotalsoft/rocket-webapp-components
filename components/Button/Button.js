@@ -70,7 +70,8 @@ RegularButton.propTypes = {
     "dangerNoBackground",
     "roseNoBackground",
     "white",
-    "transparent"
+    "transparent",
+    "themeWithGradient"
   ]),
   /**
    * If true, rounded corners are enabled.

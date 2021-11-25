@@ -17,7 +17,8 @@ export interface Props {
                 "blue" |
                 "purple" |
                 "rose" |
-                "theme"
+                "theme" |
+                "themeWithGradient"
 
     /**
     * @default "" 

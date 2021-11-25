@@ -43,7 +43,8 @@ export interface UploadButtonProps {
             "successNoBackground" |
             "warningNoBackground" |
             "dangerNoBackground" |
-            "roseNoBackground"
+            "roseNoBackground" |
+            "themeWithGradient"
 
     /**
      * @default "medium" 

@@ -79,7 +79,8 @@ IconCard.propTypes = {
     "blue",
     "purple",
     "rose",
-    "theme"
+    "theme", 
+    "themeWithGradient"
   ]),
   /**
   * The title to be displayed. This property can be a string or a component 
