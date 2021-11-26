@@ -940,18 +940,6 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "totalsoft_oss.react-mui/light-blue-theme@2.9.49": {
-        "files": [
-            {
-                "relativePath": "themes/lightBlueTheme.js",
-                "test": false,
-                "name": "lightBlueTheme.js"
-            }
-        ],
-        "mainFile": "themes/lightBlueTheme.js",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "totalsoft_oss.react-mui/nav-pills@2.9.49": {
         "files": [
             {
