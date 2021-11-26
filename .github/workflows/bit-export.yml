@@ -36,7 +36,7 @@ jobs:
       - name: bit import
         run: |
           bit -v
-          bit import totalsoft_oss.react-mui/accordion totalsoft_oss.react-mui/card-title totalsoft_oss.react-mui/image-card totalsoft_oss.react-mui/side-menu totalsoft_oss.react-mui/toast totalsoft_oss.react-mui/not-found totalsoft_oss.react-mui/charts totalsoft_oss.react-mui/icon-collapse-card totalsoft_oss.react-mui/pagination totalsoft_oss.react-mui/password-field totalsoft_oss.react-mui/regular-card totalsoft_oss.react-mui/stats-card totalsoft_oss.react-mui/custom-linear-progress totalsoft_oss.react-mui/simple-slider totalsoft_oss.react-mui/card totalsoft_oss.react-mui/chart-card --override
+          bit import totalsoft_oss.react-mui/accordion totalsoft_oss.react-mui/autocomplete totalsoft_oss.react-mui/card totalsoft_oss.react-mui/card-title totalsoft_oss.react-mui/chart-card totalsoft_oss.react-mui/charts totalsoft_oss.react-mui/custom-dialog totalsoft_oss.react-mui/custom-linear-progress totalsoft_oss.react-mui/custom-text-field totalsoft_oss.react-mui/date-time totalsoft_oss.react-mui/dialog-display totalsoft_oss.react-mui/dynamic-input totalsoft_oss.react-mui/file-upload-button totalsoft_oss.react-mui/icon-collapse-card totalsoft_oss.react-mui/image-card totalsoft_oss.react-mui/kit/core totalsoft_oss.react-mui/nav-pills totalsoft_oss.react-mui/not-found totalsoft_oss.react-mui/pagination totalsoft_oss.react-mui/password-field totalsoft_oss.react-mui/regular-card totalsoft_oss.react-mui/side-menu totalsoft_oss.react-mui/simple-slider totalsoft_oss.react-mui/stats-card totalsoft_oss.react-mui/toast --override
           bit import
           bit build
       - name: Run tests
