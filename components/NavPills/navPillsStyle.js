@@ -8,7 +8,8 @@ const navPillsStyle = theme => {
     infoColor,
     successColor,
     warningColor,
-    dangerColor
+    dangerColor,
+    themeColorGradient
   } = styles(theme);
   
   return {
@@ -126,6 +127,15 @@ const navPillsStyle = theme => {
       "&,&:hover": {
         color: "#FFFFFF",
         backgroundColor: roseColor,
+        boxShadow:
+          "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)"
+      }
+    },
+    themeWithGradient:
+    {
+      "&,&:hover": {
+        color: "#FFFFFF",
+        background: `linear-gradient(60deg, ${themeColorGradient[0]}, ${themeColorGradient[1]})`,
         boxShadow:
           "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)"
       }

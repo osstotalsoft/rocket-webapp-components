@@ -701,6 +701,7 @@ const styles = theme => {
     blueCardHeader,
     purpleCardHeader,
     roseCardHeader,
+    themeColorGradient,
     themeCardHeader,
     themeWithGradientCardHeader,
     themeBoxShadow,

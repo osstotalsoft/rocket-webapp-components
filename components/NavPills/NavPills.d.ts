@@ -26,7 +26,8 @@ export interface Props {
             "success" |
             "info" |
             "rose" |
-            "theme"
+            "theme" |
+            "themeWithGradient"
 
     /**
      * If set to true, the tabs will be displayed horizontal
