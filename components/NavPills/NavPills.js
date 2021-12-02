@@ -123,7 +123,8 @@ NavPills.propTypes = {
         "success",
         "info",
         "rose",
-        "theme"
+        "theme",
+        "themeWithGradient"
     ]),
     horizontal: PropTypes.bool,
     alignCenter: PropTypes.bool,
