@@ -26,8 +26,8 @@ const palette = {
     activeBkColor:'#00529f', 
     activeBk: 'linear-gradient(60deg, #00529f, #00aeef)' ,
     hoverBgColor: '#DFF2FD',
-    hoverTextColor: '#00385F',
-    color: '#00385F',
+    hoverTextColor: '#00529f',
+    color: '#00529f',
     bkOpacity: '1',
     focusBgColor: '#2273ab'
   },
@@ -84,7 +84,7 @@ const palette = {
   bg: {
     main: '#efeff8' 
   },
-  activeColor: '#00385F',
+  activeColor: '#00529f',
   button: {
     theme: '#00529f',
     themeHoverBk: 'transparent',
