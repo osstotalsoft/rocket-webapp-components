@@ -156,7 +156,7 @@ const styles = theme => {
   const menuActiveBkColor =
     theme.palette?.sideMenu?.activeBkColor ||
     defaultTheme.palette.sideMenu.activeBkColor;
-  const menuActiveBkWithGradient = 
+  const menuActiveBk = 
     theme.palette?.sideMenu?.activeBk ||
     defaultTheme.palette.sideMenu.activeBk
   const menuBkColor =
@@ -712,7 +712,7 @@ const styles = theme => {
     slimPadding,
     menuActiveColor,
     menuActiveBkColor,
-    menuActiveBkWithGradient,
+    menuActiveBk,
     topBarBkColor,
     menuBkColor,
     menuColor,
