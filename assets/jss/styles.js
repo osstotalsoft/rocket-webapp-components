@@ -636,7 +636,7 @@ const styles = theme => {
       }
     },
     disabled: {
-      opacity: "0.65",
+      opacity: "0.5",
       pointerEvents: "none",
       backgroundColor: grayColor,
       color: whiteColor,
