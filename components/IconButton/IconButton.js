@@ -4,6 +4,7 @@ import cx from "classnames";
 import { IconButton, makeStyles, deprecatedPropType } from "@material-ui/core";
 import Tooltip from '../Tooltip/Tooltip';
 import iconButtonStyle from "./iconButtonStyle";
+import { dissoc } from 'ramda'
 
 const useStyles = makeStyles(iconButtonStyle);
 
@@ -16,18 +17,21 @@ const Button = ({ children, color, className, ...rest }) => {
       [" " + classes[color]]: color,
       [" " + className]: className
     });
-  return <IconButton {...rest} className={buttonClasses}>
+  const restData = dissoc('title', { ...rest })
+  return <IconButton {...restData} className={buttonClasses}>
     {children}
   </IconButton>
 }
 
 function CustomIconButton({ tooltip, ...rest }) {
-  return tooltip ?
-    <Tooltip title={tooltip}>
-        <Button {...rest} />
+  const title = tooltip ? tooltip : rest?.title
+  return title ? (
+    <Tooltip title={title}>
+      <Button {...rest} />
     </Tooltip>
-    :
+  ) : (
     <Button {...rest} />
+  )
 }
 
 CustomIconButton.defaultProps = {
