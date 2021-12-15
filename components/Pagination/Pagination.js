@@ -1,10 +1,9 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { TablePagination, makeStyles } from '@material-ui/core';
+import { TablePagination, makeStyles, IconButton } from '@material-ui/core';
 import paginationStyle from './paginationStyle';
 import TablePaginationActions from './PaginationActions';
 import RefreshIcon from "@material-ui/icons/Refresh";
-import IconButton from '../IconButton';
 
 const useStyles = makeStyles(paginationStyle);
 
