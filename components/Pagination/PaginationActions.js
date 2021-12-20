@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import { IconButton } from '@bit/totalsoft_oss.react-mui.kit.core';
+import IconButton from '../IconButton';
 import paginationStyle from './paginationStyle';
 
 const useStyles = makeStyles(paginationStyle);
@@ -20,7 +20,7 @@ function TablePaginationActions({ count, page, rowsPerPage, onPageChange }) {
     }, [onPageChange, page])
 
     return (
-        <div style={{ display: "flex" }} className={classes.nextButton}>
+        <div className={classes.paginationActions}>
             <IconButton
                 onClick={handleBackButtonClick}
                 disabled={page === 0}

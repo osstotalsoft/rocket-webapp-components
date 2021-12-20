@@ -12,11 +12,11 @@ const paginationStyle = theme => {
             float: "right",
             marginRight: "10px"
         },
-        nextButton: {
+        paginationActions: {
             lineHeight: "50px",
             float: "right",
-            marginRight: "10px",
-            marginLeft: "10px"
+            margin: "0px 10px",
+            display: "flex"
         },
         selectRoot: {
             margin: "0!important"

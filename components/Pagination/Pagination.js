@@ -4,7 +4,7 @@ import { TablePagination, makeStyles } from '@material-ui/core';
 import paginationStyle from './paginationStyle';
 import TablePaginationActions from './PaginationActions';
 import RefreshIcon from "@material-ui/icons/Refresh";
-import { IconButton } from '@bit/totalsoft_oss.react-mui.kit.core';
+import IconButton from '../IconButton';
 
 const useStyles = makeStyles(paginationStyle);
 
