@@ -9,7 +9,14 @@ const paginationStyle = theme => {
         },
         refreshButton: {
             lineHeight: "50px",
-            float: "right"
+            float: "right",
+            marginRight: "10px"
+        },
+        paginationActions: {
+            lineHeight: "50px",
+            float: "right",
+            margin: "0px 10px",
+            display: "flex"
         },
         selectRoot: {
             margin: "0!important"

@@ -75,15 +75,11 @@ exports[`Pagination Snapshot 1`] = `
           1-100 of 100
         </p>
         <div
-          style={
-            Object {
-              "display": "flex",
-            }
-          }
+          className="makeStyles-paginationActions-10"
         >
           <button
             aria-label="Previous Page"
-            className="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-button-15 makeStyles-defaultNoBackground-23 Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
             disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
@@ -117,7 +113,7 @@ exports[`Pagination Snapshot 1`] = `
           </button>
           <button
             aria-label="Next Page"
-            className="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+            className="MuiButtonBase-root MuiIconButton-root makeStyles-button-15 makeStyles-defaultNoBackground-23 Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
             disabled={true}
             onBlur={[Function]}
             onClick={[Function]}
@@ -157,7 +153,7 @@ exports[`Pagination Snapshot 1`] = `
     className="makeStyles-refreshButton-2"
   >
     <button
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-button-7 makeStyles-defaultNoBackground-15"
+      className="MuiButtonBase-root MuiIconButton-root makeStyles-button-15 makeStyles-defaultNoBackground-23 MuiIconButton-sizeSmall"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

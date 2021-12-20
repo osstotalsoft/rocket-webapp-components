@@ -49,7 +49,7 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
         />
       </div>
       <div className={classes.refreshButton}>
-        {onRefresh && <IconButton onClick={handleRefresh} color="defaultNoBackground">
+        {onRefresh && <IconButton onClick={handleRefresh} color="defaultNoBackground" size='small'>
           <RefreshIcon />
         </IconButton >
         }
