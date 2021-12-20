@@ -1,9 +1,10 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { TablePagination, makeStyles, IconButton } from '@material-ui/core';
+import { TablePagination, makeStyles } from '@material-ui/core';
 import paginationStyle from './paginationStyle';
 import TablePaginationActions from './PaginationActions';
 import RefreshIcon from "@material-ui/icons/Refresh";
+import { IconButton } from '@bit/totalsoft_oss.react-mui.kit.core';
 
 const useStyles = makeStyles(paginationStyle);
 
@@ -48,7 +49,7 @@ export const Pagination = ({ loading, totalCount, pageSize, page, rowsPerPageOpt
         />
       </div>
       <div className={classes.refreshButton}>
-        {onRefresh && <IconButton onClick={handleRefresh} color="defaultNoBackground">
+        {onRefresh && <IconButton onClick={handleRefresh} color="defaultNoBackground" size='small'>
           <RefreshIcon />
         </IconButton >
         }

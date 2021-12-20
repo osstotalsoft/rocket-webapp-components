@@ -1,10 +1,15 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { IconButton } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import { IconButton } from '@bit/totalsoft_oss.react-mui.kit.core';
+import paginationStyle from './paginationStyle';
+
+const useStyles = makeStyles(paginationStyle);
 
 function TablePaginationActions({ count, page, rowsPerPage, onPageChange }) {
+    const classes = useStyles();
 
     const handleBackButtonClick = useCallback(event => {
         onPageChange(event, page - 1, 0);
@@ -15,11 +20,13 @@ function TablePaginationActions({ count, page, rowsPerPage, onPageChange }) {
     }, [onPageChange, page])
 
     return (
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }} className={classes.nextButton}>
             <IconButton
                 onClick={handleBackButtonClick}
                 disabled={page === 0}
                 aria-label="Previous Page"
+                size="small"
+                color="defaultNoBackground"
             >
                 <KeyboardArrowLeft />
             </IconButton>
@@ -27,6 +34,8 @@ function TablePaginationActions({ count, page, rowsPerPage, onPageChange }) {
                 onClick={handleNextButtonClick}
                 disabled={page >= Math.ceil(count / rowsPerPage) - 1}
                 aria-label="Next Page"
+                size="small"
+                color="defaultNoBackground"
             >
                 <KeyboardArrowRight />
             </IconButton>
