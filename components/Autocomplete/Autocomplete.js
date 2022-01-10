@@ -5,12 +5,7 @@ import cx from "classnames";
 import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
-import {
-  LinearProgress,
-  Chip,
-  makeStyles,
-  Checkbox
-} from "@material-ui/core";
+import { LinearProgress, Chip, makeStyles, Checkbox } from "@material-ui/core";
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
@@ -46,18 +41,18 @@ const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
     filtered.push(
       hasStringOptions(options)
         ? {
-          primitiveValue: params.inputValue,
-          createdLabel: createdLabel
-            ? `${createdLabel} '${params.inputValue}'`
-            : params.inputValue
-        }
+            primitiveValue: params.inputValue,
+            createdLabel: createdLabel
+              ? `${createdLabel} '${params.inputValue}'`
+              : params.inputValue
+          }
         : {
-          [valueKey]: undefined,
-          [labelKey]: params.inputValue,
-          createdLabel: createdLabel
-            ? `${createdLabel} '${params.inputValue}'`
-            : params.inputValue
-        }
+            [valueKey]: undefined,
+            [labelKey]: params.inputValue,
+            createdLabel: createdLabel
+              ? `${createdLabel} '${params.inputValue}'`
+              : params.inputValue
+          }
     );
   }
 
@@ -130,6 +125,51 @@ const Autocomplete = ({
 
   const [localInput, setLocalInput] = useState();
 
+  const Option = ({ optionLabel, selected, withCheckboxes }) => {
+    const classes = useStyles();
+    const setAttribute = ({ target }) => {
+      if (target?.clientWidth < target?.scrollWidth) {
+        target?.setAttribute("title", target?.innerText);
+      }
+    };
+
+    useEffect(() => {
+      document.addEventListener(
+        "mouseenter",
+        event => setAttribute(event),
+        true
+      );
+    }, []);
+
+    useEffect(() =>
+      document.removeEventListener(
+        "mouseenter",
+        event => setAttribute(event),
+        true
+      )
+    );
+
+    return withCheckboxes ? (
+      <>
+        <Checkbox
+          icon={<CheckBoxOutlineBlank fontSize="small" />}
+          checkedIcon={<CheckBox fontSize="small" />}
+          style={{ marginRight: 8 }}
+          checked={selected}
+        />
+        {optionLabel}
+      </>
+    ) : (
+      <Typography className={classes.option}>{optionLabel}</Typography>
+    );
+  };
+
+  Option.propTypes = {
+    optionLabel: PropTypes.string.isRequired,
+    selected: PropTypes.bool,
+    withCheckboxes: PropTypes.bool
+  };
+
   const handleLoadOptions = useCallback(() => {
     if (loadOptions) {
       setLocalLoading(true);
@@ -155,7 +195,7 @@ const Autocomplete = ({
       params.inputProps.className = `${params.inputProps.className} ${classes.input}`;
       if (inputSelectedColor)
         params.inputProps.style = { color: inputSelectedColor };
-      params.inputProps.readOnly = !isSearchable
+      params.inputProps.readOnly = !isSearchable;
 
       const textFieldProps = {
         label,
@@ -176,7 +216,15 @@ const Autocomplete = ({
         />
       );
     },
-    [classes.input, error, helperText, inputSelectedColor, label, required, isSearchable]
+    [
+      classes.input,
+      error,
+      helperText,
+      inputSelectedColor,
+      label,
+      required,
+      isSearchable
+    ]
   );
 
   const handleOptionLabel = useCallback(
@@ -184,8 +232,8 @@ const Autocomplete = ({
       getOptionLabel && getOptionLabel(option)
         ? getOptionLabel(option)
         : is(String, option)
-          ? option
-          : find(
+        ? option
+        : find(
             x => !isNil(x),
             props(["createdLabel", labelKey, valueKey], option)
           )?.toString() || emptyString,
@@ -195,19 +243,12 @@ const Autocomplete = ({
   const renderOption = useCallback(
     (option, { selected }) => {
       const optionLabel = handleOptionLabel(option);
-
-      return withCheckboxes ? (
-        <>
-          <Checkbox
-            icon={<CheckBoxOutlineBlank fontSize="small" />}
-            checkedIcon={<CheckBox fontSize="small" />}
-            style={{ marginRight: 8 }}
-            checked={selected}
-          />
-          {optionLabel}
-        </>
-      ) : (
-        <Typography className={classes.input}>{optionLabel}</Typography>
+      return (
+        <Option
+          optionLabel={optionLabel}
+          selected={selected}
+          withCheckboxes={withCheckboxes}
+        />
       );
     },
     [classes.input, withCheckboxes, handleOptionLabel]
@@ -222,9 +263,9 @@ const Autocomplete = ({
             is(String, option)
               ? option
               : find(
-                x => !isNil(x),
-                props(["primitiveValue", labelKey, valueKey], option)
-              )
+                  x => !isNil(x),
+                  props(["primitiveValue", labelKey, valueKey], option)
+                )
           }
           {...getTagProps({ index })}
         />
@@ -249,18 +290,18 @@ const Autocomplete = ({
         return onChange(
           simpleValue
             ? inputValue.map(a =>
-              is(String, a)
-                ? a
-                : find(
-                  x => !isNil(x),
-                  props([valueKey, labelKey, "primitiveValue"], a)
-                )
-            )
+                is(String, a)
+                  ? a
+                  : find(
+                      x => !isNil(x),
+                      props([valueKey, labelKey, "primitiveValue"], a)
+                    )
+              )
             : inputValue.map(a =>
-              is(String, a)
-                ? a
-                : prop("primitiveValue", a) || omit(["createdLabel"], a)
-            )
+                is(String, a)
+                  ? a
+                  : prop("primitiveValue", a) || omit(["createdLabel"], a)
+              )
         );
 
       if (simpleValue)
