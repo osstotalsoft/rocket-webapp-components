@@ -188,7 +188,7 @@ const Autocomplete = ({
           : find(
             x => !isNil(x),
             props(["createdLabel", labelKey, valueKey], option)
-          ) || emptyString,
+          )?.toString() || emptyString,
     [getOptionLabel, labelKey, valueKey]
   );
 
