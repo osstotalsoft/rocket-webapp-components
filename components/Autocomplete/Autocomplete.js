@@ -320,7 +320,7 @@ const Autocomplete = ({
   );
 
   const handleInputChange = useCallback(
-    async (event, value) => {
+    (event, value) => {
       value && setLocalInput(value);
       onInputChange && onInputChange(event, value);
 
