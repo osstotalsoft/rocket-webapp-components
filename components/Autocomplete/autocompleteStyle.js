@@ -8,9 +8,15 @@ const autocompleteStyle = theme => {
     input: {
       ...defaultFont,
       display: 'flex',
+      whiteSpace: 'nowrap'
+    },
+    option: {
+      ...defaultFont,
+      display: 'block',
       whiteSpace: 'nowrap',
       overflow: 'hidden',
-      textOverflow: 'ellipsis'
+      textOverflow: 'ellipsis',
+      width: '100%'
     },
     noOptionsMessage: {
       ...defaultFont,
