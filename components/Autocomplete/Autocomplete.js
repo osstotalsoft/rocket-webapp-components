@@ -79,6 +79,47 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
   return result || null;
 };
 
+const Option = ({ optionLabel, selected, withCheckboxes }) => {
+  const classes = useStyles();
+  const setAttribute = ({ target }) => {
+    if (target?.clientWidth < target?.scrollWidth) {
+      target?.setAttribute("title", target?.innerText);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mouseenter", event => setAttribute(event), true);
+  }, []);
+
+  useEffect(() =>
+    document.removeEventListener(
+      "mouseenter",
+      event => setAttribute(event),
+      true
+    )
+  );
+
+  return withCheckboxes ? (
+    <>
+      <Checkbox
+        icon={<CheckBoxOutlineBlank fontSize="small" />}
+        checkedIcon={<CheckBox fontSize="small" />}
+        style={{ marginRight: 8 }}
+        checked={selected}
+      />
+      {optionLabel}
+    </>
+  ) : (
+    <Typography className={classes.option}>{optionLabel}</Typography>
+  );
+};
+
+Option.propTypes = {
+  optionLabel: PropTypes.string.isRequired,
+  selected: PropTypes.bool,
+  withCheckboxes: PropTypes.bool
+};
+
 const Autocomplete = ({
   options: receivedOptions,
   defaultOptions,
@@ -124,69 +165,31 @@ const Autocomplete = ({
   const loading = receivedLoading || localLoading;
 
   const [localInput, setLocalInput] = useState();
+  const [optionsLoaded, setOptionsLoaded] = useState(false);
 
-  const Option = ({ optionLabel, selected, withCheckboxes }) => {
-    const classes = useStyles();
-    const setAttribute = ({ target }) => {
-      if (target?.clientWidth < target?.scrollWidth) {
-        target?.setAttribute("title", target?.innerText);
+  const handleLoadOptions = useCallback(
+    input => {
+      if (loadOptions) {
+        setLocalLoading(true);
+        setOptions(emptyArray);
+
+        loadOptions(input || localInput).then(loadedOptions => {
+          setOptions(loadedOptions || emptyArray);
+          setLocalLoading(false);
+          setOptionsLoaded(true);
+        });
       }
-    };
-
-    useEffect(() => {
-      document.addEventListener(
-        "mouseenter",
-        event => setAttribute(event),
-        true
-      );
-    }, []);
-
-    useEffect(() =>
-      document.removeEventListener(
-        "mouseenter",
-        event => setAttribute(event),
-        true
-      )
-    );
-
-    return withCheckboxes ? (
-      <>
-        <Checkbox
-          icon={<CheckBoxOutlineBlank fontSize="small" />}
-          checkedIcon={<CheckBox fontSize="small" />}
-          style={{ marginRight: 8 }}
-          checked={selected}
-        />
-        {optionLabel}
-      </>
-    ) : (
-      <Typography className={classes.option}>{optionLabel}</Typography>
-    );
-  };
-
-  Option.propTypes = {
-    optionLabel: PropTypes.string.isRequired,
-    selected: PropTypes.bool,
-    withCheckboxes: PropTypes.bool
-  };
-
-  const handleLoadOptions = useCallback(() => {
-    if (loadOptions) {
-      setLocalLoading(true);
-      setOptions(emptyArray);
-      loadOptions(localInput).then(loadedOptions => {
-        setOptions(loadedOptions || emptyArray);
-        setLocalLoading(false);
-      });
-    }
-  }, [loadOptions, localInput]);
+    },
+    [loadOptions, localInput]
+  );
 
   const handleMenuOpen = useCallback(() => {
-    handleLoadOptions();
+    !optionsLoaded && handleLoadOptions();
     onMenuOpen && onMenuOpen();
-  }, [handleLoadOptions, onMenuOpen]);
+  }, [handleLoadOptions, onMenuOpen, optionsLoaded]);
 
   const handleMenuClose = useCallback(() => {
+    setLocalInput("");
     onClose && onClose();
   }, [onClose]);
 
@@ -251,7 +254,7 @@ const Autocomplete = ({
         />
       );
     },
-    [classes.input, withCheckboxes, handleOptionLabel]
+    [withCheckboxes, handleOptionLabel]
   );
 
   const renderTags = useCallback(
@@ -317,16 +320,25 @@ const Autocomplete = ({
   );
 
   const handleInputChange = useCallback(
-    (event, value) => {
+    async (event, value) => {
       value && setLocalInput(value);
       onInputChange && onInputChange(event, value);
-      value !== localInput && loadOptions && loadOptions(value);
+
+      // this prevents the component from calling loadOptions again when the user clicks outside it and the menu closes
+      if (event?.nativeEvent?.type === "focusout") {
+        setOptionsLoaded(false);
+        return;
+      }
+
+      value !== localInput && loadOptions && handleLoadOptions(value);
     },
-    [loadOptions, localInput, onInputChange]
+    [handleLoadOptions, loadOptions, localInput, onInputChange]
   );
 
   useEffect(() => {
-    if (defaultOptions === true) handleLoadOptions();
+    if (defaultOptions === true) {
+      handleLoadOptions();
+    }
   }, [defaultOptions, handleLoadOptions]);
 
   useEffect(() => {
