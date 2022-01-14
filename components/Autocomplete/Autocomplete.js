@@ -148,6 +148,7 @@ const Autocomplete = ({
   typographyContentColor,
   inputSelectedColor,
   isSearchable,
+  getOptionDisabled,
   ...other
 }) => {
   const classes = useStyles();
@@ -271,9 +272,10 @@ const Autocomplete = ({
                 )
           }
           {...getTagProps({ index })}
+          disabled={getOptionDisabled && getOptionDisabled(option)}
         />
       )),
-    [labelKey, valueKey]
+    [getOptionDisabled, labelKey, valueKey]
   );
 
   const getOptionSelected = useCallback(
@@ -285,27 +287,22 @@ const Autocomplete = ({
   );
 
   const handleChange = useCallback(
-    (event, inputValue) => {
+    (event, inputValue, reason) => {
+      const computeChangedMultiValue = input =>
+        simpleValue
+          ? input.map(a => (is(String, a) ? a : find(x => !isNil(x), props([valueKey, labelKey, 'primitiveValue'], a))))
+          : input.map(a => (is(String, a) ? a : prop('primitiveValue', a) || omit(['createdLabel'], a)))
+
+      // when multi-value and clearable, doesn't clear disabled options that have already been selected
+      if (reason === 'clear' && getOptionDisabled) {
+        const disabledOptions = options.filter(getOptionDisabled)
+        return onChange(computeChangedMultiValue(disabledOptions))
+      }
+
       if (isNil(inputValue)) return onChange(inputValue);
       if (is(String, inputValue)) return onChange(inputValue);
 
-      if (isMultiSelection)
-        return onChange(
-          simpleValue
-            ? inputValue.map(a =>
-                is(String, a)
-                  ? a
-                  : find(
-                      x => !isNil(x),
-                      props([valueKey, labelKey, "primitiveValue"], a)
-                    )
-              )
-            : inputValue.map(a =>
-                is(String, a)
-                  ? a
-                  : prop("primitiveValue", a) || omit(["createdLabel"], a)
-              )
-        );
+      if (isMultiSelection) return onChange(computeChangedMultiValue(inputValue))
 
       if (simpleValue)
         return onChange(
@@ -316,7 +313,7 @@ const Autocomplete = ({
         prop("primitiveValue", inputValue) || omit(["createdLabel"], inputValue)
       );
     },
-    [isMultiSelection, labelKey, onChange, simpleValue, valueKey]
+    [getOptionDisabled, isMultiSelection, labelKey, onChange, options, simpleValue, valueKey]
   );
 
   const handleInputChange = useCallback(
@@ -368,6 +365,7 @@ const Autocomplete = ({
       filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
       getOptionLabel={handleOptionLabel}
       getOptionSelected={getOptionSelected}
+      getOptionDisabled={getOptionDisabled}
       value={
         simpleValue
           ? getSimpleValue(options, value, valueKey, isMultiSelection)
@@ -479,6 +477,10 @@ Autocomplete.propTypes = {
    * If true, the Autocomplete is disabled.
    */
   disabled: PropTypes.bool,
+  /**
+   * Used to determine the disabled state for a given option.
+   */
+  getOptionDisabled: PropTypes.func,
   /**
    * If true, options will be an array of simple values, instead of objects.
    */
