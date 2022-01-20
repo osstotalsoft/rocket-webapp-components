@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import autoCompleteStyles from "./autocompleteStyle";
 import cx from "classnames";
 import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
-import { LinearProgress, Chip, makeStyles, Checkbox } from "@material-ui/core";
+import { LinearProgress, Chip, makeStyles, Checkbox, Tooltip } from "@material-ui/core";
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
@@ -80,39 +80,33 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
 };
 
 const Option = ({ optionLabel, selected, withCheckboxes }) => {
-  const classes = useStyles();
-  const setAttribute = ({ target }) => {
-    if (target?.clientWidth < target?.scrollWidth) {
-      target?.setAttribute("title", target?.innerText);
-    }
-  };
+  const classes = useStyles()
+
+  const optionRef = useRef(null)
+  const [isOverflow, setIsOverflow] = useState(false)
 
   useEffect(() => {
-    document.addEventListener("mouseenter", event => setAttribute(event), true);
-  }, []);
-
-  useEffect(() =>
-    document.removeEventListener(
-      "mouseenter",
-      event => setAttribute(event),
-      true
-    )
-  );
+    setIsOverflow(optionRef?.current?.scrollWidth > optionRef?.current?.clientWidth)
+  }, [])
 
   return withCheckboxes ? (
     <>
       <Checkbox
-        icon={<CheckBoxOutlineBlank fontSize="small" />}
-        checkedIcon={<CheckBox fontSize="small" />}
+        icon={<CheckBoxOutlineBlank fontSize='small' />}
+        checkedIcon={<CheckBox fontSize='small' />}
         style={{ marginRight: 8 }}
         checked={selected}
       />
       {optionLabel}
     </>
   ) : (
-    <Typography className={classes.option}>{optionLabel}</Typography>
-  );
-};
+    <Tooltip title={optionLabel} disableHoverListener={!isOverflow}>
+      <div ref={optionRef} className={classes.option}>
+        <Typography>{optionLabel}</Typography>
+      </div>
+    </Tooltip>
+  )
+}
 
 Option.propTypes = {
   optionLabel: PropTypes.string.isRequired,
