@@ -137,9 +137,9 @@ const styles = theme => {
   const themeColor =
     theme.palette?.timColors?.themeColor ||
     defaultTheme.palette.timColors.themeColor;
-  const themeColorGradient = 
+  const themeColorGradient =
     theme.palette?.timColors?.themeColorGradient ||
-    defaultTheme.palette.timColors.themeColorGradient
+    defaultTheme.palette.timColors.themeColorGradient;
   const themeRGBAColor =
     theme.palette?.timColors?.themeColorRGBA ||
     defaultTheme.palette.timColors.themeColorRGBA;
@@ -156,9 +156,8 @@ const styles = theme => {
   const menuActiveBkColor =
     theme.palette?.sideMenu?.activeBkColor ||
     defaultTheme.palette.sideMenu.activeBkColor;
-  const menuActiveBk = 
-    theme.palette?.sideMenu?.activeBk ||
-    defaultTheme.palette.sideMenu.activeBk
+  const menuActiveBk =
+    theme.palette?.sideMenu?.activeBk || defaultTheme.palette.sideMenu.activeBk;
   const menuBkColor =
     theme.palette?.sideMenu?.bkColor || defaultTheme.palette.sideMenu.bkColor;
   const menuColor =
@@ -292,7 +291,7 @@ const styles = theme => {
   const themeWithGradientCardHeader = {
     background: `linear-gradient(60deg, ${themeColorGradient[0]}, ${themeColorGradient[1]})`,
     ...themeBoxShadow
-  }
+  };
 
   const cardActions = {
     margin: "0 20px 10px",
@@ -583,7 +582,7 @@ const styles = theme => {
         theme.palette?.button?.themeShadow ||
         defaultTheme.palette?.button?.themeShadow,
       "&:hover,&:focus": {
-        backgroundColor: whiteColor,
+        backgroundColor: theme.palette?.button?.theme,
         color:
           theme.palette?.button?.themeHoverColor ||
           defaultTheme.palette.button.themeHoverColor,
@@ -599,8 +598,7 @@ const styles = theme => {
       "&:hover,&:focus": {
         backgroundColor: "transparent",
         color:
-          theme.palette?.button?.themeHoverColor ||
-          defaultTheme.palette.button.themeHoverColor,
+          theme.palette?.button?.theme || defaultTheme.palette.button.theme,
         boxShadow:
           theme.palette?.button?.themeHoverShadow ||
           defaultTheme.palette?.button?.themeHoverShadow
@@ -625,14 +623,14 @@ const styles = theme => {
     },
     themeWithGradient: {
       background: `linear-gradient(60deg, ${themeColorGradient[0]}, ${themeColorGradient[1]})`,
-      '&:hover,&:focus': {
+      "&:hover,&:focus": {
         backgroundColor: `linear-gradient(60deg, ${themeColorGradient[0]}, ${themeColorGradient[1]})`,
         boxShadow:
-          '0 14px 26px -12px rgba(' +
+          "0 14px 26px -12px rgba(" +
           hexToRgb(themeColorGradient[0]) +
-          ', 0.42), 0 4px 23px 0px rgba(' +
+          ", 0.42), 0 4px 23px 0px rgba(" +
           hexToRgb(themeColorGradient[0]) +
-          ', 0.2)'
+          ", 0.2)"
       }
     },
     disabled: {
