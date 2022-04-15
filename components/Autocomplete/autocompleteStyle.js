@@ -1,29 +1,38 @@
-import styles from '../../assets/jss/styles'
-import { theme as defaultTheme } from '../../themes/defaultTheme'
+import styles from "../../assets/jss/styles";
+import { theme as defaultTheme } from "../../themes/defaultTheme";
 
 const autocompleteStyle = theme => {
-  const { defaultFont } = styles(theme)
+  const { defaultFont } = styles(theme);
 
   return {
     input: {
       ...defaultFont,
-      display: 'flex',
-      whiteSpace: 'nowrap'
+      display: "flex",
+      whiteSpace: "nowrap"
+    },
+    labelRoot: {
+      maxWidth: "100%",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap"
+    },
+    labelShrink: {
+      maxWidth: "133%"
     },
     option: {
       ...defaultFont,
-      display: 'block',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      width: '100%'
+      display: "block",
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      width: "100%"
     },
     noOptionsMessage: {
       ...defaultFont,
       padding: `${theme.spacing()}px ${theme.spacing(2)}px`
     },
     colorInherit: {
-      color: 'inherit'
+      color: "inherit"
     },
     colorPrimary: {
       color: theme.palette.primary.main || defaultTheme.palette.primary.main
@@ -38,9 +47,10 @@ const autocompleteStyle = theme => {
       color: theme.palette.text.secondary || defaultTheme.palette.text.darkGrey
     },
     colorError: {
-      color: theme.palette.error.main || defaultTheme.palette.timColors.dangerColor
+      color:
+        theme.palette.error.main || defaultTheme.palette.timColors.dangerColor
     }
-  }
-}
+  };
+};
 
-export default autocompleteStyle
+export default autocompleteStyle;
