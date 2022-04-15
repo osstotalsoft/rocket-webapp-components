@@ -5,7 +5,13 @@ import cx from "classnames";
 import MuiAutocomplete, {
   createFilterOptions
 } from "@material-ui/lab/Autocomplete";
-import { LinearProgress, Chip, makeStyles, Checkbox, Tooltip } from "@material-ui/core";
+import {
+  LinearProgress,
+  Chip,
+  makeStyles,
+  Checkbox,
+  Tooltip
+} from "@material-ui/core";
 import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
 import CustomTextField from "../CustomTextField";
 import Typography from "../Typography";
@@ -80,20 +86,22 @@ const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
 };
 
 const Option = ({ optionLabel, selected, withCheckboxes }) => {
-  const classes = useStyles()
+  const classes = useStyles();
 
-  const optionRef = useRef(null)
-  const [isOverflow, setIsOverflow] = useState(false)
+  const optionRef = useRef(null);
+  const [isOverflow, setIsOverflow] = useState(false);
 
   useEffect(() => {
-    setIsOverflow(optionRef?.current?.scrollWidth > optionRef?.current?.clientWidth)
-  }, [])
+    setIsOverflow(
+      optionRef?.current?.scrollWidth > optionRef?.current?.clientWidth
+    );
+  }, []);
 
   return withCheckboxes ? (
     <>
       <Checkbox
-        icon={<CheckBoxOutlineBlank fontSize='small' />}
-        checkedIcon={<CheckBox fontSize='small' />}
+        icon={<CheckBoxOutlineBlank fontSize="small" />}
+        checkedIcon={<CheckBox fontSize="small" />}
         style={{ marginRight: 8 }}
         checked={selected}
       />
@@ -105,8 +113,8 @@ const Option = ({ optionLabel, selected, withCheckboxes }) => {
         <Typography>{optionLabel}</Typography>
       </div>
     </Tooltip>
-  )
-}
+  );
+};
 
 Option.propTypes = {
   optionLabel: PropTypes.string.isRequired,
@@ -210,19 +218,15 @@ const Autocomplete = ({
           endAdornment={params.InputProps.endAdornment}
           {...textFieldProps}
           InputProps={{ ...params.InputProps, margin: "none" }}
-          InputLabelProps={{ ...params.InputLabelProps, margin: null }}
+          InputLabelProps={{
+            ...params.InputLabelProps,
+            margin: null,
+            classes: { root: classes.labelRoot, shrink: classes.labelShrink }
+          }}
         />
       );
     },
-    [
-      classes.input,
-      error,
-      helperText,
-      inputSelectedColor,
-      label,
-      required,
-      isSearchable
-    ]
+    [classes.input, classes.labelRoot, classes.labelShrink, inputSelectedColor, isSearchable, label, error, helperText, required]
   );
 
   const handleOptionLabel = useCallback(
@@ -284,19 +288,31 @@ const Autocomplete = ({
     (event, inputValue, reason) => {
       const computeChangedMultiValue = input =>
         simpleValue
-          ? input.map(a => (is(String, a) ? a : find(x => !isNil(x), props([valueKey, labelKey, 'primitiveValue'], a))))
-          : input.map(a => (is(String, a) ? a : prop('primitiveValue', a) || omit(['createdLabel'], a)))
+          ? input.map(a =>
+              is(String, a)
+                ? a
+                : find(
+                    x => !isNil(x),
+                    props([valueKey, labelKey, "primitiveValue"], a)
+                  )
+            )
+          : input.map(a =>
+              is(String, a)
+                ? a
+                : prop("primitiveValue", a) || omit(["createdLabel"], a)
+            );
 
       // when multi-value and clearable, doesn't clear disabled options that have already been selected
-      if (reason === 'clear' && getOptionDisabled) {
-        const disabledOptions = options.filter(getOptionDisabled)
-        return onChange(computeChangedMultiValue(disabledOptions))
+      if (reason === "clear" && getOptionDisabled) {
+        const disabledOptions = options.filter(getOptionDisabled);
+        return onChange(computeChangedMultiValue(disabledOptions));
       }
 
       if (isNil(inputValue)) return onChange(inputValue);
       if (is(String, inputValue)) return onChange(inputValue);
 
-      if (isMultiSelection) return onChange(computeChangedMultiValue(inputValue))
+      if (isMultiSelection)
+        return onChange(computeChangedMultiValue(inputValue));
 
       if (simpleValue)
         return onChange(
@@ -307,7 +323,15 @@ const Autocomplete = ({
         prop("primitiveValue", inputValue) || omit(["createdLabel"], inputValue)
       );
     },
-    [getOptionDisabled, isMultiSelection, labelKey, onChange, options, simpleValue, valueKey]
+    [
+      getOptionDisabled,
+      isMultiSelection,
+      labelKey,
+      onChange,
+      options,
+      simpleValue,
+      valueKey
+    ]
   );
 
   const handleInputChange = useCallback(
