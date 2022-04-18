@@ -11,7 +11,8 @@ const iconCollapseCardStyle = theme => {
     blueCardHeader,
     purpleCardHeader,
     roseCardHeader,
-    themeCardHeader
+    themeCardHeader,
+    themeWithGradientCardHeader
   } = styles(theme);
 
   return {
@@ -31,6 +32,7 @@ const iconCollapseCardStyle = theme => {
     purpleCardHeader,
     roseCardHeader,
     themeCardHeader,
+    themeWithGradientCardHeader,
     cardContent: {
       padding: "15px 20px",
       position: "relative"
