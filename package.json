@@ -121,7 +121,6 @@
     "react-router-dom": "^5.1.2",
     "react-test-renderer": "^17.0.0"
   },
-  "type": "module",
   "bit": {
     "env": {
       "compiler": "bit.envs/compilers/react@1.0.30"
