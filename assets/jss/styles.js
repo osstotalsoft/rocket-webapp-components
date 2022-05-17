@@ -583,9 +583,6 @@ const styles = theme => {
         defaultTheme.palette?.button?.themeShadow,
       "&:hover,&:focus": {
         backgroundColor: theme.palette?.button?.theme,
-        color:
-          theme.palette?.button?.themeHoverColor ||
-          defaultTheme.palette.button.themeHoverColor,
         boxShadow:
           theme.palette?.button?.themeHoverShadow ||
           defaultTheme.palette?.button?.themeHoverShadow
@@ -613,9 +610,7 @@ const styles = theme => {
       "&:hover,&:focus": {
         backgroundColor:
           theme.palette?.button?.theme || defaultTheme.palette.button.theme,
-        color:
-          theme.palette?.button?.themeHoverColor ||
-          defaultTheme.palette.button.themeHoverColor,
+        color: whiteColor,
         boxShadow:
           theme.palette?.button?.themeHoverShadow ||
           defaultTheme.palette?.button?.themeHoverShadow
@@ -638,6 +633,10 @@ const styles = theme => {
       pointerEvents: "none",
       backgroundColor: grayColor,
       color: whiteColor,
+      "&:hover,&:focus": {
+        backgroundColor: grayColor,
+        color: whiteColor
+      },
       "&$justIcon &svg": {
         pointerEvents: "none",
         color: whiteColor
@@ -646,6 +645,10 @@ const styles = theme => {
         background: "transparent",
         color: grayColor,
         "&$justIcon &svg": {
+          color: grayColor
+        },
+        "&:hover,&:focus": {
+          background: "transparent",
           color: grayColor
         }
       }
