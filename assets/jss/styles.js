@@ -582,7 +582,8 @@ const styles = theme => {
         theme.palette?.button?.themeShadow ||
         defaultTheme.palette?.button?.themeShadow,
       "&:hover,&:focus": {
-        backgroundColor: theme.palette?.button?.theme,
+        backgroundColor: whiteColor,
+        color:  theme.palette?.button?.theme || defaultTheme.palette.button.theme,
         boxShadow:
           theme.palette?.button?.themeHoverShadow ||
           defaultTheme.palette?.button?.themeHoverShadow
