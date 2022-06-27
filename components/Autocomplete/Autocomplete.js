@@ -1,126 +1,24 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import autoCompleteStyles from "./autocompleteStyle";
-import cx from "classnames";
-import MuiAutocomplete, {
-  createFilterOptions
-} from "@material-ui/lab/Autocomplete";
+import Option from "./Option";
+import { LinearProgress, Chip, makeStyles } from "@material-ui/core";
+import MuiAutocomplete from "@material-ui/lab/Autocomplete";
+import { is, isNil, equals, isEmpty, any, prop } from "ramda";
 import {
-  LinearProgress,
-  Chip,
-  makeStyles,
-  Checkbox,
-  Tooltip
-} from "@material-ui/core";
-import { CheckBoxOutlineBlank, CheckBox } from "@material-ui/icons";
-import CustomTextField from "../CustomTextField";
-import Typography from "../Typography";
-import {
-  prop,
-  map,
-  innerJoin,
-  find,
-  propEq,
-  all,
-  omit,
-  contains,
-  is,
-  props,
-  isNil,
-  equals
-} from "ramda";
-import humps from "humps";
+  filterOptions,
+  getSimpleValue,
+  findFirstNotNil,
+  isStringOrNumber,
+  computeChangedMultiValue,
+  computeChangedSingleValue
+} from "./utils";
 import { emptyArray, emptyString } from "../../utils/constants";
+import CustomTextField from "../CustomTextField";
+import autoCompleteStyle from "./autocompleteStyle";
+import cx from "classnames";
+import humps from "humps";
 
-const useStyles = makeStyles(autoCompleteStyles);
-
-const hasStringOptions = options => all(is(String), options);
-
-const filter = createFilterOptions();
-const filterOptions = (labelKey, valueKey, creatable, createdLabel) => (
-  options,
-  params
-) => {
-  const filtered = filter(options, params);
-  // Suggest the creation of a new value
-  if (creatable && params.inputValue !== "") {
-    filtered.push(
-      hasStringOptions(options)
-        ? {
-            primitiveValue: params.inputValue,
-            createdLabel: createdLabel
-              ? `${createdLabel} '${params.inputValue}'`
-              : params.inputValue
-          }
-        : {
-            [valueKey]: undefined,
-            [labelKey]: params.inputValue,
-            createdLabel: createdLabel
-              ? `${createdLabel} '${params.inputValue}'`
-              : params.inputValue
-          }
-    );
-  }
-
-  return filtered;
-};
-
-const getSimpleValue = (options, value, valueKey, isMultiSelection) => {
-  if (isMultiSelection && !is(Array, value)) return emptyArray;
-
-  if (!all(is(Object), options)) return value;
-
-  // Add new options if the Autocomplete is multiSelection and creatable
-  if (is(Array, value)) {
-    const optionsSimpleValues = map(prop(valueKey), options);
-    value?.map(v => {
-      if (!contains(v, optionsSimpleValues)) options.push({ [valueKey]: v });
-    });
-  }
-
-  const result = isMultiSelection
-    ? innerJoin((o, v) => o[valueKey] === v, options, value)
-    : find(propEq(valueKey, value), options);
-
-  return result || null;
-};
-
-const Option = ({ optionLabel, selected, withCheckboxes }) => {
-  const classes = useStyles();
-
-  const optionRef = useRef(null);
-  const [isOverflow, setIsOverflow] = useState(false);
-
-  useEffect(() => {
-    setIsOverflow(
-      optionRef?.current?.scrollWidth > optionRef?.current?.clientWidth
-    );
-  }, []);
-
-  return withCheckboxes ? (
-    <>
-      <Checkbox
-        icon={<CheckBoxOutlineBlank fontSize="small" />}
-        checkedIcon={<CheckBox fontSize="small" />}
-        style={{ marginRight: 8 }}
-        checked={selected}
-      />
-      {optionLabel}
-    </>
-  ) : (
-    <Tooltip title={optionLabel} disableHoverListener={!isOverflow}>
-      <div ref={optionRef} className={classes.option}>
-        <Typography>{optionLabel}</Typography>
-      </div>
-    </Tooltip>
-  );
-};
-
-Option.propTypes = {
-  optionLabel: PropTypes.string.isRequired,
-  selected: PropTypes.bool,
-  withCheckboxes: PropTypes.bool
-};
+const useStyles = makeStyles(autoCompleteStyle);
 
 const Autocomplete = ({
   options: receivedOptions,
@@ -151,6 +49,7 @@ const Autocomplete = ({
   inputSelectedColor,
   isSearchable,
   getOptionDisabled,
+  placeholder,
   ...other
 }) => {
   const classes = useStyles();
@@ -160,8 +59,9 @@ const Autocomplete = ({
       typographyContentColor !== "initial"
   });
 
-  const [options, setOptions] = useState(
-    receivedOptions || (is(Array, defaultOptions) && defaultOptions)
+  const [options, setOptions] = useState(receivedOptions);
+  const [asyncOptions, setAsyncOptions] = useState(
+    is(Array, defaultOptions) ? defaultOptions : emptyArray
   );
 
   const [localLoading, setLocalLoading] = useState(false);
@@ -170,29 +70,35 @@ const Autocomplete = ({
   const [localInput, setLocalInput] = useState();
   const [optionsLoaded, setOptionsLoaded] = useState(false);
 
+  const disabledOptions = getOptionDisabled
+    ? options.filter(getOptionDisabled)
+    : emptyArray;
+  const disabledValues = disabledOptions.map(prop(valueKey));
+  const isValueDisabled = getOptionDisabled
+    ? any(equals(value), disabledValues)
+    : false;
+
   const handleLoadOptions = useCallback(
     input => {
       if (loadOptions) {
         setLocalLoading(true);
-        setOptions(emptyArray);
-
-        loadOptions(input || localInput).then(loadedOptions => {
-          setOptions(loadedOptions || emptyArray);
+        loadOptions(input).then(loadedOptions => {
+          setAsyncOptions(loadedOptions || emptyArray);
           setLocalLoading(false);
           setOptionsLoaded(true);
         });
       }
     },
-    [loadOptions, localInput]
+    [loadOptions]
   );
 
   const handleMenuOpen = useCallback(() => {
-    !optionsLoaded && handleLoadOptions();
+    !optionsLoaded && handleLoadOptions(localInput);
     onMenuOpen && onMenuOpen();
-  }, [handleLoadOptions, onMenuOpen, optionsLoaded]);
+  }, [handleLoadOptions, localInput, onMenuOpen, optionsLoaded]);
 
   const handleMenuClose = useCallback(() => {
-    setLocalInput("");
+    setLocalInput(emptyString);
     onClose && onClose();
   }, [onClose]);
 
@@ -207,7 +113,8 @@ const Autocomplete = ({
         label,
         error,
         helperText,
-        required
+        required,
+        placeholder
       };
 
       return (
@@ -226,34 +133,45 @@ const Autocomplete = ({
         />
       );
     },
-    [classes.input, classes.labelRoot, classes.labelShrink, inputSelectedColor, isSearchable, label, error, helperText, required]
+    [
+      classes.input,
+      classes.labelRoot,
+      classes.labelShrink,
+      inputSelectedColor,
+      isSearchable,
+      label,
+      error,
+      helperText,
+      required,
+      placeholder
+    ]
   );
 
   const handleOptionLabel = useCallback(
-    option =>
-      getOptionLabel && getOptionLabel(option)
-        ? getOptionLabel(option)
-        : is(String, option)
-        ? option
-        : find(
-            x => !isNil(x),
-            props(["createdLabel", labelKey, valueKey], option)
-          )?.toString() || emptyString,
+    option => {
+      if (getOptionLabel) return getOptionLabel(option);
+      if (isStringOrNumber(option)) return option.toString();
+
+      const label = findFirstNotNil([labelKey, valueKey], option);
+      return label?.toString() ?? emptyString;
+    },
     [getOptionLabel, labelKey, valueKey]
   );
 
   const renderOption = useCallback(
     (option, { selected }) => {
       const optionLabel = handleOptionLabel(option);
+
       return (
         <Option
+          createdLabel={option._createdOption ? createdLabel : emptyString}
           optionLabel={optionLabel}
           selected={selected}
           withCheckboxes={withCheckboxes}
         />
       );
     },
-    [withCheckboxes, handleOptionLabel]
+    [handleOptionLabel, createdLabel, withCheckboxes]
   );
 
   const renderTags = useCallback(
@@ -261,19 +179,12 @@ const Autocomplete = ({
       value.map((option, index) => (
         <Chip
           key={index}
-          label={
-            is(String, option)
-              ? option
-              : find(
-                  x => !isNil(x),
-                  props(["primitiveValue", labelKey, valueKey], option)
-                )
-          }
+          label={handleOptionLabel(option)}
           {...getTagProps({ index })}
           disabled={getOptionDisabled && getOptionDisabled(option)}
         />
       )),
-    [getOptionDisabled, labelKey, valueKey]
+    [getOptionDisabled, handleOptionLabel]
   );
 
   const getOptionSelected = useCallback(
@@ -286,49 +197,43 @@ const Autocomplete = ({
 
   const handleChange = useCallback(
     (event, inputValue, reason) => {
-      const computeChangedMultiValue = input =>
-        simpleValue
-          ? input.map(a =>
-              is(String, a)
-                ? a
-                : find(
-                    x => !isNil(x),
-                    props([valueKey, labelKey, "primitiveValue"], a)
-                  )
-            )
-          : input.map(a =>
-              is(String, a)
-                ? a
-                : prop("primitiveValue", a) || omit(["createdLabel"], a)
-            );
-
       // when multi-value and clearable, doesn't clear disabled options that have already been selected
-      if (reason === "clear" && getOptionDisabled) {
-        const disabledOptions = options.filter(getOptionDisabled);
-        return onChange(computeChangedMultiValue(disabledOptions));
+      if (reason === "clear" && getOptionDisabled && isMultiSelection) {
+        return onChange(
+          computeChangedMultiValue(
+            disabledOptions,
+            simpleValue,
+            valueKey,
+            labelKey
+          )
+        );
       }
 
-      if (isNil(inputValue)) return onChange(inputValue);
-      if (is(String, inputValue)) return onChange(inputValue);
+      setLocalInput(handleOptionLabel(inputValue));
+      // for multi-value Autocomplete, options dialog remains open after selection and we do not want to display a loading state
+      loadOptions && !isMultiSelection && setLocalLoading(true);
 
-      if (isMultiSelection)
-        return onChange(computeChangedMultiValue(inputValue));
+      if (isNil(inputValue) || isStringOrNumber(inputValue))
+        return onChange(inputValue);
 
-      if (simpleValue)
+      if (isMultiSelection) {
         return onChange(
-          find(x => !isNil(x), props([valueKey, labelKey], inputValue))
+          computeChangedMultiValue(inputValue, simpleValue, valueKey, labelKey)
         );
+      }
 
       return onChange(
-        prop("primitiveValue", inputValue) || omit(["createdLabel"], inputValue)
+        computeChangedSingleValue(inputValue, simpleValue, valueKey, labelKey)
       );
     },
     [
+      disabledOptions,
       getOptionDisabled,
+      handleOptionLabel,
       isMultiSelection,
       labelKey,
+      loadOptions,
       onChange,
-      options,
       simpleValue,
       valueKey
     ]
@@ -336,7 +241,7 @@ const Autocomplete = ({
 
   const handleInputChange = useCallback(
     (event, value) => {
-      value && setLocalInput(value);
+      setLocalInput(value ? value : emptyString);
       onInputChange && onInputChange(event, value);
 
       // this prevents the component from calling loadOptions again when the user clicks outside it and the menu closes
@@ -345,16 +250,28 @@ const Autocomplete = ({
         return;
       }
 
-      value !== localInput && loadOptions && handleLoadOptions(value);
+      if (loadOptions) {
+        setLocalLoading(true);
+        handleLoadOptions(value);
+      }
     },
-    [handleLoadOptions, loadOptions, localInput, onInputChange]
+    [handleLoadOptions, loadOptions, onInputChange]
   );
 
   useEffect(() => {
-    if (defaultOptions === true) {
+    // when simpleValue is false, loadOptions has already been called at this point by handleInputChange
+    if (!simpleValue || !loadOptions) return;
+    if (is(Array, defaultOptions) && !isEmpty(defaultOptions)) return;
+    if (defaultOptions === false) return;
+
+    const hasInitialValue = is(Array, value) ? !isEmpty(value) : value;
+    // when simpleValue is true, we need to previously load a set of options in order to match the value with one of them
+    if (defaultOptions === true || hasInitialValue) {
       handleLoadOptions();
     }
-  }, [defaultOptions, handleLoadOptions]);
+    // this effect should run only at component mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     setOptions(receivedOptions || emptyArray);
@@ -368,16 +285,22 @@ const Autocomplete = ({
       }}
       forcePopupIcon
       label={label}
-      disabled={disabled}
+      disabled={disabled || isValueDisabled}
       loading={loading}
       loadingText={loadingText}
       onOpen={handleMenuOpen}
       onClose={handleMenuClose}
-      options={options || emptyArray}
+      clearOnBlur={!creatable}
+      options={
+        loading
+          ? emptyArray
+          : loadOptions
+          ? asyncOptions
+          : options || emptyArray
+      }
       autoHighlight
       handleHomeEndKeys
       selectOnFocus
-      clearOnBlur
       disableCloseOnSelect={isMultiSelection}
       filterSelectedOptions={simpleValue && isMultiSelection && !withCheckboxes}
       filterOptions={filterOptions(labelKey, valueKey, creatable, createdLabel)}
@@ -386,7 +309,12 @@ const Autocomplete = ({
       getOptionDisabled={getOptionDisabled}
       value={
         simpleValue
-          ? getSimpleValue(options, value, valueKey, isMultiSelection)
+          ? getSimpleValue(
+              loadOptions ? asyncOptions : options,
+              value,
+              valueKey,
+              isMultiSelection
+            )
           : value
       }
       multiple={isMultiSelection}
@@ -418,7 +346,8 @@ Autocomplete.defaultProps = {
   value: null,
   creatable: false,
   typographyContentColor: "textSecondary",
-  loadingText: <LinearProgress />
+  loadingText: <LinearProgress />,
+  noOptionsText: "No options"
 };
 
 Autocomplete.propTypes = {
@@ -427,7 +356,7 @@ Autocomplete.propTypes = {
    */
   options: PropTypes.array,
   /**
-   * Function that returns a promise, which is the set of options to be used once the promise resolves.
+   * Function that returns a promise, which resolves to the set of options to be used once the promise resolves.
    */
   loadOptions: PropTypes.func,
   /**
@@ -440,6 +369,10 @@ Autocomplete.propTypes = {
    * Text/component to display when in a loading state.
    */
   loadingText: PropTypes.node,
+  /**
+   * Text to display when there are no options.
+   */
+  noOptionsText: PropTypes.node,
   /**
    * Used to determine the string value for a given option.
    */
@@ -523,6 +456,10 @@ Autocomplete.propTypes = {
    * If true, the helper text is displayed when an error pops up.
    */
   error: PropTypes.bool,
+  /**
+   * Text to be displayed as a placeholder in the text field.
+   */
+  placeholder: PropTypes.string,
   /**
    * Marks the input field as required (with an *).
    */
