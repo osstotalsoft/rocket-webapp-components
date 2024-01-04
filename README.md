@@ -1,3 +1,8 @@
+# 📢 DEPRECATED
+## This library has been deprecated. The components have been rewitten using latest materi-UI and react versions and can be found here: [Rocket-UI](https://github.com/osstotalsoft/rocket-ui-ts)
+## For documentation and meaningful examples check-out the [GitBook Documentation](https://osstotalsoft.github.io/rocket-ui-ts/?path=/story/introduction--introduction)
+___
+
 # :boom: rocket-webapp-components
 
 [![Bit export CI](https://github.com/osstotalsoft/rocket-webapp-components/actions/workflows/bit-export.yml/badge.svg)](https://github.com/osstotalsoft/rocket-webapp-components/actions/workflows/bit-export.yml)
