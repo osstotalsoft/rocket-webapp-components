@@ -44,7 +44,7 @@ const palette = {
     blueColor: "#26C6DA",
     iconCardColor: "#FF6F00",
     themeColor: "#FF6F00",
-    themeColorGradient:['#FF6F00', '#f9d264'],
+    themeColorGradient: ["#FF6F00", "#f9d264"],
     themeColorRGBA: "rgba(85, 85, 85, 1)",
     themeShadowColor: "#555555",
     themeShadowColorRGBA: "rgba(51, 51, 51, 0.38)",
@@ -95,7 +95,7 @@ const palette = {
   }
 };
 
-export const theme = {
+const vividOrangeTheme = {
   logo: DefaultLogo,
   input: {
     height: "1.1875em"
@@ -195,7 +195,7 @@ export const theme = {
     hoverBgColor: "rgba(0, 0, 0, 0.08)",
     hoverTextColor: palette.text.primary,
     selectedBgColor: "rgba(0, 0, 0, 0.14)",
-    selectedTextColor: palette.text.primary,
+    selectedTextColor: palette.text.primary
   },
   card: {
     height: "auto",
@@ -225,3 +225,5 @@ export const theme = {
     }
   }
 };
+
+export default vividOrangeTheme;

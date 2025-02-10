@@ -1,7 +1,17 @@
-export { default as blueTheme } from "./blueTheme";
-export { default as defaultTheme } from "./defaultTheme";
-export { default as greenTheme } from "./greenTheme";
-export { default as lightBlueTheme } from "./lightBlueTheme";
-export { default as orangeTheme } from "./orangeTheme";
-export { default as redTheme } from "./redTheme";
-export { default as vividOrangeTheme } from "./vividOrangeTheme";
+import defaultTheme from "./defaultTheme";
+import blueTheme from "./blueTheme";
+import greenTheme from "./greenTheme";
+import lightBlueTheme from "./lightBlueTheme";
+import orangeTheme from "./orangeTheme";
+import redTheme from "./redTheme";
+import vividOrangeTheme from "./vividOrangeTheme";
+
+export {
+  defaultTheme,
+  blueTheme,
+  greenTheme,
+  lightBlueTheme,
+  orangeTheme,
+  redTheme,
+  vividOrangeTheme
+};

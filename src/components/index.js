@@ -85,11 +85,3 @@ export { default as SideMenu } from "./SideMenu/index";
 export * from "./themes/index";
 
 export { default as styles } from "../assets/jss/styles";
-
-export { theme as defaultTheme } from "./themes/defaultTheme";
-export { theme as blueTheme } from "./themes/blueTheme";
-export { theme as greenTheme } from "./themes/greenTheme";
-export { theme as lightBlueTheme } from "./themes/lightBlueTheme";
-export { theme as orangeTheme } from "./themes/orangeTheme";
-export { theme as redTheme } from "./themes/redTheme";
-export { theme as vividOrangeTheme } from "./themes/vividOrangeTheme";

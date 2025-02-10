@@ -1,5 +1,5 @@
-import styles from '../../assets/jss/styles.js';
-import {theme as defaultTheme} from '../themes/defaultTheme.js';
+import styles from "../../assets/jss/styles.js";
+import defaultTheme from "../themes/defaultTheme.js";
 
 const iconCollapseCardStyle = theme => {
   const {
@@ -49,8 +49,8 @@ const iconCollapseCardStyle = theme => {
       height: "30px"
     },
     cardTitle: {
-      ...theme.header?.title || defaultTheme.header.title,
-      display: 'flex',
+      ...(theme.header?.title || defaultTheme?.header?.title),
+      display: "flex",
       marginBottom: "3px",
       width: "100%"
     },
@@ -69,21 +69,21 @@ const iconCollapseCardStyle = theme => {
     accordionRoot: {
       boxShadow: "none",
       backgroundColor: "transparent",
-      padding: '0px'
+      padding: "0px"
     },
     expansionPanelDetails: {
-      '@media (max-width: 480px)': {
+      "@media (max-width: 480px)": {
         padding: "4px"
       }
     },
     content: {
-      margin: '0px !Important',
+      margin: "0px !Important",
       padding: "0px"
     },
     summaryRoot: {
       padding: "0px"
     }
   };
-}
+};
 
 export default iconCollapseCardStyle;

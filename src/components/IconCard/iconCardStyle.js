@@ -1,5 +1,5 @@
-import styles from '../../assets/jss/styles';
-import {theme as defaultTheme} from '../themes/defaultTheme';
+import styles from "../../assets/jss/styles";
+import defaultTheme from "../themes/defaultTheme";
 
 const iconCardStyle = theme => {
   const {
@@ -49,10 +49,10 @@ const iconCardStyle = theme => {
       height: "30px"
     },
     cardTitle: {
-      ...theme.header?.title || defaultTheme.header.title,
-      display: 'flex',
+      ...(theme.header?.title || defaultTheme?.header.title),
+      display: "flex",
       paddingBottom: "5px",
-      marginBottom: "3px",
+      marginBottom: "3px"
     },
     cardCategory: {
       color: "#999999",
@@ -67,11 +67,11 @@ const iconCardStyle = theme => {
       borderTop: "1px solid #eeeeee"
     },
     expansionPanelDetails: {
-      '@media (max-width: 480px)': {
+      "@media (max-width: 480px)": {
         padding: "4px"
       }
     }
   };
-}
+};
 
 export default iconCardStyle;

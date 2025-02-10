@@ -1,4 +1,4 @@
-import { theme as defaultTheme } from "../../components/themes/defaultTheme";
+import defaultTheme from "../../components/themes/defaultTheme";
 
 const styles = theme => {
   const hexToRgb = input => {
@@ -88,7 +88,7 @@ const styles = theme => {
     margin: "25px 0",
     boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
     borderRadius: "6px",
-    color: theme.palette?.activeColor || defaultTheme.palette?.activeColor,
+    color: theme.palette?.activeColor || defaultTheme?.palette?.activeColor,
     background: "#fff",
     overflow: "visible"
   };
@@ -99,101 +99,103 @@ const styles = theme => {
   };
 
   const defaultFont = {
-    ...(theme.defaultFont || defaultTheme.defaultFont),
+    ...(theme.defaultFont || defaultTheme?.defaultFont),
     fontWeight: "300",
     lineHeight: "1.5em"
   };
 
   const primaryColor =
-    theme.palette.timColors?.primary || defaultTheme.palette?.timColors.primary;
+    theme.palette.timColors?.primary ||
+    defaultTheme?.palette?.timColors.primary;
   const primaryColorRGBA =
     theme.palette.timColors?.primaryRGBA ||
-    defaultTheme.palette?.timColors.primaryRGBA;
+    defaultTheme?.palette?.timColors.primaryRGBA;
   const warningColor =
     theme.palette.timColors?.warningColor ||
-    defaultTheme.palette?.timColors.warningColor;
+    defaultTheme?.palette?.timColors.warningColor;
   const dangerColor =
     theme.palette.timColors?.dangerColor ||
-    defaultTheme.palette?.timColors.dangerColor;
+    defaultTheme?.palette?.timColors.dangerColor;
   const successColor =
     theme.palette.timColors?.successColor ||
-    defaultTheme.palette?.timColors.successColor;
+    defaultTheme?.palette?.timColors.successColor;
   const infoColor =
     theme.palette.timColors?.infoColor ||
-    defaultTheme.palette?.timColors.infoColor;
+    defaultTheme?.palette?.timColors.infoColor;
   const blueColor =
     theme.palette.timColors?.blueColor ||
-    defaultTheme.palette?.timColors.blueColor;
+    defaultTheme?.palette?.timColors.blueColor;
   const roseColor =
     theme.palette.timColors?.roseColor ||
-    defaultTheme.palette?.timColors.roseColor;
+    defaultTheme?.palette?.timColors.roseColor;
   const grayColor =
     theme.palette.timColors?.grayColor ||
-    defaultTheme.palette?.timColors.grayColor;
+    defaultTheme?.palette?.timColors.grayColor;
   const blackColor =
     theme.palette.timColors?.blackColor ||
-    defaultTheme.palette?.timColors.blackColor;
+    defaultTheme?.palette?.timColors.blackColor;
   //theme colors
   const themeColor =
     theme.palette?.timColors?.themeColor ||
-    defaultTheme.palette.timColors.themeColor;
+    defaultTheme?.palette.timColors.themeColor;
   const themeColorGradient =
     theme.palette?.timColors?.themeColorGradient ||
-    defaultTheme.palette.timColors.themeColorGradient;
+    defaultTheme?.palette.timColors.themeColorGradient;
   const themeRGBAColor =
     theme.palette?.timColors?.themeColorRGBA ||
-    defaultTheme.palette.timColors.themeColorRGBA;
+    defaultTheme?.palette.timColors.themeColorRGBA;
   const themeShadowColor =
     theme.palette?.timColors?.themeShadowColor ||
-    defaultTheme.palette.timColors.themeShadowColor;
+    defaultTheme?.palette.timColors.themeShadowColor;
   const themeShadowRGBAColor =
     theme.palette?.timColors?.themeShadowColorRGBA ||
-    defaultTheme.palette.timColors.themeShadowColorRGBA;
+    defaultTheme?.palette.timColors.themeShadowColorRGBA;
 
   const menuActiveColor =
     theme.palette?.sideMenu?.activeLinkColor ||
-    defaultTheme.palette.sideMenu.activeLinkColor;
+    defaultTheme?.palette.sideMenu.activeLinkColor;
   const menuActiveBkColor =
     theme.palette?.sideMenu?.activeBkColor ||
-    defaultTheme.palette.sideMenu.activeBkColor;
+    defaultTheme?.palette.sideMenu.activeBkColor;
   const menuActiveBk =
-    theme.palette?.sideMenu?.activeBk || defaultTheme.palette.sideMenu.activeBk;
+    theme.palette?.sideMenu?.activeBk ||
+    defaultTheme?.palette.sideMenu.activeBk;
   const menuBkColor =
-    theme.palette?.sideMenu?.bkColor || defaultTheme.palette.sideMenu.bkColor;
+    theme.palette?.sideMenu?.bkColor || defaultTheme?.palette.sideMenu.bkColor;
   const menuColor =
-    theme.palette?.sideMenu?.color || defaultTheme.palette.sideMenu.color;
+    theme.palette?.sideMenu?.color || defaultTheme?.palette.sideMenu.color;
   const menuBkOpacity =
     theme.palette?.sideMenu?.bkOpacity ||
-    defaultTheme.palette.sideMenu.bkOpacity;
+    defaultTheme?.palette.sideMenu.bkOpacity;
   const topBarBkColor =
-    theme.palette?.topBar?.bkColor || defaultTheme.palette.topBar.bkColor;
+    theme.palette?.topBar?.bkColor || defaultTheme?.palette.topBar.bkColor;
 
   const snackSuccessBgColor =
     theme.palette?.snackbar?.successBgColor ||
-    defaultTheme.palette?.snackbar?.successBgColor;
+    defaultTheme?.palette?.snackbar?.successBgColor;
   const snackSuccessColor =
     theme.palette?.snackbar?.successColor ||
-    defaultTheme.palette?.snackbar?.successColor;
+    defaultTheme?.palette?.snackbar?.successColor;
   const snackWarningBgColor =
     theme.palette?.snackbar?.warningBgColor ||
-    defaultTheme.palette?.snackbar?.warningBgColor;
+    defaultTheme?.palette?.snackbar?.warningBgColor;
   const snackWarningColor =
     theme.palette?.snackbar?.warningColor ||
-    defaultTheme.palette?.snackbar?.warningColor;
+    defaultTheme?.palette?.snackbar?.warningColor;
   const snackInfoBgColor =
     theme.palette?.snackbar?.infoBgColor ||
-    defaultTheme.palette?.snackbar?.infoBgColor;
+    defaultTheme?.palette?.snackbar?.infoBgColor;
   const snackInfoColor =
     theme.palette?.snackbar?.infoColor ||
-    defaultTheme.palette?.snackbar?.infoColor;
+    defaultTheme?.palette?.snackbar?.infoColor;
   const snackDangerBgColor =
     theme.palette?.snackbar?.dangerBgColor ||
-    defaultTheme.palette?.snackbar?.dangerBgColor;
+    defaultTheme?.palette?.snackbar?.dangerBgColor;
   const snackDangerColor =
     theme.palette?.snackbar?.dangerColor ||
-    defaultTheme.palette?.snackbar?.dangerColor;
+    defaultTheme?.palette?.snackbar?.dangerColor;
   const activeColor =
-    theme.palette?.activeColor || defaultTheme.palette?.activeColor;
+    theme.palette?.activeColor || defaultTheme?.palette?.activeColor;
 
   const primaryBoxShadow = {
     boxShadow:

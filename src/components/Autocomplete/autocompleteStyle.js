@@ -1,5 +1,5 @@
 import styles from "../../assets/jss/styles";
-import { theme as defaultTheme } from "../themes/defaultTheme";
+import defaultTheme from "../themes/defaultTheme";
 
 const autocompleteStyle = theme => {
   const { defaultFont } = styles(theme);
@@ -35,20 +35,21 @@ const autocompleteStyle = theme => {
       color: "inherit"
     },
     colorPrimary: {
-      color: theme.palette.primary.main || defaultTheme.palette.primary.main
+      color: theme.palette.primary.main || defaultTheme?.palette.primary.main
     },
     colorSecondary: {
-      color: theme.palette.secondary.main || defaultTheme.palette.secondary.main
+      color:
+        theme.palette.secondary.main || defaultTheme?.palette.secondary.main
     },
     colorTextPrimary: {
-      color: theme.palette.text.primary || defaultTheme.palette.text.primary
+      color: theme.palette.text.primary || defaultTheme?.palette.text.primary
     },
     colorTextSecondary: {
-      color: theme.palette.text.secondary || defaultTheme.palette.text.darkGrey
+      color: theme.palette.text.secondary || defaultTheme?.palette.text.darkGrey
     },
     colorError: {
       color:
-        theme.palette.error.main || defaultTheme.palette.timColors.dangerColor
+        theme.palette.error.main || defaultTheme?.palette.timColors.dangerColor
     }
   };
 };

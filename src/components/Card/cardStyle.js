@@ -1,5 +1,5 @@
-import styles from '../../assets/jss/styles';
-import  {theme as defaultTheme} from '../themes/defaultTheme';
+import styles from "../../assets/jss/styles";
+import defaultTheme from "../themes/defaultTheme";
 
 const cardStyle = theme => {
   const {
@@ -9,28 +9,28 @@ const cardStyle = theme => {
     dangerColor,
     warningColor,
     infoColor,
-    blackColor,
     hexToRgb
   } = styles(theme);
 
-  return ({
+  return {
     card: {
       ...theme.card
     },
     s: {
-      height: '80px',
-      width: '80px'
+      height: "80px",
+      width: "80px"
     },
     m: {
-      height: '163px',
-      width: '163px'
+      height: "163px",
+      width: "163px"
     },
     l: {
-      height: '280px',
-      width: '280px'
+      height: "280px",
+      width: "280px"
     },
     primary: {
-      background: theme.palette?.primary?.main || defaultTheme.palette?.primary?.main,
+      background:
+        theme.palette?.primary?.main || defaultTheme?.palette?.primary?.main,
       color: whiteColor
     },
     info: {
@@ -43,7 +43,11 @@ const cardStyle = theme => {
     },
     success: {
       background:
-        "linear-gradient(60deg," + successColor[1] + "," + successColor[2] + ")",
+        "linear-gradient(60deg," +
+        successColor[1] +
+        "," +
+        successColor[2] +
+        ")",
       "& h1 small": {
         color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
       },
@@ -51,7 +55,11 @@ const cardStyle = theme => {
     },
     warning: {
       background:
-        "linear-gradient(60deg," + warningColor[1] + "," + warningColor[2] + ")",
+        "linear-gradient(60deg," +
+        warningColor[1] +
+        "," +
+        warningColor[2] +
+        ")",
       "& h1 small": {
         color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
       },
@@ -73,7 +81,7 @@ const cardStyle = theme => {
       },
       color: whiteColor
     }
-  })
+  };
 };
 
 export default cardStyle;

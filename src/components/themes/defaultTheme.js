@@ -43,7 +43,7 @@ const palette = {
     infoColor: "#00acc1",
     blueColor: "#26C6DA",
     themeColor: "#26C6DA",
-    themeColorGradient:["#0077c7", "#26C6DA"],
+    themeColorGradient: ["#0077c7", "#26C6DA"],
     themeColorRGBA: "rgba(85, 85, 85, 1)",
     themeShadowColor: "#26C6DA",
     themeShadowColorRGBA: "rgba(38, 198, 218, 1)",
@@ -94,7 +94,7 @@ const palette = {
   }
 };
 
-export const theme = {
+const defaultTheme = {
   logo: DefaultLogo,
   input: {
     height: "1.1875em"
@@ -218,3 +218,4 @@ export const theme = {
   }
 };
 
+export default defaultTheme;

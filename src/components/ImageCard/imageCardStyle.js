@@ -1,5 +1,5 @@
-import styles from '../../assets/jss/styles.js';
-import {theme as defaultTheme} from '../themes/defaultTheme';
+import styles from "../../assets/jss/styles.js";
+import defaultTheme from "../themes/defaultTheme.js";
 
 const imageCardStyle = theme => {
   const {
@@ -13,10 +13,10 @@ const imageCardStyle = theme => {
     hexToRgb
   } = styles(theme);
 
-  return ({
+  return {
     image: {
       borderRadius: "50% !important",
-      margin: '5px 0px',
+      margin: "5px 0px",
       boxShadow:
         "0 5px 15px -8px rgba(" +
         hexToRgb(blackColor) +
@@ -25,19 +25,20 @@ const imageCardStyle = theme => {
         ", 0.2)"
     },
     s: {
-      height: '80px',
-      width: '80px'
+      height: "80px",
+      width: "80px"
     },
     m: {
-      height: '163px',
-      width: '163px'
+      height: "163px",
+      width: "163px"
     },
     l: {
-      height: '280px',
-      width: '280px'
+      height: "280px",
+      width: "280px"
     },
     primary: {
-      background: theme.palette?.primary?.main || defaultTheme.palette?.primary?.main,
+      background:
+        theme.palette?.primary?.main || defaultTheme?.palette?.primary?.main,
       color: whiteColor
     },
     info: {
@@ -50,7 +51,11 @@ const imageCardStyle = theme => {
     },
     success: {
       background:
-        "linear-gradient(60deg," + successColor[1] + "," + successColor[2] + ")",
+        "linear-gradient(60deg," +
+        successColor[1] +
+        "," +
+        successColor[2] +
+        ")",
       "& h1 small": {
         color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
       },
@@ -58,7 +63,11 @@ const imageCardStyle = theme => {
     },
     warning: {
       background:
-        "linear-gradient(60deg," + warningColor[1] + "," + warningColor[2] + ")",
+        "linear-gradient(60deg," +
+        warningColor[1] +
+        "," +
+        warningColor[2] +
+        ")",
       "& h1 small": {
         color: "rgba(" + hexToRgb(whiteColor) + ", 0.8)"
       },
@@ -80,7 +89,7 @@ const imageCardStyle = theme => {
       },
       color: whiteColor
     }
-  })
+  };
 };
 
 export default imageCardStyle;
