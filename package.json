@@ -92,7 +92,7 @@
     "style-loader": "^4.0.0",
     "text-mask-addons": "^3.8.0",
     "url-search-params-polyfill": "^7.0.1",
-    "use-debounce": "^3.4.3",
+    "use-debounce": "^3.4.3"
   },
   "peerDependencies": {
     "@date-io/moment": "1.3.13",
